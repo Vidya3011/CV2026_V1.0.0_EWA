@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 
 import Computhink.Pom.Customcolumns;
 
-// Dipak Automation script
 
 public class Custom_Columns_Test extends Computhink.Generic.BaseClass {
 
