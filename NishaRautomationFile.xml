@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <listeners>
+<listener class-name="Computhink.Generic.ListenersRetry"></listener>
+
+ <listener class-name="Computhink.Generic.CustomTestLisner"></listener>
+ </listeners>
+     <test name="Test1">
+   <classes>
+      <class name="Computhink.Script.AnnotationFunctionality"/>
+    </classes>
+  </test>   
+  <test name="Test2"> 
+   <classes>
+      <class name="Computhink.Script.AdvancedViewer_Script"/>
+    </classes>
+  </test> 
+   <test name="Test3">
+    <classes>
+      <class name="Computhink.Script.SearchSelectDocumentLocation"/>
+       </classes>
+       </test>  
+   
+  <test name="Test 4">
+       <classes>
+      <class name="Computhink.Script.Favorites"/>
+    </classes>
+  </test> 
+   <test name="Test 5">
+       <classes>
+      <class name="Computhink.Script.DashBoardScript"/>
+    </classes>
+  </test>    
+  <test name="Test 6">
+       <classes>
+      <class name="Computhink.Script.SecureLink"/>
+    </classes> 
+  </test> 
+  <test name="Test 7">
+       <classes>
+      <class name="Computhink.Script.PrintFunctionality"/>
+    </classes>
+  </test> 
+       <test name="Test 8">
+       <classes>
+      <class name="Computhink.Script.SecureLink_Negative_Scenerio"/>
+    </classes>
+  </test>
+   <test name="Test 9">
+       <classes>
+      <class name="Computhink.Script.Print_Email_Export_Negative_Scenerio"/>
+    </classes>
+  </test>
+   <test name="Test 10">
+       <classes>
+      <class name="Computhink.Script.LargeFiles_AutomationTesting"/>
+    </classes>
+  </test> 
+ 
+   <test name="Test 11">
+       <classes>
+      <class name="Computhink.Script.Thumbnail_MicroSoft_FabBTN"/>
+    </classes>
+  </test>
+  
+     <test name="Test12">
+       <classes>
+      <class name="Computhink.Script.RegisterStamp__Advanced_Viewing"/>
+    </classes>
+  </test> 
+   <test name="Test13">
+       <classes>
+      <class name="Computhink.Script.RoomContextFunction_TakeOwnerShip_ReleaseOwnerShip"/>
+    </classes>
+  </test>    
+   <test name="Test14">
+       <classes>
+      <class name="Computhink.Script.RoomContextMenu_CopyPaste"/>
+    </classes>
+  </test> 
+   <test name="Test15">
+       <classes>
+      <class name="Computhink.Script.RoomContextMenu_Notification"/>
+    </classes>
+  </test> 
+   <test name="Test16">
+       <classes>
+      <class name="Computhink.Script.RMC_NodeProperties"/>
+    </classes>
+  </test> 
+   <test name="Test17">
+       <classes>
+      <class name="Computhink.Script.RMC_Custom_Document_Types"/>
+    </classes>
+  </test>
+    <test name="Test18">
+       <classes>
+      <class name="Computhink.Script.UnsupportedFiles"/>
+   	</classes>
+	</test>
+
+</suite> 

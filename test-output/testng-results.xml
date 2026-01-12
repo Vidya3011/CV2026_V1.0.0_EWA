@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Chrome driver launched successfull]]>
+    </line>
+    <line>
+      <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+    </line>
+    <line>
+      <![CDATA[No error message found]]>
+    </line>
+    <line>
+      <![CDATA[Page title name: Contentverse]]>
+    </line>
+    <line>
+      <![CDATA[EWA URL launched successfull]]>
+    </line>
+    <line>
+      <![CDATA[Scenario 01: Log into a EWA]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid user name into username field]]>
+    </line>
+    <line>
+      <![CDATA[UserName Details: Dipak]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid password into password field]]>
+    </line>
+    <line>
+      <![CDATA[Select a Room]]>
+    </line>
+    <line>
+      <![CDATA[Selected Room name: demoserver.demoroom]]>
+    </line>
+    <line>
+      <![CDATA[Captcha is not present, proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Click Login button]]>
+    </line>
+    <line>
+      <![CDATA[Session message did not appear. Proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Session message did not appear. Proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[CVS URL started Successfully]]>
+    </line>
+    <line>
+      <![CDATA[Launched Contentverse URL Details : http://10.4.10.119:8080/CVWeb/cvLgn]]>
+    </line>
+    <line>
+      <![CDATA[Page title name is : Contentverse]]>
+    </line>
+    <line>
+      <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+    </line>
+    <line>
+      <![CDATA[No error message found]]>
+    </line>
+    <line>
+      <![CDATA[Page title name: Contentverse]]>
+    </line>
+    <line>
+      <![CDATA[EWA URL launched successfull]]>
+    </line>
+    <line>
+      <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+    </line>
+    <line>
+      <![CDATA[No error message found]]>
+    </line>
+    <line>
+      <![CDATA[Page title name: Contentverse]]>
+    </line>
+    <line>
+      <![CDATA[EWA URL launched successfull]]>
+    </line>
+    <line>
+      <![CDATA[Scenario 01: Log into a EWA]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid user name into username field]]>
+    </line>
+    <line>
+      <![CDATA[UserName Details: Dipak]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid password into password field]]>
+    </line>
+    <line>
+      <![CDATA[Select a Room]]>
+    </line>
+    <line>
+      <![CDATA[Selected Room name: demoserver.demoroom]]>
+    </line>
+    <line>
+      <![CDATA[Captcha is not present, proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Click Login button]]>
+    </line>
+    <line>
+      <![CDATA[Session message did not appear. Proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Session message did not appear. Proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+    </line>
+    <line>
+      <![CDATA[No error message found]]>
+    </line>
+    <line>
+      <![CDATA[Page title name: Contentverse]]>
+    </line>
+    <line>
+      <![CDATA[EWA URL launched successfull]]>
+    </line>
+    <line>
+      <![CDATA[Test Scenario 1 : Verifying No button of Session for user is already active dialog box ]]>
+    </line>
+    <line>
+      <![CDATA[Scenario 01: Log into EWA]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid user name into username field]]>
+    </line>
+    <line>
+      <![CDATA[UserName Details: Dipak]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid password into password field]]>
+    </line>
+    <line>
+      <![CDATA[Select a Room]]>
+    </line>
+    <line>
+      <![CDATA[Selected Room name: demoserver.demoroom]]>
+    </line>
+    <line>
+      <![CDATA[Captcha is not present, proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Click Login button]]>
+    </line>
+    <line>
+      <![CDATA[Session for user is already active. Do you want to create a new session? Dialog box displayed. User clicks OK button.]]>
+    </line>
+    <line>
+      <![CDATA[Verified No button of Session for user is already active dialog box ]]>
+    </line>
+    <line>
+      <![CDATA[Test Scenario 2 : Verifying Login EWA with blank username ]]>
+    </line>
+    <line>
+      <![CDATA[Do not entered username into username field]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid Password into Password field]]>
+    </line>
+    <line>
+      <![CDATA[Select a Room]]>
+    </line>
+    <line>
+      <![CDATA[Selected Room name: demoserver.demoroom]]>
+    </line>
+    <line>
+      <![CDATA[Click on the Login button]]>
+    </line>
+    <line>
+      <![CDATA[Please enter username validation message should show]]>
+    </line>
+    <line>
+      <![CDATA[Test Scenario 3 : Verifying Login EWA with blank password]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid Username into Username field]]>
+    </line>
+    <line>
+      <![CDATA[Do not entered password into password field]]>
+    </line>
+    <line>
+      <![CDATA[Select a Room]]>
+    </line>
+    <line>
+      <![CDATA[Selected Room name: demoserver.demoroom]]>
+    </line>
+    <line>
+      <![CDATA[Click on the Login button]]>
+    </line>
+    <line>
+      <![CDATA[Please enter password validation message should show]]>
+    </line>
+    <line>
+      <![CDATA[Test Scenario 4 : Verifying Login EWA without selecting roomname ]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid Username into Username field]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid Password into Password field]]>
+    </line>
+    <line>
+      <![CDATA[Not select Room]]>
+    </line>
+    <line>
+      <![CDATA[Selected Room name: Please select a room]]>
+    </line>
+    <line>
+      <![CDATA[Click on the Login button]]>
+    </line>
+    <line>
+      <![CDATA[Select a roomvalidation message should show when none of above room selected for Login]]>
+    </line>
+    <line>
+      <![CDATA[Test Scenario 5 : Verifying Login EWA with invalid username ]]>
+    </line>
+    <line>
+      <![CDATA[Enter Invalid Username into Username field]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid Password into Password field]]>
+    </line>
+    <line>
+      <![CDATA[Select a Room]]>
+    </line>
+    <line>
+      <![CDATA[Selected Room name: demoserver.demoroom]]>
+    </line>
+    <line>
+      <![CDATA[Click on the Login button]]>
+    </line>
+    <line>
+      <![CDATA[Test Scenario 6 : Verifying Login EWA with invalid password ]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid Username into Username field]]>
+    </line>
+    <line>
+      <![CDATA[Enter Invalid Password into Password field]]>
+    </line>
+    <line>
+      <![CDATA[Select a Room]]>
+    </line>
+    <line>
+      <![CDATA[Selected Room name: demoserver.demoroom]]>
+    </line>
+    <line>
+      <![CDATA[Click on the Login button]]>
+    </line>
+    <line>
+      <![CDATA[ this validation message should show]]>
+    </line>
+    <line>
+      <![CDATA[Test Scenario 7 : Verifying Yes button of Session for user is already active dialog box ]]>
+    </line>
+    <line>
+      <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+    </line>
+    <line>
+      <![CDATA[No error message found]]>
+    </line>
+    <line>
+      <![CDATA[Page title name: Contentverse]]>
+    </line>
+    <line>
+      <![CDATA[EWA URL launched successfull]]>
+    </line>
+    <line>
+      <![CDATA[Scenario 01: Log into a EWA]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid user name into username field]]>
+    </line>
+    <line>
+      <![CDATA[UserName Details: Dipak]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid password into password field]]>
+    </line>
+    <line>
+      <![CDATA[Select a Room]]>
+    </line>
+    <line>
+      <![CDATA[Selected Room name: demoserver.demoroom]]>
+    </line>
+    <line>
+      <![CDATA[Captcha is not present, proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Click Login button]]>
+    </line>
+    <line>
+      <![CDATA[Session message did not appear. Proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Session message did not appear. Proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Verified Yes button of Session for user is already active dialog box ]]>
+    </line>
+    <line>
+      <![CDATA[Test Scenario 10 : Verifying Browser Allowing Only OneUser Login ]]>
+    </line>
+    <line>
+      <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+    </line>
+    <line>
+      <![CDATA[No error message found]]>
+    </line>
+    <line>
+      <![CDATA[Page title name: Contentverse]]>
+    </line>
+    <line>
+      <![CDATA[EWA URL launched successfull]]>
+    </line>
+    <line>
+      <![CDATA[Scenario 01: Log into EWA]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid user name into username field]]>
+    </line>
+    <line>
+      <![CDATA[UserName Details: admin]]>
+    </line>
+    <line>
+      <![CDATA[Enter valid password into password field]]>
+    </line>
+    <line>
+      <![CDATA[Select a Room]]>
+    </line>
+    <line>
+      <![CDATA[Selected Room name: demoserver.demoroom]]>
+    </line>
+    <line>
+      <![CDATA[Captcha is not present, proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Click Login button]]>
+    </line>
+    <line>
+      <![CDATA[Session message did not appear. Proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Session message did not appear. Proceeding with login.]]>
+    </line>
+    <line>
+      <![CDATA[Verified If User Session is active but we Closed Browser then it should allowing to Login to EWA for Any User without Showing Login validation]]>
+    </line>
+    <line>
+      <![CDATA[Click on Username option]]>
+    </line>
+    <line>
+      <![CDATA[Click on Logout option]]>
+    </line>
+    <line>
+      <![CDATA[Timeout waiting for alert to appear.]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2026-01-12T13:20:51 IST" name="Default suite" finished-at="2026-01-12T13:26:21 IST" duration-ms="329891">
+    <groups>
+    </groups>
+    <test started-at="2026-01-12T13:20:51 IST" name="Default test" finished-at="2026-01-12T13:26:21 IST" duration-ms="329891">
+      <class name="Computhink.Script.Login_Validation">
+        <test-method is-config="true" signature="Launch_Browser()[pri:0, instance:Computhink.Script.Login_Validation@663c9e7a]" started-at="2026-01-12T13:20:51 IST" name="Launch_Browser" finished-at="2026-01-12T13:21:26 IST" duration-ms="34761" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Chrome driver launched successfull]]>
+            </line>
+            <line>
+              <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+            </line>
+            <line>
+              <![CDATA[No error message found]]>
+            </line>
+            <line>
+              <![CDATA[Page title name: Contentverse]]>
+            </line>
+            <line>
+              <![CDATA[EWA URL launched successfull]]>
+            </line>
+            <line>
+              <![CDATA[Scenario 01: Log into a EWA]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid user name into username field]]>
+            </line>
+            <line>
+              <![CDATA[UserName Details: Dipak]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid password into password field]]>
+            </line>
+            <line>
+              <![CDATA[Select a Room]]>
+            </line>
+            <line>
+              <![CDATA[Selected Room name: demoserver.demoroom]]>
+            </line>
+            <line>
+              <![CDATA[Captcha is not present, proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Click Login button]]>
+            </line>
+            <line>
+              <![CDATA[Session message did not appear. Proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Session message did not appear. Proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[CVS URL started Successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Launch_Browser -->
+        <test-method signature="TC_01_ContentVerseURLAndTitleValidation()[pri:1, instance:Computhink.Script.Login_Validation@663c9e7a]" started-at="2026-01-12T13:21:26 IST" name="TC_01_ContentVerseURLAndTitleValidation" finished-at="2026-01-12T13:21:36 IST" duration-ms="10094" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Launched Contentverse URL Details : http://10.4.10.119:8080/CVWeb/cvLgn]]>
+            </line>
+            <line>
+              <![CDATA[Page title name is : Contentverse]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_01_ContentVerseURLAndTitleValidation -->
+        <test-method signature="TC_02_ContentVerseURLValidation()[pri:2, instance:Computhink.Script.Login_Validation@663c9e7a]" started-at="2026-01-12T13:21:36 IST" name="TC_02_ContentVerseURLValidation" finished-at="2026-01-12T13:21:56 IST" duration-ms="19965" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+            </line>
+            <line>
+              <![CDATA[No error message found]]>
+            </line>
+            <line>
+              <![CDATA[Page title name: Contentverse]]>
+            </line>
+            <line>
+              <![CDATA[EWA URL launched successfull]]>
+            </line>
+            <line>
+              <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+            </line>
+            <line>
+              <![CDATA[No error message found]]>
+            </line>
+            <line>
+              <![CDATA[Page title name: Contentverse]]>
+            </line>
+            <line>
+              <![CDATA[EWA URL launched successfull]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_02_ContentVerseURLValidation -->
+        <test-method signature="TC_03_Verifying_No_button_of_Session_for_user_is_already_active_dialog_box()[pri:3, instance:Computhink.Script.Login_Validation@663c9e7a]" started-at="2026-01-12T13:21:56 IST" name="TC_03_Verifying_No_button_of_Session_for_user_is_already_active_dialog_box" finished-at="2026-01-12T13:22:54 IST" duration-ms="58174" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Scenario 01: Log into a EWA]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid user name into username field]]>
+            </line>
+            <line>
+              <![CDATA[UserName Details: Dipak]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid password into password field]]>
+            </line>
+            <line>
+              <![CDATA[Select a Room]]>
+            </line>
+            <line>
+              <![CDATA[Selected Room name: demoserver.demoroom]]>
+            </line>
+            <line>
+              <![CDATA[Captcha is not present, proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Click Login button]]>
+            </line>
+            <line>
+              <![CDATA[Session message did not appear. Proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Session message did not appear. Proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+            </line>
+            <line>
+              <![CDATA[No error message found]]>
+            </line>
+            <line>
+              <![CDATA[Page title name: Contentverse]]>
+            </line>
+            <line>
+              <![CDATA[EWA URL launched successfull]]>
+            </line>
+            <line>
+              <![CDATA[Test Scenario 1 : Verifying No button of Session for user is already active dialog box ]]>
+            </line>
+            <line>
+              <![CDATA[Scenario 01: Log into EWA]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid user name into username field]]>
+            </line>
+            <line>
+              <![CDATA[UserName Details: Dipak]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid password into password field]]>
+            </line>
+            <line>
+              <![CDATA[Select a Room]]>
+            </line>
+            <line>
+              <![CDATA[Selected Room name: demoserver.demoroom]]>
+            </line>
+            <line>
+              <![CDATA[Captcha is not present, proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Click Login button]]>
+            </line>
+            <line>
+              <![CDATA[Session for user is already active. Do you want to create a new session? Dialog box displayed. User clicks OK button.]]>
+            </line>
+            <line>
+              <![CDATA[Verified No button of Session for user is already active dialog box ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_03_Verifying_No_button_of_Session_for_user_is_already_active_dialog_box -->
+        <test-method signature="TC_04_Verifying_Login_EWA_with_blank_Username()[pri:4, instance:Computhink.Script.Login_Validation@663c9e7a]" started-at="2026-01-12T13:22:54 IST" name="TC_04_Verifying_Login_EWA_with_blank_Username" finished-at="2026-01-12T13:23:23 IST" duration-ms="29104" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Scenario 2 : Verifying Login EWA with blank username ]]>
+            </line>
+            <line>
+              <![CDATA[Do not entered username into username field]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid Password into Password field]]>
+            </line>
+            <line>
+              <![CDATA[Select a Room]]>
+            </line>
+            <line>
+              <![CDATA[Selected Room name: demoserver.demoroom]]>
+            </line>
+            <line>
+              <![CDATA[Click on the Login button]]>
+            </line>
+            <line>
+              <![CDATA[Please enter username validation message should show]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_04_Verifying_Login_EWA_with_blank_Username -->
+        <test-method signature="TC_05_Verifying_Login_EWA_with_blank_Password()[pri:5, instance:Computhink.Script.Login_Validation@663c9e7a]" started-at="2026-01-12T13:23:23 IST" name="TC_05_Verifying_Login_EWA_with_blank_Password" finished-at="2026-01-12T13:23:49 IST" duration-ms="25928" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Scenario 3 : Verifying Login EWA with blank password]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid Username into Username field]]>
+            </line>
+            <line>
+              <![CDATA[Do not entered password into password field]]>
+            </line>
+            <line>
+              <![CDATA[Select a Room]]>
+            </line>
+            <line>
+              <![CDATA[Selected Room name: demoserver.demoroom]]>
+            </line>
+            <line>
+              <![CDATA[Click on the Login button]]>
+            </line>
+            <line>
+              <![CDATA[Please enter password validation message should show]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_05_Verifying_Login_EWA_with_blank_Password -->
+        <test-method signature="TC_06_Verifying_Login_EWA_without_Selecting_Roomname()[pri:6, instance:Computhink.Script.Login_Validation@663c9e7a]" started-at="2026-01-12T13:23:49 IST" name="TC_06_Verifying_Login_EWA_without_Selecting_Roomname" finished-at="2026-01-12T13:24:13 IST" duration-ms="24027" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Scenario 4 : Verifying Login EWA without selecting roomname ]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid Username into Username field]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid Password into Password field]]>
+            </line>
+            <line>
+              <![CDATA[Not select Room]]>
+            </line>
+            <line>
+              <![CDATA[Selected Room name: Please select a room]]>
+            </line>
+            <line>
+              <![CDATA[Click on the Login button]]>
+            </line>
+            <line>
+              <![CDATA[Select a roomvalidation message should show when none of above room selected for Login]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_06_Verifying_Login_EWA_without_Selecting_Roomname -->
+        <test-method signature="TC_07_Verifying_Login_EWA_with_Invalid_Username()[pri:7, instance:Computhink.Script.Login_Validation@663c9e7a]" started-at="2026-01-12T13:24:13 IST" name="TC_07_Verifying_Login_EWA_with_Invalid_Username" finished-at="2026-01-12T13:24:31 IST" duration-ms="17876" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Scenario 5 : Verifying Login EWA with invalid username ]]>
+            </line>
+            <line>
+              <![CDATA[Enter Invalid Username into Username field]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid Password into Password field]]>
+            </line>
+            <line>
+              <![CDATA[Select a Room]]>
+            </line>
+            <line>
+              <![CDATA[Selected Room name: demoserver.demoroom]]>
+            </line>
+            <line>
+              <![CDATA[Click on the Login button]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_07_Verifying_Login_EWA_with_Invalid_Username -->
+        <test-method signature="TC_08_Verifying_Login_EWA_with_Invalid_Password()[pri:8, instance:Computhink.Script.Login_Validation@663c9e7a]" started-at="2026-01-12T13:24:31 IST" name="TC_08_Verifying_Login_EWA_with_Invalid_Password" finished-at="2026-01-12T13:25:01 IST" duration-ms="30164" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Scenario 6 : Verifying Login EWA with invalid password ]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid Username into Username field]]>
+            </line>
+            <line>
+              <![CDATA[Enter Invalid Password into Password field]]>
+            </line>
+            <line>
+              <![CDATA[Select a Room]]>
+            </line>
+            <line>
+              <![CDATA[Selected Room name: demoserver.demoroom]]>
+            </line>
+            <line>
+              <![CDATA[Click on the Login button]]>
+            </line>
+            <line>
+              <![CDATA[ this validation message should show]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_08_Verifying_Login_EWA_with_Invalid_Password -->
+        <test-method signature="TC_09_Verifying_Yes_button_of_Session_for_user_is_already_active_dialog_box()[pri:9, instance:Computhink.Script.Login_Validation@663c9e7a]" started-at="2026-01-12T13:25:01 IST" name="TC_09_Verifying_Yes_button_of_Session_for_user_is_already_active_dialog_box" finished-at="2026-01-12T13:25:33 IST" duration-ms="31691" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Scenario 7 : Verifying Yes button of Session for user is already active dialog box ]]>
+            </line>
+            <line>
+              <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+            </line>
+            <line>
+              <![CDATA[No error message found]]>
+            </line>
+            <line>
+              <![CDATA[Page title name: Contentverse]]>
+            </line>
+            <line>
+              <![CDATA[EWA URL launched successfull]]>
+            </line>
+            <line>
+              <![CDATA[Scenario 01: Log into a EWA]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid user name into username field]]>
+            </line>
+            <line>
+              <![CDATA[UserName Details: Dipak]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid password into password field]]>
+            </line>
+            <line>
+              <![CDATA[Select a Room]]>
+            </line>
+            <line>
+              <![CDATA[Selected Room name: demoserver.demoroom]]>
+            </line>
+            <line>
+              <![CDATA[Captcha is not present, proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Click Login button]]>
+            </line>
+            <line>
+              <![CDATA[Session message did not appear. Proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Session message did not appear. Proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Verified Yes button of Session for user is already active dialog box ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_09_Verifying_Yes_button_of_Session_for_user_is_already_active_dialog_box -->
+        <test-method signature="TC_10_Verifying_Browser_Allowing_Only_OneUser_Login()[pri:10, instance:Computhink.Script.Login_Validation@663c9e7a]" started-at="2026-01-12T13:25:33 IST" name="TC_10_Verifying_Browser_Allowing_Only_OneUser_Login" finished-at="2026-01-12T13:26:21 IST" duration-ms="48061" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Scenario 10 : Verifying Browser Allowing Only OneUser Login ]]>
+            </line>
+            <line>
+              <![CDATA[Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn]]>
+            </line>
+            <line>
+              <![CDATA[No error message found]]>
+            </line>
+            <line>
+              <![CDATA[Page title name: Contentverse]]>
+            </line>
+            <line>
+              <![CDATA[EWA URL launched successfull]]>
+            </line>
+            <line>
+              <![CDATA[Scenario 01: Log into EWA]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid user name into username field]]>
+            </line>
+            <line>
+              <![CDATA[UserName Details: admin]]>
+            </line>
+            <line>
+              <![CDATA[Enter valid password into password field]]>
+            </line>
+            <line>
+              <![CDATA[Select a Room]]>
+            </line>
+            <line>
+              <![CDATA[Selected Room name: demoserver.demoroom]]>
+            </line>
+            <line>
+              <![CDATA[Captcha is not present, proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Click Login button]]>
+            </line>
+            <line>
+              <![CDATA[Session message did not appear. Proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Session message did not appear. Proceeding with login.]]>
+            </line>
+            <line>
+              <![CDATA[Verified If User Session is active but we Closed Browser then it should allowing to Login to EWA for Any User without Showing Login validation]]>
+            </line>
+            <line>
+              <![CDATA[Click on Username option]]>
+            </line>
+            <line>
+              <![CDATA[Click on Logout option]]>
+            </line>
+            <line>
+              <![CDATA[Timeout waiting for alert to appear.]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC_10_Verifying_Browser_Allowing_Only_OneUser_Login -->
+      </class> <!-- Computhink.Script.Login_Validation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
