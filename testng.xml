@@ -4,7 +4,7 @@
 
 	<test name="Test1">
 		<classes>
-			<class name="Computhink.Script.Login_Validation" />
+			<class name="Computhink.Script.Special_Char_FileNames" />
 		</classes>
 	</test>
 <!-- 

@@ -14,6 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 
@@ -280,15 +281,17 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Reporter.log("Select value from Document Type dropdown Option", true);
 		Enter_Report_Name_Text.sendKeys(Specialchar_excelRead(1, 0));
 		Reporter.log("Enter Value into Report Name field", true);
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
-		Thread.sleep(3000);
-		Reporter.log("Browse Document Page", true);
-		Runtime.getRuntime()
-				.exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Percentage .exe");
-		Thread.sleep(6000);
+		Thread.sleep(2000);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Percentage%.tif");
+		Thread.sleep(4000);
+	
+		
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait2.until(ExpectedConditions.alertIsPresent());
@@ -339,12 +342,11 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
-		Thread.sleep(3000);
-		Reporter.log("Browse Document Page", true);
-		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Tile.exe");
-		Thread.sleep(12000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Thread.sleep(2000);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Tile~.TIF");
+		Thread.sleep(4000);
 		jsclick(Open_Tile_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -383,14 +385,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(3, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime()
-				.exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\At the rate .exe");
-		Thread.sleep(12000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\At the rate @.xls");
+		Thread.sleep(4000);
 		jsclick(Open_Attherate_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -430,13 +432,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(4, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Hash .exe");
-		Thread.sleep(12000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Hash #.TIF");
+		Thread.sleep(4000);
 		jsclick(Open_Hash_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -475,13 +478,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(5, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Dollar.exe");
-		Thread.sleep(12000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Dollar $.jpg");
+		Thread.sleep(4000);
 		jsclick(Open_Dollar_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -520,13 +524,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(6, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Plus.exe");
-		Thread.sleep(12000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Plus +.TIF");
+		Thread.sleep(4000);
 		jsclick(Open_Plus_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -567,13 +572,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(7, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Caret.exe");
-		Thread.sleep(15000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Caret ^.TIF");
+		Thread.sleep(4000);
 		jsclick(Open_Caret_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -613,13 +619,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(8, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Equals.exe");
-		Thread.sleep(15000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Equal to =.TIF");
+		Thread.sleep(4000);
 		jsclick(Open_Equals_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -659,14 +666,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(9, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime()
-				.exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Single Quote .exe");
-		Thread.sleep(14000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Single Quote '.png");
+		Thread.sleep(4000);
 		jsclick(Open_SingleQuote_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -706,13 +713,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(10, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Comma.exe");
-		Thread.sleep(15000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Comm,.DOCX");
+		Thread.sleep(4000);
 		jsclick(Open_Comma_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -752,14 +760,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(11, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime()
-				.exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Exclamatory.exe");
-		Thread.sleep(20000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Exclamatory !.csv");
+		Thread.sleep(4000);
 		jsclick(Open_Exclamatory_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -799,13 +807,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(12, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Hyphen.exe");
-		Thread.sleep(15000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Hyphen -.tif");
+		Thread.sleep(4000);
 		jsclick(Open_Hyphen_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -845,14 +854,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(13, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime()
-				.exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Round Brackets.exe");
-		Thread.sleep(15000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Round Brackets().docx");
+		Thread.sleep(4000);
 		jsclick(Open_RoundBrackets_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -892,13 +901,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(14, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Accent.exe");
-		Thread.sleep(15000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Accent `.pdf");
+		Thread.sleep(4000);
 		jsclick(Open_Accent_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -938,13 +948,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(15, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Ampersant.exe");
-		Thread.sleep(15000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Ampersant &.djvu");
+		Thread.sleep(4000);
 		jsclick(Open_Ampersant_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -984,13 +995,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(16, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
-		Thread.sleep(3000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime()
-				.exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Underscore.exe");
-		Thread.sleep(15000);
+		Thread.sleep(2000);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Underscore _.pdf");
+		Thread.sleep(4000);
 		Reporter.log("By using AutoIT add file from external folder", true);
 		jsclick(Open_Underscore_page);
 		Thread.sleep(6000);
@@ -1030,14 +1042,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(17, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime().exec(
-				"D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Flower or Curly bracket .exe");
-		Thread.sleep(15000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Flower or Curly bracket {}.JPG");
+		Thread.sleep(4000);
 		jsclick(Open_Flowerbracket_Page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -1077,14 +1089,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(18, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime()
-				.exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Square bracket.exe");
-		Thread.sleep(15000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Square Bracket [].tiff");
+		Thread.sleep(4000);
 		jsclick(Open_Squarebracket_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
@@ -1124,14 +1136,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Update_ReportName.sendKeys(Specialchar_excelRead(19, 0));
 		Thread.sleep(2000);
 		Reporter.log("Enter value into Report Name field", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
-		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
-		Runtime.getRuntime()
-				.exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Semi Colon.exe");
-		Thread.sleep(15000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		Reporter.log("Browse Document Page from Local Path", true);
+		//Upload file by using Browse option
+		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Semi Colon ;.tif");
+		Thread.sleep(4000);
 		jsclick(Open_SemiColon_page);
 		Thread.sleep(6000);
 		Reporter.log("Select Uploaded Page", true);
