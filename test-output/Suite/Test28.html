@@ -1,0 +1,187 @@
+<html>
+<head>
+<title>TestNG:  Test28</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test28</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jan 19 19:51:42 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>249 seconds (249001 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.Offline_Document.TC_02_Open_Offline_Doc()'><b>TC_02_Open_Offline_Doc</b><br>Test class: Computhink.Script.Offline_Document<br/>
+<a href="#Output-831101272" onClick='toggleBox("Output-831101272", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-831101272" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-831101272">
+Test Scenario 2:Open Offline Doc<br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Mousehover to Recent Tab<br/>
+Click on Recent Folder<br/>
+Document page open succesfully<br/>
+ this message should show<br/>
+ this message should show<br/>
+Document Is in Offline message showing succesfully open document in View only mode<br/>
+Document page Close succesfully<br/>
+</div>
+</td>
+<td></td>
+<td>39</td>
+<td>Computhink.Script.Offline_Document@503f91c3</td></tr>
+<tr>
+<td title='Computhink.Script.Offline_Document.Login_EWA()'><b>Login_EWA</b><br>Test class: Computhink.Script.Offline_Document<br/>
+<a href="#Output-1027051459" onClick='toggleBox("Output-1027051459", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1027051459" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1027051459">
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: Dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session for user is already active. Do you want to create a new session? Dialog box displayed. User clicks OK button.<br/>
+Session message did not appear. Proceeding with login.<br/>
+User has logged in successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>Computhink.Script.Offline_Document@503f91c3</td></tr>
+<tr>
+<td title='Computhink.Script.Offline_Document.TC_03_Sync_New_Document_onOffline_Doc()'><b>TC_03_Sync_New_Document_onOffline_Doc</b><br>Test class: Computhink.Script.Offline_Document<br/>
+<a href="#Output-923732634" onClick='toggleBox("Output-923732634", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-923732634" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-923732634">
+Test Scenario 3:Sync New Document on Offline Doc<br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Click on Username<br/>
+Click on Offline Document option<br/>
+Document showing Succesfully under Offline page and select offline document<br/>
+New document sync successfully<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>Computhink.Script.Offline_Document@503f91c3</td></tr>
+<tr>
+<td title='Computhink.Script.Offline_Document.TC_04_Release_Offline_Doc()'><b>TC_04_Release_Offline_Doc</b><br>Test class: Computhink.Script.Offline_Document<br/>
+<a href="#Output-1082092313" onClick='toggleBox("Output-1082092313", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1082092313" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1082092313">
+Test Scenario 4: Release Offline Doc<br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Click on Username<br/>
+Click on Offline Document option<br/>
+Select Offline Document page<br/>
+Click on Release option and Document Release succesfully<br/>
+Mousehover to Recent Tab<br/>
+Click on Recent Folder<br/>
+Document open Successfully<br/>
+Document Release successfully<br/>
+Click on Refresh button<br/>
+</div>
+</td>
+<td></td>
+<td>79</td>
+<td>Computhink.Script.Offline_Document@503f91c3</td></tr>
+<tr>
+<td title='Computhink.Script.Offline_Document.TC_01_Create_OfflineDocument()'><b>TC_01_Create_OfflineDocument</b><br>Test class: Computhink.Script.Offline_Document<br/>
+<a href="#Output-1801058086" onClick='toggleBox("Output-1801058086", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1801058086" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1801058086">
+Test Scenario 1:Create Offline Document<br/>
+Click on the Refresh button<br/>
+Expand a cabinet<br/>
+Expand a drawer<br/>
+select a folder<br/>
+Document open Successfully<br/>
+Select Document checkbox from Thumbnail<br/>
+Click on Offline page menu option<br/>
+Click on Document offline message ok button<br/>
+Document Created successfully and send to Offline<br/>
+</div>
+</td>
+<td></td>
+<td>69</td>
+<td>Computhink.Script.Offline_Document@503f91c3</td></tr>
+</table><p>
+</body>
+</html>

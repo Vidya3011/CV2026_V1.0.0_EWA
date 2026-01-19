@@ -1,0 +1,519 @@
+<html>
+<head>
+<title>TestNG:  Test 5</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test 5</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>8/1/3</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jan 19 21:35:51 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>463 seconds (463134 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality()'><b>TodoListWFDetailsDashBoardFunctionality</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-895649241" onClick='toggleBox("Output-895649241", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-895649241" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-895649241">
+Scenario 03: Verify dashboard 'Todolist' dropdown<br/>
+Click on dashboard tab<br/>
+Click on dashboard tab<br/>
+<b>Test Failed: TodoListWFDetailsDashBoardFunctionality</b><br/>
+<a href='screenshots/TodoListWFDetailsDashBoardFunctionality_failure.png' target='_blank'>View Screenshot</a><br/>
+<br><img src='screenshots/TodoListWFDetailsDashBoardFunctionality_failure.png' width='400' height='300'/><br><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (6a4888643d9257666c2dd2cf75293758)] -&gt; xpath: (//span[@class=&apos;e-input-group-icon e-ddl-icon e-search-icon&apos;])[2]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55766}, goog:processID: 30996, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55766/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a4888643d9257666c2dd2cf75293758
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Computhink.Pom.DashBoardPom.TodoListWFDetailsfromDb(DashBoardPom.java:155)
+	at Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality(DashBoardScript.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace895649241", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace895649241'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (6a4888643d9257666c2dd2cf75293758)] -&gt; xpath: (//span[@class=&apos;e-input-group-icon e-ddl-icon e-search-icon&apos;])[2]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55766}, goog:processID: 30996, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55766/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a4888643d9257666c2dd2cf75293758
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Computhink.Pom.DashBoardPom.TodoListWFDetailsfromDb(DashBoardPom.java:155)
+	at Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality(DashBoardScript.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>26</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.TC_7_Contentverse_RejectDocumentInWFReport_Report()'><b>TC_7_Contentverse_RejectDocumentInWFReport_Report</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-704886738" onClick='toggleBox("Output-704886738", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-704886738" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-704886738">
+Scenario 08: Verify 'ContentverseReport' - Reject document in workflow Report<br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Exception while logging in and accessing dashboard<br/>
+Mouse hover on Document Report dropdown and Select 'Reject document in workflow Report'<br/>
+Select 'This Week'<br/>
+Click on Generate Button<br/>
+Error selecting 'This Week'.<br/>
+No alert present<br/>
+It should list the 'Reject document in workflow' Report on the page<br/>
+Error exporting the report to Excel or PDF.<br/>
+Generated Document Report has Exported Successfully...<br/>
+</div>
+</td>
+<td></td>
+<td>56</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.TC_6_Contentverse_WrokflowStatus_Report()'><b>TC_6_Contentverse_WrokflowStatus_Report</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-879665901" onClick='toggleBox("Output-879665901", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-879665901" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-879665901">
+Scenario 07: Verify 'ContentverseReport' - Workflow Status Reports<br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Exception while logging in and accessing dashboard<br/>
+Mouse hover on Document Report dropdown and Select 'Workflow Status Report'<br/>
+Select 'This Week'<br/>
+Click on Generate Button<br/>
+No alert present<br/>
+It should list the 'Workflow Status Report' on the page<br/>
+Click on Excel export<br/>
+Click on PDF Export<br/>
+Generated Document Report has Exported Successfully...<br/>
+</div>
+</td>
+<td></td>
+<td>57</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.TC_5_Contentverse_Document_Report()'><b>TC_5_Contentverse_Document_Report</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-702529866" onClick='toggleBox("Output-702529866", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-702529866" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-702529866">
+Launched Contentverse URL Details: http://10.4.10.119:8080/CVWeb/cvLgn<br/>
+No error message found<br/>
+Page title name: Contentverse<br/>
+EWA URL launched successfull<br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Select Contentverse Report icon<br/>
+Select 'Document Report'<br/>
+Select 'This Week'<br/>
+Click on Generate Button<br/>
+No alert present<br/>
+It should list the Document Report on the page<br/>
+Click on Excel export<br/>
+Click on PDF Export<br/>
+Generated Document Report has Exported Successfully...<br/>
+</div>
+</td>
+<td></td>
+<td>156</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.TC_4_CreateNewDocumentFromDB()'><b>TC_4_CreateNewDocumentFromDB</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-565352670" onClick='toggleBox("Output-565352670", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-565352670" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-565352670">
+Scenario 06: Verify dashboard 'New document' functionality<br/>
+Click on dashboard tab<br/>
+Click on New document icon<br/>
+It will redirect to New document tab successfully...<br/>
+The New document page opened successfully...<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.TC_2_NotifiactionIconDashBoardFunctionality()'><b>TC_2_NotifiactionIconDashBoardFunctionality</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-549828088" onClick='toggleBox("Output-549828088", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-549828088" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-549828088">
+Scenario 02: Verify dashboard 'Notification' functionality<br/>
+Click on dashboard tab<br/>
+Click on notification icon<br/>
+It will redirect to Notification tab successfully...<br/>
+Notification page displayed successfully...<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.TC_8_logoutFromDB()'><b>TC_8_logoutFromDB</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-1245592803" onClick='toggleBox("Output-1245592803", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1245592803" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1245592803">
+Scenario 08: Verify 'Logout functionality' from the dashboard<br/>
+Click on dashboard tab<br/>
+Click on logout icon<br/>
+Session logged out successfully<br/>
+Dashboard logout option verified successfully...<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.Login()'><b>Login</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-426544019" onClick='toggleBox("Output-426544019", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-426544019" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-426544019">
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session for user is already active. Do you want to create a new session? Dialog box displayed. User clicks OK button.<br/>
+User logged in successfully... <br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.TC_1_SearchIconDashBoardFunctionality()'><b>TC_1_SearchIconDashBoardFunctionality</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-1686175966" onClick='toggleBox("Output-1686175966", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1686175966" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1686175966">
+Test scenario 01: Verify 'dashboard search' functionality<br/>
+Click on dashboard tab<br/>
+Dashboard opened successfully<br/>
+Click on search icon from the dashboard page<br/>
+It will redirect to Search tab successfully...<br/>
+Click on find button<br/>
+Searched document display on the page successfully...<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality()'><b>TodoListWFDetailsDashBoardFunctionality</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-1315912968" onClick='toggleBox("Output-1315912968", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1315912968" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1315912968">
+Scenario 03: Verify dashboard 'Todolist' dropdown<br/>
+Click on dashboard tab<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (6a4888643d9257666c2dd2cf75293758)] -&gt; xpath: (//span[@class=&apos;e-input-group-icon e-ddl-icon e-search-icon&apos;])[2]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55766}, goog:processID: 30996, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55766/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a4888643d9257666c2dd2cf75293758
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Computhink.Pom.DashBoardPom.TodoListWFDetailsfromDb(DashBoardPom.java:155)
+	at Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality(DashBoardScript.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1315912968", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1315912968'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (6a4888643d9257666c2dd2cf75293758)] -&gt; xpath: (//span[@class=&apos;e-input-group-icon e-ddl-icon e-search-icon&apos;])[2]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55766}, goog:processID: 30996, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55766/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a4888643d9257666c2dd2cf75293758
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Computhink.Pom.DashBoardPom.TodoListWFDetailsfromDb(DashBoardPom.java:155)
+	at Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality(DashBoardScript.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>26</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality()'><b>TodoListWFDetailsDashBoardFunctionality</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-891954784" onClick='toggleBox("Output-891954784", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-891954784" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-891954784">
+Scenario 03: Verify dashboard 'Todolist' dropdown<br/>
+Click on dashboard tab<br/>
+Click on dashboard tab<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (6a4888643d9257666c2dd2cf75293758)] -&gt; xpath: (//span[@class=&apos;e-input-group-icon e-ddl-icon e-search-icon&apos;])[2]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55766}, goog:processID: 30996, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55766/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a4888643d9257666c2dd2cf75293758
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Computhink.Pom.DashBoardPom.TodoListWFDetailsfromDb(DashBoardPom.java:155)
+	at Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality(DashBoardScript.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace891954784", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace891954784'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (6a4888643d9257666c2dd2cf75293758)] -&gt; xpath: (//span[@class=&apos;e-input-group-icon e-ddl-icon e-search-icon&apos;])[2]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55766}, goog:processID: 30996, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55766/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a4888643d9257666c2dd2cf75293758
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Computhink.Pom.DashBoardPom.TodoListWFDetailsfromDb(DashBoardPom.java:155)
+	at Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality(DashBoardScript.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>26</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+<tr>
+<td title='Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality()'><b>TodoListWFDetailsDashBoardFunctionality</b><br>Test class: Computhink.Script.DashBoardScript<br/>
+<a href="#Output-330331486" onClick='toggleBox("Output-330331486", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-330331486" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-330331486">
+Scenario 03: Verify dashboard 'Todolist' dropdown<br/>
+Click on dashboard tab<br/>
+Click on dashboard tab<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (6a4888643d9257666c2dd2cf75293758)] -&gt; xpath: (//span[@class=&apos;e-input-group-icon e-ddl-icon e-search-icon&apos;])[2]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55766}, goog:processID: 30996, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55766/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a4888643d9257666c2dd2cf75293758
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Computhink.Pom.DashBoardPom.TodoListWFDetailsfromDb(DashBoardPom.java:155)
+	at Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality(DashBoardScript.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace330331486", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace330331486'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (6a4888643d9257666c2dd2cf75293758)] -&gt; xpath: (//span[@class=&apos;e-input-group-icon e-ddl-icon e-search-icon&apos;])[2]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55766}, goog:processID: 30996, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55766/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a4888643d9257666c2dd2cf75293758
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at Computhink.Pom.DashBoardPom.TodoListWFDetailsfromDb(DashBoardPom.java:155)
+	at Computhink.Script.DashBoardScript.TodoListWFDetailsDashBoardFunctionality(DashBoardScript.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>26</td>
+<td>Computhink.Script.DashBoardScript@592e843a</td></tr>
+</table><p>
+</body>
+</html>

@@ -68,7 +68,7 @@
        <classes>
       <class name="Computhink.Script.RegisterStamp__Advanced_Viewing"/>
     </classes>
-  </test> 
+   </test> 
    <test name="Test13">
        <classes>
       <class name="Computhink.Script.RoomContextFunction_TakeOwnerShip_ReleaseOwnerShip"/>

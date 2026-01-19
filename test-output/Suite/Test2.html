@@ -1,0 +1,294 @@
+<html>
+<head>
+<title>TestNG:  Test2</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test2</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jan 19 21:11:09 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>549 seconds (549490 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.AdvancedViewer_Script.TestCase_5_Verify_Footer_Option()'><b>TestCase_5_Verify_Footer_Option</b><br>Test class: Computhink.Script.AdvancedViewer_Script<br/>
+<a href="#Output-1639923805" onClick='toggleBox("Output-1639923805", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1639923805" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1639923805">
+Click on link button<br/>
+Entered text into the textbox.<br/>
+Enter Link into the textbox<br/>
+Link added successfully...<br/>
+Word Document verified successful<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>Computhink.Script.AdvancedViewer_Script@186978a6</td></tr>
+<tr>
+<td title='Computhink.Script.AdvancedViewer_Script.TestCase_6_Save_And_Reopen()'><b>TestCase_6_Save_And_Reopen</b><br>Test class: Computhink.Script.AdvancedViewer_Script<br/>
+<a href="#Output-726025092" onClick='toggleBox("Output-726025092", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-726025092" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-726025092">
+Click on the save icon from viewer toolbar<br/>
+The added data has been saved successfully...<br/>
+Click on the close icon<br/>
+Document closed successfully...<br/>
+Reopen the created word file document...<br/>
+All saved data should be displayed successfully...<br/>
+Word Document verified successful<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>Computhink.Script.AdvancedViewer_Script@186978a6</td></tr>
+<tr>
+<td title='Computhink.Script.AdvancedViewer_Script.TestCase_4_Verify_Header_Option()'><b>TestCase_4_Verify_Header_Option</b><br>Test class: Computhink.Script.AdvancedViewer_Script<br/>
+<a href="#Output-302846894" onClick='toggleBox("Output-302846894", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-302846894" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-302846894">
+Click on link button<br/>
+Clicked at the specified offset.<br/>
+Entered text into the textbox.<br/>
+Word Document verified successful<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>Computhink.Script.AdvancedViewer_Script@186978a6</td></tr>
+<tr>
+<td title='Computhink.Script.AdvancedViewer_Script.TestCase_2_AdvancedViewerWordDocument()'><b>TestCase_2_AdvancedViewerWordDocument</b><br>Test class: Computhink.Script.AdvancedViewer_Script<br/>
+<a href="#Output-1237024911" onClick='toggleBox("Output-1237024911", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1237024911" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1237024911">
+Scenario 2: Create a document with Advanced viewer - new word document.<br/>
+Click the New Document tab.<br/>
+Click the 'Select destination folder location' text box.<br/>
+'Browser for folder' dialog should be open.<br/>
+Expand the cabinet<br/>
+Expand drawer<br/>
+Select a folder<br/>
+Folder selected successfully...<br/>
+Click on 'Select document type' dropdown and select the document type.<br/>
+Document type selected successfully...<br/>
+Enter the value into index field<br/>
+Mouse hover on the browse icon<br/>
+Select a 'New Word Document'<br/>
+Enter file name dialog should be open.<br/>
+Enter the file name.<br/>
+Click on OK button.<br/>
+'Enter file name' dialog should be closed successfully...<br/>
+Click on Create button<br/>
+'Document Created Successfully' dialog should be displayed<br/>
+Click on View option<br/>
+Click on the close icon<br/>
+Document closed successfully...<br/>
+Reopen the created word file document...<br/>
+All saved data should be displayed successfully...<br/>
+Mouse hover on the browse icon<br/>
+Enter data into the page<br/>
+Click on the Save icon from viewer tool bar.<br/>
+Click on save successful dialog OK button.<br/>
+Click on image icon, it will show 'upload from computer' option.<br/>
+Select the 'upload from computer' option.<br/>
+Using Auto IT add the image from folder successfully.<br/>
+Click on Table icon.<br/>
+Add the table into the page.<br/>
+Enter the data inside the table<br/>
+Click on the save icon from viewer tool bar<br/>
+The added data has been saved successfully...<br/>
+Click on the close icon<br/>
+Document closed successfully...<br/>
+Reopen the created word file document...<br/>
+All saved data should be displayed successfully...<br/>
+Word Document verified successful<br/>
+</div>
+</td>
+<td></td>
+<td>191</td>
+<td>Computhink.Script.AdvancedViewer_Script@186978a6</td></tr>
+<tr>
+<td title='Computhink.Script.AdvancedViewer_Script.TestCase_7_AdvancedViewerPDfDocument()'><b>TestCase_7_AdvancedViewerPDfDocument</b><br>Test class: Computhink.Script.AdvancedViewer_Script<br/>
+<a href="#Output-1298048886" onClick='toggleBox("Output-1298048886", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1298048886" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1298048886">
+Scenario 4: Create a document with Advanced viewer - new PDF document <br/>
+Click on New Document tab<br/>
+Click the 'Select document type' dropdown and select the document type.<br/>
+Enter the value into index field<br/>
+Mouse hover on the browse icon<br/>
+Select New PDF document<br/>
+Enter the file name<br/>
+Click on the create button<br/>
+Click on the view option<br/>
+Click on advanced tool icon<br/>
+Click on free text icon.<br/>
+Enter data into free text box<br/>
+Click on comment icon, add a comment<br/>
+Comment added successfully<br/>
+Click on save icon from viewer menu tab<br/>
+Document saved successfully<br/>
+Click on the Close icon<br/>
+Reopen the Created pdf file document<br/>
+PDF Document verified successfull<br/>
+</div>
+</td>
+<td></td>
+<td>133</td>
+<td>Computhink.Script.AdvancedViewer_Script@186978a6</td></tr>
+<tr>
+<td title='Computhink.Script.AdvancedViewer_Script.Login_To_EWA()'><b>Login_To_EWA</b><br>Test class: Computhink.Script.AdvancedViewer_Script<br/>
+<a href="#Output-1952627275" onClick='toggleBox("Output-1952627275", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1952627275" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1952627275">
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session for user is already active. Do you want to create a new session? Dialog box displayed. User clicks OK button.<br/>
+User logged in successful... <br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>Computhink.Script.AdvancedViewer_Script@186978a6</td></tr>
+<tr>
+<td title='Computhink.Script.AdvancedViewer_Script.TestCase_8_AdvancedViewerExcelDocument()'><b>TestCase_8_AdvancedViewerExcelDocument</b><br>Test class: Computhink.Script.AdvancedViewer_Script<br/>
+<a href="#Output-1689211988" onClick='toggleBox("Output-1689211988", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1689211988" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1689211988">
+Scenario 3: Create a document with Advanced viewer - 'New Excel Document' <br/>
+Click on the New Document tab<br/>
+Click on the 'Select document type' dropdown and select the document type.<br/>
+Enter the value into index field<br/>
+Click on the create button<br/>
+Click on View option<br/>
+Mouse hover on browse icon<br/>
+Select New Excel sheet<br/>
+Enter file name dialog should be open<br/>
+Enter file name and click OK button<br/>
+'Enter file name' dialog should be closed successfully...<br/>
+Enter data into the first row<br/>
+Enter data into the second row<br/>
+Click on save icon from viewer tool bar<br/>
+Click on 'Save successful' dialog box OK button<br/>
+Click on Close icon<br/>
+Document closed successfully...<br/>
+Reopen the created document<br/>
+Excel spread sheet verified successfull<br/>
+</div>
+</td>
+<td></td>
+<td>95</td>
+<td>Computhink.Script.AdvancedViewer_Script@186978a6</td></tr>
+<tr>
+<td title='Computhink.Script.AdvancedViewer_Script.TestCase_1_AdvancedViewerOptionSelection()'><b>TestCase_1_AdvancedViewerOptionSelection</b><br>Test class: Computhink.Script.AdvancedViewer_Script<br/>
+<a href="#Output-1900806101" onClick='toggleBox("Output-1900806101", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1900806101" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1900806101">
+Scenario 1: Go to My Preference, Change the Default viewing as Advanced viewer<br/>
+Click on Setting icon<br/>
+Go to My preference<br/>
+Set the office document to advanced viewing<br/>
+Set the PDF document to advanced viewing<br/>
+Click on Apply button<br/>
+Advanced viewer mode has been set successfully...<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>Computhink.Script.AdvancedViewer_Script@186978a6</td></tr>
+<tr>
+<td title='Computhink.Script.AdvancedViewer_Script.TestCase_3_Verify_Link_Option()'><b>TestCase_3_Verify_Link_Option</b><br>Test class: Computhink.Script.AdvancedViewer_Script<br/>
+<a href="#Output-873636861" onClick='toggleBox("Output-873636861", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-873636861" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-873636861">
+Click on link button<br/>
+Enter Link into the textbox<br/>
+Link added successfully...<br/>
+Word Document verified successful<br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>Computhink.Script.AdvancedViewer_Script@186978a6</td></tr>
+</table><p>
+</body>
+</html>

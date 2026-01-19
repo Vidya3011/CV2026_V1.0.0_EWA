@@ -1,0 +1,1058 @@
+<html>
+<head>
+<title>TestNG:  Test3</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test3</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>24/0/1</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jan 19 21:20:19 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>807 seconds (807447 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.N_TextSearchWithSQLData()'><b>N_TextSearchWithSQLData</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-1561722966" onClick='toggleBox("Output-1561722966", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1561722966" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1561722966">
+Scenario 19:Search tab- TextContains search 'alloftheword' option<br/>
+NOTE:Start the indexer server then execute the mentioned SQL statement 'ALTER FULLTEXT INDEX ON Indexer START FULL POPULATION
+Select * from Indexer<br/>
+Click on search tab<br/>
+Select text contains 'alloftheword' option<br/>
+Start the  indexer by using sql statement<br/>
+Click on find button<br/>
+It will automatically  list all the indexed document relate to the search<br/>
+Click on find button<br/>
+open the document from the list, verify the thumbnail it will be highlihted for the particular search.<br/>
+open the document from the list, verify the thumbnail it will be highlihted for the particular search.<br/>
+AlertNotPresent<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.R_QuickSearch()'><b>R_QuickSearch</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-878300377" onClick='toggleBox("Output-878300377", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-878300377" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-878300377">
+Scenario 23: Search tab - Quick search<br/>
+Enter value in quick search textbox<br/>
+vwadmin Data entered and searched successful<br/>
+Click on Keyboard ENTER key<br/>
+Search result count :0<br/>
+Document list verified succesful<br/>
+It should display document on the page<br/>
+It should display the searched document on the page successfully...<br/>
+Page refreshed after search.<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.A_BlankSearch()'><b>A_BlankSearch</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-751413576" onClick='toggleBox("Output-751413576", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-751413576" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-751413576">
+Scenario 01: Search tab - blank search<br/>
+Scenario 01: Search tab - blank search<br/>
+User clicks on Search tab<br/>
+Search tab is displayed successfully.<br/>
+Click on the Find button<br/>
+Search result : 50<br/>
+Document list verified succesful<br/>
+Document list is displayed after clicking Find button.<br/>
+Click on Clear button<br/>
+Searched document list cleared successfully<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.P_TextSearchWithAtpartOftheWord()'><b>P_TextSearchWithAtpartOftheWord</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-763733191" onClick='toggleBox("Output-763733191", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-763733191" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-763733191">
+Scenario 21:Search tab- TextContains search 'AtPartOFTheWord' option<br/>
+NOTE:Start the indexer server then execute the mentioned SQL statement 'ALTER FULLTEXT INDEX ON Indexer START FULL POPULATION
+Select * from Indexer<br/>
+Click on search tab<br/>
+Click on 'AtpartOFtheWord' word submenu<br/>
+It will automatically  list all the indexed document relate to the search<br/>
+User click on Find button<br/>
+open the document from the list, verify the thumbnail it will be highlihted for the particular search.<br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.O_TaskCompletedWFDocumentt()'><b>O_TaskCompletedWFDocumentt</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-33798663" onClick='toggleBox("Output-33798663", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-33798663" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-33798663">
+Scenario 18: Verify Search tab-Workflow status(TaskCompleted option)<br/>
+Task completed workflow selected successful<br/>
+Select a workflow dropdown  Task completed Option<br/>
+Click on find button<br/>
+Search result count :0<br/>
+Document list verified succesful<br/>
+SUmmary is NOT opening<br/>
+Click on clear button<br/>
+Listed document cleared successfully...<br/>
+===============================================================================<br/>
+</div>
+</td>
+<td></td>
+<td>40</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.G_FolderLevelSearch()'><b>G_FolderLevelSearch</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-1985467039" onClick='toggleBox("Output-1985467039", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1985467039" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1985467039">
+Scenario 10: Verify 'Select document location' - folder<br/>
+Click on search tab<br/>
+Click on 'Select search location' textbox<br/>
+Search select location opened successful<br/>
+Select search location<br/>
+Cabinet list in current room:   cabinet test<br/>
+Cabinet list in current room:   CVReports<br/>
+Cabinet list in current room:   2025<br/>
+Cabinet list in current room:   Reject<br/>
+Cabinet list in current room:   Start workflow<br/>
+Cabinet list in current room:   Test_cabinet<br/>
+Cabinet list in current room:   Final Regression test<br/>
+Expand a cabinet<br/>
+ CVReportsCabinet expanded successfully...<br/>
+Expand a drawer<br/>
+ Users and Groups PanelDrawer expanded successfully...<br/>
+Select a folder<br/>
+ 2025 Named folder selected successful<br/>
+Click on 'Select search location' dialog OK button<br/>
+Click on find button<br/>
+Search result : 3<br/>
+Document list verified succesful<br/>
+It should display document on the page<br/>
+It should display the particular selected folder documents on the page<br/>
+Clear search criteria<br/>
+Page cleared successful<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.K_DocumentCreatorDropDown()'><b>K_DocumentCreatorDropDown</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-1412194661" onClick='toggleBox("Output-1412194661", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1412194661" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1412194661">
+Scenario 14:Verify Search tab  ('document creator')<br/>
+Scenario 14: Verify Search tab ('document creator')<br/>
+Click on the search tab<br/>
+Document creator dropdown NOT selected successful<br/>
+Select a document creator from the dropdown<br/>
+Creator List: admin<br/>
+Creator List: admin1<br/>
+Creator List: AIPUser1<br/>
+Creator List: AIPUser2<br/>
+Creator List: AIPUser3<br/>
+Creator List: Ajay<br/>
+Creator List: Boot<br/>
+Creator List: CR-QA<br/>
+Creator List: cvadmin<br/>
+Creator List: cvadmin1<br/>
+Creator List: cvuser<br/>
+Creator List: dipak<br/>
+Creator List: hrithik<br/>
+Creator List: joe<br/>
+Creator List: Kaviya<br/>
+Creator List: Kaviya.cube<br/>
+Creator List: Kiara<br/>
+Creator List: nisha<br/>
+Creator List: Nithish<br/>
+Creator List: PNUser1<br/>
+Creator List: PNUser2<br/>
+Creator List: pradeepa<br/>
+Creator List: pradeepa.p<br/>
+Creator List: pujita<br/>
+Creator List: Rahini<br/>
+Creator List: rnisha<br/>
+Creator List: Robert<br/>
+Creator List: srikanth<br/>
+Creator List: subham<br/>
+Creator List: test-user<br/>
+Creator List: test-user.com<br/>
+Creator List: test_user<br/>
+Creator List: Tom<br/>
+Creator List: vidya<br/>
+Creator List: vwadmin<br/>
+Select a specific document creator<br/>
+Selected creator name details :dipak<br/>
+Click on find button<br/>
+Search result : 50<br/>
+Document list verified succesful<br/>
+It should display document on the page<br/>
+Given creator name :dipakShould be same as listed creator name: dipak<br/>
+Document creator name selected successful...<br/>
+It should display the searched creator documents on the page<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.B_ExactSearchInIndexWithLoadMoreCount()'><b>B_ExactSearchInIndexWithLoadMoreCount</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-991393180" onClick='toggleBox("Output-991393180", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-991393180" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-991393180">
+Scenario 02: Search - load more count<br/>
+User clicks on Search tab<br/>
+Search tab clicked successfully...<br/>
+Click on find button<br/>
+Document list is displayed after clicking Find button.<br/>
+Click on metadata option<br/>
+It should list the below-mentioned options:<br/>
+Document Type<br/>
+<br/>
+Properties<br/>
+Comments [0]<br/>
+[0]<br/>
+References [0]<br/>
+Versions<br/>
+General<br/>
+History<br/>
+Scroll down the searched list; user can now see the 'Load More' button.<br/>
+Click on 'Load More' button<br/>
+Load More button clicked<br/>
+It should list the next set of documents; click another document and verify metadata options.<br/>
+It should list the below-mentioned options:<br/>
+Document Type<br/>
+<br/>
+Properties<br/>
+Comments [0]<br/>
+[0]<br/>
+References [0]<br/>
+Versions<br/>
+General<br/>
+History<br/>
+Scroll down the searched list again to show 'Load More' button<br/>
+Load More button clicked again<br/>
+No alert is present.<br/>
+Click on OK button<br/>
+It should close the alert dialog successfully.<br/>
+Click on clear button<br/>
+</div>
+</td>
+<td></td>
+<td>63</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.D_AtLeastOneWordSeachIndex()'><b>D_AtLeastOneWordSeachIndex</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-2064777114" onClick='toggleBox("Output-2064777114", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2064777114" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2064777114">
+Scenario 04: Search tab- Index contains 'AtleastOneOfTheWord'<br/>
+User clicks on Search tab<br/>
+User click on 'AtleastOneOfTheWord' submenu<br/>
+'At least one of the word' option selected successful <br/>
+User enters the value into index contains text box<br/>
+Data entered successful<br/>
+Entered Data details:Employment<br/>
+User clicks on find button<br/>
+Search result count :0<br/>
+Document list verified succesful<br/>
+It should display document on the page<br/>
+Search functionality with exact phrase index contains search working fine<br/>
+Click on Clear button<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.CreateAndModifyDate()'><b>CreateAndModifyDate</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-591667658" onClick='toggleBox("Output-591667658", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-591667658" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-591667658">
+Scenario 25:Verify Date enter functionality<br/>
+Click on search tab<br/>
+Click on Datefrom<br/>
+Enter the datefrom<br/>
+Click on ok button<br/>
+Click on Dateto<br/>
+Enter the Dateto<br/>
+Click on ok button<br/>
+Click on find<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.J_DocumentDropDown()'><b>J_DocumentDropDown</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-1176077642" onClick='toggleBox("Output-1176077642", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1176077642" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1176077642">
+Scenario 13: Verify search tab ('Document Type')<br/>
+Click on document type dropdown<br/>
+User should select a document type<br/>
+Document type List: AAA Mask 2<br/>
+Document type List: AAA mask check<br/>
+Document type List: All Type doc<br/>
+Document type List: Boolean doc type<br/>
+Document type List: Custom column<br/>
+Document type List: customer<br/>
+Document type List: Customer Invoice<br/>
+Document type List: CVReports<br/>
+Document type List: Date and Number<br/>
+Document type List: Date Doc type<br/>
+Document type List: DB Lookup others<br/>
+Document type List: DBLookup - Workflow doc type<br/>
+Document type List: Decimal dt<br/>
+Document type List: del 12<br/>
+Document type List: Document Size<br/>
+Document type List: Dynamic doc type<br/>
+Document type List: Dynamic with DB Lookup<br/>
+Document type List: EEOC - Civil Rights Charges<br/>
+Document type List: EMP Details<br/>
+Document type List: Employment Application - Not Hired<br/>
+Document type List: HR Docs<br/>
+Document type List: Index based<br/>
+Document type List: MS Access DB Lookup<br/>
+Document type List: My Sql DB Lookup<br/>
+Document type List: MySql Different<br/>
+Document type List: Number with Digit<br/>
+Document type List: Oracle DBLookup<br/>
+Document type List: ppp<br/>
+Document type List: Selection Doc type<br/>
+Document type List: SEQ doctype<br/>
+Document type List: spoets<br/>
+Document type List: Sql DB Lookup<br/>
+Document type List: Sql DB Lookup New<br/>
+Document type List: Sybase DB Lookup<br/>
+Document type List: Table of Organization<br/>
+Document type List: Tax<br/>
+Document type List: Test Data<br/>
+Document type List: Test document robert<br/>
+Document type List: Test new document<br/>
+Document type List: Test Year<br/>
+Document type List: test5664<br/>
+Document type List: Text mask Doc type<br/>
+Document type List: The Deep Seafood Co-Tax Invoice<br/>
+Document type List: Trail Plan_CR_STG<br/>
+Document type List: Trail Plan_QA<br/>
+Document type List: Trail Plan_RD<br/>
+Document type List: Trial Plan_HR_STG<br/>
+Document type List: Uppper char<br/>
+Document type List: Volunteer Applications<br/>
+Selected document type details: AAA mask check<br/>
+Document type selected successfully<br/>
+Click on find button<br/>
+Search result : 16<br/>
+Document list verified succesful<br/>
+Selected document type name : AAA mask check  Listed document type name: AAA mask check  Both should be same name<br/>
+Document type name matched successfully...<br/>
+It should display document on the page<br/>
+It should display the searched document type documents on the page<br/>
+Click on clear button; It should clear the search list <br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.C_ExactSearchInIndex()'><b>C_ExactSearchInIndex</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-666363491" onClick='toggleBox("Output-666363491", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-666363491" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-666363491">
+Scenario 03: Search tab - Index search contains 'Exact Phrase'<br/>
+User clicks on search tab<br/>
+Click on index search contains textbox and select Exact phrase option<br/>
+Exact phrase option selected successful<br/>
+Click on find button<br/>
+It should list the document on the page, document displayed successfully...<br/>
+Generated Document Count = Search result : 2<br/>
+Search tab: Exact phrase index contains search working fine<br/>
+Click on Clear button<br/>
+It should clear the searched document list successfully<br/>
+</div>
+</td>
+<td></td>
+<td>29</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.N_CompletedWF_Document()'><b>N_CompletedWF_Document</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-335938576" onClick='toggleBox("Output-335938576", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-335938576" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-335938576">
+Scenario 16: Verify Search tab - Workflow status (Workflow Completed option)<br/>
+Selected a workflow dropdown 'Workflow Completed' option<br/>
+User clicked on the Find button<br/>
+Search result : 40<br/>
+Document list verified succesful<br/>
+Click on summary button<br/>
+<br><strong>Worflow Document Summary Details Mentioned Below:</strong><br><br/>
+<table border='1' style='border-collapse: collapse; text-align: center;'><br/>
+<tr><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+</tr><br/>
+<tr><br/>
+<td>1</td><br/>
+<td>cvadmin</td><br/>
+<td>Originator</td><br/>
+<td>-</td><br/>
+<td>Originator</td><br/>
+<td>2025-05-06 02:58</td><br/>
+<td></td><br/>
+<td>SBI Workflow</td><br/>
+<td></td><br/>
+</tr><br/>
+<tr><br/>
+<td>2</td><br/>
+<td>Robert</td><br/>
+<td>Task_1</td><br/>
+<td>-</td><br/>
+<td>Pending</td><br/>
+<td>2025-05-06 02:58</td><br/>
+<td></td><br/>
+<td>SBI Workflow</td><br/>
+<td></td><br/>
+</tr><br/>
+</table><br><br/>
+Click on clear button<br/>
+Listed documents cleared successfully...<br/>
+===============================================================================<br/>
+Scenario 17: Verify Search tab - Workflow status (End Workflow option)<br/>
+Clicked on workflow dropdown<br/>
+Selected a workflow dropdown 'End Workflow' option<br/>
+User clicked on the Find button<br/>
+Search result : 3<br/>
+Document list verified succesful<br/>
+Click on summary button<br/>
+<br><strong>Worflow Document Summary Details Mentioned Below:</strong><br><br/>
+<table border='1' style='border-collapse: collapse; text-align: center;'><br/>
+<tr><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+</tr><br/>
+<tr><br/>
+<td>1</td><br/>
+<td>vidya</td><br/>
+<td>Originator</td><br/>
+<td>-</td><br/>
+<td>Originator</td><br/>
+<td>2025-06-23 13:22</td><br/>
+<td></td><br/>
+<td>Test wf</td><br/>
+<td></td><br/>
+</tr><br/>
+<tr><br/>
+<td>2</td><br/>
+<td>nisha</td><br/>
+<td>Task_1</td><br/>
+<td>-</td><br/>
+<td>Ended, Workflow ceased</td><br/>
+<td>2025-06-23 13:22</td><br/>
+<td></td><br/>
+<td>Test wf</td><br/>
+<td></td><br/>
+</tr><br/>
+<tr><br/>
+<td>3</td><br/>
+<td>vidya</td><br/>
+<td>Task_1</td><br/>
+<td>2025-06-23 15:22:44: bjud</td><br/>
+<td>Workflow Ended</td><br/>
+<td>2025-06-23 13:22</td><br/>
+<td>2025-06-23 15:22</td><br/>
+<td>Test wf</td><br/>
+<td></td><br/>
+</tr><br/>
+</table><br><br/>
+Click on clear button<br/>
+Listed documents cleared successfully...<br/>
+===============================================================================<br/>
+</div>
+</td>
+<td></td>
+<td>46</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.Q_FolderSerchIcon()'><b>Q_FolderSerchIcon</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-1569579349" onClick='toggleBox("Output-1569579349", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1569579349" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1569579349">
+Scenario 22: Navigation folder icon search<br/>
+Click on navigation folder search icon<br/>
+Navigation tree icon selected<br/>
+Navigation tree icon NOT selected<br/>
+Enter value into navigation folder search textbox<br/>
+Data entered successful; Entered Data Details: vwadmin<br/>
+Click on Keyboard ENTER key<br/>
+Folder search dialog should be opened<br/>
+Folder search icon opened successful<br/>
+Click on folder document close icon<br/>
+TreeIcon search functionality works fine<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.H_DrawerLevelSearch()'><b>H_DrawerLevelSearch</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-586212137" onClick='toggleBox("Output-586212137", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-586212137" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-586212137">
+Scenario 11: Verify 'Select Document location' - drawer<br/>
+Click on search tab<br/>
+Click on 'Select Document location' textbox<br/>
+Expand a cabinet<br/>
+Select search location<br/>
+Cabinet list in current room:   cabinet test<br/>
+Cabinet list in current room:   CVReports<br/>
+Cabinet list in current room:   2025<br/>
+Cabinet list in current room:   Reject<br/>
+Cabinet list in current room:   Start workflow<br/>
+Cabinet list in current room:   Test_cabinet<br/>
+Cabinet list in current room:   Final Regression test<br/>
+Expand a cabinet<br/>
+ CVReportsCabinet expanded successfully...<br/>
+Expand a drawer<br/>
+ Users and Groups PanelDrawer expanded successfully...<br/>
+Click on 'Select Document location' dialog OK button<br/>
+Click on find button<br/>
+Search result : 3<br/>
+Document list verified succesful<br/>
+It should display document on the page<br/>
+It should display the particular drawer document on the page<br/>
+Document list cleared...<br/>
+</div>
+</td>
+<td></td>
+<td>35</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.E_AllOfTheWordSearchIndex()'><b>E_AllOfTheWordSearchIndex</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-528776606" onClick='toggleBox("Output-528776606", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-528776606" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-528776606">
+Scenario 05:Search tab Index contains 'all of the word'<br/>
+Click on Index contains search 'all of the word' submenu<br/>
+Enter value in index contains search textbox<br/>
+'All of the word search' option selected successful <br/>
+User enters the value into index contains text box<br/>
+Data entered successful<br/>
+Entered Data details:Test<br/>
+Click on find button<br/>
+Search result : 62<br/>
+Document list verified succesful<br/>
+It should display the document on the page, Document dislpayed successfull...<br/>
+Click on meta data option<br/>
+It should list below mentioned options:<br/>
+Index contains search 'all of the word' working fine...<br/>
+It should display the document on the page, Document dislpayed successfull...<br/>
+Index contains search 'all of the word' working fine...<br/>
+Click on clear button<br/>
+</div>
+</td>
+<td></td>
+<td>36</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.O_TextSearchWithAllOftheWords()'><b>O_TextSearchWithAllOftheWords</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-1417740319" onClick='toggleBox("Output-1417740319", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1417740319" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1417740319">
+Scenario 20:Search tab- TextContains search 'AtLeasetOneOFTheWord' option<br/>
+NOTE:Start the indexer server then execute the mentioned SQL statement 'ALTER FULLTEXT INDEX ON Indexer START FULL POPULATION
+Select * from Indexer<br/>
+Click on search tab<br/>
+Select text contains 'AtLeastOneOFTheWord' option<br/>
+Start the  indexer by using sql statement<br/>
+It will automatically  list all the indexed document relate to the search<br/>
+open the document from the list, verify the thumbnail it will be highlihted for the particular search.<br/>
+AlertNotPresent<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.S_DocumentSearch()'><b>S_DocumentSearch</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-434497606" onClick='toggleBox("Output-434497606", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-434497606" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-434497606">
+Scenario 24:Folder document search<br/>
+Open a folder<br/>
+Enter document name in folder search text box<br/>
+It should display the particular document on the page<br/>
+The documents Search from folder completed, working fine<br/>
+</div>
+</td>
+<td></td>
+<td>61</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.M_PendingWorkflow()'><b>M_PendingWorkflow</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-1573832937" onClick='toggleBox("Output-1573832937", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1573832937" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1573832937">
+Scenario 15:  Verify Search tab-Workflow status(Pending option)<br/>
+Select the workflow dropdown pending Option<br/>
+Workflowdropdown option expanded successful<br/>
+Click on find button<br/>
+It should display the wrokflow status pending documents on the page<br/>
+Search result : 21<br/>
+Document list verified succesful<br/>
+It should display document on the page<br/>
+Click on summary button<br/>
+<br><strong>Pending Document Summary Details Mentioned Below:</strong><br><br/>
+<table border='1' style='border-collapse: collapse; text-align: center;'><br/>
+Pending Document Summary Details Mentioned Below:<br/>
+<tr><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+</tr><br/>
+<tr><br/>
+<td>1</td><br/>
+<td>dipak</td><br/>
+<td>Originator</td><br/>
+<td>-</td><br/>
+<td>Originator</td><br/>
+<td>2026-01-08 17:50</td><br/>
+<td></td><br/>
+<td>QA Test Workflow</td><br/>
+<td></td><br/>
+</tr><br/>
+<tr><br/>
+<td>2</td><br/>
+<td>dipak</td><br/>
+<td>Task_1</td><br/>
+<td>-</td><br/>
+<td>Pending</td><br/>
+<td>2026-01-08 17:50</td><br/>
+<td></td><br/>
+<td>QA Test Workflow</td><br/>
+<td></td><br/>
+</tr><br/>
+</table><br><br/>
+Click on clear button<br/>
+Listed document cleared successfully...<br/>
+===============================================================================<br/>
+</div>
+</td>
+<td></td>
+<td>26</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.I_CabinetLevel()'><b>I_CabinetLevel</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-1717737290" onClick='toggleBox("Output-1717737290", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1717737290" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1717737290">
+Scenario 12: Verify 'Select Document location'- cabinet <br/>
+Click on search tab<br/>
+Click on 'Select Document location' textbox<br/>
+Expand a cabinet<br/>
+Select search location<br/>
+Cabinet list in current room:   cabinet test<br/>
+Cabinet list in current room:   CVReports<br/>
+Cabinet list in current room:   2025<br/>
+Cabinet list in current room:   Reject<br/>
+Cabinet list in current room:   Start workflow<br/>
+Cabinet list in current room:   Test_cabinet<br/>
+Cabinet list in current room:   Final Regression test<br/>
+Expand a cabinet<br/>
+ CVReportsCabinet expanded successfully...<br/>
+Click on find button<br/>
+Search result : 50<br/>
+Document list verified succesful<br/>
+It should display document on the page<br/>
+It should display the searched cabinet document on the page<br/>
+Document list cleared...<br/>
+</div>
+</td>
+<td></td>
+<td>35</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.Login()'><b>Login</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-1946122836" onClick='toggleBox("Output-1946122836", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1946122836" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1946122836">
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session for user is already active. Do you want to create a new session? Dialog box displayed. User clicks OK button.<br/>
+User logged in successfully... <br/>
+Zero-Page Document IDs: <br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.All_Version()'><b>All_Version</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-905879757" onClick='toggleBox("Output-905879757", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-905879757" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-905879757">
+Scneario 09: Search tab - all version check box<br/>
+User enter the value in index contains search text box<br/>
+Click on all version check box<br/>
+Click on find button<br/>
+It should display the document which in containing version<br/>
+Click on Clear button<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.AppendToHit()'><b>AppendToHit</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-1247658278" onClick='toggleBox("Output-1247658278", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1247658278" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1247658278">
+Scenario 06:Search tab - AppendToHitlist checkbox<br/>
+Enter the value into index contains search text box<br/>
+First do a normal search for listing the document purpose <br/>
+Data entered successful<br/>
+Entered Data details:Document<br/>
+Click on find button<br/>
+Search result : 50<br/>
+Document list verified succesful<br/>
+It should display document on the page<br/>
+It should list the document on document page<br/>
+Clear the index contains search text box,which has given before for normal search<br/>
+Click on append to hit list check box<br/>
+Append to hitlist option selected successful<br/>
+After selecting append to hitlist checkbox, Enter the value into index contains search text box <br/>
+Data entered successful<br/>
+Entered Data details:dfsd<br/>
+User clicks on find button<br/>
+Search result : 50 of 50<br/>
+Document list verified succesful<br/>
+It should display document on the page<br/>
+It appends the search document in the listed document<br/>
+The given document name must match with the  searched document name,<br/>
+Document appends on the page successful; given document name : dfsd
+ Append Document name : AdvancedViewExcelDocument<br/>
+===========================================================================<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.L_Reject_WF()'><b>L_Reject_WF</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-1133529071" onClick='toggleBox("Output-1133529071", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1133529071" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1133529071">
+Scenario 14:Verify Search tab-Workflow status(Reject option)<br/>
+Click on workflow status dropdown<br/>
+Workflowdropdown option expanded successful<br/>
+Select Reject option<br/>
+Workflowdropdown REJECT option NOT selected successful<br/>
+Click on find button<br/>
+It should display the rejected workflow documents on the page<br/>
+Search result : 5<br/>
+Document list verified succesful<br/>
+It should display document on the page<br/>
+Click on summary button<br/>
+<strong>Reject Document Summary Details Mentioned Below:</strong><br><br/>
+<table border='1' style='border-collapse: collapse; text-align: center;'><br/>
+Reject Document Summary Details Mentioned Below:<br/>
+<tr><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+<td></td><br/>
+</tr><br/>
+<tr><br/>
+<td>1</td><br/>
+<td>dipak</td><br/>
+<td>Originator</td><br/>
+<td>-</td><br/>
+<td>Originator</td><br/>
+<td>2025-12-19 14:41</td><br/>
+<td></td><br/>
+<td>QA Test Workflow</td><br/>
+<td></td><br/>
+</tr><br/>
+<tr><br/>
+<td>2</td><br/>
+<td>dipak</td><br/>
+<td>Task_1</td><br/>
+<td>2025-12-19 14:44:59: hii</td><br/>
+<td>Approved</td><br/>
+<td>2025-12-19 14:41</td><br/>
+<td>2025-12-19 14:44</td><br/>
+<td>QA Test Workflow</td><br/>
+<td></td><br/>
+</tr><br/>
+<tr><br/>
+<td>3</td><br/>
+<td>pradeepa</td><br/>
+<td>Task_2</td><br/>
+<td>2025-12-19 14:46:03: rejected</td><br/>
+<td>Rejected</td><br/>
+<td>2025-12-19 14:45</td><br/>
+<td>2025-12-19 14:46</td><br/>
+<td>QA Test Workflow</td><br/>
+<td></td><br/>
+</tr><br/>
+<tr><br/>
+<td>4</td><br/>
+<td>dipak</td><br/>
+<td>Task_2</td><br/>
+<td>-</td><br/>
+<td>Rejected, Workflow completed</td><br/>
+<td>2025-12-19 14:46</td><br/>
+<td></td><br/>
+<td>QA Test Workflow</td><br/>
+<td></td><br/>
+</tr><br/>
+</table><br><br/>
+Summary verified; Rejected Document Listed successfully.<br/>
+Summary cancel button clicked successful<br/>
+Click on clear button<br/>
+Listed document cleared successfully...<br/>
+=================================================================<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.SearchSelectDocumentLocation.P_TextSearchWithAtpartOftheWord()'><b>P_TextSearchWithAtpartOftheWord</b><br>Test class: Computhink.Script.SearchSelectDocumentLocation<br/>
+<a href="#Output-519710094" onClick='toggleBox("Output-519710094", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-519710094" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-519710094">
+Scenario 21:Search tab- TextContains search 'AtPartOFTheWord' option<br/>
+NOTE:Start the indexer server then execute the mentioned SQL statement 'ALTER FULLTEXT INDEX ON Indexer START FULL POPULATION
+Select * from Indexer<br/>
+Click on search tab<br/>
+Click on 'AtpartOFtheWord' word submenu<br/>
+It will automatically  list all the indexed document relate to the search<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=144.0.7559.59)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [95bde7cd628b528319af5d66b83f65f0, clickElement {id=f.FF3338F5EEFDA4A34A01AFDD61BBDBDB.d.87DD257754A2DDC070F7DFA7F6E520A5.e.4421}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55450}, goog:processID: 36200, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55450/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (95bde7cd628b528319af5d66b83f65f0)] -&gt; xpath: (//img[@id=&apos;labelSearchImage2&apos;])[1]]
+Session ID: 95bde7cd628b528319af5d66b83f65f0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at Computhink.Pom.SearchFunction.TextSearchWithAtpartOftheWord(SearchFunction.java:991)
+	at Computhink.Script.SearchSelectDocumentLocation.P_TextSearchWithAtpartOftheWord(SearchSelectDocumentLocation.java:171)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace519710094", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace519710094'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=144.0.7559.59)
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [95bde7cd628b528319af5d66b83f65f0, clickElement {id=f.FF3338F5EEFDA4A34A01AFDD61BBDBDB.d.87DD257754A2DDC070F7DFA7F6E520A5.e.4421}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55450}, goog:processID: 36200, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55450/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (95bde7cd628b528319af5d66b83f65f0)] -&gt; xpath: (//img[@id=&apos;labelSearchImage2&apos;])[1]]
+Session ID: 95bde7cd628b528319af5d66b83f65f0
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at Computhink.Pom.SearchFunction.TextSearchWithAtpartOftheWord(SearchFunction.java:991)
+	at Computhink.Script.SearchSelectDocumentLocation.P_TextSearchWithAtpartOftheWord(SearchSelectDocumentLocation.java:171)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>13</td>
+<td>Computhink.Script.SearchSelectDocumentLocation@32f0fba8</td></tr>
+</table><p>
+</body>
+</html>

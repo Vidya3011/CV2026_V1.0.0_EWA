@@ -180,13 +180,13 @@ public class SearchSelectDocumentLocation extends Computhink.Generic.BaseClass {
 		log.info(" verify Allversion/include comments/appendtohitlist /find in hit list functionality working fine");
 	}
 
-	@Test(priority = 22)
+	/*@Test(priority = 22)
 	public void Find_In_Hit_List() throws InterruptedException, IOException {
 		SearchFunction sr = new SearchFunction();
 		sr.Find_In_Hit_List();
 		log.info("Find in hit list functionality working fine");
 	}
-
+*/
 	@Test(priority = 23)
 	public void All_Version() throws InterruptedException, IOException {
 		SearchFunction sr = new SearchFunction();

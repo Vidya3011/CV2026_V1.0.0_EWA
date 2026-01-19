@@ -1,0 +1,1741 @@
+<html>
+<head>
+<title>TestNG:  Test5</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test5</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/2/6</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jan 19 16:21:50 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>3369 seconds (3369952 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes()'><b>TC_10_Verify_Respective_permission_To_Group_for_AllNodes</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-123902210" onClick='toggleBox("Output-123902210", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-123902210" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-123902210">
+Test Scenario 10 :Verifying Respective permission To Group for AllNodes <br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Login with Security permission assign Group<br/>
+Click on Refresh button<br/>
+Click on Setting Icon<br/>
+Click on My Preferences Option<br/>
+Select Office Document and set Default View Option <br/>
+Select Pdf Document and set Default View Option<br/>
+Click on Security Dialog Apply button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+Mousehover to Roomname Tab<br/>
+Delete permission should be Denied Selected  for Drawer<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Check Document from Document List <br/>
+Mousehover on Documents Tab<br/>
+Click on the Send To Option<br/>
+Document open successfully under Folder<br/>
+Click on First page Thumbnail<br/>
+Verified Share option is Disable from Viewer menu<br/>
+Click on Cross button and Close document<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+<b>Test Failed: TC_10_Verify_Respective_permission_To_Group_for_AllNodes</b><br/>
+<a href='screenshots/TC_10_Verify_Respective_permission_To_Group_for_AllNodes_failure.png' target='_blank'>View Screenshot</a><br/>
+<br><img src='screenshots/TC_10_Verify_Respective_permission_To_Group_for_AllNodes_failure.png' width='400' height='300'/><br><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Verify_Respective_Group_permission(Security.java:1562)
+	at Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes(Security_dialog_Test.java:94)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace123902210", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace123902210'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at jdk.internal.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Verify_Respective_Group_permission(Security.java:1562)
+	at Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes(Security_dialog_Test.java:94)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>203</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder()'><b>TC_08_Verify_Modify_Permissions_Denied_on_subFolder</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1658243833" onClick='toggleBox("Output-1658243833", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1658243833" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1658243833">
+Test Scenario 8 : Verifying Modify Permissions Denied on subFolder <br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Click on Security Dialog Add button<br/>
+Select Cvnamed Group<br/>
+Select User from Group<br/>
+Click on Security dialog Ok button<br/>
+The Selected Entry is already in the Entry List. this validation message should show<br/>
+Verifying Validation message<br/>
+Select added User<br/>
+Click on  New Entry button<br/>
+Assign all permission to Selected <br/>
+Denied Modify Permission to Selected <br/>
+Click on Security dialog Apply button<br/>
+Click on the Ok button<br/>
+Modify permission should be Denied Selected  for SubFolder<br/>
+Click on Username option<br/>
+Click on Logout option<br/>
+Timeout waiting for alert to appear.<br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: Dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Session message did not appear. Proceeding with login.<br/>
+Login EWA with User Credential<br/>
+Expand a Cabinet<br/>
+Expand a  Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+<b>Test Failed: TC_08_Verify_Modify_Permissions_Denied_on_subFolder</b><br/>
+<a href='screenshots/TC_08_Verify_Modify_Permissions_Denied_on_subFolder_failure.png' target='_blank'>View Screenshot</a><br/>
+<br><img src='screenshots/TC_08_Verify_Modify_Permissions_Denied_on_subFolder_failure.png' width='400' height='300'/><br><br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Modify_Denied_Subfolder(Security.java:1152)
+	at Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder(Security_dialog_Test.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1658243833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1658243833'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at jdk.internal.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Modify_Denied_Subfolder(Security.java:1152)
+	at Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder(Security_dialog_Test.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>209</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_01_Give_All_permission_To_Cabinet()'><b>TC_01_Give_All_permission_To_Cabinet</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1460350363" onClick='toggleBox("Output-1460350363", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1460350363" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1460350363">
+Test Scenario 1 : Give All permission for Cabinet <br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Click on Username<br/>
+Click on Logout Option<br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: admin<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Session message did not appear. Proceeding with login.<br/>
+Login EWA with  User<br/>
+Expand a Cabinet<br/>
+Mousehover to Roomname Tab<br/>
+Click on  Security Option<br/>
+Click on  Security dialog Add button<br/>
+Select User Group<br/>
+Click on Security dialog Ok button<br/>
+The Selected Entry is already in the Entry List. this validation message should show<br/>
+Verifying Validation message<br/>
+Select Added Group<br/>
+Click on  New Entry Security button<br/>
+Assign all permission to Group<br/>
+Click on Security dialog Apply button<br/>
+Click on  Security dialog Add button<br/>
+Click_UserGroup Downarrow which you want to select<br/>
+Select User from Group<br/>
+Click on Security dialog Ok button<br/>
+Select a User<br/>
+Click on  New Enty button<br/>
+Assign all permission to User<br/>
+Click on Security dialog Apply button<br/>
+Click on Username option<br/>
+Click on Logout option<br/>
+Timeout waiting for alert to appear.<br/>
+Click on  Security dialog Ok button<br/>
+All permission should be given for Cabinet<br/>
+</div>
+</td>
+<td></td>
+<td>202</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.Login_EWA()'><b>Login_EWA</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-572118744" onClick='toggleBox("Output-572118744", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-572118744" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-572118744">
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: Dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session for user is already active. Do you want to create a new session? Dialog box displayed. User clicks OK button.<br/>
+Session message did not appear. Proceeding with login.<br/>
+User has logged in successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_02_Verify_All_permission_for_Cabinet()'><b>TC_02_Verify_All_permission_for_Cabinet</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1777053705" onClick='toggleBox("Output-1777053705", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1777053705" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1777053705">
+Test Scenario 2 : Verifying All permission for Cabinet<br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: Dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Session message did not appear. Proceeding with login.<br/>
+Login EWA with User credential<br/>
+Click on Refresh button<br/>
+Click on Setting Icon<br/>
+Click on My Preferences Option<br/>
+Select Office Document and set Default View<br/>
+Select Pdf Document and set Default View<br/>
+Click on Security dialog Apply button<br/>
+Click on New Document Tab<br/>
+Click on Destination Folder Textbox<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Click on Ok button <br/>
+Select Value from Document type dropdown<br/>
+Enter value into Report Name field<br/>
+Browse a Document Page<br/>
+By using AutoIT add file from external folder<br/>
+Click on Create button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Mousehover to Roomname Tab<br/>
+Check Document from Document List <br/>
+Mousehover on Documents Tab<br/>
+Click on the Send To Option<br/>
+Click on Document from Document List<br/>
+Document Open successfully<br/>
+Click on First Page Thumbnail<br/>
+Verified All permission for Cabinet<br/>
+Click on Username option<br/>
+Click on Logout option<br/>
+Timeout waiting for alert to appear.<br/>
+Logout the user account <br/>
+</div>
+</td>
+<td></td>
+<td>269</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_03_Remove_All_permission_for_Cabinet()'><b>TC_03_Remove_All_permission_for_Cabinet</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1401007302" onClick='toggleBox("Output-1401007302", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1401007302" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1401007302">
+Test Scenario 3 : Remove All permission To  for Cabinet<br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: admin<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Session message did not appear. Proceeding with login.<br/>
+Login EWA with admin User <br/>
+Expand a Cabinet<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Select added User<br/>
+Click on Remove button<br/>
+Click on Security dialog Ok button<br/>
+Added Remove Successfully on Cabinet level<br/>
+</div>
+</td>
+<td></td>
+<td>80</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_09_Give_Different_permission_To_Group_for_AllNodes()'><b>TC_09_Give_Different_permission_To_Group_for_AllNodes</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1534840003" onClick='toggleBox("Output-1534840003", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1534840003" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1534840003">
+Test Scenario 9 : Give Different permission To Group for AllNodes<br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Expand a Cabinet<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Click on Security dialog Add button<br/>
+Click on cvadmins Group Name<br/>
+Click on Security dialog Ok button<br/>
+The Selected Entry is already in the Entry List. this validation message should show<br/>
+Verifying Group added already Validation Message<br/>
+Select Added Group<br/>
+Click on  New Entry Security button<br/>
+Assign all permission to Group<br/>
+Click on Security dialog Apply button<br/>
+Click on  Security dialog Ok button<br/>
+All permission should be given to  for Cabinet<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Click on Security dialog Add button<br/>
+Select cvadmins Group<br/>
+Click on Security dialog Ok button<br/>
+The Selected Entry is already in the Entry List. this validation message should show<br/>
+Verifying Validation message<br/>
+Click on Close button<br/>
+Select Added Group<br/>
+Click on New Entry button<br/>
+Assign all permission to Group<br/>
+Denied Delete permission to Group<br/>
+Click on Security Dialog Apply button<br/>
+Click on Security Dialog Ok button<br/>
+Delete permission should be Denied Selected  for Drawer<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Click on Security Dialog Add button<br/>
+Select cvadmins Group<br/>
+Click on Security dialog Ok button<br/>
+The Selected Entry is already in the Entry List. this validation message should show<br/>
+Verifying Validation message<br/>
+Click on Close button<br/>
+Select added Group<br/>
+Click on New Entry button<br/>
+Assign all permission to selected Group<br/>
+Denied share permission<br/>
+Click on Security Dialog Apply button<br/>
+Click on Security Dialog Ok button<br/>
+Share permission should be Denied Selected  for Folder<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Click on Security Dialog Add button<br/>
+Select cvadmins Group <br/>
+Click on Security dialog  Ok button<br/>
+The Selected Entry is already in the Entry List. this validation message should show<br/>
+Verifying Validation Message<br/>
+Click on Close button<br/>
+Select added Group<br/>
+Click on New Entry Tab<br/>
+Assign all Permission to Group<br/>
+Denied Modify Permission<br/>
+Click on Security dialog Apply button<br/>
+Click on Security dialog Ok button<br/>
+Modify permission should be Denied Selected  for SubFolder<br/>
+</div>
+</td>
+<td></td>
+<td>420</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_04_Set_Delete_permission_Denied_for_Folder()'><b>TC_04_Set_Delete_permission_Denied_for_Folder</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-563702498" onClick='toggleBox("Output-563702498", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-563702498" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-563702498">
+Test Scenario 4 : Set Delete permission Denied for Folder<br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Click on Security dialog Add button<br/>
+Select Click_UserGroup Group<br/>
+Select User from Group<br/>
+Click on Security dialog Ok button<br/>
+The Selected Entry is already in the Entry List. this validation message should show<br/>
+Verifying Valialidation message<br/>
+Select added User<br/>
+Click on New Entry button<br/>
+Assign Permission to added User<br/>
+Denied Delete Permission for Folder<br/>
+Click on Security dialog Apply button<br/>
+Click on Security dialog Ok button<br/>
+Delete permission should be Denied Selected  for Drawer<br/>
+Click on Username option<br/>
+Click on Logout option<br/>
+Timeout waiting for alert to appear.<br/>
+</div>
+</td>
+<td></td>
+<td>137</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_07_Share_permission_Denied_for_Folder()'><b>TC_07_Share_permission_Denied_for_Folder</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1517795276" onClick='toggleBox("Output-1517795276", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1517795276" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1517795276">
+Test Scenario 7 : Share permission Denied for Folder <br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Mousehover to Roomname <br/>
+Click on Security Option<br/>
+Click on Security dialog Add button<br/>
+Click on Click_UserGroup Group<br/>
+Select from Group<br/>
+Click on Security dialog Ok button<br/>
+Select added User<br/>
+Click on New Entry button<br/>
+Assign permission to Selected <br/>
+Denied Share permission to Selected <br/>
+Click on Security dialog Apply button<br/>
+Click on Security dialog Ok button<br/>
+Share permission should be Denied Selected  for Folder<br/>
+Click on Username<br/>
+Click on Logout Option<br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: Dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Session message did not appear. Proceeding with login.<br/>
+Login EWA with User Credential<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Check Document from Document List <br/>
+Mousehover on Documents Tab<br/>
+Click on the Send To Option<br/>
+Document open successfully under Folder<br/>
+Click on First page Thumbnail<br/>
+Verified Share option is Disable from Viewer menu<br/>
+Click on Cross button and Close document<br/>
+Click on Username option<br/>
+Click on Logout option<br/>
+Timeout waiting for alert to appear.<br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: admin<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Session message did not appear. Proceeding with login.<br/>
+Login EWA with admin User <br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Tab<br/>
+Select added User <br/>
+Click on Remove button<br/>
+Click on  Security dialog Ok button<br/>
+Added  Remove Successfully on Folder level<br/>
+Share permission is denied for Folder verified Successfully...<br/>
+</div>
+</td>
+<td></td>
+<td>348</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_05_Verify_Delete_permission_Denied_for_Folder()'><b>TC_05_Verify_Delete_permission_Denied_for_Folder</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1278164801" onClick='toggleBox("Output-1278164801", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1278164801" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1278164801">
+Test Scenario 5 : Verifying Delete permission Denied for Folder <br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: Dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Session message did not appear. Proceeding with login.<br/>
+Login EWA with User Credential <br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Mousehover to Roomname Tab<br/>
+Check Document from Document List <br/>
+Mousehover on Documents Tab<br/>
+Open Document from document List <br/>
+Document Open successfully<br/>
+Select First page Thumbnail<br/>
+Verified Delete Option is Disable from Fab button and Delete Menu Option<br/>
+Click on Cross button and Close Document<br/>
+Click on Username option<br/>
+Click on Logout option<br/>
+Timeout waiting for alert to appear.<br/>
+</div>
+</td>
+<td></td>
+<td>136</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_06_Remove_Delete_permission_Denied_for_Folder()'><b>TC_06_Remove_Delete_permission_Denied_for_Folder</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1184633490" onClick='toggleBox("Output-1184633490", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1184633490" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1184633490">
+Test Scenario 6 : Remove Delete Permission Denied for Folder<br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: admin<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Session message did not appear. Proceeding with login.<br/>
+Login EWA with  User<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Mousehover into Roomname Tab<br/>
+Click on Security Option<br/>
+Select added User<br/>
+Click on Remove button<br/>
+Click on Security dialog Ok button<br/>
+Added user Remove Successfully on Folder level<br/>
+Delete permission is denied for Folder verified Successfully...<br/>
+</div>
+</td>
+<td></td>
+<td>94</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes()'><b>TC_10_Verify_Respective_permission_To_Group_for_AllNodes</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-392431380" onClick='toggleBox("Output-392431380", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-392431380" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-392431380">
+Test Scenario 10 :Verifying Respective permission To Group for AllNodes <br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Login with Security permission assign Group<br/>
+Click on Refresh button<br/>
+Click on Setting Icon<br/>
+Click on My Preferences Option<br/>
+Select Office Document and set Default View Option <br/>
+Select Pdf Document and set Default View Option<br/>
+Click on Security Dialog Apply button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+Mousehover to Roomname Tab<br/>
+Delete permission should be Denied Selected  for Drawer<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Check Document from Document List <br/>
+Mousehover on Documents Tab<br/>
+Click on the Send To Option<br/>
+Document open successfully under Folder<br/>
+Click on First page Thumbnail<br/>
+Verified Share option is Disable from Viewer menu<br/>
+Click on Cross button and Close document<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Verify_Respective_Group_permission(Security.java:1562)
+	at Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes(Security_dialog_Test.java:94)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace392431380", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace392431380'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at jdk.internal.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Verify_Respective_Group_permission(Security.java:1562)
+	at Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes(Security_dialog_Test.java:94)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>203</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes()'><b>TC_10_Verify_Respective_permission_To_Group_for_AllNodes</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1548261402" onClick='toggleBox("Output-1548261402", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1548261402" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1548261402">
+Test Scenario 10 :Verifying Respective permission To Group for AllNodes <br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Login with Security permission assign Group<br/>
+Click on Refresh button<br/>
+Click on Setting Icon<br/>
+Click on My Preferences Option<br/>
+Select Office Document and set Default View Option <br/>
+Select Pdf Document and set Default View Option<br/>
+Click on Security Dialog Apply button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+Mousehover to Roomname Tab<br/>
+Delete permission should be Denied Selected  for Drawer<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Check Document from Document List <br/>
+Mousehover on Documents Tab<br/>
+Click on the Send To Option<br/>
+Document open successfully under Folder<br/>
+Click on First page Thumbnail<br/>
+Verified Share option is Disable from Viewer menu<br/>
+Click on Cross button and Close document<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Verify_Respective_Group_permission(Security.java:1562)
+	at Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes(Security_dialog_Test.java:94)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1548261402", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1548261402'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at jdk.internal.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Verify_Respective_Group_permission(Security.java:1562)
+	at Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes(Security_dialog_Test.java:94)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>204</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes()'><b>TC_10_Verify_Respective_permission_To_Group_for_AllNodes</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1950302412" onClick='toggleBox("Output-1950302412", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1950302412" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1950302412">
+Test Scenario 10 :Verifying Respective permission To Group for AllNodes <br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Login with Security permission assign Group<br/>
+Click on Refresh button<br/>
+Click on Setting Icon<br/>
+Click on My Preferences Option<br/>
+Select Office Document and set Default View Option <br/>
+Select Pdf Document and set Default View Option<br/>
+Click on Security Dialog Apply button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+Mousehover to Roomname Tab<br/>
+Delete permission should be Denied Selected  for Drawer<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+Check Document from Document List <br/>
+Mousehover on Documents Tab<br/>
+Click on the Send To Option<br/>
+Document open successfully under Folder<br/>
+Click on First page Thumbnail<br/>
+Verified Share option is Disable from Viewer menu<br/>
+Click on Cross button and Close document<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Verify_Respective_Group_permission(Security.java:1562)
+	at Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes(Security_dialog_Test.java:94)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1950302412", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1950302412'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at jdk.internal.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Verify_Respective_Group_permission(Security.java:1562)
+	at Computhink.Script.Security_dialog_Test.TC_10_Verify_Respective_permission_To_Group_for_AllNodes(Security_dialog_Test.java:94)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>203</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder()'><b>TC_08_Verify_Modify_Permissions_Denied_on_subFolder</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-10726628" onClick='toggleBox("Output-10726628", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-10726628" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-10726628">
+Test Scenario 8 : Verifying Modify Permissions Denied on subFolder <br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Click on Security Dialog Add button<br/>
+Select Cvnamed Group<br/>
+Select User from Group<br/>
+Click on Security dialog Ok button<br/>
+Select added User<br/>
+Click on  New Entry button<br/>
+Assign all permission to Selected <br/>
+Denied Modify Permission to Selected <br/>
+Click on Security dialog Apply button<br/>
+Click on the Ok button<br/>
+Modify permission should be Denied Selected  for SubFolder<br/>
+Click on Username option<br/>
+Click on Logout option<br/>
+Timeout waiting for alert to appear.<br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: Dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Session message did not appear. Proceeding with login.<br/>
+Login EWA with User Credential<br/>
+Expand a Cabinet<br/>
+Expand a  Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Modify_Denied_Subfolder(Security.java:1152)
+	at Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder(Security_dialog_Test.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace10726628", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace10726628'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at jdk.internal.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Modify_Denied_Subfolder(Security.java:1152)
+	at Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder(Security_dialog_Test.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>209</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder()'><b>TC_08_Verify_Modify_Permissions_Denied_on_subFolder</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1705577568" onClick='toggleBox("Output-1705577568", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1705577568" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1705577568">
+Test Scenario 8 : Verifying Modify Permissions Denied on subFolder <br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Click on Security Dialog Add button<br/>
+Select Cvnamed Group<br/>
+Select User from Group<br/>
+Click on Security dialog Ok button<br/>
+The Selected Entry is already in the Entry List. this validation message should show<br/>
+Verifying Validation message<br/>
+Select added User<br/>
+Click on  New Entry button<br/>
+Assign all permission to Selected <br/>
+Denied Modify Permission to Selected <br/>
+Click on Security dialog Apply button<br/>
+Click on the Ok button<br/>
+Modify permission should be Denied Selected  for SubFolder<br/>
+Click on Username option<br/>
+Click on Logout option<br/>
+Timeout waiting for alert to appear.<br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: Dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Session message did not appear. Proceeding with login.<br/>
+Login EWA with User Credential<br/>
+Expand a Cabinet<br/>
+Expand a  Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Modify_Denied_Subfolder(Security.java:1152)
+	at Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder(Security_dialog_Test.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1705577568", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1705577568'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at jdk.internal.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Modify_Denied_Subfolder(Security.java:1152)
+	at Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder(Security_dialog_Test.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>211</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+<tr>
+<td title='Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder()'><b>TC_08_Verify_Modify_Permissions_Denied_on_subFolder</b><br>Test class: Computhink.Script.Security_dialog_Test<br/>
+<a href="#Output-1089498844" onClick='toggleBox("Output-1089498844", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1089498844" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1089498844">
+Test Scenario 8 : Verifying Modify Permissions Denied on subFolder <br/>
+Scenario 01: Log into EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Click on Security Dialog Add button<br/>
+Select Cvnamed Group<br/>
+Select User from Group<br/>
+Click on Security dialog Ok button<br/>
+The Selected Entry is already in the Entry List. this validation message should show<br/>
+Verifying Validation message<br/>
+Select added User<br/>
+Click on  New Entry button<br/>
+Assign all permission to Selected <br/>
+Denied Modify Permission to Selected <br/>
+Click on Security dialog Apply button<br/>
+Click on the Ok button<br/>
+Modify permission should be Denied Selected  for SubFolder<br/>
+Click on Username option<br/>
+Click on Logout option<br/>
+Timeout waiting for alert to appear.<br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: Dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session message did not appear. Proceeding with login.<br/>
+Session message did not appear. Proceeding with login.<br/>
+Login EWA with User Credential<br/>
+Expand a Cabinet<br/>
+Expand a  Drawer<br/>
+select a Folder<br/>
+select a SubFolder<br/>
+Mousehover to Roomname Tab<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Modify_Denied_Subfolder(Security.java:1152)
+	at Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder(Security_dialog_Test.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1089498844", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1089498844'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[@class=&apos;checkmark&apos;])[1]&quot;}
+  (Session info: chrome=144.0.7559.59)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f0e4ed435116fc5efb9d07abd80e6e11, findElement {using=xpath, value=(//span[@class=&apos;checkmark&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.59, chrome: {chromedriverVersion: 144.0.7559.31 (18537d992890..., userDataDir: C:\Users\dipak.p\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 25932, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 144.0.7559.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0e4ed435116fc5efb9d07abd80e6e11
+	at jdk.internal.reflect.GeneratedConstructorAccessor59.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:462)
+	at Computhink.Generic.BaseClass.jsclick(BaseClass.java:1469)
+	at Computhink.Pom.Security.Modify_Denied_Subfolder(Security.java:1152)
+	at Computhink.Script.Security_dialog_Test.TC_08_Verify_Modify_Permissions_Denied_on_subFolder(Security_dialog_Test.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>209</td>
+<td>Computhink.Script.Security_dialog_Test@35841320</td></tr>
+</table><p>
+</body>
+</html>

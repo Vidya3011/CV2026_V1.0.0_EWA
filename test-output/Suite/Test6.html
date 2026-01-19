@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>TestNG:  Test6</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test6</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jan 19 17:18:00 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>279 seconds (279222 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.Negative_Securitydialog.TC_01_Open_Security_Dialog_And_Verify_Title_and_Cancel_Button()'><b>TC_01_Open_Security_Dialog_And_Verify_Title_and_Cancel_Button</b><br>Test class: Computhink.Script.Negative_Securitydialog<br/>
+<a href="#Output-430248020" onClick='toggleBox("Output-430248020", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-430248020" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-430248020">
+Test Scenario 1 : Open Security Dialog And Verifying Title and Cancel button <br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Click on Setting Icon<br/>
+Click on My Preferences<br/>
+Select Office Document and set as Default View<br/>
+Select Pdf Document and set as Default View<br/>
+Click on Apply button<br/>
+Expand a Cabinet<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Security dialog title Verified<br/>
+Click on cancel button<br/>
+Open security dialog Verifying title and cancel button successfully<br/>
+</div>
+</td>
+<td></td>
+<td>87</td>
+<td>Computhink.Script.Negative_Securitydialog@533bda92</td></tr>
+<tr>
+<td title='Computhink.Script.Negative_Securitydialog.TC_02_Verify_Already_added_showing_Validation()'><b>TC_02_Verify_Already_added_showing_Validation</b><br>Test class: Computhink.Script.Negative_Securitydialog<br/>
+<a href="#Output-225982909" onClick='toggleBox("Output-225982909", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-225982909" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-225982909">
+Test Scenario 2 : Verifying Already added  showing Validation <br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Click on Security dialog Add button<br/>
+Select Cvnamed Group<br/>
+Select from Group<br/>
+Click on Security Dialog Ok button<br/>
+Click on Cancel button<br/>
+Already added showing validation Verified<br/>
+</div>
+</td>
+<td></td>
+<td>79</td>
+<td>Computhink.Script.Negative_Securitydialog@533bda92</td></tr>
+<tr>
+<td title='Computhink.Script.Negative_Securitydialog.TC_03_Verify_Already_addedGroup_showing_Validation()'><b>TC_03_Verify_Already_addedGroup_showing_Validation</b><br>Test class: Computhink.Script.Negative_Securitydialog<br/>
+<a href="#Output-1306906931" onClick='toggleBox("Output-1306906931", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1306906931" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1306906931">
+Test Scenario 3 : Verifying Already added Group showing Validation <br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Expand a Cabinet<br/>
+Mousehover to Roomname Tab<br/>
+Click on Security Option<br/>
+Click on Security dialog Add button<br/>
+Click on cvadmins Group<br/>
+Click on Ok button<br/>
+The Selected Entry is already in the Entry List. this validation message should show<br/>
+Verifying Validation message<br/>
+Click on Cancel button<br/>
+Already added Group showing validation Verified<br/>
+Click on Refresh button<br/>
+</div>
+</td>
+<td></td>
+<td>83</td>
+<td>Computhink.Script.Negative_Securitydialog@533bda92</td></tr>
+<tr>
+<td title='Computhink.Script.Negative_Securitydialog.Login_EWA()'><b>Login_EWA</b><br>Test class: Computhink.Script.Negative_Securitydialog<br/>
+<a href="#Output-1595549446" onClick='toggleBox("Output-1595549446", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1595549446" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1595549446">
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: Dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session for user is already active. Do you want to create a new session? Dialog box displayed. User clicks OK button.<br/>
+Session message did not appear. Proceeding with login.<br/>
+User has logged in successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>Computhink.Script.Negative_Securitydialog@533bda92</td></tr>
+</table><p>
+</body>
+</html>

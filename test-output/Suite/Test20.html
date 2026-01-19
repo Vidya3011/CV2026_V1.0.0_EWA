@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>TestNG:  Test20</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test20</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jan 19 19:09:52 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>312 seconds (312835 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Computhink.Script.My_preferences_Pdf_documents.Login_EWA()'><b>Login_EWA</b><br>Test class: Computhink.Script.My_preferences_Pdf_documents<br/>
+<a href="#Output-749518778" onClick='toggleBox("Output-749518778", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-749518778" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-749518778">
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+UserName Details: Dipak<br/>
+Enter valid password into password field<br/>
+Select a Room<br/>
+Selected Room name: demoserver.demoroom<br/>
+Captcha is not present, proceeding with login.<br/>
+Click Login button<br/>
+Session for user is already active. Do you want to create a new session? Dialog box displayed. User clicks OK button.<br/>
+Session message did not appear. Proceeding with login.<br/>
+User has logged in successfully.<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>Computhink.Script.My_preferences_Pdf_documents@626abbd0</td></tr>
+<tr>
+<td title='Computhink.Script.My_preferences_Pdf_documents.TC_03_Verify_Browse_PDF_documents_Defaultviewing()'><b>TC_03_Verify_Browse_PDF_documents_Defaultviewing</b><br>Test class: Computhink.Script.My_preferences_Pdf_documents<br/>
+<a href="#Output-864251797" onClick='toggleBox("Output-864251797", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-864251797" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-864251797">
+Test Scenario 3 : Verifying Browse PDF documents Defaultviewing <br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Click on Setting Icon<br/>
+Click on My Preferences Option<br/>
+Select Pdf Document and set as Default View<br/>
+Click on Apply button<br/>
+Click on New Document Tab<br/>
+Click on Destination Folder Textbox<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+Expand a Folder<br/>
+Click on Ok button<br/>
+Select Document Type Dropdown<br/>
+Enter value into Report Name field<br/>
+Browse Document Page<br/>
+By using AutoIT add file from external folder<br/>
+Click on Create button<br/>
+Click on Navigate button<br/>
+Advanced Viewing New Document Created<br/>
+Click on Refresh button<br/>
+</div>
+</td>
+<td></td>
+<td>137</td>
+<td>Computhink.Script.My_preferences_Pdf_documents@626abbd0</td></tr>
+<tr>
+<td title='Computhink.Script.My_preferences_Pdf_documents.TC_01_Verify_Browse_Pdf_documents_Advancedviewing()'><b>TC_01_Verify_Browse_Pdf_documents_Advancedviewing</b><br>Test class: Computhink.Script.My_preferences_Pdf_documents<br/>
+<a href="#Output-853290359" onClick='toggleBox("Output-853290359", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-853290359" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-853290359">
+Test Scenario 1 : Verifying Browse Pdf documents Advanced viewing <br/>
+Scenario 01: Log into a EWA<br/>
+Enter valid user name into username field<br/>
+Click on Refresh button<br/>
+Click on Setting Icon<br/>
+Click on My Preferences<br/>
+Select Pdf Document and set as Advanced View<br/>
+Click on Apply button<br/>
+Click on New Document Tab<br/>
+Click on Destination Folder Textbox<br/>
+Expand a Cabinet<br/>
+Expand a Drawer<br/>
+Expand a Folder<br/>
+Click on Ok button<br/>
+Select Document type dropdown<br/>
+Enter a Report Name<br/>
+Browse Document Page<br/>
+By using AutoIT add file from external folder<br/>
+</div>
+</td>
+<td></td>
+<td>109</td>
+<td>Computhink.Script.My_preferences_Pdf_documents@626abbd0</td></tr>
+<tr>
+<td title='Computhink.Script.My_preferences_Pdf_documents.TC_02_Verify_Create_New_pdf_document_Advancedviewing()'><b>TC_02_Verify_Create_New_pdf_document_Advancedviewing</b><br>Test class: Computhink.Script.My_preferences_Pdf_documents<br/>
+<a href="#Output-1121534" onClick='toggleBox("Output-1121534", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1121534" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1121534">
+Test Scenario 2 : Verifying Create New pdf document Advancedviewing <br/>
+Move to  Plus Icon<br/>
+Click on Pdf Document Option<br/>
+Enter Pdf file name<br/>
+Select and Open pdf page<br/>
+Click on Create button<br/>
+Click on Navigate button<br/>
+Advanced Viewing New PDF Document Created<br/>
+</div>
+</td>
+<td></td>
+<td>37</td>
+<td>Computhink.Script.My_preferences_Pdf_documents@626abbd0</td></tr>
+</table><p>
+</body>
+</html>
