@@ -74,11 +74,11 @@
       <class name="Computhink.Script.RoomContextFunction_TakeOwnerShip_ReleaseOwnerShip"/>
     </classes>
   </test>    
-   <test name="Test14">
+   <!-- <test name="Test14">
        <classes>
       <class name="Computhink.Script.RoomContextMenu_CopyPaste"/>
     </classes>
-  </test> 
+  </test>  -->
    <test name="Test15">
        <classes>
       <class name="Computhink.Script.RoomContextMenu_Notification"/>

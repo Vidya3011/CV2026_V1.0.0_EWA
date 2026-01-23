@@ -29,11 +29,10 @@ public class DashBoardScript extends Computhink.Generic.BaseClass {
 	@Test(priority = 1)
 	public void Login() throws Exception {
 	
-		//LogoutPage();
 		loginRNISHA47();
 		
 		Reporter.log("User logged in successfully... ");
-		log.info("Rnisha user logged in 'CVWin19Server.Win2019_TestRoom'successfully... ");
+		log.info("Dipak user logged in successfully on EWA... ");
 	}
 
 		@Test(priority = 2)

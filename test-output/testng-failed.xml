@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="Computhink.Generic.ListenersRetry"/>
-    <listener class-name="Computhink.Generic.CustomTestLisner"/>
-  </listeners>
-  <test thread-count="5" name="Test3(failed)">
-    <classes>
-      <class name="Computhink.Script.Templates_Test">
-        <methods>
-          <include name="TC_05_verify_to_Create_Formmapping_PDFTemplate_Advancedviewing"/>
-          <include name="Launch_Browser"/>
-          <include name="TC_06_Verify_to_Edit_and_Delete_Formfield"/>
-        </methods>
-      </class> <!-- Computhink.Script.Templates_Test -->
-    </classes>
-  </test> <!-- Test3(failed) -->
-  <test thread-count="5" name="Test5(failed)">
-    <classes>
-      <class name="Computhink.Script.Security_dialog_Test">
-        <methods>
-          <include name="TC_08_Verify_Modify_Permissions_Denied_on_subFolder"/>
-          <include name="Launch_Browser"/>
-          <include name="TC_10_Verify_Respective_permission_To_Group_for_AllNodes"/>
-        </methods>
-      </class> <!-- Computhink.Script.Security_dialog_Test -->
-    </classes>
-  </test> <!-- Test5(failed) -->
-  <test thread-count="5" name="Test11(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="Computhink.Script.Document_Version_Test">
         <methods>
@@ -37,15 +11,5 @@
         </methods>
       </class> <!-- Computhink.Script.Document_Version_Test -->
     </classes>
-  </test> <!-- Test11(failed) -->
-  <test thread-count="5" name="Test31(failed)">
-    <classes>
-      <class name="Computhink.Script.Special_Char_FileNames">
-        <methods>
-          <include name="Launch_Browser"/>
-          <include name="TC_20_Verify_All_filetypes"/>
-        </methods>
-      </class> <!-- Computhink.Script.Special_Char_FileNames -->
-    </classes>
-  </test> <!-- Test31(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -9,13 +9,13 @@ import org.testng.annotations.Test;
 import Computhink.Generic.BaseClass;
 import Computhink.Pom.RoomContextMenu;
 
-public class RoomContextMenu_CopyPaste extends BaseClass {
+ public class RoomContextMenu_CopyPaste extends BaseClass {
 	
 	public static Actions act;
 
 	private static org.apache.logging.log4j.Logger log = LogManager.getLogger(RoomContextMenu_CopyPaste.class);
 
-	@BeforeClass
+	 @BeforeClass
 	public void loadBrowser() throws Exception {
 		loadBrowser("Chrome");
 

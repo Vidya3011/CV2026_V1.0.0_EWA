@@ -272,6 +272,9 @@ public void getVerify_ThirdVersion() {
 	@FindBy(xpath = "//*[@id=\"defaultPdfDocViewListNo\"]")
 	private WebElement Pdf_document_Defaultviewing;
 	
+	@FindBy(xpath = "//*[@id=\"modelHome\"]")
+	private WebElement Navigate_button;
+	
 	public void getPdf_document_Defaultviewing() throws Exception {
 		Select sel = new Select(Pdf_document_Defaultviewing);
 		// sel.selectByVisibleText("Default viewing");
@@ -428,9 +431,18 @@ public void getVerify_ThirdVersion() {
 		movingclkElement(Create_button);
 		Thread.sleep(8000);
 		Reporter.log("Click on Create button", true);
-		jsclick(ViewDocument_Button);
-		Thread.sleep(10000);
-		Reporter.log("Click on View document option", true);
+		
+		jsclick(Navigate_button);
+		jsclick(Select_Document);
+		Thread.sleep(8000);
+		try {
+			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+			wait1.until(ExpectedConditions.alertIsPresent());
+			Alert alt = driver.switchTo().alert();
+			alt.accept();
+		} catch (Exception e) {
+			System.out.println("Alert is not present...");
+		}
 		Reporter.log("PDF is created successfully", true);
 		jsclick(Version_Option);
 		Thread.sleep(4000);

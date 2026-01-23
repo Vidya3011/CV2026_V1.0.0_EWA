@@ -3,32 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Computhink.Script.Special_Char_FileNames">
+      <class name="Computhink.Script.Document_Version_Test">
         <methods>
-          <include name="TC_06_Upload_and_verify_Allowing_Plus_Characterfile"/>
-          <include name="TC_10_Upload_and_verify_Allowing_Comma_Characterfile"/>
-          <include name="TC_14_Upload_and_verify_Allowing_Accent_Characterfile"/>
-          <include name="TC_08_Upload_and_verify_Allowing_Equals_Characterfile"/>
-          <include name="TC_16_Upload_and_verify_Allowing_Underscore_Characterfile"/>
-          <include name="Login_EWA"/>
-          <include name="TC_12_Upload_and_verify_Allowing_Hyphen_Characterfile"/>
-          <include name="TC_20_Verify_All_filetypes"/>
-          <include name="TC_11_Upload_and_verify_Allowing_Exclamatory_Characterfile"/>
-          <include name="TC_18_Upload_and_verify_Allowing_Squarebracket_Characterfile"/>
-          <include name="TC_19_Upload_and_verify_Allowing_SemiColon_Characterfile"/>
-          <include name="TC_03_Upload_and_verify_Allowing_Atrate_Characterfile"/>
-          <include name="TC_05_Upload_and_verify_Allowing_Dollar_Characterfile"/>
-          <include name="TC_02_Upload_and_verify_Allowing_Tile_Characterfile"/>
-          <include name="TC_04_Upload_and_verify_Allowing_Hash_Characterfile"/>
-          <include name="TC_09_Upload_and_verify_Allowing_SingleQuote_Characterfile"/>
-          <include name="TC_13_Upload_and_verify_Allowing_RoundBrackets_Characterfile"/>
-          <include name="TC_07_Upload_and_verify_Allowing_Caret_Characterfile"/>
+          <include name="TC_05_Add_Annotation"/>
+          <include name="TC_02_Upload_and_Save_New_page_and_Verify_Version_with_New_Comments"/>
           <include name="Launch_Browser"/>
-          <include name="TC_17_Upload_and_verify_Allowing_Flowerbracket_Characterfile"/>
-          <include name="TC_01_Upload_and_verify_Allowing_Percentage_Characterfile"/>
-          <include name="TC_15_Upload_and_verify_Allowing_Ampersant_Characterfile"/>
         </methods>
-      </class> <!-- Computhink.Script.Special_Char_FileNames -->
+      </class> <!-- Computhink.Script.Document_Version_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

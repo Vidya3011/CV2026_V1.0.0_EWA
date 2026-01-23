@@ -5,47 +5,26 @@
     <listener class-name="Computhink.Generic.ListenersRetry"/>
     <listener class-name="Computhink.Generic.CustomTestLisner"/>
   </listeners>
-  <test thread-count="5" name="Test3(failed)">
+  <test thread-count="5" name="Test 5(failed)">
     <classes>
-      <class name="Computhink.Script.Templates_Test">
+      <class name="Computhink.Script.DashBoardScript">
         <methods>
-          <include name="TC_05_verify_to_Create_Formmapping_PDFTemplate_Advancedviewing"/>
-          <include name="Launch_Browser"/>
-          <include name="TC_06_Verify_to_Edit_and_Delete_Formfield"/>
+          <include name="ladBrowser"/>
+          <include name="TodoListWFDetailsDashBoardFunctionality"/>
         </methods>
-      </class> <!-- Computhink.Script.Templates_Test -->
+      </class> <!-- Computhink.Script.DashBoardScript -->
     </classes>
-  </test> <!-- Test3(failed) -->
-  <test thread-count="5" name="Test5(failed)">
+  </test> <!-- Test 5(failed) -->
+  <test thread-count="5" name="Test12(failed)">
     <classes>
-      <class name="Computhink.Script.Security_dialog_Test">
+      <class name="Computhink.Script.RegisterStamp__Advanced_Viewing">
         <methods>
-          <include name="TC_08_Verify_Modify_Permissions_Denied_on_subFolder"/>
-          <include name="Launch_Browser"/>
-          <include name="TC_10_Verify_Respective_permission_To_Group_for_AllNodes"/>
+          <include name="TestCase_3_Dynamic_Stamp"/>
+          <include name="TestCase_4_Standard_Stamp"/>
+          <include name="TestCase_5_Custom_Stamp"/>
+          <include name="ladBrowser"/>
         </methods>
-      </class> <!-- Computhink.Script.Security_dialog_Test -->
+      </class> <!-- Computhink.Script.RegisterStamp__Advanced_Viewing -->
     </classes>
-  </test> <!-- Test5(failed) -->
-  <test thread-count="5" name="Test11(failed)">
-    <classes>
-      <class name="Computhink.Script.Document_Version_Test">
-        <methods>
-          <include name="TC_05_Add_Annotation"/>
-          <include name="TC_02_Upload_and_Save_New_page_and_Verify_Version_with_New_Comments"/>
-          <include name="Launch_Browser"/>
-        </methods>
-      </class> <!-- Computhink.Script.Document_Version_Test -->
-    </classes>
-  </test> <!-- Test11(failed) -->
-  <test thread-count="5" name="Test31(failed)">
-    <classes>
-      <class name="Computhink.Script.Special_Char_FileNames">
-        <methods>
-          <include name="Launch_Browser"/>
-          <include name="TC_20_Verify_All_filetypes"/>
-        </methods>
-      </class> <!-- Computhink.Script.Special_Char_FileNames -->
-    </classes>
-  </test> <!-- Test31(failed) -->
+  </test> <!-- Test12(failed) -->
 </suite> <!-- Failed suite [Suite] -->

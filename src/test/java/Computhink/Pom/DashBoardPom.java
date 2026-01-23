@@ -2,6 +2,7 @@ package Computhink.Pom;
 
 import java.time.Duration;
 import org.openqa.selenium.JavascriptException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -60,7 +61,7 @@ public class DashBoardPom extends BaseClass {
 	@FindBy(xpath = ("(//button[@id='reset'])[1]"))
 	private WebElement resetBTNmyPref;
 
-	@FindBy(xpath = ("(//span[@class='e-input-group-icon e-ddl-icon e-search-icon'])[2]"))
+	@FindBy(xpath = ("//*[@id=\"todoListTypesDiv\"]/span"))
 	private WebElement TodoListDropDownDashBoard;
 
 	@FindBy(xpath = ("//li[text()='New Items']"))
@@ -80,12 +81,55 @@ public class DashBoardPom extends BaseClass {
 
 	@FindBy(xpath = ("(//div[@class='e-next e-icons e-icon-next e-nextpage e-pager-default'])[1]"))
 	private WebElement nextPage;
+	
+	@FindBy(xpath = "//*[@id=\"imgSettings\"]")
+	private WebElement Setting_Icon;
+	
+	@FindBy(xpath = "//*[@id='adminPreferencesSubmit']")
+	private WebElement AdminApply_button;
+
+	@FindBy(xpath = "//li[@id='adminPreferencesSettingsNav']/p")
+	private WebElement AdminPreference;
+	
+	@FindBy(xpath = "//*[@id=\"restrictDashboardView\"]")
+	private WebElement checkRestrictDashboard_View;
+
+	
 
 	public void DashBoardSeachIcon() throws Exception {
 		SoftAssert softAssert = new SoftAssert();
 		Reporter.log("Test scenario 01: Verify 'dashboard search' functionality", true);
 		Thread.sleep(5000);
+		
+		Refresh_Button();
+		Thread.sleep(6000);
+		Reporter.log("Click on Refresh button", true);
+		LogoutPage();
+		LoginAdminUser();
+		Thread.sleep(6000);
+		movingclkElement(Setting_Icon);
+		Thread.sleep(6000);
+		Reporter.log("Click on Setting Icon", true);
+		movingclkElement(AdminPreference);
+		Thread.sleep(6000);
+		Reporter.log("Click on Admin preferences", true);
+		Thread.sleep(2000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		
+		Thread.sleep(2000);
 
+		if (checkRestrictDashboard_View.isSelected()) {
+			checkRestrictDashboard_View.click();
+		}
+		
+		movingclkElement(AdminApply_button);
+		Thread.sleep(6000);
+		Reporter.log("Click on Apply button", true);
+		LogoutPage();
+		Thread.sleep(2000);
+		LogDipakUser();
+		Thread.sleep(4000);
 		Reporter.log("Click on dashboard tab", true);
 		softAssert.assertTrue(DashBoardTab.isDisplayed(), "Dashboard tab is not displayed");
 
@@ -151,11 +195,11 @@ public class DashBoardPom extends BaseClass {
 		}
 
 		Reporter.log("Click on dashboard tab", true);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		wait.until(ExpectedConditions.elementToBeClickable(TodoListDropDownDashBoard));
 
 		Reporter.log("Click on todo list dropdown", true);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		movingclkElement(TodoListDropDownDashBoard);
 		softAssert.assertTrue(TodoListDropDownDashBoard.isDisplayed(), "Todo List dropdown is not displayed");
 		Thread.sleep(2000);

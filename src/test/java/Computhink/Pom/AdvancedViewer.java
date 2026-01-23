@@ -1683,6 +1683,12 @@ public class AdvancedViewer extends BaseClass {
 
 	@FindBy(xpath = ("//*[@id=\"fabButton\"]")) // Change 9 to change the value
 	private WebElement FabBTN;
+	
+	@FindBy(xpath = "//*[@id=\"modelHome\"]")
+	private WebElement Navigate_button;
+	
+	@FindBy(xpath = "//*[@id=\"documentListTable\"]/tbody/tr[1]/td[3]")
+	private WebElement Open_Document;
 
 	////////////////////////// Nisha R Codes///////////////
 	public void SignHereAllStamps(int numberOfDocs) throws Exception {
@@ -1842,8 +1848,12 @@ public class AdvancedViewer extends BaseClass {
 		jsclick(CreateBTN);
 		Reporter.log("Click on the create button", true);
 		Thread.sleep(10000);
-		jsclick(viewOption);
+		
+		jsclick(Navigate_button);
 		Thread.sleep(5000);
+		jsclick(Open_Document);
+		Thread.sleep(6000);
+		Reporter.log("Select and Open Document", true);
 
 		jsclick(pdfEditAnnotation);
 
@@ -1983,8 +1993,11 @@ public class AdvancedViewer extends BaseClass {
 		jsclick(CreateBTN);
 		Reporter.log("Click on the create button", true);
 		Thread.sleep(4000);
-		jsclick(viewOption);
+		jsclick(Navigate_button);
 		Thread.sleep(5000);
+		jsclick(Open_Document);
+		Thread.sleep(6000);
+		Reporter.log("Select and Open Document", true);
 
 		jsclick(pdfEditAnnotation);
 
@@ -2111,8 +2124,11 @@ public class AdvancedViewer extends BaseClass {
 		jsclick(CreateBTN);
 		Reporter.log("Click on the create button", true);
 		Thread.sleep(4000);
-		jsclick(viewOption);
+		jsclick(Navigate_button);
 		Thread.sleep(5000);
+		jsclick(Open_Document);
+		Thread.sleep(6000);
+		Reporter.log("Select and Open Document", true);
 
 		jsclick(pdfEditAnnotation);
 
