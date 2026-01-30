@@ -96,7 +96,7 @@ public class Login_Validation extends Computhink.Generic.BaseClass {
 		//driver.quit();
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 10) 
 	public void TC_10_Verifying_Browser_Allowing_Only_OneUser_Login () throws Exception {
 		Login pojo = new Login();
 		pojo.Verifying_Browser_Allowing_Only_OneUser_Login ();
