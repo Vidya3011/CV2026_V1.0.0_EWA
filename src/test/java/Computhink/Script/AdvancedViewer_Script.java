@@ -13,6 +13,7 @@ public class AdvancedViewer_Script extends Computhink.Generic.BaseClass {
 
 	private static org.apache.logging.log4j.Logger log = LogManager.getLogger(AdvancedViewer_Script.class);
 //BaseClass bc=new BaseClass();
+	
 
 	@BeforeClass
 	public void loadBrowser() throws Exception {
