@@ -1,9 +1,6 @@
 package Computhink.Script;
 
-import org.apache.logging.log4j.LogManager;
-
 import org.testng.Reporter;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 
@@ -12,27 +9,15 @@ import Computhink.Pom.DashBoardPom;
 
 public class DashBoardScript extends Computhink.Generic.BaseClass {
 
-	private static org.apache.logging.log4j.Logger log = LogManager.getLogger(DashBoardScript.class);
-
-	@BeforeClass
-	public void ladBrowser() throws Exception {
-		loadBrowser("Chrome");
-	
-		log.info("Chrome Browser Launched");
-		Reporter.log("Chrome Browser launched Successfully...");
-		launchUrl();
-		// launchLocalUrl();
-		Reporter.log("Contentverse URL launched successfully...");
-		log.info("Contentverse URL launched successfully...");
-	}
 	
 	@Test(priority = 1)
 	public void Login() throws Exception {
 	
+		launchUrl();
 		loginRNISHA47();
 		
 		Reporter.log("User logged in successfully... ");
-		log.info("Dipak user logged in successfully on EWA... ");
+		
 	}
 
 		@Test(priority = 2)

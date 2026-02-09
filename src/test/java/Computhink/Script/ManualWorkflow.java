@@ -1,52 +1,31 @@
 package Computhink.Script;
 
-
-
-import org.apache.logging.log4j.LogManager;
 import org.testng.Reporter;
-
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import Computhink.Pom.ToDoListTab;
 
-//NishaR codes
 public class
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~NishaR
-// codes~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ManualWorkflow extends Computhink.Generic.BaseClass {
 
 	public static SoftAssert so;
-	private static org.apache.logging.log4j.Logger log = LogManager.getLogger(ManualWorkflow.class);
-	@BeforeClass
-	public void loadBrowser() throws Exception {
-		loadBrowser("Chrome");
-
-		log.info("Chrome Browser Launched");
-		Reporter.log("Chrome Browser launched Successfully...");
-		launchUrl();
-		
-		Reporter.log("Contentverse URL launched successfully...");
-		log.info("Contentverse URL launched successfully...");
-	}
 
 	@Test(priority = 1)
 	public void Login() throws Exception {
-	
-		
-		loginRNISHA47();
-		
-		Reporter.log("User logged in successfully... ");
-		log.info("Rnisha user logged in 'CVWin19Server.Win2019_TestRoom'successfully... ");
-	}
 
+		launchUrl();
+		loginRNISHA47();
+
+		Reporter.log("User logged in successfully... ");
+
+	}
 
 	@Test(priority = 2)
 	public void TC_1_SendDoc() throws Exception {
 		ToDoListTab todo = new ToDoListTab();
 		todo.SendingDocumentToworkflow();
 		Thread.sleep(10000);
-		log.info("Nisha User Sending the document in to new manual for automation workflow successful");
+
 		Reporter.log("Logout the current session");
 
 	}
@@ -57,8 +36,7 @@ ManualWorkflow extends Computhink.Generic.BaseClass {
 		Thread.sleep(4000);
 		todo.LogRnishaTaskUser1();
 		jsclick(Refresh_Button(driver));
-		log.info("Task User1 logged in successfully... ");
-		log.info("New manual for automation first task user vidya has logged in successful");
+
 	}
 
 	@Test(priority = 4)
@@ -76,7 +54,7 @@ ManualWorkflow extends Computhink.Generic.BaseClass {
 		Thread.sleep(8000);
 		todo.refrshLogVidyaTaskUser();
 		jsclick(Refresh_Button(driver));
-		log.info("Task user 2 Vidya Logged in successful");
+
 	}
 
 	@Test(priority = 6)
@@ -92,7 +70,7 @@ ManualWorkflow extends Computhink.Generic.BaseClass {
 		Thread.sleep(3000);
 		todo.refrshLog3rdTaskUserNishaC();
 		Thread.sleep(3000);
-	
+
 		jsclick(Refresh_Button(driver));
 		Reporter.log("TaskUser3 Dipak Logged in successful");
 	}

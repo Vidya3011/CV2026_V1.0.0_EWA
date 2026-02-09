@@ -1,37 +1,19 @@
 package Computhink.Script;
 
-import org.apache.logging.log4j.LogManager;
 import org.testng.Reporter;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import Computhink.Pom.AdvancedViewer;
 
-//NishaR codes
-
-//**************************************NishaR codes*********************************************************************
 public class AdvancedViewer_Script extends Computhink.Generic.BaseClass {
 
-	private static org.apache.logging.log4j.Logger log = LogManager.getLogger(AdvancedViewer_Script.class);
-//BaseClass bc=new BaseClass();
-	
-
-	@BeforeClass
-	public void loadBrowser() throws Exception {
-		loadBrowser("Chrome");
-
-		log.info("Chrome Browser Launched");
-		Reporter.log("Chrome Browser launched Successfully...");
-		launchUrl(); //
-		// launchLocalUrl();
-		Reporter.log("Contentverse URL launched successfully...");
-		log.info("Contentverse URL launched successfully...");
-	}
 
 	@Test(priority = 1)
 	public void Login_To_EWA() throws Exception { //
+		launchUrl();
+		Reporter.log("Contentverse URL launched successfully...");
 		loginRNISHA47();
 		Reporter.log("User logged in successful... ");
-		log.info("Rnisha user logged in 'CVWin19Server.Win2019_TestRoom'successful... ");
+		
 	}
 
 	@Test(priority = 2)
@@ -39,7 +21,6 @@ public class AdvancedViewer_Script extends Computhink.Generic.BaseClass {
 
 		AdvancedViewer ad = new AdvancedViewer();
 		ad.AdvancedViewerOption();
-		log.info("Pdf document and office document changed as advanced viewing successful...");
 		Thread.sleep(5000);
 	}
 

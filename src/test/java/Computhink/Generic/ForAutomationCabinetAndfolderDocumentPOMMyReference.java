@@ -1,6 +1,5 @@
 package Computhink.Generic;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -37,19 +36,15 @@ public class ForAutomationCabinetAndfolderDocumentPOMMyReference extends BaseCla
 	// Here Am Going to use HashMapFor All cabinets and drawer xpath
 	@BeforeClass
 	public void ladBrowser() throws Exception {
-		loadBrowser("Chrome");
-		// log.info("Chrome Browser started Successfully...");
-
+		
 		launchUrl();
 
-		// log.info("CVS URL started Successfully...");
 	}
 
 	@Test(priority = 1)
 	public void LoginCV() throws Exception {
 		loginCVS();
 
-		// log.info("CVS User is logged in successfully...");
 
 	}
 
@@ -67,13 +62,6 @@ public class ForAutomationCabinetAndfolderDocumentPOMMyReference extends BaseCla
 			}
 
 		}
-		/*
-		 * String first=all.getText(); System.out.println(first);
-		 * 
-		 * String searchVal = first.substring(0,11); if(searchVal != null &&
-		 * searchVal.length()>0) { System.out.println("SearchVal: "+searchVal);
-		 * all.click(); break;
-		 */
 
 	}
 }

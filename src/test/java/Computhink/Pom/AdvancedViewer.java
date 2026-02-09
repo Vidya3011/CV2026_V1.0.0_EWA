@@ -22,10 +22,7 @@ import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 
 import Computhink.Generic.BaseClass;
-
-//NishaR codes
-
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~NishaR codes~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+ 
 public class AdvancedViewer extends BaseClass {
 
 	public AdvancedViewer() {

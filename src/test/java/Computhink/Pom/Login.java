@@ -63,14 +63,14 @@ public class Login extends BaseClass {
 	public static void loginwithoutUsername() throws Exception {
 
 		Reporter.log("Do not entered username into username field", true);
-		Thread.sleep(2000);
+		
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(1, 1));
 		Reporter.log("Enter valid Password into Password field", true);
-		Thread.sleep(1000);
+		
 		RoomSelectionCVS();
-		Thread.sleep(1000);
+		
 		try {
-			Thread.sleep(2000);
+			
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
@@ -80,7 +80,7 @@ public class Login extends BaseClass {
 		}
 		driver.findElement(By.id("submitid")).click();
 		Reporter.log("Click on the Login button", true);
-		Thread.sleep(1000);
+		
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.alertIsPresent());
@@ -95,13 +95,13 @@ public class Login extends BaseClass {
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(1, 0));
 		Reporter.log("Enter valid Username into Username field", true);
 		driver.findElement(By.id("loginPassword")).clear();
-		Thread.sleep(1000);
+		
 		Reporter.log("Do not entered password into password field", true);
-		Thread.sleep(1000);
+		
 		RoomSelectionCVS();
-		Thread.sleep(1000);
+		
 		try {
-			Thread.sleep(2000);
+			
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
@@ -111,7 +111,7 @@ public class Login extends BaseClass {
 		}
 		driver.findElement(By.id("submitid")).click();
 		Reporter.log("Click on the Login button", true);
-		Thread.sleep(1000);
+		
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.alertIsPresent());
@@ -127,7 +127,7 @@ public class Login extends BaseClass {
 		driver.findElement(By.xpath("//input[@id='userName']")).clear();
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(1, 0));
 		Reporter.log("Enter valid Username into Username field", true);
-		Thread.sleep(1000);
+		
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(1, 1));
 		Reporter.log("Enter valid Password into Password field", true);
 		WebElement room = driver.findElement(By.xpath("//select[@id='rooms']"));
@@ -135,15 +135,15 @@ public class Login extends BaseClass {
 		Select sel = new Select(room);
 		sel.selectByIndex(0);
 		Reporter.log("Not select Room", true);
-		Thread.sleep(1000);
+		
 		// Validate that the room has been selected correctly
 		String selectedRoom = sel.getFirstSelectedOption().getText();
 		Reporter.log("Selected Room name: " + selectedRoom, true);
 		as.assertEquals(selectedRoom, "Room selection is not correct."); // Assuming "Room 3" is the option
-		Thread.sleep(1000);
+		
 
 		try {
-			Thread.sleep(2000);
+			
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
@@ -153,7 +153,7 @@ public class Login extends BaseClass {
 		}
 		driver.findElement(By.id("submitid")).click();
 		Reporter.log("Click on the Login button", true);
-		Thread.sleep(1000);
+		
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.alertIsPresent());
@@ -169,13 +169,13 @@ public class Login extends BaseClass {
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(2, 1));
 		Reporter.log("Enter Invalid Username into Username field", true);
 		driver.findElement(By.id("loginPassword")).clear();
-		Thread.sleep(1000);
+		
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(1, 1));
 		Reporter.log("Enter valid Password into Password field", true);
-		Thread.sleep(2000);
+		
 		RoomSelectionCVS();
 		try {
-			Thread.sleep(2000);
+			
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
@@ -185,7 +185,7 @@ public class Login extends BaseClass {
 		}
 		driver.findElement(By.id("submitid")).click();
 		Reporter.log("Click on the Login button", true);
-		Thread.sleep(3000);
+		
 
 		try {
 			WebElement sessionmsg = driver.findElement(By.xpath("//*[@id=\"cvModelLoginValidationMessageMulti\"]"));
@@ -201,18 +201,18 @@ public class Login extends BaseClass {
 
 	public void InvalidPassword() throws Exception {
 
-		Thread.sleep(2000);
+		
 		driver.findElement(By.xpath("//input[@id='userName']")).clear();
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(1, 0));
 		Reporter.log("Enter valid Username into Username field", true);
 		driver.findElement(By.id("loginPassword")).clear();
-		Thread.sleep(1000);
+		
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(2, 1));
 		Reporter.log("Enter Invalid Password into Password field", true);
-		Thread.sleep(2000);
+		
 		RoomSelectionCVS();
 		try {
-			Thread.sleep(2000);
+			
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
@@ -222,7 +222,7 @@ public class Login extends BaseClass {
 		}
 		driver.findElement(By.id("submitid")).click();
 		Reporter.log("Click on the Login button", true);
-		Thread.sleep(1000);
+		
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.alertIsPresent());
@@ -295,7 +295,7 @@ public class Login extends BaseClass {
 		Login pojo = new Login();
 
 		Reporter.log("Test Scenario 3 : Verifying Login EWA with blank password", true);
-		Thread.sleep(2000);
+		
 		Login.loginwithoutPassword();
 		pojo.getPassworderror();
 	}
@@ -305,7 +305,7 @@ public class Login extends BaseClass {
 		Login pojo = new Login();
 
 		Reporter.log("Test Scenario 4 : Verifying Login EWA without selecting roomname ", true);
-		Thread.sleep(2000);
+		
 		pojo.loginwithoutRoomname();
 		pojo.getRoomerror();
 	}
@@ -315,7 +315,7 @@ public class Login extends BaseClass {
 		Login pojo = new Login();
 
 		Reporter.log("Test Scenario 5 : Verifying Login EWA with invalid username ", true);
-		Thread.sleep(2000);
+		
 		pojo.InvalidUsername();
 
 	}
@@ -324,10 +324,10 @@ public class Login extends BaseClass {
 
 		Login pojo = new Login();
 		Reporter.log("Test Scenario 6 : Verifying Login EWA with invalid password ", true);
-		Thread.sleep(2000);
+		
 		pojo.InvalidPassword();
 		pojo.getUsernotexist();
-		Thread.sleep(2000);
+		
 		jsclick(sessionNOButton);
 	}
 
@@ -335,7 +335,7 @@ public class Login extends BaseClass {
 
 		Reporter.log("Test Scenario 1 : Verifying No button of Session for user is already active dialog box ", true);
 		Already_Logged_User();
-		Thread.sleep(3000);
+		
 		Reporter.log("Verified No button of Session for user is already active dialog box ", true);
 
 	}
@@ -346,7 +346,6 @@ public class Login extends BaseClass {
 		ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(0));
 		launchUrl();
-		Thread.sleep(1000);
 		LogDipakUser();
 		Reporter.log("Verified Yes button of Session for user is already active dialog box ", true);
 
@@ -359,7 +358,6 @@ public class Login extends BaseClass {
 		ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(0));
 		launchUrl();
-		Thread.sleep(1000);
 		LoginAdminUser();
 		Reporter.log("Verified If User Session is active but we Closed Browser then it should "
 				+ "allowing to Login to EWA for Any User without Showing Login validation", true);
@@ -463,12 +461,12 @@ public class Login extends BaseClass {
 		// Step 2: Click the eye icon to toggle visibility
 
 		passwordField.sendKeys("syntax@10");
-		Thread.sleep(2000);
+		
 		eyeIcon.click();
-		Thread.sleep(2000);
+		
 
 		// Step 3: Validate password is now visible
-		Thread.sleep(2000);
+		
 		String newType = passwordField.getAttribute("type");
 		System.out.println("After clicking eye icon, type: " + newType);
 
@@ -479,7 +477,7 @@ public class Login extends BaseClass {
 		}
 
 		// Step 4 (Optional): Click again to hide password
-		Thread.sleep(3000);
+		
 		eyeIcon.click();
 		String finalType = passwordField.getAttribute("type");
 		System.out.println("After clicking again, type: " + finalType);
@@ -502,7 +500,7 @@ public class Login extends BaseClass {
 		if (ForgotpasswordLink.isDisplayed() && ForgotpasswordLink.isEnabled()) {
 			System.out.println("Link is visible and enabled");
 			ForgotpasswordLink.click();
-			Thread.sleep(2000);
+			
 			ForgotPassCancel.click();
 		} else {
 			System.out.println("Forgot password Link is either hiden or disabled");
@@ -512,7 +510,7 @@ public class Login extends BaseClass {
 			Thread.sleep(6000);
 			System.out.println("EULA Contentverse website Link is visible and enabled");
 			EULALink.click();
-			Thread.sleep(5000);
+			
 			String title1 = driver.getTitle();
 			System.out.println("The Page title is : " + title1);
 		} else {
@@ -536,10 +534,10 @@ public class Login extends BaseClass {
 		// Url Launch
 
 		if (CVWebsite.isDisplayed() && CVWebsite.isEnabled()) {
-			Thread.sleep(2000);
+			
 			System.out.println("Contentverse website Link is visible and enabled");
 			CVWebsite.click();
-			Thread.sleep(5000);
+			
 			String title = driver.getTitle();
 			System.out.println("The Page title is : " + title);
 		} else {

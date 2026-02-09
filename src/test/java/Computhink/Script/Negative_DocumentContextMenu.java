@@ -3,7 +3,6 @@ package Computhink.Script;
 //Dipak Automation Coading
 
 import org.testng.Reporter;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import Computhink.Generic.BaseClass;
@@ -11,44 +10,38 @@ import Computhink.Pom.Documents_ContextMenu;
 
 public class Negative_DocumentContextMenu extends BaseClass {
 
-	@BeforeClass
 
-	public void Launch_Browser() throws Exception {
-		loadBrowser("Chrome");
-		launchUrl();
-		Reporter.log("CVS URL started Successfully", true);
-	}
-
-	@Test
+	@Test(priority = 1)
 
 	public void Login_EWA() throws Exception {
+		launchUrl();
 		LogDipakUser();
 		Reporter.log("User has logged in successfully.", true);
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void TC_01_Verify_BlankToemailID() throws Exception {
 
 		Documents_ContextMenu Doc = new Documents_ContextMenu();
 		Doc.Verify_BlankToemailID();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void TC_02_Verify_InvalidToEmailId() throws Exception {
 
 		Documents_ContextMenu Doc = new Documents_ContextMenu();
 		Doc.Verify_InvalidToEmailId();
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void TC_03_Verify_InvalidCCEmailId() throws Exception {
 
 		Documents_ContextMenu Doc = new Documents_ContextMenu();
 		Doc.Verify_InvalidCCEmailId();
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void TC_04_Verify_MailDialog_Cancel_button() throws Exception {
 
 		Documents_ContextMenu Doc = new Documents_ContextMenu();

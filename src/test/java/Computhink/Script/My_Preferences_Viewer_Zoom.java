@@ -3,7 +3,6 @@ package Computhink.Script;
 //Dipak Automation Coading
 
 import org.testng.Reporter;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import Computhink.Pom.My_Preferences;
@@ -11,23 +10,17 @@ import Computhink.Pom.My_Preferences;
 //Dipak Automation script
 public class My_Preferences_Viewer_Zoom extends Computhink.Generic.BaseClass {
 
-	@BeforeClass
 
-	public void Launch_Browser() throws Exception {
-		loadBrowser("Chrome");
-		launchUrl();
-		Reporter.log("CVS URL started Successfully", true);
-	}
-
-	@Test
+	@Test(priority = 1)
 
 	public void Login_EWA() throws Exception {
+		launchUrl();
 		LogDipakUser();
 		Reporter.log("User has logged in successfully.", true);
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void TC_01_Verify_Viewer_Zoom_Fit_To_Width() throws Exception {
 
 		My_Preferences pojo = new My_Preferences();
@@ -35,7 +28,7 @@ public class My_Preferences_Viewer_Zoom extends Computhink.Generic.BaseClass {
 
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void TC_02_Verify_Viewer_Zoom_Fit_To_Height() throws Exception {
 
 		My_Preferences pojo = new My_Preferences();
@@ -43,7 +36,7 @@ public class My_Preferences_Viewer_Zoom extends Computhink.Generic.BaseClass {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void TC_03_Verify_Viewer_Zoom_Fit_Entire_Image() throws Exception {
 
 		My_Preferences pojo = new My_Preferences();
@@ -51,7 +44,7 @@ public class My_Preferences_Viewer_Zoom extends Computhink.Generic.BaseClass {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void TC_04_Verify_Viewer_Zoom_Actual_Size() throws Exception {
 
 		My_Preferences pojo = new My_Preferences();

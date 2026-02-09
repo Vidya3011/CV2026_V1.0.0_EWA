@@ -140,7 +140,7 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 	@FindBy(xpath = "//*[@id=\"documentListTable\"]/tbody/tr[1]/td[3]")
 	private WebElement Open_Document;
 
-	@FindBy(xpath = "(//a[normalize-space()='Update'])[1]")
+	@FindBy(xpath = "//*[@class='editproperties']")
 	private WebElement Update_Button;
 
 	@FindBy(xpath = "//td[contains(text(),'ReportName')]/parent::tr//input") 

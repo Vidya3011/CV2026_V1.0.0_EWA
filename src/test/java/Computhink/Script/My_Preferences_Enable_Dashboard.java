@@ -3,30 +3,23 @@ package Computhink.Script;
 //Dipak Automation Coading
 
 import org.testng.Reporter;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import Computhink.Generic.BaseClass;
 import Computhink.Pom.My_Preferences;
 
 public class My_Preferences_Enable_Dashboard extends BaseClass {
 
-	@BeforeClass
-	
-	public void Launch_Browser() throws Exception {
-		loadBrowser("Chrome");
-		launchUrl();
-		Reporter.log("CVS URL started Successfully", true);
-	}
 
-	@Test
+	@Test(priority = 1)
 
 	public void Login_EWA() throws Exception {
+		launchUrl();
 		LogDipakUser();
 		Reporter.log("User has logged in successfully", true);
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void TC_01_Verify_Enable_Dashboard() throws Exception {
 
 		My_Preferences pojo = new My_Preferences();

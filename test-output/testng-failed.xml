@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Computhink.Script.Document_Version_Test">
+      <class name="Computhink.Script.Login_Validation">
         <methods>
-          <include name="TC_05_Add_Annotation"/>
-          <include name="TC_02_Upload_and_Save_New_page_and_Verify_Version_with_New_Comments"/>
-          <include name="Launch_Browser"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC_01_ContentVerseURLAndTitleValidation"/>
         </methods>
-      </class> <!-- Computhink.Script.Document_Version_Test -->
+      </class> <!-- Computhink.Script.Login_Validation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

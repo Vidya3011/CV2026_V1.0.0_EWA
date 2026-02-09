@@ -4,23 +4,16 @@ package Computhink.Script;
 
 
 import org.testng.Reporter;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import Computhink.Pom.Language;
 
 public class Dutch_Language_Test extends Computhink.Generic.BaseClass {
 
-	@BeforeClass
-	public void Launch_Browser() throws Exception {
 
-		loadBrowser("edge");
-		launchUrl();
-		Reporter.log("CVS URL started Successfully", true);
-	}
-
-	@Test
+	@Test(priority = 1)
 	public void Login_EWA() throws Exception {
+		launchUrl();
 		LogDipakUser();
 		Reporter.log("User has logged in successfully", true);
 
@@ -28,35 +21,35 @@ public class Dutch_Language_Test extends Computhink.Generic.BaseClass {
 
 	// Verifying Dutch Language //
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void TC_01_CreateandOpen_NewDocument_Dutch_Language() throws Exception {
 
 		Language pojo = new Language();
 		pojo.CreateandOpen_NewDocument_Dutch_Language();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void TC_02_Verify_OCR_afterCreatingDocument() throws Exception {
 
 		Language pojo = new Language();
 		pojo.Verify_OCR_afterCreatingDocument();
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void TC_03_Addsignature_Dutch_Language() throws Exception {
 
 		Language pojo = new Language();
 		pojo.Addsignature_Dutch_Language();
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void TC_04_AddRedaction_Dutch_Language() throws Exception {
 
 		Language pojo = new Language();
 		pojo.getAddRedaction_Dutch_Language();
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void TC_05_ShowHideThumbnail_Dutch_Language() throws Exception {
 
 		Language pojo = new Language();
@@ -65,28 +58,28 @@ public class Dutch_Language_Test extends Computhink.Generic.BaseClass {
 
 	// Create Template in Dutch laguage
 
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void TC_06_verify_to_CreateorBrowse_Template_Defaultviewing() throws Exception {
 
 		Language pojo = new Language();
 		pojo.getverify_to_CreateorBrowse_Template_Defaultviewing();
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void TC_07_Verify_to_Edit_and_Delete_DefaultTemplate() throws Exception {
 
 		Language pojo = new Language();
 		pojo.getVerify_to_Edit_and_Delete_DefaultTemplate();
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 9)
 	public void TC_08_verify_to_CreateorBrowse_Template_Advancedviewing_OfficeDoc() throws Exception {
 
 		Language pojo = new Language();
 		pojo.getverify_to_CreateorBrowse_Template_Advancedviewing_OfficeDoc();
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 10)
 	public void TC_09_Verify_to_Edit_and_Delete_AdvancedTemplate_OfficeDoc() throws Exception {
 
 		Language pojo = new Language();

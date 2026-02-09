@@ -1,39 +1,26 @@
 package Computhink.Script;
 
-
-import org.apache.logging.log4j.LogManager;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-//NishaR codes
+import Computhink.Pom.Print;
+
 public class
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~NishaR
-// codes~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 PrintFunctionality extends Computhink.Generic.BaseClass {
 
 	public static SoftAssert so;
-	private static org.apache.logging.log4j.Logger log = LogManager.getLogger(PrintFunctionality.class);
-
-	/*@BeforeClass
-	public void ladBrowser() throws Exception {
-		loadBrowser("Chrome");
-	
-		log.info("Chrome Browser Launched");
-		Reporter.log("Chrome Browser launched Successfully...");
-		launch47Url();
-		// launchLocalUrl();
-		Reporter.log("Contentverse URL launched successfully...");
-		log.info("Contentverse URL launched successfully...");
-	}
 	
 	@Test(priority = 1)
 	public void Login() throws Exception {
 	
-		//LogoutPage();
+		launchUrl();
 		loginRNISHA47();
 		
 		Reporter.log("User logged in successfully... ");
-		log.info("Rnisha user logged in 'CVWin19Server.Win2019_TestRoom'successfully... ");
+		
 	}
 	
 	
@@ -43,7 +30,7 @@ PrintFunctionality extends Computhink.Generic.BaseClass {
 		Print pojo = new Print();
 		pojo.PrintWithcertifiedCoverPageUnlockRedaction();
 
-	}*/
+	}
 
 }
 

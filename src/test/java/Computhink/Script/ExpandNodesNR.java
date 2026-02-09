@@ -5,40 +5,21 @@ package Computhink.Script;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
 import org.testng.Reporter;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import Computhink.Generic.BaseClass;
 
-//NishaR codes
+
 public class
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~NishaR
-// codes~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ExpandNodesNR extends BaseClass {
-
-	@BeforeClass
-	public void loadBrowser() throws Exception {
-		loadBrowser("Chrome");
-
-		// log.info("Chrome Browser Launched");
-		Reporter.log("Chrome Browser launched Successfully...");
-		launchUrl();
-		// launchLocalUrl();
-		Reporter.log("Contentverse URL launched successfully...");
-		// log.info("Contentverse URL launched successfully...");
-	}
 
 	@Test(priority = 1)
 	public void TC_1_Login() throws Exception {
-		// LogoutPage();
+		launchUrl();
 		loginCVS();
 
-		// Reporter.log("Rnisha user logged in
-		// 'CVWin19Server.Win2019_TestRoom'successfully... ");
-		// .info("Rnisha user logged in 'CVWin19Server.Win2019_TestRoom'successfully...
-		// ");
 	}
 
 	public static void expandCabinets() throws Exception {

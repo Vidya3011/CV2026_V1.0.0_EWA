@@ -1,6 +1,5 @@
 package Computhink.Script;
 
-import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
 
@@ -8,35 +7,19 @@ import org.testng.annotations.Test;
 
 import Computhink.Pom.FavoritesPom;
 
-
-//NishaR codes
-
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~NishaR codes~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+ 
 public class Favorites extends Computhink.Generic.BaseClass {
 	public static Actions act;
 
-	private static org.apache.logging.log4j.Logger log = LogManager.getLogger(Favorites.class);
 
-	//@BeforeClass
-	public void loadBrowser() throws Exception {
-		loadBrowser("Chrome");
-
-		log.info("Chrome Browser Launched");
-		Reporter.log("Chrome Browser launched Successfully...");
-		launchUrl();
-		// launchLocalUrl();
-		Reporter.log("Contentverse URL launched successfully...");
-		log.info("Contentverse URL launched successfully...");
-	}
-
-  //	@Test(priority = 1)
+  @Test(priority = 1)
 	public void Login() throws Exception {
-	
+		launchUrl();
 		LogoutPage();
 		LogInAdmin();
 		
 		Reporter.log("User logged in successfully... ");
-		log.info("Rnisha user logged in 'CVWin19Server.Win2019_TestRoom'successfully... ");
+		
 	}
 	
 
@@ -48,7 +31,7 @@ public class Favorites extends Computhink.Generic.BaseClass {
 
 		FavoritesPom fav = new FavoritesPom();
 		fav.FavoriteInUserLevel();
-		log.info("Favorite User Level working fine...");
+		
 	}
 
 	@Test(priority = 3)

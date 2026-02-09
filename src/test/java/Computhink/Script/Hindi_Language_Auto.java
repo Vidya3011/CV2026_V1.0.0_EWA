@@ -1,33 +1,22 @@
 package Computhink.Script;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import Computhink.Pom.Language;
 
 
-//NishaR codes
 public class
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~NishaR
-// codes~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Hindi_Language_Auto extends Computhink.Generic.BaseClass {
 
-	private static final Logger log = LogManager.getLogger(Hindi_Language_Auto.class);
 
-	// @BeforeClass
-	public void LandBrowser() throws Exception {
-
-		loadBrowser("Chrome");
-		launchUrl();
-		log.info("CVS URL started Successfully...");
-	}
-
-	// @Test
+	@Test(priority = 1)
 	public void Login_EWA() throws Exception {
+		
+		
+		launchUrl();
 		loginCVS();
-
-		log.info("CVS User is logged in successfully...");
+		
 
 	}
 

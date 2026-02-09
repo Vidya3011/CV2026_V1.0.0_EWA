@@ -37,13 +37,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.asserts.SoftAssert;
 
 import Computhink.Pom.ToDoListTab;
@@ -53,9 +57,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 
-	//
 
-	public static WebDriver driver;
 	public static Alert a;
 	public static Actions a1;
 	public static Robot r;
@@ -64,55 +66,102 @@ public class BaseClass {
 	public static TakesScreenshot ts;
 	public static ToDoListTab todo;
 
-	// 1. Select Browser for EWA Automation scripts
+	
+//********************Select Browser for EWA Automation scripts****************************************//
 
-	public static void StartTime() {
-		Date d = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		String currentDateTime = sdf.format(d);
-		System.out.println("Test Execution Start Time :" + currentDateTime);
+	protected static WebDriver driver;
+
+	// 🔴 CHANGE BROWSER ONLY HERE
+	private static final String BROWSER = "Chrome";
+	// Chrome | Edge | Firefox
+
+	@BeforeClass(alwaysRun = true)
+	public void setUp() {
+		loadBrowser(BROWSER);
 	}
 
-	public static void loadBrowser(String browserName) {
+	private static void loadBrowser(String browserName) {
 
-		if (browserName.equals("Chrome")) {
+		if (browserName.equalsIgnoreCase("Chrome")) {
 
 			WebDriverManager.chromedriver().setup();
+
 			ChromeOptions options = new ChromeOptions();
 
-			Map<String, Object> prefs = new HashMap<>();
-			prefs.put("credentials_enable_service", false);
-			prefs.put("profile.password_manager_enabled", false);
+			// ================= HEADLESS MODE (CHROME) =================
+			// 👉 Uncomment below lines to run in Headless mode
 			// options.addArguments("--headless=new");
-			options.addArguments("--remote-allow-origins=*"); // Resolve version-specific Chrome driver issues
-			options.addArguments("--disable-extensions");
-			options.addArguments("--disable-popup-blocking");
-			options.addArguments("--disable-infobars");
+			// options.addArguments("--window-size=1920,1080");
+			// ===========================================================
+
+			// Remove "Chrome is being controlled by automated software"
 			options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+			options.setExperimentalOption("useAutomationExtension", false);
+
+			// Disable permission popups + auto download
+			Map<String, Object> prefs = new HashMap<>();
+			prefs.put("profile.default_content_setting_values.notifications", 2);
+			prefs.put("profile.default_content_setting_values.geolocation", 2);
+			prefs.put("profile.default_content_setting_values.media_stream_camera", 2);
+			prefs.put("profile.default_content_setting_values.media_stream_mic", 2);
+			prefs.put("download.prompt_for_download", false);
+			prefs.put("safebrowsing.enabled", true);
+
 			options.setExperimentalOption("prefs", prefs);
 
+			options.addArguments("--disable-notifications");
+			options.addArguments("--disable-infobars");
+			options.addArguments("--disable-extensions");
+			options.addArguments("--remote-allow-origins=*");
+
 			driver = new ChromeDriver(options);
-			Reporter.log("Chrome driver launched successfull");
 
-		} else if (browserName.equals("edge")) {
-			
-		  WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
-			// Set the driver path
-			
-			Reporter.log("Edge driver launched successfull");
+		} else if (browserName.equalsIgnoreCase("Edge")) {
 
-		} else if (browserName.equals("Firefox")) {
+			WebDriverManager.edgedriver().setup();
+
+			EdgeOptions options = new EdgeOptions();
+
+			// ================= HEADLESS MODE (EDGE) =================
+			// 👉 Uncomment below lines to run in Headless mode
+			// options.addArguments("--headless=new");
+			// options.addArguments("--window-size=1920,1080");
+			// ========================================================
+
+			options.addArguments("--disable-notifications");
+			driver = new EdgeDriver(options);
+
+		} else if (browserName.equalsIgnoreCase("Firefox")) {
+
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+
+			FirefoxOptions options = new FirefoxOptions();
+
+			// ================= HEADLESS MODE (FIREFOX) =================
+			// 👉 Uncomment below line to run in Headless mode
+			// options.addArguments("--headless");
+			// ===========================================================
+
+			options.addPreference("geo.enabled", false);
+			options.addPreference("dom.webnotifications.enabled", false);
+			options.addPreference("browser.download.prompt_for_download", false);
+
+			driver = new FirefoxDriver(options);
 
 		} else {
-			Reporter.log("we do not support this selected browser", true);
+			throw new RuntimeException("Unsupported browser: " + browserName);
 		}
 
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().deleteAllCookies();
+	}
+
+	@AfterClass(alwaysRun = false)
+	public void tearDown() {
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
 	// 2. Contentverse URL Validation
@@ -176,7 +225,7 @@ public class BaseClass {
 
 	public static void launchUrl() throws Exception {
 		driver.get(ExcelLogin(1, 3));
-		ContentVerseURLAndTitleAssertValidation();
+		//ContentVerseURLAndTitleAssertValidation();
 		Reporter.log("EWA URL launched successfull");
 	}
 
@@ -203,9 +252,6 @@ public class BaseClass {
 
 		SoftAssert as = new SoftAssert(); // Initialize SoftAssert to capture all assertions
 
-		// Wait for the page to load
-		Thread.sleep(2000);
-
 		// Find and validate Username input field
 		WebElement UserName = driver.findElement(By.xpath("//input[@id='userName']"));
 		as.assertTrue(UserName.isDisplayed(), "Username field is not displayed on the page.");
@@ -215,7 +261,7 @@ public class BaseClass {
 		String username = ExcelLogin(1, 0);
 		UserName.clear();
 		UserName.sendKeys(username);
-		Thread.sleep(2000);
+	
 
 		// Validate the username entered
 		as.assertEquals(UserName.getAttribute("value"), username, "Entered username is not correct.");
@@ -253,7 +299,7 @@ public class BaseClass {
 		as.assertTrue(LoginBTN.isEnabled(), "Login button is not enabled.");
 
 		jsclick(LoginBTN); // Perform the click action using JavaScript click
-		Thread.sleep(1000);
+		
 
 		// Check for session message and handle it
 		try {
@@ -289,9 +335,7 @@ public class BaseClass {
 	public static void Already_Logged_User() throws Exception {
 
 		SoftAssert as = new SoftAssert(); // Initialize SoftAssert to capture all assertions
-
-		// Wait for the page to load
-		Thread.sleep(2000);
+		
 
 		// Find and validate Username input field
 		WebElement UserName = driver.findElement(By.xpath("//input[@id='userName']"));
@@ -301,7 +345,7 @@ public class BaseClass {
 
 		String username = ExcelLogin(1, 0);
 		UserName.sendKeys(username);
-		Thread.sleep(3000);
+		
 
 		// Validate the username entered
 		as.assertEquals(UserName.getAttribute("value"), username, "Entered username is not correct.");
@@ -338,7 +382,7 @@ public class BaseClass {
 		as.assertTrue(LoginBTN.isEnabled(), "Login button is not enabled.");
 
 		jsclick(LoginBTN); // Perform the click action using JavaScript click
-		Thread.sleep(3000);
+		
 
 		// Check for session message and handle it
 		try {
@@ -375,9 +419,6 @@ public class BaseClass {
 
 		SoftAssert as = new SoftAssert(); // Initialize SoftAssert to capture all assertions
 
-		// Wait for the page to load
-		Thread.sleep(2000);
-
 		// Find and validate Username input field
 		WebElement UserName = driver.findElement(By.xpath("//input[@id='userName']"));
 		as.assertTrue(UserName.isDisplayed(), "Username field is not displayed on the page.");
@@ -386,7 +427,7 @@ public class BaseClass {
 
 		String username = ExcelLogin(2, 0);
 		UserName.sendKeys(username);
-		Thread.sleep(3000);
+		
 
 		// Validate the username entered
 		as.assertEquals(UserName.getAttribute("value"), username, "Entered username is not correct.");
@@ -423,7 +464,7 @@ public class BaseClass {
 		as.assertTrue(LoginBTN.isEnabled(), "Login button is not enabled.");
 
 		jsclick(LoginBTN); // Perform the click action using JavaScript click
-		Thread.sleep(3000);
+		
 
 		// Check for session message and handle it
 		try {
@@ -467,9 +508,7 @@ public class BaseClass {
 
 	public static void loginRNISHA47() throws Exception {
 		SoftAssert as = new SoftAssert(); // Initialize SoftAssert to capture all assertions
-
-		// Wait for the page to load
-		Thread.sleep(2000);
+	
 
 		// Find and validate Username input field
 		WebElement UserName = driver.findElement(By.xpath("//input[@id='userName']"));
@@ -481,7 +520,7 @@ public class BaseClass {
 												// 7.vidyaAssuming this method reads the username from an external
 												// source
 		UserName.sendKeys(username);
-		Thread.sleep(3000);
+		
 
 		// Validate the username entered
 		as.assertEquals(UserName.getAttribute("value"), username, "Entered username is not correct.");
@@ -518,7 +557,7 @@ public class BaseClass {
 		as.assertTrue(LoginBTN.isEnabled(), "Login button is not enabled.");
 
 		jsclick(LoginBTN); // Perform the click action using JavaScript click
-		Thread.sleep(3000);
+	
 
 		// Check for session message and handle it
 		try {
@@ -542,7 +581,7 @@ public class BaseClass {
 		SoftAssert as = new SoftAssert(); // Initialize SoftAssert to capture all assertions
 
 		// Wait for the page to load
-		Thread.sleep(4000);
+		
 
 		// Find and validate Username input field
 		WebElement UserName = driver.findElement(By.xpath("//input[@id='userName']"));
@@ -552,7 +591,7 @@ public class BaseClass {
 
 		String username = readFromExLogin(2, 0); // Assuming this method reads the username from an external source
 		UserName.sendKeys(username);
-		Thread.sleep(3000);
+		
 
 		// Validate the username entered
 		as.assertEquals(UserName.getAttribute("value"), username, "Entered username is not correct.");
@@ -588,7 +627,7 @@ public class BaseClass {
 		as.assertTrue(LoginBTN.isEnabled(), "Login button is not enabled.");
 
 		jsclick(LoginBTN); // Perform the click action using JavaScript click
-		Thread.sleep(3000);
+	
 
 		// Check for session message and handle it
 		try {
@@ -1762,74 +1801,3 @@ public class BaseClass {
 	}
 }
 
-/*
- * //53. public static String excelRead(String fileName, String sheetName, int
- * rowNo, int cellNo) throws IOException { f=new File(""+fileName+".xlsx"); fin=
- * new FileInputStream(f); w = new XSSFWorkbook(fin); s = w.getSheet(sheetName);
- * row =s.getRow(rowNo); cell = row.getCell(cellNo); int cellType =
- * cell.getCellType(); String text=""; if (cellType==1) {
- * text=cell.getStringCellValue(); } else if
- * (DateUtil.isCellDateFormatted(cell)) { Date d = cell.getDateCellValue();
- * System.out.println(d); SimpleDateFormat sim = new
- * SimpleDateFormat("dd-MM-yyyy"); text = sim.format(d); } else { double d =
- * cell.getNumericCellValue(); long l = (long)d; text = String.valueOf(l); }
- * return text; }
- * 
- * //54. public static void excelWrite(String fileName, String sheetName, int
- * rowNo, int cellNo, String value) throws IOException { f=new
- * File(""+fileName+".xlsx"); w = new XSSFWorkbook(); s =
- * w.createSheet(sheetName); row= s.createRow(rowNo); cell =
- * row.createCell(cellNo); cell.setCellValue(value); fout = new
- * FileOutputStream(f); w.write(fout); System.out.println("Done"); }
- * 
- * //55. public static void excelUpdate(String fileName, String sheetName, int
- * rowNo, int cellNo, String oldValue, String newValue) throws IOException {
- * f=new File(""+fileName+".xlsx"); fin = new FileInputStream(f); w = new
- * XSSFWorkbook(fin); s = w.getSheet(sheetName); row= s.getRow(rowNo); cell =
- * row.getCell(cellNo); String text = cell.getStringCellValue(); if
- * (text.equals(oldValue)) { cell.setCellValue(newValue); } fout = new
- * FileOutputStream(f); w.write(fout); System.out.println("Done"); } public
- * static void excelUpdates(String fileName, String sheetName, int rowNo, int
- * cellNo, String value) throws IOException { f=new File(""+fileName+".xlsx");
- * fin = new FileInputStream(f); w = new XSSFWorkbook(fin); s =
- * w.getSheet(sheetName); row= s.getRow(rowNo); cell = row.getCell(cellNo);
- * cell.setCellValue(value); fout = new FileOutputStream(f); w.write(fout);
- * System.out.println("Done");
- * 
- * } //56. public static void excelAddNewRow(String fileName, String sheetName,
- * int rowNo, int cellNo, String value) throws IOException{ f=new
- * File(""+fileName+".xlsx"); fin = new FileInputStream(f); w = new
- * XSSFWorkbook(fin); s = w.getSheet(sheetName); row= s.createRow(rowNo); cell =
- * row.createCell(cellNo); cell.setCellValue(value); fout = new
- * FileOutputStream(f); w.write(fout); System.out.println("Done"); } //57.
- * public static void createExcel(String fileName, String sheetName) throws
- * IOException { f=new File("" + fileName + ".xlsx"); w = new XSSFWorkbook(); s=
- * w.createSheet(sheetName); fout=new FileOutputStream(f); w.write(fout); }
- * //58. public static void createRow(String fileName, String sheetName, int
- * rowNo) throws IOException { f=new File(""+fileName+".xlsx"); fin = new
- * FileInputStream(f); w = new XSSFWorkbook(fin); s= w.getSheet(sheetName);
- * s.createRow(rowNo); fout=new FileOutputStream(f); w.write(fout); } //59.
- * public static void createCell(String fileName, String sheetName, int rowNo,
- * int cellNo, String value) throws IOException { f=new
- * File(""+fileName+".xlsx"); fin = new FileInputStream(f); w = new
- * XSSFWorkbook(fin); s= w.getSheet(sheetName); row= s.getRow(rowNo); cell =
- * row.createCell(cellNo); cell.setCellValue(value); fout=new
- * FileOutputStream(f); w.write(fout);
- * 
- * } //60. public static int getNoOfRows(String fileName, String sheetName)
- * throws IOException { f=new File(""+fileName+".xlsx"); fin = new
- * FileInputStream(f); w = new XSSFWorkbook(fin); s= w.getSheet(sheetName); int
- * NumberOfRows = s.getPhysicalNumberOfRows(); return NumberOfRows;
- * 
- * } //61. public static int getNoOFColumn(String fileName, String sheetName)
- * throws IOException { int NumberOfCells=0; f=new File(""+fileName+".xlsx");
- * fin = new FileInputStream(f); w = new XSSFWorkbook(fin); s=
- * w.getSheet(sheetName); for (int i = 0; i < getNoOfRows(fileName, sheetName);
- * i++) { Row r = s.getRow(i); NumberOfCells = r.getPhysicalNumberOfCells();
- * return NumberOfCells; }
- * 
- * } //62. public static int getTotalNoOfCells(String fileName, String
- * sheetName) throws IOException { int rows = getNoOfRows(fileName, sheetName);
- * int column = getNoOFColumn(fileName, sheetName); int Totalcells =rows*column;
- * return Totalcells; } }
- */

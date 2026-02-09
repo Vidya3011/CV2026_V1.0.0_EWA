@@ -3,25 +3,17 @@ package Computhink.Script;
 //Dipak Automation Coading
 
 import org.testng.Reporter;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import Computhink.Generic.BaseClass;
 import Computhink.Pom.Document_Version;
 
 public class Document_Version_Test extends BaseClass {
 
-	@BeforeClass
-
-	public void Launch_Browser() throws Exception {
-		loadBrowser("Chrome");
-		launchUrl();
-		Reporter.log("CVS URL started Successfully", true);
-	}
 
 	@Test
 
 	public void Login_EWA() throws Exception {
+		launchUrl();
 		LogDipakUser();
 		Reporter.log("User has logged in successfully", true);
 
