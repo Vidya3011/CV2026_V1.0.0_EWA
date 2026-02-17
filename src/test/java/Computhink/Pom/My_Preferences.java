@@ -787,28 +787,28 @@ public class My_Preferences extends BaseClass {
 		Date d = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		String currentDate = sdf.format(d);
-		Reporter.log("Current CREATED ON Date Format is :" + currentDate);
+		log("Current CREATED ON Date Format is :" + currentDate);
 	}
 
 	public void Verify_DD_MM_YYYY_Date() {
 		Date d = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 		String currentDate = sdf.format(d);
-		Reporter.log("Current CREATED ON Date is :" + currentDate);
+		log("Current CREATED ON Date is :" + currentDate);
 	}
 
 	public void Verify_MM_DD_YYYY_Date() {
 		Date d = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
 		String currentDate = sdf.format(d);
-		Reporter.log("Current CREATED ON Date is :" + currentDate);
+		log("Current CREATED ON Date is :" + currentDate);
 	}
 
 	public void Verify_Default_Date() {
 		Date d = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String currentDateTime = sdf.format(d);
-		Reporter.log("Current CREATED ON Date is :" + currentDateTime);
+		log("Current CREATED ON Date is :" + currentDateTime);
 	}
 
 	// PDF with Overlay
@@ -834,9 +834,9 @@ public class My_Preferences extends BaseClass {
 	public void getVerify_PDF_with_Overlay_option() throws Exception {
 		Boolean ele = Verify_PDF_with_Overlay_option.isDisplayed();
 		if (ele) {
-			Reporter.log(" PDF with Overlay is Enable");
+			log(" PDF with Overlay is Enable");
 		} else {
-			Reporter.log(" PDF with Overlay is Disable");
+			log(" PDF with Overlay is Disable");
 		}
 	}
 
@@ -868,7 +868,7 @@ public class My_Preferences extends BaseClass {
 	}
 
 	public void getVerify_Doc_Id() throws Exception {
-		Reporter.log(Copy_Doc_Id.getText() + " this document ID number is showing", true);
+		log(Copy_Doc_Id.getText() + " this document ID number is showing");
 
 	}
 
@@ -895,13 +895,13 @@ public class My_Preferences extends BaseClass {
 
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 	}
 
 	public void getEnter_IndexValue_InSearch() throws Exception {
@@ -982,7 +982,7 @@ public class My_Preferences extends BaseClass {
 
 	public void getClick_FileInfo_OkButton_withFileName() {
 		WebElement Filename = Click_FileInfo_OkButton_withFileName;
-		Reporter.log(Filename.getText() + " this name should show", true);
+		log(Filename.getText() + " this name should show");
 		WebElement ele = RemarkOk;
 		ele.click();
 	}
@@ -1045,7 +1045,7 @@ public class My_Preferences extends BaseClass {
 
 	public void getSignature_Upload_OkButton() throws Exception {
 		WebElement sel = Signature_Upload_OkButton;
-		Reporter.log("The Successfully:" + sel.getText() + " this message should show", true);
+		log("The Successfully:" + sel.getText() + " this message should show");
 		WebElement ok = okbutton;
 		ok.click();
 	}
@@ -1112,8 +1112,7 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Search result : 10";
 		String actualcount = Verify_Loadmorecount_Searchresult.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		Reporter.log("The " + Verify_Loadmorecount_Searchresult.getText() + " this count is shows on search result",
-				true);
+		log("The " + Verify_Loadmorecount_Searchresult.getText() + " this count is shows on search result");
 	}
 
 	public void getVerify_Loadmorecount_Searchresult2() throws Exception {
@@ -1121,8 +1120,7 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Search result : 20";
 		String actualcount = Verify_Loadmorecount_Searchresult.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		Reporter.log("The " + Verify_Loadmorecount_Searchresult.getText() + " this count is shows on search result",
-				true);
+		log("The " + Verify_Loadmorecount_Searchresult.getText() + " this count is shows on search result");
 	}
 
 	public void getVerify_Loadmorecount_Document_Folder1() throws Exception {
@@ -1130,8 +1128,8 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Showing 10 documents in folder.";
 		String actualcount = Verify_Loadmorecount_Document_Folder.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		Reporter.log("The " + Verify_Loadmorecount_Document_Folder.getText()
-				+ " this count is shows on Folder search result", true);
+		log("The " + Verify_Loadmorecount_Document_Folder.getText()
+				+ " this count is shows on Folder search result");
 	}
 
 	public void getVerify_Loadmorecount_Document_Folder2() throws Exception {
@@ -1139,8 +1137,8 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Showing 20 documents in folder.";
 		String actualcount = Verify_Loadmorecount_Document_Folder.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		Reporter.log("The " + Verify_Loadmorecount_Document_Folder.getText()
-				+ " this count is shows on Folder search result", true);
+		log("The " + Verify_Loadmorecount_Document_Folder.getText()
+				+ " this count is shows on Folder search result");
 	}
 
 	// Verify Maximum load more count
@@ -1150,8 +1148,7 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Search result : 60";
 		String actualcount = Verify_Loadmorecount_Searchresult.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		Reporter.log("The " + Verify_Loadmorecount_Searchresult.getText() + " this count is shows on search result",
-				true);
+		log("The " + Verify_Loadmorecount_Searchresult.getText() + " this count is shows on search result");
 	}
 
 	public void getVerify_maxLoadmorecount_Searchresult2() throws Exception {
@@ -1159,8 +1156,7 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Search result : 120";
 		String actualcount = Verify_Loadmorecount_Searchresult.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		Reporter.log("The " + Verify_Loadmorecount_Searchresult.getText() + " this count is shows on search result",
-				true);
+		log("The " + Verify_Loadmorecount_Searchresult.getText() + " this count is shows on search result");
 	}
 
 	public void getVerify_maxLoadmorecount_Document_Folder1() throws Exception {
@@ -1168,8 +1164,8 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Showing 60 documents in folder.";
 		String actualcount = Verify_Loadmorecount_Document_Folder.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		Reporter.log("The " + Verify_Loadmorecount_Document_Folder.getText()
-				+ " this count is shows on Folder search result", true);
+		log("The " + Verify_Loadmorecount_Document_Folder.getText()
+				+ " this count is shows on Folder search result");
 	}
 
 	public void getVerify_maxLoadmorecount_Document_Folder2() throws Exception {
@@ -1177,8 +1173,8 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Showing 120 documents in folder.";
 		String actualcount = Verify_Loadmorecount_Document_Folder.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		Reporter.log("The " + Verify_Loadmorecount_Document_Folder.getText()
-				+ " this count is shows on Folder search result", true);
+		log("The " + Verify_Loadmorecount_Document_Folder.getText()
+				+ " this count is shows on Folder search result");
 	}
 
 	public void getEnter_Maximum_Loadmorecount() throws Exception {
@@ -1192,7 +1188,7 @@ public class My_Preferences extends BaseClass {
 	}
 
 	public void getMax_Loadmorecount_OK_button() throws Exception {
-		Reporter.log(Max_Loadmorecount_message.getText() + "this message should display", true);
+		log(Max_Loadmorecount_message.getText() + "this message should display");
 		jsclick(Max_Loadmorecount_OK_button);
 
 	}
@@ -1218,34 +1214,34 @@ public class My_Preferences extends BaseClass {
 
 		WebElement Annotation1 = Redaction;
 		if (Annotation1.isSelected()) {
-			Reporter.log("Annotation selected");
+			log("Annotation selected");
 		} else {
 			jsclick(Annotation1);
 		}
 
 		if (Redaction.isSelected()) {
-			Reporter.log("Annotation selected");
+			log("Annotation selected");
 		} else {
 			jsclick(Redaction);
 		}
 
 		WebElement Annotation2 = Highlight;
 		if (Annotation2.isSelected()) {
-			Reporter.log("Annotation selected");
+			log("Annotation selected");
 		} else {
 			jsclick(Annotation2);
 		}
 
 		WebElement Annotation3 = Sticky_Note;
 		if (Annotation3.isSelected()) {
-			Reporter.log("Annotation selected");
+			log("Annotation selected");
 		} else {
 			jsclick(Annotation3);
 		}
 
 		WebElement Annotation4 = Rubber_Stamp;
 		if (Annotation4.isSelected()) {
-			Reporter.log("Annotation selected");
+			log("Annotation selected");
 		} else {
 			jsclick(Annotation4);
 		}
@@ -1261,23 +1257,23 @@ public class My_Preferences extends BaseClass {
 
 		Boolean Ann1 = Redaction_Annotation.isEnabled();
 		if (Ann1) {
-			Reporter.log("Redaction_Annotation option is Enable");
+			log("Redaction_Annotation option is Enable");
 		} else {
-			Reporter.log("Redaction_Annotation option is Disable");
+			log("Redaction_Annotation option is Disable");
 		}
 
 		Boolean Ann2 = Highlight_Annotation.isEnabled();
 		if (Ann2) {
-			Reporter.log("Highlight_Annotation option from button is Enable");
+			log("Highlight_Annotation option from button is Enable");
 		} else {
-			Reporter.log("Highlight_Annotation option from button is Disable");
+			log("Highlight_Annotation option from button is Disable");
 		}
 
 		Boolean Ann3 = Sticky_Notes_Annotation.isEnabled();
 		if (Ann3) {
-			Reporter.log("Sticky_Notes_Annotation option from button is Enable");
+			log("Sticky_Notes_Annotation option from button is Enable");
 		} else {
-			Reporter.log("Sticky_Notes_Annotation option from button is Disable");
+			log("Sticky_Notes_Annotation option from button is Disable");
 		}
 	}
 
@@ -1329,7 +1325,7 @@ public class My_Preferences extends BaseClass {
 		String expectedtext = "Password can't be empty !";
 		String actualtext = error.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verified");
-		Reporter.log(error.getText() + " this validation message should show", true);
+		log(error.getText() + " this validation message should show");
 	}
 
 	public void getenter_Password() throws Exception {
@@ -1348,7 +1344,7 @@ public class My_Preferences extends BaseClass {
 		String expectedtext = "Password mismatch !";
 		String actualtext = error.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verified");
-		Reporter.log(error.getText() + " this validation message should show", true);
+		log(error.getText() + " this validation message should show");
 	}
 
 	public void getenter_Confirmpassword() throws Exception {
@@ -1399,7 +1395,7 @@ public class My_Preferences extends BaseClass {
 	}
 
 	public void getToastmessage() {
-		Reporter.log(Toastmessage.getText() + " this toast message should show", true);
+		log(Toastmessage.getText() + " this toast message should show");
 
 	}
 
@@ -1411,36 +1407,36 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(Click_New_Document);
 		Thread.sleep(5000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(5000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(5000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(3000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(5000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(4000);
-		Reporter.log("Click on Ok button ", true);
+		log("Click on Ok button ");
 		getSelect_Document_Type_Dropdown1();
 		Thread.sleep(4000);
-		Reporter.log("Select Value from Document type dropdown", true);
+		log("Select Value from Document type dropdown");
 		getEnter_ReportName();
 		Thread.sleep(3000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
 		Thread.sleep(5000);
-		Reporter.log("Browse a Document Page", true);
+		log("Browse a Document Page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\PdfDoc\\FileUploadUpdate.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		try {
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait1.until(ExpectedConditions.alertIsPresent());
@@ -1452,10 +1448,10 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Create_button);
 		Thread.sleep(4000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(ViewDocument_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on View button", true);
+		log("Click on View button");
 
 	}
 
@@ -1463,7 +1459,7 @@ public class My_Preferences extends BaseClass {
 
 	public void Verify_Redaction_View_Password() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Redaction View Password", true);
+		log("Test Scenario 1 : Verifying Redaction View Password");
 		try {
 			Thread.sleep(3000);
 			jsclick(Navigate_button);
@@ -1482,32 +1478,32 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Documents Tab", true);
+		log("Click on New Documents Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select value from Document type Dropdown", true);
+		log("Select value from Document type Dropdown");
 		getEnter_ReportName_RedactionPassword();
-		Reporter.log("Enter a Report Name", true);
+		log("Enter a Report Name");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(5000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
 		try {
@@ -1518,47 +1514,47 @@ public class My_Preferences extends BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		getMove_to_Annotation_Option_inViewer();
 		Thread.sleep(6000);
-		Reporter.log("Move to  Annotation Option in Viewer", true);
+		log("Move to  Annotation Option in Viewer");
 		getRedaction_Option();
 		Thread.sleep(6000);
-		Reporter.log("Click on Redaction option", true);
+		log("Click on Redaction option");
 		getvalidate_Redaction_Emptypassword();
 		Thread.sleep(6000);
-		Reporter.log("Verified Redaction empty password", true);
+		log("Verified Redaction empty password");
 		getmessagevalidation1();
 		Thread.sleep(6000);
-		Reporter.log("Verified Validation message", true);
+		log("Verified Validation message");
 		getenter_Password();
 		Thread.sleep(6000);
-		Reporter.log("Enter Invalid Password", true);
+		log("Enter Invalid Password");
 		getmessagevalidate2();
 		Thread.sleep(6000);
-		Reporter.log("Verified Validation message", true);
+		log("Verified Validation message");
 		getenter_Confirmpassword();
 		Thread.sleep(6000);
-		Reporter.log("Enter Invalid Confirm password", true);
+		log("Enter Invalid Confirm password");
 		getmessagevalidate2();
 		Thread.sleep(6000);
-		Reporter.log("Verified Validation message", true);
+		log("Verified Validation message");
 		getenter_validpassword();
 		Thread.sleep(6000);
-		Reporter.log("Enter Valid password", true);
+		log("Enter Valid password");
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
-		Reporter.log("Redaction view password validation Verified", true);
+		log("Click on Navigate button");
+		log("Redaction view password validation Verified");
 	}
 
 	public void Verify_InvalidRedaction_View_Password() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying Invalid Redaction View Password", true);
+		log("Test Scenario 2 : Verifying Invalid Redaction View Password");
 		try {
 			Thread.sleep(3000);
 			jsclick(Navigate_button);
@@ -1576,25 +1572,25 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My preferences option", true);
+		log("Click on My preferences option");
 		getEnter_InvalidRedactionPassword_MyPreferences();
 		Thread.sleep(6000);
-		Reporter.log("Enter Invalid Redaction password under Textbox", true);
+		log("Enter Invalid Redaction password under Textbox");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Open_Document);
 		Thread.sleep(6000);
-		Reporter.log("Open Redaction added Document", true);
-		Reporter.log("Invalid Redaction verified in My preferences.", true);
+		log("Open Redaction added Document");
+		log("Invalid Redaction verified in My preferences.");
 	}
 
 	public void Verify_ResetInvalidPassword_My_Preferences() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Verifying Reset Invalid Password My Preferences", true);
+		log("Test Scenario 3 : Verifying Reset Invalid Password My Preferences");
 		try {
 			Thread.sleep(3000);
 			jsclick(Navigate_button);
@@ -1612,27 +1608,27 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getReset_InvalidRedactionPassword_MyPreferences();
 		Thread.sleep(6000);
-		Reporter.log("Reset Invalid Password", true);
+		log("Reset Invalid Password");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
-		Reporter.log("Reset Invalid Reset Password Successfully", true);
+		log("Click on Apply button");
+		log("Reset Invalid Reset Password Successfully");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// Split and Merge Document
 
 	public void Create_Documents_SplitMerge() throws Exception {
 
-		Reporter.log("Test Scenario 1: Verifying  Create new documents for Split & Merge", true);
+		log("Test Scenario 1: Verifying  Create new documents for Split & Merge");
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
 		} else {
@@ -1653,52 +1649,52 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(4000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(4000);
-		Reporter.log("Click on My preferences option", true);
+		log("Click on My preferences option");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(4000);
-		Reporter.log("Select Office document and set Default view Option", true);
+		log("Select Office document and set Default view Option");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(4000);
-		Reporter.log("Select Pdf document and set Default view Option", true);
+		log("Select Pdf document and set Default view Option");
 		movingclkElement(Apply_button);
 		Thread.sleep(4000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_New_Document);
 		Thread.sleep(5000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(5000);
-		Reporter.log("Click on Destination Folder Checkbox", true);
+		log("Click on Destination Folder Checkbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(4000);
-		Reporter.log("Expand a cabinet", true);
+		log("Expand a cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(4000);
-		Reporter.log("Expand a drawer", true);
+		log("Expand a drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(4000);
-		Reporter.log("select a folder", true);
+		log("select a folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(4000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(4000);
-		Reporter.log("Select Document type dropdown value", true);
+		log("Select Document type dropdown value");
 		getEnter_ReportName();
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report name field", true);
+		log("Enter value into Report name field");
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait2.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
 		Thread.sleep(5000);
-		Reporter.log("Browse Document page", true);
+		log("Browse Document page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadSplitMerge.exe");
 		try {
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -1709,20 +1705,19 @@ public class My_Preferences extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(4000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		movingclkElement(Create_button);
 		Thread.sleep(4000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(ViewDocument_Button);
 		Thread.sleep(9000);
-		Reporter.log("Click on View document option", true);
-		Reporter.log("Document is created successfully", true);
+		log("Click on View document option");
+		log("Document is created successfully");
 	}
 
 	public void Select_PdfPage_SplitAll() throws Exception {
 
-		Reporter.log("Test Scenario 3: Verify selected page is pdf or not and do Split All pages for pdf document",
-				true);
+		log("Test Scenario 3: Verify selected page is pdf or not and do Split All pages for pdf document");
 
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -1735,7 +1730,7 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(9000);
 		List<WebElement> files = driver.findElements(By.xpath("//input[@class='thumbnailOptionSelected']"));
 		int fileCount = files.size();
-		Reporter.log("Number of files present: " + fileCount, true);
+		log("Number of files present: " + fileCount);
 
 		// Verify and Select Only pdf file type for Split
 
@@ -1760,7 +1755,7 @@ public class My_Preferences extends BaseClass {
 
 	public void Verify_Split_Merge_Viewer() throws Exception {
 
-		Reporter.log("Test Scenario 3: Verifying  Split and Merge from Viewer menu option", true);
+		log("Test Scenario 3: Verifying  Split and Merge from Viewer menu option");
 
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -1780,7 +1775,7 @@ public class My_Preferences extends BaseClass {
 		
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 
 		// / 9
 
@@ -1802,50 +1797,50 @@ public class My_Preferences extends BaseClass {
 
 		jsclick(SelectCheckbox);
 		Thread.sleep(4000);
-		Reporter.log("Select Frst page Thumbnail", true);
+		log("Select Frst page Thumbnail");
 		jsclick(Click_Pagemenu);
 		Thread.sleep(4000);
-		Reporter.log("Click on Page menu option", true);
+		log("Click on Page menu option");
 		jsclick(Splitpage);
 		Thread.sleep(6000);
-		Reporter.log("Click on Split option", true);
+		log("Click on Split option");
 		getEnter_SplitPageNumber();
 		Thread.sleep(4000);
-		Reporter.log("Enter value in  From and To page number", true);
+		log("Enter value in  From and To page number");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on save menu option", true);
+		log("Click on save menu option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(4000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(SelectCheckbox);
 		Thread.sleep(4000);
-		Reporter.log("Select Second page Thumbnail", true);
+		log("Select Second page Thumbnail");
 		jsclick(SelectAllCheckbox);
-		Reporter.log("Select Anor Document from Thumbnail", true);
+		log("Select Anor Document from Thumbnail");
 		jsclick(Click_Pagemenu);
 		Thread.sleep(4000);
-		Reporter.log("Click on Page Menu option", true);
+		log("Click on Page Menu option");
 		jsclick(Mergepage);
 		Thread.sleep(4000);
-		Reporter.log("Click on Merge option", true);
+		log("Click on Merge option");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save menu option", true);
+		log("Click on Save menu option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(4000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Split and Merge Documents Verifying successfully", true);
+		log("Click on Ok button");
+		log("Split and Merge Documents Verifying successfully");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// Add signature Script
 
 	public void Verify_Upload_New_Signature() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Upload New Signature", true);
+		log("Test Scenario 1 : Verifying Upload New Signature");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -1865,38 +1860,38 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office document and set as Default view", true);
+		log("Select Office document and set as Default view");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf document and set as Default view", true);
+		log("Select Pdf document and set as Default view");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getClick_AddSignature();
 		Thread.sleep(6000);
-		Reporter.log("Click on Add signature button", true);
+		log("Click on Add signature button");
 		try {
 			getsettingpass();
 			Thread.sleep(4000);
-			Reporter.log("Enter a Password", true);
+			log("Enter a Password");
 		} catch (Exception e) {
 			System.out.println("signature is not password protected...");
 		}
@@ -1908,59 +1903,59 @@ public class My_Preferences extends BaseClass {
 		act.moveToElement(Click_AddSignature_Browse).click().build().perform();
 		Thread.sleep(6000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\UploadSignature.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(8000);
 		getclickProtectpassword();
 		Thread.sleep(6000);
-		Reporter.log("Check on Protect password Icon", true);
+		log("Check on Protect password Icon");
 		getClick_AddSignature_Save();
 		Thread.sleep(2000);
 		jsclick(Signature_Upload_OkButton);
 		
 		try {
-			Reporter.log("Click on Save button", true);
+			log("Click on Save button");
 			getEnterpassword();
 			Thread.sleep(6000);
-			Reporter.log("Enter a Password", true);
+			log("Enter a Password");
 			getSignature_Upload_OkButton();
 			Thread.sleep(6000);
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
 		
-		Reporter.log("New signature Upload Successfully", true);
+		log("New signature Upload Successfully");
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(3000);
-		Reporter.log("Select Document type dropdown", true);
+		log("Select Document type dropdown");
 		getEnter_ReportName_Addsignature();
 		Thread.sleep(5000);
-		Reporter.log("Enter value Report Name field", true);
+		log("Enter value Report Name field");
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait1.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(2000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -1973,28 +1968,28 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		getClick_signature_Menuoption();
 		Thread.sleep(6000);
-		Reporter.log("Click on signature menu Option", true);
+		log("Click on signature menu Option");
 		try {
 			getinputpassword();
 			Thread.sleep(6000);
-			Reporter.log("Enter a Password", true);
+			log("Enter a Password");
 		} catch (Exception e) {
 			System.out.println("Signature is not password protected");
 		}
 		getAdd_Signature_Onpage();
 		Thread.sleep(6000);
-		Reporter.log("New signature added Successfully on  Document", true);
+		log("New signature added Successfully on  Document");
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
-		Reporter.log("New Document Created successfully with signature", true);
+		log("New Document Created successfully with signature");
 
 	}
 
 	public void Verify_Type_New_Signature() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying New Signature Type ", true);
+		log("Test Scenario 2 : Verifying New Signature Type ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2014,91 +2009,91 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office document and set as Default view", true);
+		log("Select Office document and set as Default view");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf document and set as Default view", true);
+		log("Select Pdf document and set as Default view");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getClick_AddSignature();
 		Thread.sleep(6000);
-		Reporter.log("Click on Add Signature button", true);
+		log("Click on Add Signature button");
 		try {
 			getsettingpass();
 			Thread.sleep(6000);
-			Reporter.log("Enter a Password", true);
+			log("Enter a Password");
 		} catch (Exception e) {
 			System.out.println("signature is not password protected...");
 		}
 		jsclick(signType);
 		Thread.sleep(6000);
-		Reporter.log("Select sign type", true);
+		log("Select sign type");
 		getclickProtectpassword();
 		Thread.sleep(6000);
-		Reporter.log("Check Password Protect Icon", true);
+		log("Check Password Protect Icon");
 		getsignatureFont();
 		Thread.sleep(6000);
-		Reporter.log("Select signature Font", true);
+		log("Select signature Font");
 		getsignInput();
 		Thread.sleep(6000);
-		Reporter.log("Enter  Signature Name", true);
+		log("Enter  Signature Name");
 		getsignatureFontOption2();
 		Thread.sleep(6000);
-		Reporter.log("Select again New Signature Font", true);
+		log("Select again New Signature Font");
 		getsignInput();
 		Thread.sleep(6000);
-		Reporter.log("Enter signature Name", true);
+		log("Enter signature Name");
 		getsavesigntype();
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button", true);
+		log("Click on Save button");
 		getEnterpassword();
 		Thread.sleep(6000);
-		Reporter.log("Enter a Password", true);
+		log("Enter a Password");
 		getSignature_Upload_OkButton();
 		Thread.sleep(6000);
-		Reporter.log("Click on the Upload button", true);
+		log("Click on the Upload button");
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder textbox", true);
+		log("Click on Destination Folder textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select document type dropdown", true);
+		log("Select document type dropdown");
 		getEnter_ReportName_Addsignature();
 		Thread.sleep(5000);
-		Reporter.log("Enter Report name", true);
+		log("Enter Report name");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(2000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait2.until(ExpectedConditions.alertIsPresent());
@@ -2110,29 +2105,29 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		getClick_signature_Menuoption();
 		Thread.sleep(6000);
-		Reporter.log("Click on Signature menu Option", true);
+		log("Click on Signature menu Option");
 		getinputpassword();
 		Thread.sleep(6000);
-		Reporter.log("Enter a Password", true);
+		log("Enter a Password");
 		getAdd_Signature_Onpage();
 		Thread.sleep(6000);
-		Reporter.log("New signature type added Successfully on  Document", true);
+		log("New signature type added Successfully on  Document");
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
-		Reporter.log("New Document Created successfully with signature type ", true);
+		log("New Document Created successfully with signature type ");
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// Add and Verify Annotation on Viewer
 
 	public void Verify_Maximum_Annotation() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Maximum Annotation ", true);
+		log("Test Scenario 1 : Verifying Maximum Annotation ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2153,47 +2148,47 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		/*getReset_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Reset button", true);
+		log("Click on Reset button");
 		Thread.sleep(6000);
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);*/
+		log("Click on My Preferences Option");*/
 		jsclick(allannotation);
 		Thread.sleep(4000);
-		Reporter.log("Click on Annotation", true);
+		log("Click on Annotation");
 		Select_Annotation_Dropdown1();
 		Thread.sleep(3000);
-		Reporter.log("Select Annotation value", true);
+		log("Select Annotation value");
 		getToastmessage();
-		Reporter.log("Verified maximum annotation error message", true);
+		log("Verified maximum annotation error message");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		LogoutPage();
 		LogDipakUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with User credential ", true);
+		log("Login EWA with User credential ");
 
 	}
 
 	public void Verify_set_Annotation() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying set Annotation ", true);
+		log("Test Scenario 2 : Verifying set Annotation ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2213,38 +2208,38 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select Document type Dropdown", true);
+		log("Select Document type Dropdown");
 		getEnter_ReportName_Annotation();
-		Reporter.log("Enter value Report Name field", true);
+		log("Enter value Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
 		Thread.sleep(5000);
-		Reporter.log("Browse a Document", true);
+		log("Browse a Document");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -2257,23 +2252,23 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(9000);
 		getVerify_AnnotationDropdown1_Option_enable();
 		Thread.sleep(6000);
-		Reporter.log("Verified Added annotation enable from menu", true);
+		log("Verified Added annotation enable from menu");
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
-		Reporter.log("New Document Created successfully with verifying Annotation", true);
+		log("New Document Created successfully with verifying Annotation");
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// Date Format verification Script
 
 	public void Verify_DateFormat_YYYY_MM_DD() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Date Format YYYY_MM_DD ", true);
+		log("Test Scenario 1 : Verifying Date Format YYYY_MM_DD ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2288,51 +2283,51 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getYYYY_MM_DD_DateFormat();
 		Thread.sleep(6000);
-		Reporter.log("Select Date Format and set as YYYY_MM_DD", true);
+		log("Select Date Format and set as YYYY_MM_DD");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(2000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		Verify_YYYY_MM_DD_Date();
 		Thread.sleep(6000);
-		Reporter.log("Verified showing date format YYYY_MM_DD", true);
+		log("Verified showing date format YYYY_MM_DD");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		Verify_YYYY_MM_DD_Date();
 		Thread.sleep(6000);
-		Reporter.log("Verified DateFormat YYYY-MM-DD on Search and Folder Documents List", true);
+		log("Verified DateFormat YYYY-MM-DD on Search and Folder Documents List");
 
 	}
 
 	public void Verify_DateFormat_DD_MM_YYYY() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying Date Format DD_MM_YYYY ", true);
+		log("Test Scenario 2 : Verifying Date Format DD_MM_YYYY ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2341,46 +2336,46 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on  Refresh button", true);
+		log("Click on  Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getDD_MM_YYYY_DateFormat();
 		Thread.sleep(6000);
-		Reporter.log("Select Date Format and set as DD_MM_YYYY", true);
+		log("Select Date Format and set as DD_MM_YYYY");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		Verify_DD_MM_YYYY_Date();
 		Thread.sleep(6000);
-		Reporter.log("Verified showing Date format DD_MM_YYYY", true);
+		log("Verified showing Date format DD_MM_YYYY");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		Verify_DD_MM_YYYY_Date();
 		Thread.sleep(6000);
-		Reporter.log("Verified DateFormat DD-MM-YYYY on Search and Folder Documents List", true);
+		log("Verified DateFormat DD-MM-YYYY on Search and Folder Documents List");
 
 	}
 
 	public void Verify_DateFormat_MM_DD_YYYY() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Verifying Date Format MM_DD_YYYY ", true);
+		log("Test Scenario 3 : Verifying Date Format MM_DD_YYYY ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2389,48 +2384,48 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getMM_DD_YYYY_DateFormat();
 		Thread.sleep(6000);
-		Reporter.log("Select Date Format and set as MM_DD_YYYY", true);
+		log("Select Date Format and set as MM_DD_YYYY");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		Verify_MM_DD_YYYY_Date();
 		Thread.sleep(6000);
-		Reporter.log("Verified showing MM_DD_YYYY Date FormatClic", true);
+		log("Verified showing MM_DD_YYYY Date FormatClic");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		Verify_MM_DD_YYYY_Date();
 		Thread.sleep(6000);
-		Reporter.log("Verified DateFormat MM-DD-YYYY on Search and Folder Documents List", true);
+		log("Verified DateFormat MM-DD-YYYY on Search and Folder Documents List");
 
 	}
 
 	public void Verify_DateFormat_Default() throws Exception {
 
-		Reporter.log("Test Scenario 4 : Verifying Date Format Default ", true);
+		log("Test Scenario 4 : Verifying Date Format Default ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2439,50 +2434,50 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getDefault_DateFormat();
 		Thread.sleep(6000);
-		Reporter.log("Select Date Format and set as Default", true);
+		log("Select Date Format and set as Default");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		Verify_Default_Date();
 		Thread.sleep(6000);
-		Reporter.log("Verified Default Date Format shwoing successfully", true);
+		log("Verified Default Date Format shwoing successfully");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		Verify_Default_Date();
 		Thread.sleep(6000);
-		Reporter.log("Verified DateFormat Default on Search and Folder Documents List", true);
+		log("Verified DateFormat Default on Search and Folder Documents List");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 // Default View Native / Covert To pdf.
 
 	public void Verify_Defaultviewing_Convert_To_PDF() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Default viewing Convert To PDF", true);
+		log("Test Scenario 1 : Verifying Default viewing Convert To PDF");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2503,36 +2498,36 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office document and set as Default view", true);
+		log("Select Office document and set as Default view");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf document and set as Default view", true);
+		log("Select Pdf document and set as Default view");
 		getSelect_Dropdown_Convert_To_PDF();
 		Thread.sleep(6000);
-		Reporter.log("Select Convert To Pdf Option", true);
+		log("Select Convert To Pdf Option");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		getEnter_Document_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter Document Name", true);
+		log("Enter Document Name");
 		jsclick(Find_Button);
 		Thread.sleep(12000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		getSelect_Document();
-		Reporter.log("Select and Open Document", true);
+		log("Select and Open Document");
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait2.until(ExpectedConditions.alertIsPresent());
@@ -2544,16 +2539,16 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(50000);
 		getSearch_Page_Number();
 		Thread.sleep(6000);
-		Reporter.log("Enter page number", true);
+		log("Enter page number");
 		movingclkElement(closedoc);
 		Thread.sleep(6000);
-		Reporter.log("Defaultviewing Convert To PDF Format verified successfully", true);
+		log("Defaultviewing Convert To PDF Format verified successfully");
 
 	}
 
 	public void Verify_Defaultviewing_Native_Format() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying Default viewing Native Format ", true);
+		log("Test Scenario 2 : Verifying Default viewing Native Format ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2573,31 +2568,31 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getClick_Dropdown_DefaultViewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Default View", true);
+		log("Select Default View");
 		getSelect_Dropdown_Native_Format();
 		Thread.sleep(6000);
-		Reporter.log("Select Native Formatio Option", true);
+		log("Select Native Formatio Option");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		getEnter_Document_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter Document Name", true);
+		log("Enter Document Name");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		getSelect_Document();
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -2610,17 +2605,17 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(closedoc);
 		Thread.sleep(6000);
-		Reporter.log("Defaultviewing Native Format verified successfully", true);
+		log("Defaultviewing Native Format verified successfully");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// File Download
 
 	public void Verify_Download_All_Files() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Download All Files ", true);
+		log("Test Scenario 1 : Verifying Download All Files ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2642,53 +2637,53 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		LogoutPage();
 		LoginAdminUser();
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		movingclkElement(AdminPreference);
 		Thread.sleep(6000);
-		Reporter.log("Click on Admin preferences", true);
+		log("Click on Admin preferences");
 		Downloadpath.clear();
 		Downloadpath.sendKeys("pdf;tif;tiff;jpg;png;docx;doc");
-		Reporter.log("Enter all valid file type for downlod file", true);
+		log("Enter all valid file type for downlod file");
 		Thread.sleep(6000);
 		movingclkElement(AdminApply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		LogoutPage();
 		LogDipakUser();
 		Thread.sleep(4000);
 
 		Refresh_Button();
 		Thread.sleep(8000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getVerify_DownloadAllFiles_checkbox();
 		Thread.sleep(6000);
-		Reporter.log("Check Download all file checkbox", true);
+		log("Check Download all file checkbox");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		getEnter_Document_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter Document Name", true);
+		log("Enter Document Name");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		getSelect_Document();
-		Reporter.log("Select and Open Document page", true);
+		log("Select and Open Document page");
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait2.until(ExpectedConditions.alertIsPresent());
@@ -2700,8 +2695,8 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		getDownload_File();
 		Thread.sleep(6000);
-		Reporter.log("Click on Download Menu Option", true);
-		Reporter.log("All files should be Downloaded successfully", true);
+		log("Click on Download Menu Option");
+		log("All files should be Downloaded successfully");
 		movingclkElement(closedoc);
 		Thread.sleep(4000);
 		LogoutPage();
@@ -2732,7 +2727,7 @@ public class My_Preferences extends BaseClass {
 
 	public void Verify_Enable_Dashboard() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Enable Dashboard Set from My preferences ", true);
+		log("Test Scenario 1 : Verifying Enable Dashboard Set from My preferences ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2747,42 +2742,42 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getVerify_EnableDashboard_checkbox();
 		Thread.sleep(6000);
-		Reporter.log("Check Enable Dashboard Chekbox", true);
+		log("Check Enable Dashboard Chekbox");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		LogoutPage();
 		LogDipakUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with User credential", true);
+		log("Login EWA with User credential");
 		movingclkElement(Click_SwitchTo_DefaultView_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Switch to Default view Option", true);
+		log("Click on Switch to Default view Option");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		getVerify_EnableDashboard_checkbox_Unchecked();
 		Thread.sleep(6000);
-		Reporter.log("Uncheck Enable Dashboard Checkbox", true);
+		log("Uncheck Enable Dashboard Checkbox");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
-		Reporter.log("Enable Dashboard Functionality Verified Successfully", true);
+		log("Click on Apply button");
+		log("Enable Dashboard Functionality Verified Successfully");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 
 	}
 
@@ -2790,7 +2785,7 @@ public class My_Preferences extends BaseClass {
 
 	public void Verify_Load_MoreCount_On_Search() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Load More Count On Search ", true);
+		log("Test Scenario 1 : Verifying Load More Count On Search ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2804,16 +2799,16 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getEnter_Minimum_Loadmorecount();
 		Thread.sleep(6000);
-		Reporter.log("Enter Load more count value", true);
+		log("Enter Load more count value");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
 		try {
@@ -2822,32 +2817,32 @@ public class My_Preferences extends BaseClass {
 			System.out.println("Load more Alert not showing");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		jsclick(Find_Button);
 		Thread.sleep(15000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		getVerify_Loadmorecount_Searchresult1();
 		Thread.sleep(6000);
-		Reporter.log("Verified Load More on Search Result", true);
+		log("Verified Load More on Search Result");
 		jsclick(Loadmorebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Load More button", true);
+		log("Click on Load More button");
 		getVerify_Loadmorecount_Searchresult2();
 		Thread.sleep(6000);
-		Reporter.log("Verified Load More on Search ResultC", true);
+		log("Verified Load More on Search ResultC");
 		Refresh_Button();
 		Thread.sleep(7000);
-		Reporter.log("Click on Refresh button", true);
-		Reporter.log("Minumum number of Load More count on Search Verified successfully", true);
+		log("Click on Refresh button");
+		log("Minumum number of Load More count on Search Verified successfully");
 
 	}
 
 	public void Verify_Load_MoreCount_On_Folder() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying Load More Count On Folder ", true);
+		log("Test Scenario 2 : Verifying Load More Count On Folder ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2861,27 +2856,27 @@ public class My_Preferences extends BaseClass {
 		}
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getVerify_Loadmorecount_Document_Folder1();
 		Thread.sleep(6000);
-		Reporter.log("Verified Load More Count on Document Flder", true);
+		log("Verified Load More Count on Document Flder");
 		jsclick(Loadmorebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Load More button", true);
+		log("Click on Load More button");
 		getVerify_Loadmorecount_Document_Folder2();
-		Reporter.log("Minumum number of Load More count on Folder Verified successfully", true);
+		log("Minumum number of Load More count on Folder Verified successfully");
 
 	}
 
 	public void Verify_Maximum_Load_MoreCountOn_Search() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Verifying Maximum Load More Count On Search ", true);
+		log("Test Scenario 3 : Verifying Maximum Load More Count On Search ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2895,18 +2890,18 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getEnter_Maximum_Loadmorecount();
-		Reporter.log("Enter Load More count Value in textbox", true);
+		log("Enter Load More count Value in textbox");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		try {
 			getMax_Loadmorecount_OK_button();
 		} catch (Exception e) {
@@ -2914,29 +2909,29 @@ public class My_Preferences extends BaseClass {
 		}
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		jsclick(Find_Button);
 		Thread.sleep(15000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		getVerify_maxLoadmorecount_Searchresult1();
 		Thread.sleep(6000);
-		Reporter.log("Verified Load More count On Serach Result", true);
+		log("Verified Load More count On Serach Result");
 		jsclick(Loadmorebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Load More button", true);
+		log("Click on Load More button");
 		getVerify_maxLoadmorecount_Searchresult2();
 		Thread.sleep(7000);
-		Reporter.log("Verified Load More count On Serach Result", true);
+		log("Verified Load More count On Serach Result");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
-		Reporter.log("Maximum number of Load More count on Search Verified successfully", true);
+		log("Click on Refresh button");
+		log("Maximum number of Load More count on Search Verified successfully");
 
 	}
 
 	public void Verify_Maximum_Load_MoreCount_On_Folder() throws Exception {
 
-		Reporter.log("Test Scenario 4 : Verifying Maximum Load More Count On Folder  ", true);
+		log("Test Scenario 4 : Verifying Maximum Load More Count On Folder  ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2950,32 +2945,32 @@ public class My_Preferences extends BaseClass {
 		}
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getVerify_maxLoadmorecount_Document_Folder1();
 		Thread.sleep(6000);
-		Reporter.log("Verified Load More count on Document Folder", true);
+		log("Verified Load More count on Document Folder");
 		jsclick(Loadmorebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Load More button", true);
+		log("Click on Load More button");
 		getVerify_maxLoadmorecount_Document_Folder2();
 		Thread.sleep(6000);
-		Reporter.log("Maximum number of Load More count on Folder Verified successfully", true);
+		log("Maximum number of Load More count on Folder Verified successfully");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// Office document Advanced and Lead view
 
 	public void Verify_Browse_Office_documents_Advancedviewing() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Browse Office Documents Advanced viewing ", true);
+		log("Test Scenario 1 : Verifying Browse Office Documents Advanced viewing ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2996,89 +2991,89 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Advancedviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set as Advanced View", true);
+		log("Select Office Document and set as Advanced View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder", true);
+		log("Click on Destination Folder");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select Document type Dropdown", true);
+		log("Select Document type Dropdown");
 		getEnter_ReportName();
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(5000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\OfficeDoc\\FileUploadOfficedoc.exe");
 		Thread.sleep(6000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 
 	}
 
 	public void Verify_NewWordDocuments_Office_documents_Advancedviewing() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying New Word Documents Office documents Advanced viewing ", true);
+		log("Test Scenario 2 : Verifying New Word Documents Office documents Advanced viewing ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			selectElement(Select_Cabinet1);
 			Thread.sleep(6000);
-			Reporter.log("Expand a Cabinet", true);
+			log("Expand a Cabinet");
 			selectElement(Select_Drawer1);
 			Thread.sleep(6000);
-			Reporter.log("Expand a Drawer", true);
+			log("Expand a Drawer");
 			selectElement(Select_Folder1);
 			Thread.sleep(6000);
-			Reporter.log("Expand a Folder", true);
+			log("Expand a Folder");
 			jsclick(OK_Button_BrowseforFolder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Ok button", true);
+			log("Click on Ok button");
 			getSelect_Document_Type_Dropdown();
 			Thread.sleep(6000);
-			Reporter.log("Select Document type Dropdown", true);
+			log("Select Document type Dropdown");
 			getEnter_ReportName();
-			Reporter.log("Enter value into Report Name field", true);
+			log("Enter value into Report Name field");
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 			movingclkElement(Move_To_PlusIcon);
 			getBrowse_Option();
-			Reporter.log("Browse Document Page", true);
+			log("Browse Document Page");
 			Thread.sleep(5000);
 			Runtime.getRuntime().exec("D:\\DipakAutoit\\OfficeDoc\\FileUploadOfficedoc.exe");
 			Thread.sleep(6000);
-			Reporter.log("By using AutoIT add file from external folder", true);
+			log("By using AutoIT add file from external folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -3089,54 +3084,54 @@ public class My_Preferences extends BaseClass {
 		}
 		Thread.sleep(6000);
 		movingclkElement(Move_To_PlusIcon);
-		Reporter.log("Click on  Plus button", true);
+		log("Click on  Plus button");
 		getNew_Word_Document_Option();
 		Thread.sleep(6000);
-		Reporter.log("Create New Word document", true);
+		log("Create New Word document");
 		getEnter_Word_File_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter word Filename", true);
+		log("Enter word Filename");
 		jsclick(Open_Word_page);
 		Thread.sleep(6000);
-		Reporter.log("Advanced Viewing New Word Document Created", true);
+		log("Advanced Viewing New Word Document Created");
 
 	}
 
 	public void Verify_NewExcelSpreadsheet_Office_documents_Advancedviewing() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Verifying New Excel Spreadsheet Office documents Advancedviewing", true);
+		log("Test Scenario 3 : Verifying New Excel Spreadsheet Office documents Advancedviewing");
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
 		} else {
 			// Saving dialog not present
 		}
 		movingclkElement(Move_To_PlusIcon);
-		Reporter.log("Click on Plus Icon", true);
+		log("Click on Plus Icon");
 		getNew_Excel_Spreadsheet_Option();
 		Thread.sleep(6000);
-		Reporter.log("Create Excel Sheet", true);
+		log("Create Excel Sheet");
 		getEnter_Excel_File_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter Excel sheet name", true);
+		log("Enter Excel sheet name");
 		jsclick(Open_Excel_page);
 		Thread.sleep(6000);
-		Reporter.log("Open Excel page", true);
+		log("Open Excel page");
 		try {
 			jsclick(AlertOK_button);
 		} catch (Exception e) {
 			System.out.println("Alert is not showing");
 		}
 		movingclkElement(Create_button);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
-		Reporter.log("Click on  Navigate button", true);
-		Reporter.log("Advanced Viewing New Excel Document Created", true);
+		log("Click on  Navigate button");
+		log("Advanced Viewing New Excel Document Created");
 
 	}
 
 	public void Verify_Browse_Office_documents_Defaultviewing() throws Exception {
 
-		Reporter.log("Test Scenario 4 : Verifying Browse Office documents Defaultviewing ", true);
+		log("Test Scenario 4 : Verifying Browse Office documents Defaultviewing ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3156,54 +3151,54 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office document and set as Default view", true);
+		log("Select Office document and set as Default view");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document", true);
+		log("Click on New Document");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder", true);
+		log("Click on Destination Folder");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(4000);
-		Reporter.log("Select document Type dropdown ", true);
+		log("Select document Type dropdown ");
 		getEnter_ReportNameDefaultview();
 		Thread.sleep(5000);
-		Reporter.log("Enter Report Name", true);
+		log("Enter Report Name");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(5000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -3215,21 +3210,21 @@ public class My_Preferences extends BaseClass {
 		}
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
-		Reporter.log("Verifying Browse Office documents Defaultviewing", true);
+		log("Click on Navigate button");
+		log("Verifying Browse Office documents Defaultviewing");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// Pdf Document My preference
 
 	public void Verify_Browse_Pdf_documents_Advancedviewing() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Browse Pdf documents Advanced viewing ", true);
+		log("Test Scenario 1 : Verifying Browse Pdf documents Advanced viewing ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3250,58 +3245,58 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getPdf_document_Advancedviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set as Advanced View", true);
+		log("Select Pdf Document and set as Advanced View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select Document type dropdown", true);
+		log("Select Document type dropdown");
 		getEnter_ReportName();
 		Thread.sleep(6000);
-		Reporter.log("Enter a Report Name", true);
+		log("Enter a Report Name");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(5000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
 		Thread.sleep(6000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 
 	}
 
 	public void Verify_Create_New_pdf_document_Advancedviewing() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying Create New pdf document Advancedviewing ", true);
+		log("Test Scenario 2 : Verifying Create New pdf document Advancedviewing ");
 
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -3310,29 +3305,29 @@ public class My_Preferences extends BaseClass {
 		}
 		Thread.sleep(6000);
 		movingclkElement(Move_To_PlusIcon);
-		Reporter.log("Move to  Plus Icon", true);
+		log("Move to  Plus Icon");
 		getNew_pdf_Document_Option();
 		Thread.sleep(6000);
-		Reporter.log("Click on Pdf Document Option", true);
+		log("Click on Pdf Document Option");
 		getEnter_pdf_File_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter Pdf file name", true);
+		log("Enter Pdf file name");
 		jsclick(Open_pdf_page);
 		Thread.sleep(6000);
-		Reporter.log("Select and Open pdf page", true);
+		log("Select and Open pdf page");
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
-		Reporter.log("Advanced Viewing New PDF Document Created", true);
+		log("Click on Navigate button");
+		log("Advanced Viewing New PDF Document Created");
 
 	}
 
 	public void Verify_Browse_PDF_documents_Defaultviewing() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Verifying Browse PDF documents Defaultviewing ", true);
+		log("Test Scenario 3 : Verifying Browse PDF documents Defaultviewing ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3352,47 +3347,47 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set as Default View", true);
+		log("Select Pdf Document and set as Default View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select Document Type Dropdown", true);
+		log("Select Document Type Dropdown");
 		getEnter_ReportName();
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(5000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
 		Thread.sleep(6000);
@@ -3404,25 +3399,25 @@ public class My_Preferences extends BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
-		Reporter.log("Advanced Viewing New Document Created", true);
+		log("Click on Navigate button");
+		log("Advanced Viewing New Document Created");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// PDF with Overlay
 
 	public void Verify_PDF_with_Overlay_Disable() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying PDF with Overlay Disable ", true);
+		log("Test Scenario 1 : Verifying PDF with Overlay Disable ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3443,42 +3438,42 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on  Refresh button", true);
+		log("Click on  Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_PDF_with_Overlay_Disable();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf With Overlay and set as Disable", true);
+		log("Select Pdf With Overlay and set as Disable");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select a Document Type dropdown", true);
+		log("Select a Document Type dropdown");
 		getEnter_ReportNamePDFwithOverlay();
-		Reporter.log("Enter a Report Name", true);
+		log("Enter a Report Name");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
@@ -3493,20 +3488,20 @@ public class My_Preferences extends BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(8000);
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
-		Reporter.log("Click on Navigate button", true);
-		Reporter.log("Verifying PDF with Overlay is Disable", true);
+		log("Click on Navigate button");
+		log("Verifying PDF with Overlay is Disable");
 
 	}
 
 	public void Verify_PDF_with_Overlay_Enable() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying PDF with Overlay Enable ", true);
+		log("Test Scenario 2 : Verifying PDF with Overlay Enable ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3521,35 +3516,35 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_PDF_with_Overlay_Enable();
 		Thread.sleep(6000);
-		Reporter.log("Verified Pdf With Overlay Enable", true);
+		log("Verified Pdf With Overlay Enable");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Open_Document);
 		Thread.sleep(6000);
-		Reporter.log("Select and Open document", true);
+		log("Select and Open document");
 
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on  My Preferences", true);
+		log("Click on  My Preferences");
 		getSelect_PDF_with_Overlay_Disable();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf With Overlay and set as Disable", true);
+		log("Select Pdf With Overlay and set as Disable");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 
 	}
 
@@ -3557,7 +3552,7 @@ public class My_Preferences extends BaseClass {
 
 	public void Verify_QuickFind_DocIdSearch() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Quick Find Doc Id Search ", true);
+		log("Test Scenario 1 : Verifying Quick Find Doc Id Search ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3572,51 +3567,51 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_QuickFind_DocIdSearch();
 		Thread.sleep(6000);
-		Reporter.log("Select Quick fing and set as Doc Id Search", true);
+		log("Select Quick fing and set as Doc Id Search");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		// Create New Document and Copy Document ID.
 		jsclick(Click_New_Document);
 		Thread.sleep(5000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(5000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(5000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(5000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(5000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button ", true);
+		log("Click on Ok button ");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select Value from Document type Dropdown", true);
+		log("Select Value from Document type Dropdown");
 		getEnter_ReportName();
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
 		Thread.sleep(5000);
-		Reporter.log("Browse a Document Page", true);
+		log("Browse a Document Page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\PdfDoc\\FileUploadMorePdfDoc.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait2.until(ExpectedConditions.alertIsPresent());
@@ -3628,34 +3623,34 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Create_button);
 		Thread.sleep(3000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(ViewDocument_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on View button", true);
-		Reporter.log("Document Created Successfully ", true);
+		log("Click on View button");
+		log("Document Created Successfully ");
 		jsclick(Click_general_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on General Option", true);
+		log("Click on General Option");
 		getVerify_Doc_Id();
 		Thread.sleep(6000);
-		Reporter.log("Verified created Document ID In General", true);
+		log("Verified created Document ID In General");
 		getEnter_Doc_Id_InSearch();
 		Thread.sleep(6000);
-		Reporter.log("Enter Document Id in Search textbox", true);
+		log("Enter Document Id in Search textbox");
 		jsclick(Click_general_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on General Option", true);
+		log("Click on General Option");
 		getVerify_Doc_Id();
 		Thread.sleep(6000);
-		Reporter.log("Searching and verified newly created Document ID", true);
-		Reporter.log("Selected Document Id Document Open successfully", true);
-		Reporter.log("Verifying successfully Quick Find Doc Id Search", true);
+		log("Searching and verified newly created Document ID");
+		log("Selected Document Id Document Open successfully");
+		log("Verifying successfully Quick Find Doc Id Search");
 
 	}
 
 	public void Verify_QuickFind_TextSearch() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying QuickFind TextSearch ", true);
+		log("Test Scenario 2 : Verifying QuickFind TextSearch ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3669,26 +3664,26 @@ public class My_Preferences extends BaseClass {
 		}
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_QuickFind_TextSearch();
 		Thread.sleep(6000);
-		Reporter.log("Select Quick find and set as Text Search", true);
+		log("Select Quick find and set as Text Search");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getEnter_Text_InSearch();
 		Thread.sleep(6000);
-		Reporter.log("Enter Text in Serach Textbox", true);
-		Reporter.log("Verifying successfully Quick Find Text search", true);
+		log("Enter Text in Serach Textbox");
+		log("Verifying successfully Quick Find Text search");
 
 	}
 
 	public void Verify_QuickFind_IndexSearch() throws Exception {
 
-		Reporter.log("Test Scenario 3: Verifying QuickFind IndexSearch ", true);
+		log("Test Scenario 3: Verifying QuickFind IndexSearch ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3702,26 +3697,26 @@ public class My_Preferences extends BaseClass {
 		}
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_QuickFind_IndexSearch();
 		Thread.sleep(6000);
-		Reporter.log("Select Quick find and set as Index Search", true);
+		log("Select Quick find and set as Index Search");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getEnter_IndexValue_InSearch();
 		Thread.sleep(6000);
-		Reporter.log("Enter Index name in Search Textbox", true);
-		Reporter.log("Verifying successfully Quick Find Index search", true);
+		log("Enter Index name in Search Textbox");
+		log("Verifying successfully Quick Find Index search");
 
 	}
 
 	public void Verify_QuickFind_BothSearch() throws Exception {
 
-		Reporter.log("Test Scenario 4: Verifying Quick Find Both Search ", true);
+		log("Test Scenario 4: Verifying Quick Find Both Search ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3737,30 +3732,30 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_QuickFind_Both();
 		Thread.sleep(6000);
-		Reporter.log("Select Quick find and set as Both", true);
+		log("Select Quick find and set as Both");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getEnter_BothValue_InSearch();
 		Thread.sleep(6000);
-		Reporter.log("Enter Both Value in search Textbox", true);
-		Reporter.log("Verifying successfully Quick Find Text and Index search", true);
+		log("Enter Both Value in search Textbox");
+		log("Verifying successfully Quick Find Text and Index search");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// Redaction My preferences
 
 	public void MyPreferences_Verify_Redaction_View_Password() throws Exception {
 
-		Reporter.log("Test Scenario 1: Verifying Redaction View Password ", true);
+		log("Test Scenario 1: Verifying Redaction View Password ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3787,35 +3782,35 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select Document Type ", true);
+		log("Select Document Type ");
 		getEnter_ReportName_RedactionPassword();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
 		Thread.sleep(5000);
-		Reporter.log("Browse a Document", true);
+		log("Browse a Document");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -3825,51 +3820,51 @@ public class My_Preferences extends BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		getMove_to_Annotation_Option_inViewer();
 		Thread.sleep(6000);
-		Reporter.log("Click on Annotation Menu Option", true);
+		log("Click on Annotation Menu Option");
 		getRedaction_Option();
 		Thread.sleep(6000);
-		Reporter.log("Click on Redaction Option", true);
+		log("Click on Redaction Option");
 		getSet_Redaction_ToDocument();
 		Thread.sleep(6000);
-		Reporter.log("Enter password and set Redaction on Document ", true);
+		log("Enter password and set Redaction on Document ");
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
+		log("Click on Navigate button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getEnter_RedactionPassword_MyPreferences();
 		Thread.sleep(6000);
-		Reporter.log("Enter Redaction Password", true);
+		log("Enter Redaction Password");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Open_Document);
 		Thread.sleep(6000);
-		Reporter.log("Select and Open Document", true);
+		log("Select and Open Document");
 		getClick_FileInfo_Option();
 		Thread.sleep(6000);
-		Reporter.log("Click on File Info Option", true);
+		log("Click on File Info Option");
 		getClick_FileInfo_OkButton_withFileName();
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Reaction View Password Functionality Verified Successfulluy", true);
+		log("Click on Ok button");
+		log("Reaction View Password Functionality Verified Successfulluy");
 
 	}
 
 	public void Verify_Reset_My_Preferences() throws Exception {
 
-		Reporter.log("Test Scenario 2: Verifying Reset My Preferences ", true);
+		log("Test Scenario 2: Verifying Reset My Preferences ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3896,30 +3891,30 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getReset_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Reset button", true);
+		log("Click on Reset button");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Apply button", true);
-		Reporter.log("Reset Successfully", true);
+		log("Click on  Apply button");
+		log("Reset Successfully");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// Theme My preferences
 
 	public void Verify_Theme() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying and Set Theme Color or Font ", true);
+		log("Test Scenario 1 : Verifying and Set Theme Color or Font ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3934,33 +3929,33 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Themes_Option();
 		Thread.sleep(6000);
-		Reporter.log("Click on Theme Option", true);
+		log("Click on Theme Option");
 		getSelect_Themes_Setting();
 		Thread.sleep(6000);
-		Reporter.log("Select and Apply Theme setting with Green color", true);
+		log("Select and Apply Theme setting with Green color");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Apply button", true);
-		Reporter.log("Verified and added New mes successfully", true);
+		log("Click on the Apply button");
+		log("Verified and added New mes successfully");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button and page Refresh Successfully", true);
+		log("Click on Refresh button and page Refresh Successfully");
 	}
 
 	// Viewer Zoom
 
 	public void Verify_Viewer_Zoom_Fit_To_Width() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Viewer Zoom Fit To Width ", true);
+		log("Test Scenario 1 : Verifying Viewer Zoom Fit To Width ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -3976,42 +3971,42 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office document and set as Default view", true);
+		log("Select Office document and set as Default view");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf document and set as Default view", true);
+		log("Select Pdf document and set as Default view");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select a Document Type dropdown", true);
+		log("Select a Document Type dropdown");
 		getEnter_ReportName();
-		Reporter.log("Enter a Report Name", true);
+		log("Enter a Report Name");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
@@ -4026,40 +4021,40 @@ public class My_Preferences extends BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
-		Reporter.log("Click on Navigate button", true);
+		log("Click on Navigate button");
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Dropdown_Fit_To_Width();
 		Thread.sleep(6000);
-		Reporter.log("Select Viewer zoom and set as Fit To Width", true);
+		log("Select Viewer zoom and set as Fit To Width");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click Apply button", true);
+		log("Click Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click Search Tab", true);
+		log("Click Search Tab");
 		getEnter_Document_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Document Name field", true);
+		log("Enter value into Document Name field");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		getSelect_Document();
-		Reporter.log("Select and Open document ", true);
+		log("Select and Open document ");
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait2.until(ExpectedConditions.alertIsPresent());
@@ -4070,13 +4065,13 @@ public class My_Preferences extends BaseClass {
 		}
 		Thread.sleep(6000);
 		movingclkElement(closedoc);
-		Reporter.log("Verifying Viewer Zoom Fit To Width successfully", true);
+		log("Verifying Viewer Zoom Fit To Width successfully");
 
 	}
 
 	public void Verify_Viewer_Zoom_Fit_To_Height() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying Viewer Zoom Fit To Height ", true);
+		log("Test Scenario 2 : Verifying Viewer Zoom Fit To Height ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -4085,30 +4080,30 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Dropdown_Fit_To_Height();
 		Thread.sleep(6000);
-		Reporter.log("Select Viwer zoom and set as Fit To Height", true);
+		log("Select Viwer zoom and set as Fit To Height");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		getEnter_Document_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Document Name field", true);
+		log("Enter value into Document Name field");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find Buttton", true);
+		log("Click on Find Buttton");
 		getSelect_Document();
-		Reporter.log("Select and Open Document ", true);
+		log("Select and Open Document ");
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait2.until(ExpectedConditions.alertIsPresent());
@@ -4118,13 +4113,13 @@ public class My_Preferences extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Verifying Viewer Zoom Fit To Height successfully", true);
+		log("Verifying Viewer Zoom Fit To Height successfully");
 		movingclkElement(closedoc);
 	}
 
 	public void Verify_Viewer_Zoom_Fit_Entire_Image() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Verifying Viewer Zoom Fit Entire Image ", true);
+		log("Test Scenario 3 : Verifying Viewer Zoom Fit Entire Image ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -4133,30 +4128,30 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Dropdown_Fit_Entire_Image();
 		Thread.sleep(6000);
-		Reporter.log("Select Viwer Zoom and set as Fit Entire Image", true);
+		log("Select Viwer Zoom and set as Fit Entire Image");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Option", true);
+		log("Click on Search Option");
 		getEnter_Document_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Document Name field", true);
+		log("Enter value into Document Name field");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		getSelect_Document();
-		Reporter.log("Select and Open Document ", true);
+		log("Select and Open Document ");
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait2.until(ExpectedConditions.alertIsPresent());
@@ -4166,13 +4161,13 @@ public class My_Preferences extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Verifying Viewer Zoom Fit To Entire Image successfully", true);
+		log("Verifying Viewer Zoom Fit To Entire Image successfully");
 		movingclkElement(closedoc);
 	}
 
 	public void Verify_Viewer_Zoom_Actual_Size() throws Exception {
 
-		Reporter.log("Test Scenario 4 : Verifying Viewer Zoom Actual Size ", true);
+		log("Test Scenario 4 : Verifying Viewer Zoom Actual Size ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -4181,30 +4176,30 @@ public class My_Preferences extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon ", true);
+		log("Click on Setting Icon ");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Dropdown_Actual_Size();
 		Thread.sleep(6000);
-		Reporter.log("Select  Viwer Zoom and set as Actual size", true);
+		log("Select  Viwer Zoom and set as Actual size");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab ", true);
+		log("Click on Search Tab ");
 		getEnter_Document_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Document Name field", true);
+		log("Enter value into Document Name field");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		getSelect_Document();
-		Reporter.log("Select and Open Document ", true);
+		log("Select and Open Document ");
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait2.until(ExpectedConditions.alertIsPresent());
@@ -4214,11 +4209,11 @@ public class My_Preferences extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Verifying Viewer Zoom Actual Size successfully", true);
+		log("Verifying Viewer Zoom Actual Size successfully");
 		movingclkElement(closedoc);
 		Refresh_Button();
 		Thread.sleep(8000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// My Preferences Register Custom Stamp
@@ -4228,7 +4223,7 @@ public class My_Preferences extends BaseClass {
 		String expectedtext = "Contentverse";
 		String actualtext = Register_Custom_Stamp_DialogTitle.getText();
 		softAssert.assertEquals(actualtext, expectedtext);
-		Reporter.log("The " + Register_Custom_Stamp_DialogTitle.getText() + " this Dialog title should display", true);
+		log("The " + Register_Custom_Stamp_DialogTitle.getText() + " this Dialog title should display");
 	}
 
 	public void getVerify_RergisterCustomStamp_text() throws Exception {
@@ -4236,7 +4231,7 @@ public class My_Preferences extends BaseClass {
 		String expectedtext = "Stamp Name:";
 		String actualtext = Stamp_Name.getText();
 		softAssert.assertEquals(actualtext, expectedtext);
-		Reporter.log("The " + Stamp_Name.getText() + " this text should display", true);
+		log("The " + Stamp_Name.getText() + " this text should display");
 
 	}
 
@@ -4249,60 +4244,60 @@ public class My_Preferences extends BaseClass {
 
 	public void Verify_Register_Custom_Stamp_UI_and_UploadStamp() throws Exception {
 
-		Reporter.log("Test Scenario 1: Verifying Register Custom Stamp UI and Upload Stamp ", true);
+		log("Test Scenario 1: Verifying Register Custom Stamp UI and Upload Stamp ");
 		Thread.sleep(4000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(4000);
-		Reporter.log("Click on Setting Icon ", true);
+		log("Click on Setting Icon ");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(4000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		Actions actions = new Actions(driver);
 		actions.moveToElement(Register_Custom_Stamp).perform();
 		String tooltipText = Register_Custom_Stamp.getAttribute("title");
 		Assert.assertEquals(tooltipText, "Register Custom Stamps");
-		Reporter.log("Register Custom Stamp tooltip text Verified", true);
+		log("Register Custom Stamp tooltip text Verified");
 		jsclick(Register_Custom_Stamp);
-		Reporter.log("Click on the Register Custom Stamp Button", true);
+		log("Click on the Register Custom Stamp Button");
 		Thread.sleep(4000);
 		getVerify_RergisterCustomStamp_DialogTitle();
 		getVerify_RergisterCustomStamp_text();
-		Reporter.log("Register Custom Stamp title and text Verified", true);
+		log("Register Custom Stamp title and text Verified");
 		Thread.sleep(4000);
 		jsclick(RegisterStamp_CloseButton);
-		Reporter.log("Register Custom Stamp dialog closed Verified", true);
+		log("Register Custom Stamp dialog closed Verified");
 		Thread.sleep(4000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(4000);
-		Reporter.log("Click on Setting Icon ", true);
+		log("Click on Setting Icon ");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(4000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		jsclick(Register_Custom_Stamp);
-		Reporter.log("Click on the Register Custom Stamp Button", true);
+		log("Click on the Register Custom Stamp Button");
 		Thread.sleep(4000);
 		jsclick(RegisterStamp_CancelButton);
-		Reporter.log("Register Custom Stamp dialog cancel Verified", true);
+		log("Register Custom Stamp dialog cancel Verified");
 		Thread.sleep(4000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(4000);
-		Reporter.log("Click on Setting Icon ", true);
+		log("Click on Setting Icon ");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(4000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		jsclick(Register_Custom_Stamp);
-		Reporter.log("Click on the Register Custom Stamp Button", true);
+		log("Click on the Register Custom Stamp Button");
 		Thread.sleep(4000);
 		jsclick(RegisterStamp_AddButton);
 		Thread.sleep(2000);
-		Reporter.log("Click on the Register Custom Stamp dialog Add Button", true);
+		log("Click on the Register Custom Stamp dialog Add Button");
 		getToastmessage();
 		Thread.sleep(4000);
 		RegisterStamp_Textbox.sendKeys(MyPreferences_excelRead(19, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter Register Custom Stamp Name", true);
+		log("Enter Register Custom Stamp Name");
 		jsclick(RegisterStamp_AddButton);
-		Reporter.log("Click on the Register Custom Stamp dialog Add Button", true);
+		log("Click on the Register Custom Stamp dialog Add Button");
 		Thread.sleep(2000);
 		getToastmessage();
 		Thread.sleep(4000);
@@ -4311,16 +4306,16 @@ public class My_Preferences extends BaseClass {
 		movingclkElement(Stamp_fileChosen);
 		Thread.sleep(5000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\UploadSignature.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		jsclick(RegisterStamp_AddButton);
 		Thread.sleep(2000);
-		Reporter.log("Click on the Register Custom Stamp dialog Add Button", true);
+		log("Click on the Register Custom Stamp dialog Add Button");
 		try {
 			getVerify_existStamp();
 			Thread.sleep(2000);
 			jsclick(RegisterStamp_CancelButton);
-			Reporter.log("Click on the Register Custom Stamp dialog cancel button", true);
+			log("Click on the Register Custom Stamp dialog cancel button");
 		} catch (Exception e) {
 			System.out.println("Stamp is Added successfully");
 		}
@@ -4330,63 +4325,63 @@ public class My_Preferences extends BaseClass {
 		} else {
 			System.out.println("Duplicate Name Custom Stamp not available");
 		}
-		Reporter.log("Register Custom Stamp added succeesfully", true);
+		log("Register Custom Stamp added succeesfully");
 	}
 
 	public void Add_Register_Custom_Stamp_LeadViewer() throws Exception {
 
-		Reporter.log("Test Scenario 2: Add Register Custom Stamp in Lead View ", true);
+		log("Test Scenario 2: Add Register Custom Stamp in Lead View ");
 		Thread.sleep(4000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office document and set as Default view", true);
+		log("Select Office document and set as Default view");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf document and set as Default view", true);
+		log("Select Pdf document and set as Default view");
 		movingclkElement(Apply_button);
 		Thread.sleep(3000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getToastmessage();
 		Thread.sleep(3000);
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(8000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(3000);
-		Reporter.log("Select Document type dropdown", true);
+		log("Select Document type dropdown");
 		getEnter_ReportName_LeadViewRegister_Custom_Stamp();
 		Thread.sleep(5000);
-		Reporter.log("Enter value Report Name field", true);
+		log("Enter value Report Name field");
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait1.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(2000);
 		// Add tif file type
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -4408,24 +4403,24 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
+		log("Click on Navigate button");
 		jsclick(Open_Document);
 		Thread.sleep(6000);
-		Reporter.log("Select and Open Document", true);
+		log("Select and Open Document");
 		wait1.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(2000);
 		// Add pdf page
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		jsclick(Open_Second_page);
-		Reporter.log("PDF Page open successfully", true);
+		log("PDF Page open successfully");
 		Thread.sleep(6000);
 		movingElement(AnnotationMenu);
 		Thread.sleep(2000);
@@ -4438,70 +4433,70 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Verified and Create PDF and tif file with adding Custom Stamp in Lead view", true);
+		log("Click on Ok button");
+		log("Verified and Create PDF and tif file with adding Custom Stamp in Lead view");
 		movingclkElement(closedoc);
-		Reporter.log("Close the document page", true);
+		log("Close the document page");
 	}
 
 	public void Add_Register_Custom_Stamp_AdvancedViewer() throws Exception {
 
-		Reporter.log("Test Scenario 2: Add Register Custom Stamp in Advanced View ", true);
+		log("Test Scenario 2: Add Register Custom Stamp in Advanced View ");
 		Refresh_Button();
 		Thread.sleep(4000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getPdf_document_Advancedviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set as Advanced View", true);
+		log("Select Pdf Document and set as Advanced View");
 		movingclkElement(Apply_button);
 		Thread.sleep(3000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		//getToastmessage();
 		Thread.sleep(3000);
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(3000);
-		Reporter.log("Select Document type dropdown", true);
+		log("Select Document type dropdown");
 		getEnter_ReportName_AdvancedViewRegister_Custom_Stamp();
 		Thread.sleep(5000);
-		Reporter.log("Enter value Report Name field", true);
+		log("Enter value Report Name field");
 
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait1.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(2000);
 
 		// Add tif file type
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -4525,85 +4520,85 @@ public class My_Preferences extends BaseClass {
 
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(ViewDocument_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on View button", true);
+		log("Click on View button");
 
 		// Add pdf page
 		movingclkElement(Move_To_PlusIcon);
-		Reporter.log("Move to  Plus Icon", true);
+		log("Move to  Plus Icon");
 		getNew_pdf_Document_Option();
 		Thread.sleep(6000);
-		Reporter.log("Click on Pdf Document Option", true);
+		log("Click on Pdf Document Option");
 		getEnter_pdf_File_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter Pdf file name", true);
+		log("Enter Pdf file name");
 		jsclick(Open_pdf_page);
 		Thread.sleep(10000);
-		Reporter.log("Select and Open pdf page", true);
+		log("Select and Open pdf page");
 		jsclick(EditAnnotation);
-		Reporter.log("Click on the Add or Edit annotation button", true);
+		log("Click on the Add or Edit annotation button");
 		Thread.sleep(20000);
 		jsclick(AddStampADV);
-		Reporter.log("Click on the Add Stamp menu option", true);
+		log("Click on the Add Stamp menu option");
 		Thread.sleep(5000);
 		action.moveToElement(AddCustomStamp).perform();
 		Thread.sleep(4000);
-		Reporter.log("Mousehover on the Add custom Stamp", true);
+		log("Mousehover on the Add custom Stamp");
 		Thread.sleep(4000);
 		movingclkElement(Select_Added_Stamp);
 		Thread.sleep(6000);
 		WebElement container = driver.findElement(By.xpath("//*[@id='pdfViewerDiv_viewerContainer']"));
 		action.moveToElement(container).click(Page) // Perform click at the center of the container
 				.build().perform();
-		Reporter.log("Click on comment icon, add a comment");
+		log("Click on comment icon, add a comment");
 		Thread.sleep(3000);
-		Reporter.log("Stamp Added Successfully", true);
+		log("Stamp Added Successfully");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Verified and Create PDF and tif file with adding Custom Stamp in Lead view", true);
+		log("Click on Ok button");
+		log("Verified and Create PDF and tif file with adding Custom Stamp in Lead view");
 		movingclkElement(closedoc);
-		Reporter.log("Close the document page", true);
+		log("Close the document page");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office document and set as Default view", true);
+		log("Select Office document and set as Default view");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf document and set as Default view", true);
+		log("Select Pdf document and set as Default view");
 		movingclkElement(Apply_button);
 		Thread.sleep(3000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getToastmessage();
 
 	}
 
 	public void Reset_Register_Custom_Stamp() throws Exception {
 
-		Reporter.log("Test Scenario 3: Reset Register Custom Stamp from Admin Preferences", true);
+		log("Test Scenario 3: Reset Register Custom Stamp from Admin Preferences");
 		Thread.sleep(4000);
 		LogoutPage();
 		LoginAdminUser();
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		movingclkElement(AdminPreference);
 		Thread.sleep(6000);
-		Reporter.log("Click on Admin preferences", true);
+		log("Click on Admin preferences");
 		Select_Added_CustomStamp_AdminPreferences();
 		Thread.sleep(4000);
-		Reporter.log("Added Custom Stamp Select from dropdown", true);
+		log("Added Custom Stamp Select from dropdown");
 		movingclkElement(Delete_CustomStamp);
 		Thread.sleep(2000);
 		getToastmessage();
@@ -4617,7 +4612,7 @@ public class My_Preferences extends BaseClass {
 
 	public void Create_and_Open_document_Default_View() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Create Open and Update document in Default view", true);
+		log("Test Scenario 1 : Verifying Create Open and Update document in Default view");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -4632,49 +4627,49 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(8000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf document and set as Default view", true);
+		log("Select Pdf document and set as Default view");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set as Default View", true);
+		log("Select Office Document and set as Default View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		// getToastmessage();
 		Thread.sleep(6000);
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		ViewExpandNodes();
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(8000);
-		Reporter.log("Click on Ok button ", true);
+		log("Click on Ok button ");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select Value from Document type dropdown", true);
+		log("Select Value from Document type dropdown");
 		getEnter_ReportNameDefaultview();
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait1.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
 		Thread.sleep(4000);
-		Reporter.log("Browse a Document Page", true);
+		log("Browse a Document Page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\PdfDoc\\FileUploadUpdate.exe");
 		Thread.sleep(8000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait2.until(ExpectedConditions.alertIsPresent());
@@ -4686,30 +4681,30 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Create_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(ViewDocument_Button);
 		Thread.sleep(8000);
-		Reporter.log("Click on View button", true);
+		log("Click on View button");
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait2.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		Thread.sleep(4000);
-		Reporter.log("Browse a Document Page", true);
+		log("Browse a Document Page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\PdfDoc\\FileUploadUpdate.exe");
 		Thread.sleep(8000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		jsclick(Save_button);
 		Thread.sleep(10000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(closedoc);
 		Thread.sleep(6000);
-		Reporter.log("Close the document page", true);
-		Reporter.log("Verified Create Open and Update document in Default view", true);
+		log("Close the document page");
+		log("Verified Create Open and Update document in Default view");
 		Refresh_Button();
 		Thread.sleep(8000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 }

@@ -160,7 +160,7 @@ public class Document_References extends Computhink.Generic.BaseClass {
 
 	public void Copy_PasteAsReference() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Copy and Paste References On documents ", true);
+		log("Test Scenario 1 : Verifying Copy and Paste References On documents ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -180,24 +180,24 @@ public class Document_References extends Computhink.Generic.BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(Check_Document1);
 		Thread.sleep(6000);
-		Reporter.log("Check document Thumbnail", true);
+		log("Check document Thumbnail");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on documents Tab", true);
+		log("Mousehover on documents Tab");
 		getVerify_CopyandPasteReferences_Document();
-		Reporter.log("Copy and Paste References document", true);
+		log("Copy and Paste References document");
 		Thread.sleep(6000);
 		jsclick(Select_Document);
 		Thread.sleep(6000);
@@ -210,23 +210,23 @@ public class Document_References extends Computhink.Generic.BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Verified copy and paste References document", true);
+		log("Verified copy and paste References document");
 		
 		Actions action = new Actions(driver);
 		action.moveToElement(Click_References).click().build().perform();
 		Thread.sleep(6000);
-		Reporter.log("Click on References Option", true);
+		log("Click on References Option");
 		jsclick(Open_ReferenceDOC);
 		Thread.sleep(15000);
-		Reporter.log("Copy and Paste References verified successfully", true);
+		log("Copy and Paste References verified successfully");
 		Refresh_Button();
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		Thread.sleep(6000);
 	}
 
 	public void Open_Delete_Reference_Document() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying and Delete References Documents ", true);
+		log("Test Scenario 2 : Verifying and Delete References Documents ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -248,10 +248,10 @@ public class Document_References extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		Thread.sleep(6000);
 		jsclick(Select_Document);
 		try {
@@ -263,19 +263,19 @@ public class Document_References extends Computhink.Generic.BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Verified Copy and Paste References Document", true);
+		log("Verified Copy and Paste References Document");
 		jsclick(Click_References);
 		Thread.sleep(6000);
-		Reporter.log("Click on References", true);
+		log("Click on References");
 		jsclick(DeleteReferenceDoc);
 		Thread.sleep(6000);
-		Reporter.log("Delete added References document", true);
+		log("Delete added References document");
 		jsclick(ReferencedocCancelbutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Cancel button", true);
-		Reporter.log("Deleted added References document successfully", true);
+		log("Click on  Cancel button");
+		log("Deleted added References document successfully");
 		Refresh_Button();
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		
 	}
 	
@@ -302,36 +302,36 @@ public class Document_References extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		jsclick(Click_New_Document);
 		Thread.sleep(4000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(4000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(2000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(3000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(2000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button ", true);
+		log("Click on Ok button ");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(4000);
-		Reporter.log("Select Value from Document type dropdown", true);
+		log("Select Value from Document type dropdown");
 		getEnter_ReportName();
 		Thread.sleep(3000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingElement(Move_To_PlusIcon);
 		getBrowse_Option();
 		Thread.sleep(3000);
-		Reporter.log("Browse a Document Page", true);
+		log("Browse a Document Page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\PdfDoc\\FileUploadUpdate.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		try {
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait1.until(ExpectedConditions.alertIsPresent());
@@ -343,7 +343,7 @@ public class Document_References extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Create_button);
 		Thread.sleep(4000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
 		Thread.sleep(6000);
 }

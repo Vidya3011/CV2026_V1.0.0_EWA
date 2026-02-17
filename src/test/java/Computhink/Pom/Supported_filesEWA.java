@@ -129,17 +129,17 @@ public class Supported_filesEWA extends BaseClass {
 	}
 
 	public void create_document_Auto() throws Exception {
-		Reporter.log("Scenario 01: Verifying Supported Files", true);
+		log("Scenario 01: Verifying Supported Files");
 		Thread.sleep(2000);
 		jsclick(NewDocumentID);
-		Reporter.log("Click on New Document tab", true);
+		log("Click on New Document tab");
 		Thread.sleep(2000);
 
 		jsclick(DestinationFolder);
-		Reporter.log("Open Desitination folder dialog", true);
+		log("Open Desitination folder dialog");
 		Thread.sleep(3000);
 		selectElement(NishaCabinet);
-		Reporter.log("Select Folder", true);
+		log("Select Folder");
 		Thread.sleep(3000);
 		selectElement(NishaDrawer);
 
@@ -148,34 +148,34 @@ public class Supported_filesEWA extends BaseClass {
 		Thread.sleep(3000);
 		jsclick(DestinationLocationOKBTN);
 		Thread.sleep(3000);
-		Reporter.log("Click on Destination folder dialog OK button", true);
+		log("Click on Destination folder dialog OK button");
 		getSelect_Document_Type_Dropdown();
-		Reporter.log("Select a Document type", true);
+		log("Select a Document type");
 		Thread.sleep(3000);
 		Actions act = new Actions(driver);
 		try {
 
 			act.click(DocumentCVRep).sendKeys(readFrmXLNEgative(6, 1)).build().perform();
-			Reporter.log("Enter indices value", true);
+			log("Enter indices value");
 		} catch (Exception e) {
 			System.out.println("Document name not enter failed");
 		}
 
 		Thread.sleep(4000);
 		jsclick(CreateBTN);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		Thread.sleep(4000);
 
 		jsclick(Navigate_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
+		log("Click on Navigate button");
 		jsclick(Open_Document);
 		Thread.sleep(6000);
-		Reporter.log("Select and Open Document", true);
+		log("Select and Open Document");
 		
 		Thread.sleep(6000);
 		movingElement(Move_To_PlusIcon);
-		Reporter.log("Select Browse icon", true);
+		log("Select Browse icon");
 		try {
 
 			act.moveToElement(Browse_Option).click().build().perform();
@@ -184,7 +184,7 @@ public class Supported_filesEWA extends BaseClass {
 		}
 
 		Thread.sleep(25000);
-		Reporter.log("Add Supported files by using AutoIT script", true);
+		log("Add Supported files by using AutoIT script");
 		String path1 = "D:\\SupporterFiles";  
 		File directory = new File(path1);
 
@@ -209,21 +209,21 @@ public class Supported_filesEWA extends BaseClass {
 					try {
 						// Execute the AutoIt script with the full file paths as argument
 						String command = "D:\\RNishaAutoIt\\FileuploadForFolder.exe " + filePaths.toString();
-						Reporter.log("Supported File names With Extention : " + command, true); // Log the command
+						log("Supported File names With Extention : " + command); // Log the command
 																									// for verification
 						Process process = Runtime.getRuntime().exec(command);
 						process.waitFor();
-						Reporter.log("All Supported files are uploaded successful", true);
+						log("All Supported files are uploaded successful");
 					} catch (IOException | InterruptedException e) {
 						System.out.println("Upload Failed");
 						e.printStackTrace();
 					}
 				}
 			} else {
-				Reporter.log("No files found in directory: " + path1);
+				log("No files found in directory: " + path1);
 			}
 		} else {
-			Reporter.log("Directory does not exist or is not a directory : " + path1);
+			log("Directory does not exist or is not a directory : " + path1);
 		}
 		Thread.sleep(8000);
 
@@ -236,30 +236,30 @@ public class Supported_filesEWA extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(4000);
-		Reporter.log("Click on save button", true);
+		log("Click on save button");
 		jsclick(SaveTab);
 		Thread.sleep(3000);
 		VisiblityOf(SaveTabOKBTN);
-		Reporter.log("Added Supported files are saved successfully...", true);
+		log("Added Supported files are saved successfully...");
 		jsclick(SaveTabOKBTN);
 		Thread.sleep(4000);
 
 	}
 
 	public void FirstDocView() throws Exception {
-		Reporter.log("Scenario 02: Verify Supported files Download", true);
+		log("Scenario 02: Verify Supported files Download");
 		Thread.sleep(3000);
 		jsclick(FirstFileThumbnail);
-		Reporter.log("Select Supported file", true);
+		log("Select Supported file");
 		Thread.sleep(5000);
 		jsclick(DownloadBTN);
-		Reporter.log("Select Supported file and download successfully", true);
+		log("Select Supported file and download successfully");
 
 	}
 
 	public void viewAndDownloadDocs(int numberOfDocs) throws Exception {
 		
-		Reporter.log("Scenario 02:Verify Supported files and Download", true);
+		log("Scenario 02:Verify Supported files and Download");
 		for (int i = 1; i <= numberOfDocs; i++) {
 			// Construct the XPath with the current index
 			String xpath = "//*[@id='docViewerMetaData']/div[" + i + "]";
@@ -268,9 +268,9 @@ public class Supported_filesEWA extends BaseClass {
 
 			WebElement element = driver.findElement(By.xpath(xpath));
 			jsclick(element);
-			Reporter.log("Select Supported file", true);
+			log("Select Supported file");
 			String Uploaded = element.getAttribute("title");
-			Reporter.log("Supported file name with file type :" + Uploaded, true);
+			log("Supported file name with file type :" + Uploaded);
 			Thread.sleep(5000);
 			try {
 				jsclick(SaveOKBTN);
@@ -279,16 +279,15 @@ public class Supported_filesEWA extends BaseClass {
 			}
 			Thread.sleep(5000);
 			jsclick(DownloadBTN);
-			Reporter.log("File Downloaded successfully", true);
+			log("File Downloaded successfully");
 			Thread.sleep(5000);
 
-				Reporter.log(
-						"==============================================================================================================================",
-						true);
+				log(
+						"==============================================================================================================================");
 		}
 		
 		jsclick(closedoc);
-		Reporter.log("Verified All supported files and Closed document successfully", true);
+		log("Verified All supported files and Closed document successfully");
 		
 	}
 	

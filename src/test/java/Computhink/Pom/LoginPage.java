@@ -15,8 +15,10 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 
+import Computhink.Generic.BaseClass;
+
 //NDipak codes 
-public class LoginPage {
+public class LoginPage extends BaseClass {
 	
 	Select select;
 	public WebDriver driver;
@@ -106,23 +108,23 @@ public class LoginPage {
 		// RememberMeCheck.click();
 		if (RememberMeCheck.isEnabled()) {
 			RememberMeCheck.click();
-			Reporter.log("Remember me checkbox is selected", true);
+			log("Remember me checkbox is selected");
 		} else {
 			// userNameTextBox.sendKeys(" ");
 			// passwordTextBox.sendKeys(" ");
 			// SelectRoomsDropdown.sendKeys(" ");
-			Reporter.log("Remember me checkbox is not selected", true);
+			log("Remember me checkbox is not selected");
 		}
 	}
 
 	public void ClickLoginButton(String username, String password, String RoomName) throws InterruptedException {
 
 		if (username.isEmpty()) {
-			Reporter.log("Username should not be blank ", true);
+			log("Username should not be blank ");
 		} else if (password.isEmpty()) {
-			Reporter.log("Password should not be blank ", true);
+			log("Password should not be blank ");
 		} else if (RoomName.isEmpty()) {
-			Reporter.log("Select a room ", true);
+			log("Select a room ");
 		}
 
 		LoginBTN.click();
@@ -132,7 +134,7 @@ public class LoginPage {
 				SessionMessageOK.click();
 			}
 		} catch (Exception e) {
-			Reporter.log("Session message is not displayed", true);
+			log("Session message is not displayed");
 		}
 
 	}
@@ -141,10 +143,10 @@ public class LoginPage {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		try {
 			wait.until(ExpectedConditions.visibilityOf(errMsg));
-			Reporter.log("pass:Error message is Displayed", true);
+			log("pass:Error message is Displayed");
 
 		} catch (Exception e) {
-			Reporter.log("pass:Error message is Displayed", true);
+			log("pass:Error message is Displayed");
 			Assert.fail();
 		}
 	}
@@ -181,7 +183,7 @@ public class LoginPage {
 					"The URL is not valid. Expected a URL starting with http://10.4.10.x:8080/CVWeb/cvLgn");
 
 			if (isValidUrl) {
-				Reporter.log("Contentverse URL Launched Successfully...");
+				log("Contentverse URL Launched Successfully...");
 			}
 		}
 

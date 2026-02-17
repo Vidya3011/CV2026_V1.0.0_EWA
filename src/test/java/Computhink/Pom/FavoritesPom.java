@@ -55,48 +55,48 @@ public class FavoritesPom extends BaseClass {
 
 	    Thread.sleep(3000);
 	    jsclick(CabinetForFav);
-	    Reporter.log("Select a cabinet to set a favorite user level", true);
+	    log("Select a cabinet to set a favorite user level");
 	    softAssert.assertEquals(driver.getTitle(), "Expected Page Title", "Page title mismatch after selecting cabinet.");
 
 	    Thread.sleep(3000);
 	    movingclkElement(favStarIcon);
-	    Reporter.log("Click on star icon", true);
+	    log("Click on star icon");
 	    softAssert.assertEquals(favStarIcon.getAttribute("class"), "expected-class-after-click", "Star icon not updated after clicking.");
 
 	    Thread.sleep(3000);
 	    jsclick(favUserLevel);
-	    Reporter.log("Select the user radio button in the favorite dialog", true);
-	    softAssert.assertEquals(favUserLevel.isSelected(), true, "User radio button not selected.");
+	    log("Select the user radio button in the favorite dialog");
+	    softAssert.assertEquals(favUserLevel.isSelected(), "User radio button not selected.");
 
 	    jsclick(favdialogOKBTN);
-	    Reporter.log("Select favorite dialog OK button", true);
+	    log("Select favorite dialog OK button");
 	    softAssert.assertEquals(favdialogOKBTN.isDisplayed(), false, "Favorite dialog did not close after clicking OK.");
 
 	    Thread.sleep(5000);
 	    movingclkElement(favBookMarkIconTab);
-	    Reporter.log("Mouse hover on favorite icon", true);
+	    log("Mouse hover on favorite icon");
 	 
 	    Thread.sleep(8000);
 	    jsclick(loadAll);
-	    Reporter.log("Click on ellipse icon from the dropdown", true);
-	    softAssert.assertEquals(loadAll.isDisplayed(), true, "Dropdown not displayed after clicking ellipse icon.");
+	    log("Click on ellipse icon from the dropdown");
+	    softAssert.assertEquals(loadAll.isDisplayed(), "Dropdown not displayed after clicking ellipse icon.");
 
 	    Thread.sleep(3000);
-	    Reporter.log("Show favorite dialog opened", true);
+	    log("Show favorite dialog opened");
 
 	    movingElement(DeleteFav);
-	    Reporter.log("Click on delete icon", true);
+	    log("Click on delete icon");
 	    jsclick(DeleteFav);
-	    Reporter.log("Added favorite item deleted successfully...", true);
+	    log("Added favorite item deleted successfully...");
 	    softAssert.assertEquals(DeleteFav.isDisplayed(), false, "Delete icon still displayed after deletion.");
 
 	    Thread.sleep(3000);
 	    jsclick(DeleteFavOkBTN);
-	    Reporter.log("Close the show favorite dialog", true);
+	    log("Close the show favorite dialog");
 	    softAssert.assertEquals(DeleteFavOkBTN.isDisplayed(), false, "Favorite dialog did not close after deletion.");
 
 	    Thread.sleep(3000);
-	    Reporter.log("Favorite User Option verified successfully...", true);
+	    log("Favorite User Option verified successfully...");
 
 	 //   softAssert.assertAll();
 	}
@@ -108,31 +108,31 @@ public class FavoritesPom extends BaseClass {
 
 		    Thread.sleep(3000);
 		    jsclick(SystemLevelFavCabinet);
-		    Reporter.log("Select a cabinet to set a favorite system level", true);
+		    log("Select a cabinet to set a favorite system level");
 		    softAssert.assertEquals(driver.getTitle(), "Expected Page Title", "Page title mismatch after selecting system level cabinet.");
 
 		    Thread.sleep(3000);
 		    movingclkElement(favStarIcon);
-		    Reporter.log("Click on star icon", true);
+		    log("Click on star icon");
 		    softAssert.assertEquals(favStarIcon.getAttribute("class"), "expected-class-after-click", "Star icon not updated after clicking.");
 
 		    Thread.sleep(3000);
 		    jsclick(favSystemLevel);
-		    Reporter.log("Select the System radio button in the favorite dialog", true);
-		    softAssert.assertEquals(favSystemLevel.isSelected(), true, "System radio button not selected.");
+		    log("Select the System radio button in the favorite dialog");
+		    softAssert.assertEquals(favSystemLevel.isSelected(), "System radio button not selected.");
 
 		    Thread.sleep(3000);
 		    jsclick(favdialogOKBTN);
-		    Reporter.log("Select favorite dialog OK button", true);
+		    log("Select favorite dialog OK button");
 		  
 		    Thread.sleep(3000);
 		    movingclkElement(favBookMarkIconTab);
-		    Reporter.log("Mouse hover on favorite bookmark icon to show the system level favorite cabinet", true);
+		    log("Mouse hover on favorite bookmark icon to show the system level favorite cabinet");
 		   
 		    Thread.sleep(4000);
-		    Reporter.log("Logout the page", true);
+		    log("Logout the page");
 		    LogoutPage();
-		    Reporter.log("Login as another user", true);
+		    log("Login as another user");
 		    loginRNISHA47();
 
 		    Thread.sleep(2000);
@@ -140,14 +140,14 @@ public class FavoritesPom extends BaseClass {
 		    Thread.sleep(3000);
 
 		    movingclkElement(favBookMarkIconTab);
-		    Reporter.log("Mouse hover on favorite icon", true);
+		    log("Mouse hover on favorite icon");
 		  
 		    Thread.sleep(3000);
-		    Reporter.log("It should show the favorite cabinet name", true);
+		    log("It should show the favorite cabinet name");
 		  
 		    jsclick(Refresh_Button(driver));
 		    Thread.sleep(5000);
-		    Reporter.log("The Favorite System option verified successfully...", true);
+		    log("The Favorite System option verified successfully...");
 
 		   
 	}

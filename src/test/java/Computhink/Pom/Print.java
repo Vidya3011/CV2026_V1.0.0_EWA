@@ -258,27 +258,27 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 03: Verify Email 'Convert_to_PDF' with 'Burn annotation' option");
-		Reporter.log("Verifying Email Functionality");
+		log("Scenario 03: Verify Email 'Convert_to_PDF' with 'Burn annotation' option");
+		log("Verifying Email Functionality");
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(CheckBox));
 		jsclick(CheckBox);
-		Reporter.log("Open a document and select a page");
+		log("Open a document and select a page");
 		jsclick(SendToIcon);
 		Thread.sleep(3000);
 		jsclick(EmailDoc);
-		Reporter.log("Mouse hover on send to icon from viewer tool bar");
+		log("Mouse hover on send to icon from viewer tool bar");
 		jsclick(ConvertPDfCheckbox);
 		Thread.sleep(3000);
-		Reporter.log("Click convertToPDF checkbox");
-		Reporter.log("Click burn annotation checkbox");
+		log("Click convertToPDF checkbox");
+		log("Click burn annotation checkbox");
 		sendvalue(EnterEmail, readFromExMail(2, 0));
 		Thread.sleep(3000);
-		Reporter.log("Enter valid mail into email field");
+		log("Enter valid mail into email field");
 		sendvalue(ForSubject, readFromExMail(3, 2));
 		Thread.sleep(3000);
-		Reporter.log("Enter valid subject into subject textbox");
+		log("Enter valid subject into subject textbox");
 		jsclick(ForRetainEmail);
 		Thread.sleep(3000);
 		jsclick(ForemailPasswrd);
@@ -286,14 +286,14 @@ public class Print extends Computhink.Generic.BaseClass {
 		movingElement(ForzipPasswrd);
 		sendvalue(ForzipPasswrd, readFromExMail(1, 3));
 		jsclick(EmailSendOk);
-		Reporter.log("Click email dialog OK button");
-		Reporter.log("Email dialog with burn annotation verified successfully...");
+		log("Click email dialog OK button");
+		log("Email dialog with burn annotation verified successfully...");
 		Thread.sleep(20000);
 		wait.until(ExpectedConditions.elementToBeClickable(EmailsuccessMessageDialogboxOK));
 		jsclick(EmailsuccessMessageDialogboxOK);
 		Thread.sleep(15000);
 
-		Reporter.log("Email Functionality with all annotation settings, sent successfully", true);
+		log("Email Functionality with all annotation settings, sent successfully");
 
 		// SoftAssert: Verifying that the values entered match the expected email,
 		// subject, and password
@@ -312,19 +312,19 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 01: Verify reference Email");
+		log("Scenario 01: Verify reference Email");
 		Thread.sleep(4000);
 		jsclick(TestCabExpIcon);
-		Reporter.log("Expand the cabinet");
+		log("Expand the cabinet");
 		Thread.sleep(3000);
 		jsclick(TesttestDrawerExpIcon);
-		Reporter.log("Expand the drawer");
+		log("Expand the drawer");
 		Thread.sleep(3000);
-		Reporter.log("Click on the folder");
+		log("Click on the folder");
 		selectElement(VidyaTestFolder);
 		Thread.sleep(5000);
 		jsclick(Document);
-		Reporter.log("Open a document");
+		log("Open a document");
 		Thread.sleep(7000);
 
 		try {
@@ -333,7 +333,7 @@ public class Print extends Computhink.Generic.BaseClass {
 				jsclick(element1);
 			}
 		} catch (Exception e) {
-			Reporter.log("Locked message displayed", true);
+			log("Locked message displayed");
 			Thread.sleep(2000);
 		}
 
@@ -343,32 +343,32 @@ public class Print extends Computhink.Generic.BaseClass {
 			wait.until(ExpectedConditions.alertIsPresent());
 			acceptAlert();
 		} catch (Exception e) {
-			Reporter.log("Alert IS Not Present");
+			log("Alert IS Not Present");
 		}
 		Thread.sleep(3000);
 		jsclick(CheckBox);
-		Reporter.log("Select a page");
+		log("Select a page");
 		jsclick(SendToIcon);
 		Thread.sleep(3000);
-		Reporter.log("Click on send to tool icon");
+		log("Click on send to tool icon");
 		jsclick(EmailDoc);
 		Thread.sleep(3000);
-		Reporter.log("Click on email option");
+		log("Click on email option");
 		jsclick(ReferenceEmail);
 		Thread.sleep(3000);
-		Reporter.log("Click on reference radio button");
+		log("Click on reference radio button");
 
 		sendvalue(EnterEmail, readFromExMail(1, 0));
-		Reporter.log("Enter the valid email into the email field");
+		log("Enter the valid email into the email field");
 		jsclick(EmailSendOk);
 		Thread.sleep(20000);
-		Reporter.log("Click on email dialog OK button");
+		log("Click on email dialog OK button");
 		wait.until(ExpectedConditions.elementToBeClickable(EmailsuccessMessageDialogboxOK));
 		jsclick(EmailsuccessMessageDialogboxOK);
 		Thread.sleep(15000);
-		Reporter.log("User should receive 'Email sent successful' message dialog");
+		log("User should receive 'Email sent successful' message dialog");
 
-		Reporter.log("Email sent dialog displayed successfully");
+		log("Email sent dialog displayed successfully");
 
 		// SoftAssert: Verifying the entered email is correct
 		String expectedEmail = readFromExMail(1, 0);
@@ -386,7 +386,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		SoftAssert softAssert = new SoftAssert();
 
-		Reporter.log("Scenario 02: Verify copy email and message textbox");
+		log("Scenario 02: Verify copy email and message textbox");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(CheckBox));
 		jsclick(CheckBox);
@@ -398,12 +398,12 @@ public class Print extends Computhink.Generic.BaseClass {
 			softAssert.fail("Checkbox is not selected.");
 		}
 
-		Reporter.log("Open a document and select a page");
+		log("Open a document and select a page");
 		jsclick(SendToIcon);
-		Reporter.log("Click on sendto tool icon");
+		log("Click on sendto tool icon");
 		Thread.sleep(3000);
 		jsclick(EmailDoc);
-		Reporter.log("Select email submenu");
+		log("Select email submenu");
 		jsclick(CopyEmail);
 		Thread.sleep(3000);
 
@@ -414,9 +414,9 @@ public class Print extends Computhink.Generic.BaseClass {
 			softAssert.fail("Copy radio button is not selected.");
 		}
 
-		Reporter.log("Select copy radio button");
+		log("Select copy radio button");
 		sendvalue(EnterEmail, readFromExMail(2, 0));
-		Reporter.log("Enter a valid email id");
+		log("Enter a valid email id");
 
 		// Soft assert for email field input
 		if (EnterEmail.getAttribute("value").equals(readFromExMail(2, 0))) {
@@ -426,7 +426,7 @@ public class Print extends Computhink.Generic.BaseClass {
 		}
 
 		sendvalue(ForSubject, readFromExMail(1, 2));
-		Reporter.log("Enter subject into subject textbox");
+		log("Enter subject into subject textbox");
 
 		// Soft assert for subject field input
 		if (ForSubject.getAttribute("value").equals(readFromExMail(1, 2))) {
@@ -437,7 +437,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		Thread.sleep(4000);
 		sendvalue(MessageBox, readFromExMail(2, 2));
-		Reporter.log("Enter message into message dialog box");
+		log("Enter message into message dialog box");
 
 		// Soft assert for message box input
 		if (MessageBox.getAttribute("value").equals(readFromExMail(2, 2))) {
@@ -448,7 +448,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		Thread.sleep(4000);
 		jsclick(EmailSendOk);
-		Reporter.log("Click on Email dialog OK button");
+		log("Click on Email dialog OK button");
 		Thread.sleep(20000);
 		wait.until(ExpectedConditions.elementToBeClickable(EmailsuccessMessageDialogboxOK));
 
@@ -460,9 +460,9 @@ public class Print extends Computhink.Generic.BaseClass {
 		}
 
 		jsclick(EmailsuccessMessageDialogboxOK);
-		Reporter.log("User should receive 'Email sent successfully' message dialog");
+		log("User should receive 'Email sent successfully' message dialog");
 		Thread.sleep(15000);
-		Reporter.log("Email sent successfully dialog displayed...");
+		log("Email sent successfully dialog displayed...");
 
 		// Assert all to verify soft assertions
 		softAssert.assertAll();
@@ -567,14 +567,13 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		SoftAssert softAssert = new SoftAssert();
 
-		Reporter.log("Scenario 04: Verifying export functionality retain format, with average quality and zip password",
-				true);
+		log("Scenario 04: Verifying export functionality retain format, with average quality and zip password");
 		Thread.sleep(10000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		// Wait until CheckBox is visible
 		wait.until(ExpectedConditions.visibilityOf(CheckBox));
-		Reporter.log("Open a document and select a page");
+		log("Open a document and select a page");
 
 		// Soft assert for CheckBox visibility
 		if (CheckBox.isDisplayed()) {
@@ -585,7 +584,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		// Wait until CheckBox is clickable
 		wait.until(ExpectedConditions.elementToBeClickable(CheckBox));
-		Reporter.log("Click on sendto tool icon");
+		log("Click on sendto tool icon");
 
 		// Click on CheckBox
 		jsclick(CheckBox);
@@ -599,7 +598,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		// Click on SendToIcon
 		jsclick(SendToIcon);
-		Reporter.log("Select export submenu");
+		log("Select export submenu");
 
 		// Soft assert for SendToIcon clickability
 		if (SendToIcon.isEnabled()) {
@@ -612,12 +611,12 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		// Click on ExportDialog
 		jsclick(ExportDialog);
-		Reporter.log("Select retain radio button");
+		log("Select retain radio button");
 		Thread.sleep(5000);
 
 		// Select Expretainchkbox
 		jsclick(Expretainchkbox);
-		Reporter.log("Click on export dialog OK button");
+		log("Click on export dialog OK button");
 
 		// Soft assert for retain checkbox selection
 		if (Expretainchkbox.isSelected()) {
@@ -630,7 +629,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		// Enter zip password
 		Expzippwrdcheckbx.sendKeys(readFromExMail(3, 3));
-		Reporter.log("Document exported successfully");
+		log("Document exported successfully");
 
 		// Soft assert for zip password entry
 		if (Expzippwrdcheckbx.getAttribute("value").equals(readFromExMail(3, 3))) {
@@ -658,10 +657,10 @@ public class Print extends Computhink.Generic.BaseClass {
 	public void exports_with_convert_to_pdf_and_best_quality() throws Exception {
 		SoftAssert softAssert = new SoftAssert();
 
-		Reporter.log("Step Details: Verify Export");
+		log("Step Details: Verify Export");
 		Thread.sleep(4000);
 		jsclick(TestCabExpIcon);
-		Reporter.log("Expand the cabinet");
+		log("Expand the cabinet");
 
 		// Soft assert for cabinet expansion
 		if (TestCabExpIcon.isDisplayed()) {
@@ -672,7 +671,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		Thread.sleep(3000);
 		jsclick(TesttestDrawerExpIcon);
-		Reporter.log("Expand the drawer");
+		log("Expand the drawer");
 
 		// Soft assert for drawer expansion
 		if (TesttestDrawerExpIcon.isDisplayed()) {
@@ -682,7 +681,7 @@ public class Print extends Computhink.Generic.BaseClass {
 		}
 
 		Thread.sleep(3000);
-		Reporter.log("Click on the folder");
+		log("Click on the folder");
 
 		try {
 			selectElement(VidyaTestFolder);
@@ -692,7 +691,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		Thread.sleep(5000);
 		jsclick(Document);
-		Reporter.log("Open a document");
+		log("Open a document");
 
 		// Soft assert for document opening
 		if (Document.isDisplayed()) {
@@ -706,10 +705,10 @@ public class Print extends Computhink.Generic.BaseClass {
 			if (Lockeddoc.isDisplayed()) {
 				WebElement element1 = driver.findElement(By.xpath("//*[@id=\"ownershipMessageModelOk\"]"));
 				jsclick(element1);
-				Reporter.log("Locked document message handled.");
+				log("Locked document message handled.");
 			}
 		} catch (Exception e) {
-			Reporter.log("Locked message displayed", true);
+			log("Locked message displayed");
 			Thread.sleep(2000);
 		}
 
@@ -718,19 +717,19 @@ public class Print extends Computhink.Generic.BaseClass {
 		try {
 			wait.until(ExpectedConditions.alertIsPresent());
 			acceptAlert();
-			Reporter.log("Alert handled successfully.");
+			log("Alert handled successfully.");
 		} catch (Exception e) {
-			Reporter.log("Alert is not present.");
+			log("Alert is not present.");
 		}
 
 		Thread.sleep(3000);
 		Thread.sleep(5000);
 
-		Reporter.log("Scenario 05: Verify Export with convert to PDF");
+		log("Scenario 05: Verify Export with convert to PDF");
 
 		wait.until(ExpectedConditions.visibilityOf(CheckBox));
 
-		Reporter.log("Open a document and select a page");
+		log("Open a document and select a page");
 		jsclick(CheckBox);
 
 		// Soft assert for CheckBox clickability
@@ -740,15 +739,15 @@ public class Print extends Computhink.Generic.BaseClass {
 			softAssert.fail("Checkbox is not selected.");
 		}
 
-		Reporter.log("Click on sendto tool icon");
+		log("Click on sendto tool icon");
 		jsclick(SendToIcon);
 		Thread.sleep(3000);
 
-		Reporter.log("Select export submenu");
+		log("Select export submenu");
 		jsclick(ExportDialog);
 		Thread.sleep(3000);
 
-		Reporter.log("Select convert to PDF radio button");
+		log("Select convert to PDF radio button");
 		jsclick(ExportCovertPDFcheckbx);
 
 		// Soft assert for "Convert to PDF" checkbox selection
@@ -789,7 +788,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		// Select burn annotation checkbox
 		jsclick(ExpWithannotations);
-		Reporter.log("Select the burn annotation checkbox");
+		log("Select the burn annotation checkbox");
 
 		// Soft assert for burn annotation checkbox
 		if (ExpWithannotations.isSelected()) {
@@ -812,8 +811,8 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		// Finalize export
 		jsclick(EmailSendOk);
-		Reporter.log("User clicked on export dialog OK button");
-		Reporter.log("The document exported successfully.");
+		log("User clicked on export dialog OK button");
+		log("The document exported successfully.");
 
 		Thread.sleep(15000);
 
@@ -823,7 +822,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		SoftAssert softAssert = new SoftAssert();
 
-		Reporter.log("Scenario 06: Verify Export with convert to PDF");
+		log("Scenario 06: Verify Export with convert to PDF");
 		Thread.sleep(8000);
 
 		// Wait for CheckBox visibility
@@ -833,7 +832,7 @@ public class Print extends Computhink.Generic.BaseClass {
 		// Wait for CheckBox to be clickable
 
 		jsclick(CheckBox);
-		Reporter.log("Open a document and select a page");
+		log("Open a document and select a page");
 
 		// Soft assert for CheckBox selection
 		if (CheckBox.isSelected()) {
@@ -844,7 +843,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		// Click on SendToIcon
 		jsclick(SendToIcon);
-		Reporter.log("Select send to tool icon");
+		log("Select send to tool icon");
 
 		// Soft assert for SendToIcon clickability
 		if (SendToIcon.isEnabled()) {
@@ -857,7 +856,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		// Click on ExportDialog
 		jsclick(ExportDialog);
-		Reporter.log("Click on export submenu");
+		log("Click on export submenu");
 
 		// Soft assert for ExportDialog click
 		if (ExportDialog.isDisplayed()) {
@@ -871,7 +870,7 @@ public class Print extends Computhink.Generic.BaseClass {
 		// Click on ExportCovertPDF checkbox
 		jsclick(ExportCovertPDFcheckbx);
 		Thread.sleep(3000);
-		Reporter.log("Select convert to PDF radio button");
+		log("Select convert to PDF radio button");
 
 		// Soft assert for ExportCovertPDF checkbox selection
 		if (ExportCovertPDFcheckbx.isSelected()) {
@@ -883,7 +882,7 @@ public class Print extends Computhink.Generic.BaseClass {
 		// Click on Include Workflow checkbox
 		jsclick(ExpIncludewrkflwchkbox);
 		Thread.sleep(3000);
-		Reporter.log("Select include workflow checkbox");
+		log("Select include workflow checkbox");
 
 		// Soft assert for Include Workflow checkbox
 		if (ExpIncludewrkflwchkbox.isSelected()) {
@@ -894,7 +893,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		// Click OK button on export dialog
 		jsclick(EmailSendOk);
-		Reporter.log("Click on export dialog OK button");
+		log("Click on export dialog OK button");
 
 		// Soft assert for EmailSendOk button click
 		if (EmailSendOk.isDisplayed() && EmailSendOk.isEnabled()) {
@@ -907,7 +906,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		// Click on Refresh Button
 		jsclick(Refresh_Button(driver));
-		Reporter.log("User clicks on refresh button");
+		log("User clicks on refresh button");
 
 		// Soft assert for Refresh button click
 		if (Refresh_Button(driver).isDisplayed() && Refresh_Button(driver).isEnabled()) {
@@ -949,7 +948,7 @@ public class Print extends Computhink.Generic.BaseClass {
 		sendvalue(UnlockRedaction, readFromExMail(2, 3));
 		Thread.sleep(2000);
 		// jsclick(OKbuttonprintpage);
-		Reporter.log("The print page displayed successfully with selected document", true);
+		log("The print page displayed successfully with selected document");
 		try {
 			jsclick(Refresh_Button(driver));
 		} catch (Exception e) {
@@ -963,29 +962,29 @@ public class Print extends Computhink.Generic.BaseClass {
 		SoftAssert softAssert = new SoftAssert();
 
 		// Scenario 01: Verify email with invalid email id
-		Reporter.log("Scenario 01: Verify email with invalid email id");
+		log("Scenario 01: Verify email with invalid email id");
 		Thread.sleep(6000);
 
 		// Click on Cabinet
-		Reporter.log("Click on cabinet");
+		log("Click on cabinet");
 		jsclick(TestCabExpIcon);
 		Thread.sleep(5000);
 
 		// Click on Drawer
-		Reporter.log("Click on drawer");
+		log("Click on drawer");
 		jsclick(TesttestDrawerExpIcon);
 		Thread.sleep(3000);
 
 		// Select Folder
 		ElementToBeClickable(VidyaTestFolder);
-		Reporter.log("Select a folder");
+		log("Select a folder");
 		selectElement(VidyaTestFolder);
 		Thread.sleep(5000);
 
 		// Open Document
-		Reporter.log("Click on cabinet");
+		log("Click on cabinet");
 		jsclick(Document);
-		Reporter.log("Open a document");
+		log("Open a document");
 		Thread.sleep(5000);
 
 		// Check if document is locked
@@ -995,7 +994,7 @@ public class Print extends Computhink.Generic.BaseClass {
 				jsclick(element1);
 			}
 		} catch (Exception e) {
-			Reporter.log("Locked message displayed", true);
+			log("Locked message displayed");
 			Thread.sleep(2000);
 		}
 		Thread.sleep(3000);
@@ -1006,63 +1005,63 @@ public class Print extends Computhink.Generic.BaseClass {
 			wait.until(ExpectedConditions.alertIsPresent());
 			acceptAlert();
 		} catch (Exception e) {
-			Reporter.log("Alert is not present");
+			log("Alert is not present");
 		}
 		Thread.sleep(4000);
 
 		// Thumbnail View Checkbox
 		wait.until(ExpectedConditions.elementToBeClickable(CheckBox));
-		Reporter.log("Click on thumbnail view check box");
+		log("Click on thumbnail view check box");
 		jsclick(CheckBox);
 		softAssert.assertTrue(CheckBox.isSelected(), "Thumbnail view checkbox selected successfully");
 
 		// SendTo Icon
-		Reporter.log("Click on SendTo icon");
+		log("Click on SendTo icon");
 		jsclick(SendToIcon);
 		Thread.sleep(3000);
 
 		// Email Option
-		Reporter.log("Click on email option");
+		log("Click on email option");
 		jsclick(EmailDoc);
 
 		// Invalid Email Scenario
-		Reporter.log("Enter invalid mail ID into Enter email textbox");
+		log("Enter invalid mail ID into Enter email textbox");
 		jsclick(ConvertPDfCheckbox);
 		Thread.sleep(3000);
 		sendvalue(EnterEmail, (readFrmXLNEgative(6, 0)));
 		Thread.sleep(3000);
 		jsclick(EmailSendOk);
-		Reporter.log("Click on Email dialog OK button");
+		log("Click on Email dialog OK button");
 		Thread.sleep(4000);
 		System.out.println(InvalidEmailMessageValidation.getText());
-		Reporter.log("User should get 'please enter valid email' warning message");
+		log("User should get 'please enter valid email' warning message");
 		jsclick(InvalidDialogBoxOKBTN);
 		Thread.sleep(8000);
-		Reporter.log("Invalid email ID scenario verified successfully", true);
+		log("Invalid email ID scenario verified successfully");
 
 		// Clear Email Field
 		EnterEmail.clear();
-		Reporter.log("===========================================================================================");
+		log("===========================================================================================");
 
 		// Scenario 02: Verify blank email
-		Reporter.log("Scenario 02: Verify blank email");
+		log("Scenario 02: Verify blank email");
 		Thread.sleep(2000);
 		sendvalue(ForCCmail, (readFrmXLNEgative(3, 0)));
 		Thread.sleep(3000);
 		jsclick(EmailSendOk);
-		Reporter.log("Clear the previous entered email in email text box");
+		log("Clear the previous entered email in email text box");
 		Thread.sleep(4000);
-		Reporter.log("Click on mail dialog OK button");
+		log("Click on mail dialog OK button");
 		System.out.println(WithoutEmailID.getText());
 		softAssert.assertEquals(WithoutEmailID.getText(), "Email ID should not be blank",
 				"Correct warning message displayed for blank email");
 		Thread.sleep(4000);
 		jsclick(InvalidDialogBoxOKBTN);
 		Thread.sleep(8000);
-		Reporter.log("Blank email negative scenario verified successfully");
+		log("Blank email negative scenario verified successfully");
 
 		// Refresh Button
-		Reporter.log("Click on refresh button");
+		log("Click on refresh button");
 		jsclick(Refresh_Button(driver));
 		Thread.sleep(5000);
 
@@ -1072,27 +1071,27 @@ public class Print extends Computhink.Generic.BaseClass {
 	public void SecureLinkInvalidRecepient_Mail_ID_ValidConfirm_Mail() throws Exception {
 
 		// Negative Scenario 01: Check SecureLink with Invalid Email ID
-		Reporter.log("Negative Scenario 01: Check SecureLink with Invalid Email ID");
+		log("Negative Scenario 01: Check SecureLink with Invalid Email ID");
 		Thread.sleep(5000);
 
 		// Expand Cabinet
 		jsclick(TestCabExpIcon);
-		Reporter.log("Expand a cabinet");
+		log("Expand a cabinet");
 		Thread.sleep(3000);
 
 		// Expand Drawer
 		jsclick(TesttestDrawerExpIcon);
 		Thread.sleep(3000);
-		Reporter.log("Expand a drawer");
+		log("Expand a drawer");
 
 		// Open Folder
 		selectElement(VidyaTestFolder);
-		Reporter.log("Open a folder");
+		log("Open a folder");
 		Thread.sleep(5000);
 
 		// Open Document
 		jsclick(Document);
-		Reporter.log("Open a document");
+		log("Open a document");
 		Thread.sleep(5000);
 
 		// Handle Locked Document Scenario
@@ -1100,10 +1099,10 @@ public class Print extends Computhink.Generic.BaseClass {
 			if (Lockeddoc.isDisplayed()) {
 				WebElement element1 = driver.findElement(By.xpath("//*[@id=\"ownershipMessageModelOk\"]"));
 				jsclick(element1);
-				Reporter.log("Locked document dialog handled successfully");
+				log("Locked document dialog handled successfully");
 			}
 		} catch (Exception e) {
-			Reporter.log("No locked document dialog displayed", true);
+			log("No locked document dialog displayed");
 			Thread.sleep(2000);
 		}
 		Thread.sleep(3000);
@@ -1113,29 +1112,29 @@ public class Print extends Computhink.Generic.BaseClass {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.alertIsPresent());
 			acceptAlert();
-			Reporter.log("Alert handled successfully");
+			log("Alert handled successfully");
 		} catch (Exception e) {
-			Reporter.log("No alert is present");
+			log("No alert is present");
 		}
 		Thread.sleep(3000);
 
 		// Click Checkbox
 		jsclick(CheckBox);
-		Reporter.log("Click on check box");
+		log("Click on check box");
 
 		// Click SendTo Icon
 		jsclick(SendToIcon);
 		Thread.sleep(3000);
-		Reporter.log("Click on SendTo icon");
+		log("Click on SendTo icon");
 
 		// Select Secure Link
 		jsclick(secureLink);
-		Reporter.log("Select secure link submenu");
+		log("Select secure link submenu");
 		Thread.sleep(3000);
 
 		// Enter Invalid Email
 		sendvalue(secureLinkReceipientMail, readFrmXLNEgative(1, 0));
-		Reporter.log("User enters invalid email into email textbox");
+		log("User enters invalid email into email textbox");
 		Thread.sleep(2000);
 
 		// Enter Confirm Email
@@ -1144,7 +1143,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		// Click Secure Link OK Button
 		jsclick(secureLinkOKBTN);
-		Reporter.log("Click on secure link dialog OK button");
+		log("Click on secure link dialog OK button");
 		Thread.sleep(5000);
 
 		// Log Error Message for Invalid Email
@@ -1156,15 +1155,15 @@ public class Print extends Computhink.Generic.BaseClass {
 		// Validate Error Message
 		String expectedMessage = "Please enter valid recipient email id";
 		SoftAssertEqalValidation(EmailIDMismatchMessage, expectedMessage); // Custom validation method
-		Reporter.log("Validation: 'Please enter valid recipient email id' dialog is displayed on the page");
+		log("Validation: 'Please enter valid recipient email id' dialog is displayed on the page");
 
 		// Click OK on the Dialog
 		jsclick(EmailIDMismatchDialogOKBTN);
-		Reporter.log("Error dialog dismissed successfully");
+		log("Error dialog dismissed successfully");
 		Thread.sleep(3000);
 
 		// Final Success Log
-		Reporter.log("SecureLink - invalid email ID scenario verified successfully");
+		log("SecureLink - invalid email ID scenario verified successfully");
 		System.out.println("Assert Validation successful.");
 		Thread.sleep(8000);
 
@@ -1177,19 +1176,19 @@ public class Print extends Computhink.Generic.BaseClass {
 	public void SendToSecureLinkwithout_Email_ID_BlankTest() throws Exception {
 
 		// Scenario 2: SecureLink with Blank Email ID
-		Reporter.log("Scenario 2: SecureLink with Blank Email ID");
+		log("Scenario 2: SecureLink with Blank Email ID");
 
 		// Clear Recipient Email ID Field
 		secureLinkReceipientMail.clear();
-		Reporter.log("Recipient email ID field cleared. Email ID should be blank");
+		log("Recipient email ID field cleared. Email ID should be blank");
 
 		// Clear Confirm Email ID Field
 		secureLinkConfirmMail.clear();
-		Reporter.log("Confirm email ID field cleared");
+		log("Confirm email ID field cleared");
 
 		// Click SecureLink OK Button
 		Thread.sleep(2000);
-		Reporter.log("Click on secure link dialog OK button");
+		log("Click on secure link dialog OK button");
 		jsclick(secureLinkOKBTN);
 
 		// Wait for Warning Dialog
@@ -1203,15 +1202,15 @@ public class Print extends Computhink.Generic.BaseClass {
 		// Validate Warning Message
 		String expectedMessage = "Please enter recipient email id";
 		SoftAssertEqalValidation(secLinkBlankMail_ID, expectedMessage); // Custom validation method
-		Reporter.log("Validation: 'Please enter recipient email id' Warning dialog is displayed on the page");
+		log("Validation: 'Please enter recipient email id' Warning dialog is displayed on the page");
 
 		// Dismiss Warning Dialog
 		Thread.sleep(3000);
 		jsclick(EmailIDMismatchDialogOKBTN);
-		Reporter.log("Warning dialog dismissed successfully");
+		log("Warning dialog dismissed successfully");
 
 		// Final Log
-		Reporter.log("Warning dialog displayed successfully. Blank email ID scenario verified successfully.");
+		log("Warning dialog displayed successfully. Blank email ID scenario verified successfully.");
 		System.out.println("Assert Validation successful.");
 		Thread.sleep(8000);
 
@@ -1230,7 +1229,7 @@ public class Print extends Computhink.Generic.BaseClass {
 
 				// Click on the current document
 				WebElement document = documentNames.get(i);
-				Reporter.log("Document Name: " + document.getText(), true);
+				log("Document Name: " + document.getText());
 				jsclick(document); // Custom click method
 				Thread.sleep(4000);
 
@@ -1240,10 +1239,10 @@ public class Print extends Computhink.Generic.BaseClass {
 						WebElement ownershipOkButton = driver
 								.findElement(By.xpath("//*[@id=\"ownershipMessageModelOk\"]"));
 						jsclick(ownershipOkButton);
-						Reporter.log("Locked document message handled successfully.", true);
+						log("Locked document message handled successfully.");
 					}
 				} catch (Exception e) {
-					Reporter.log("Locked document message not displayed.", true);
+					log("Locked document message not displayed.");
 				}
 
 				// Handle alert if present
@@ -1251,25 +1250,25 @@ public class Print extends Computhink.Generic.BaseClass {
 					WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 					wait.until(ExpectedConditions.alertIsPresent());
 					acceptAlert();
-					Reporter.log("Alert accepted successfully.", true);
+					log("Alert accepted successfully.");
 				} catch (Exception e) {
-					Reporter.log("No alert is present.", true);
+					log("No alert is present.");
 				}
 
 				// Handle Excel sheet alert
 				try {
 					ExcelSheetAlert();
 				} catch (Exception e) {
-					Reporter.log("Excel save alert not present.", true);
+					log("Excel save alert not present.");
 				}
 
 				// Get document pages and check if they are empty
 				List<WebElement> pages = driver.findElements(By.xpath("//*[@id='docViewerMetaData']//img"));
 				int pageCount = pages.size();
-				Reporter.log("Document " + (i + 1) + " has " + pageCount + " pages.", true);
+				log("Document " + (i + 1) + " has " + pageCount + " pages.");
 
 				if (pages.isEmpty()) {
-					Reporter.log("The opened document is empty. No action will be performed.", true);
+					log("The opened document is empty. No action will be performed.");
 
 					// Capture the document ID for zero-page documents
 					WebElement generalTab = driver.findElement(By.xpath("//span[text()='General']"));
@@ -1277,7 +1276,7 @@ public class Print extends Computhink.Generic.BaseClass {
 					WebElement documentIDElement = driver.findElement(By.xpath("//*[@id=\"generalRow_Id\"]/td[2]"));
 					String zeroPageDocumentID = documentIDElement.getText();
 					zeroPageDocumentIDs.add(zeroPageDocumentID);
-					Reporter.log("Zero-page document ID captured: " + zeroPageDocumentID, true);
+					log("Zero-page document ID captured: " + zeroPageDocumentID);
 
 					// Add SoftAssert for zero-page condition
 					softAssert.assertTrue(pageCount == 0, "Document has zero pages, but condition mismatch.");
@@ -1289,10 +1288,10 @@ public class Print extends Computhink.Generic.BaseClass {
 					});
 
 					if (!hasContent) {
-						Reporter.log("Document pages are empty or not loaded. No action will be performed.", true);
+						log("Document pages are empty or not loaded. No action will be performed.");
 						softAssert.assertFalse(hasContent, "Document pages are empty or not loaded as expected.");
 					} else {
-						Reporter.log("Document pages are loaded with content. Proceeding with further actions.", true);
+						log("Document pages are loaded with content. Proceeding with further actions.");
 						softAssert.assertTrue(hasContent,
 								"Document pages are loaded with content but condition mismatch.");
 					}
@@ -1304,25 +1303,25 @@ public class Print extends Computhink.Generic.BaseClass {
 				Thread.sleep(1000); // Ensure UI stabilizes before the next iteration
 
 			} catch (StaleElementReferenceException e) {
-				Reporter.log("Stale element reference error: " + e.getMessage(), true);
+				log("Stale element reference error: " + e.getMessage());
 			} catch (NoSuchElementException e) {
-				Reporter.log("Error while interacting with the document: " + e.getMessage(), true);
+				log("Error while interacting with the document: " + e.getMessage());
 			} catch (Exception e) {
-				Reporter.log("Unexpected error: " + e.getMessage(), true);
+				log("Unexpected error: " + e.getMessage());
 			}
 		}
 
 		// Final log for zero-page document IDs
-		Reporter.log("Zero-Page Document IDs: " + String.join(", ", zeroPageDocumentIDs), true);
+		log("Zero-Page Document IDs: " + String.join(", ", zeroPageDocumentIDs));
 
 	}
 
 	public void AutomatingAllCabinetAndDrawerAndFolderForZeroPageDocumentIssue() throws Exception {
-		Reporter.log("Scenario: Automate all folders in growing structure", true);
+		log("Scenario: Automate all folders in growing structure");
 
 		// Fetch all cabinets dynamically
 		List<WebElement> cabinets = driver.findElements(By.xpath("//div[@id='viewDocumentnavigator']//ul//li//a"));
-		Reporter.log("Total cabinets found: " + cabinets.size(), true);
+		log("Total cabinets found: " + cabinets.size());
 
 		for (int i = 0; i < cabinets.size(); i++) {
 			try {
@@ -1330,53 +1329,53 @@ public class Print extends Computhink.Generic.BaseClass {
 				// Expand cabinet
 				Thread.sleep(1000);
 				movingDoublecli(cabinet, cabinet); // Custom method to click on cabinet
-				Reporter.log("Expanded cabinet: " + cabinet.getText(), true);
+				log("Expanded cabinet: " + cabinet.getText());
 				Thread.sleep(1000);
 
 				// Fetch all drawers in the current cabinet
 				List<WebElement> drawers = driver
 						.findElements(By.xpath("//*[@id='viewDocumentnavigator']/ul/li[" + (i + 1) + "]/ul/li/a"));
-				Reporter.log("Total drawers in cabinet: " + drawers.size(), true);
+				log("Total drawers in cabinet: " + drawers.size());
 
 				for (int j = 0; j < drawers.size(); j++) {
 					try {
 						WebElement drawer = drawers.get(j); // Get drawer dynamically
 						// Expand drawer
 						movingDoublecli(drawer, drawer);// Custom method to click on drawer
-						Reporter.log("Expanded drawer: " + drawer.getText(), true);
+						log("Expanded drawer: " + drawer.getText());
 						Thread.sleep(2000);
 
 						// Fetch all folders in the current drawer
 						List<WebElement> folders = driver
 								.findElements(By.xpath("//*[@id='viewDocumentnavigator']/ul/li[" + (i + 1) + "]/ul/li["
 										+ (j + 1) + "]/ul/li/a"));
-						Reporter.log("Total folders in drawer: " + folders.size(), true);
+						log("Total folders in drawer: " + folders.size());
 
 						for (int k = 0; k < folders.size(); k++) {
 							try {
 								WebElement folder = folders.get(k); // Get folder dynamically
 								// Select folder
 								movingDoublecli(folder, folder); // Custom method to click on folder
-								Reporter.log("Selected folder: " + folder.getText(), true);
+								log("Selected folder: " + folder.getText());
 								Thread.sleep(2000);
 
 								// Perform your document-related actions here
 								OpenDocumentAndCheckPages();
 
 							} catch (Exception e) {
-								Reporter.log("Error while handling folder: " + (k + 1) + " in drawer: "
-										+ drawer.getText() + " - " + e.getMessage(), true);
+								log("Error while handling folder: " + (k + 1) + " in drawer: "
+										+ drawer.getText() + " - " + e.getMessage());
 							}
 						}
 
 					} catch (Exception e) {
-						Reporter.log("Error while handling drawer: " + (j + 1) + " in cabinet: " + cabinet.getText()
-								+ " - " + e.getMessage(), true);
+						log("Error while handling drawer: " + (j + 1) + " in cabinet: " + cabinet.getText()
+								+ " - " + e.getMessage());
 					}
 				}
 
 			} catch (Exception e) {
-				Reporter.log("Error while handling cabinet: " + (i + 1) + " - " + e.getMessage(), true);
+				log("Error while handling cabinet: " + (i + 1) + " - " + e.getMessage());
 			}
 
 		}
@@ -1387,18 +1386,18 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Negative Scenario 3: Securelink with valid email and invalid confirm mail");
+		log("Negative Scenario 3: Securelink with valid email and invalid confirm mail");
 
 		Thread.sleep(3000);
 		sendvalue(secureLinkReceipientMail, readFromExMail(2, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter a valid email id into email field");
+		log("Enter a valid email id into email field");
 		sendvalue(secureLinkConfirmMail, readFromExMail(2, 0));
 		jsclick(secureLinkModifyCheckBox);
-		Reporter.log("Click on modify check box");
+		log("Click on modify check box");
 		Thread.sleep(2000);
 		jsclick(secureLinkOKBTN);
-		Reporter.log("User should enter invalid email id into confirm mail text box");
+		log("User should enter invalid email id into confirm mail text box");
 		Thread.sleep(5000);
 		sendvalue(secLinkReceipientMailAgain, (readFrmXLNEgative(4, 0)));
 
@@ -1406,12 +1405,12 @@ public class Print extends Computhink.Generic.BaseClass {
 		sendvalue(secLinkConfirmtMailAgain, (readFrmXLNEgative(5, 0)));
 		Thread.sleep(2000);
 		jsclick(secureLinkOKBTNsecond);
-		Reporter.log("Click on securelink dialog OK button");
+		log("Click on securelink dialog OK button");
 		Thread.sleep(5000);
-		Reporter.log(
+		log(
 				"Sending secure link mail from viewer page, select the document from page List. The selected Page was sent successfully... Mail has been received.");
 		Thread.sleep(5000);
-		Reporter.log("User should get 'Email id mismatch' warning dialog");
+		log("User should get 'Email id mismatch' warning dialog");
 
 		System.out.println("SecureLink : invalid confirm email id");
 		System.out.println(EmailIDMismatchMessage.getText());
@@ -1423,7 +1422,7 @@ public class Print extends Computhink.Generic.BaseClass {
 		softAssert.assertEquals(EmailIDMismatchMessage.getText(), msg, "The email mismatch message is incorrect.");
 
 		// Log success message
-		Reporter.log(
+		log(
 				"Warning dialog displayed... Valid email - invalid confirm mail scenario verified successfully...");
 		System.out.println("Assert Validation successful.");
 
@@ -1436,23 +1435,23 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		Thread.sleep(5000);
 		secLinkReceipientMailAgain.clear();
-		Reporter.log(
+		log(
 				"Negative Scenario 4: Securelink first dialog box has Valid email and Valid confirm email ID / Securelink Second dialog box should be blank");
 
 		Thread.sleep(2000);
-		Reporter.log("Enter valid email");
+		log("Enter valid email");
 		secLinkConfirmtMailAgain.clear();
 		Thread.sleep(2000);
-		Reporter.log("Enter valid confirm email");
+		log("Enter valid confirm email");
 		jsclick(secureLinkOKBTNsecond);
 		Thread.sleep(5000);
-		Reporter.log("Blank mail id: Unable to send the document into secure link");
+		log("Blank mail id: Unable to send the document into secure link");
 		Thread.sleep(5000);
-		Reporter.log("Click on first securelink dialog box OK button");
+		log("Click on first securelink dialog box OK button");
 		System.out.println("SecureLink : blank confirm email id");
 		System.out.println(EmailIDMismatchMessage.getText());
 		Thread.sleep(3000);
-		Reporter.log("Should not enter email id, just click on second securelink dialog box OK button");
+		log("Should not enter email id, just click on second securelink dialog box OK button");
 		jsclick(EmailIDMismatchDialogOKBTN);
 
 		// SoftAssert validation for email mismatch message
@@ -1460,8 +1459,8 @@ public class Print extends Computhink.Generic.BaseClass {
 		softAssert.assertEquals(EmailIDMismatchMessage.getText(), msg, "The mismatch message is incorrect.");
 
 		// Log success message
-		Reporter.log("User should get 'Email id Mismatch' warning alert");
-		Reporter.log("Warning alert displayed...");
+		log("User should get 'Email id Mismatch' warning alert");
+		log("Warning alert displayed...");
 		System.out.println("Assert Validation successful.");
 
 		// Refresh the page at the end
@@ -1472,17 +1471,17 @@ public class Print extends Computhink.Generic.BaseClass {
 
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 01: Document send to securelink from viewer page");
-		Reporter.log("Expand the cabinet");
+		log("Scenario 01: Document send to securelink from viewer page");
+		log("Expand the cabinet");
 		jsclick(TestCabExpIcon);
 		Thread.sleep(3000);
 		jsclick(TesttestDrawerExpIcon);
-		Reporter.log("Expand the drawer");
+		log("Expand the drawer");
 		Thread.sleep(3000);
 		selectElement(VidyaTestFolder);
-		Reporter.log("Expand the folder");
+		log("Expand the folder");
 		Thread.sleep(5000);
-		Reporter.log("Open the document");
+		log("Open the document");
 		jsclick(Document);
 		Thread.sleep(5000);
 		try {
@@ -1491,7 +1490,7 @@ public class Print extends Computhink.Generic.BaseClass {
 				jsclick(element1);
 			}
 		} catch (Exception e) {
-			Reporter.log("Locked message displayed", true);
+			log("Locked message displayed");
 			Thread.sleep(2000);
 		}
 
@@ -1501,33 +1500,33 @@ public class Print extends Computhink.Generic.BaseClass {
 			wait.until(ExpectedConditions.alertIsPresent());
 			acceptAlert();
 		} catch (Exception e) {
-			Reporter.log("No Alert is present");
+			log("No Alert is present");
 		}
 		Thread.sleep(3000);
 		jsclick(CheckBox);
-		Reporter.log("Select a page check box in thumbnail view");
+		log("Select a page check box in thumbnail view");
 		jsclick(SendToIcon);
-		Reporter.log("Click on sendTo tool button");
+		log("Click on sendTo tool button");
 		Thread.sleep(3000);
 		jsclick(secureLink);
-		Reporter.log("Select secure link option");
+		log("Select secure link option");
 		Thread.sleep(3000);
 		sendvalue(secureLinkReceipientMail, readFromExMail(2, 0));
-		Reporter.log("Enter the valid mail into securelink email textbox");
+		log("Enter the valid mail into securelink email textbox");
 		Thread.sleep(2000);
 		sendvalue(secureLinkConfirmMail, readFromExMail(2, 0));
-		Reporter.log("Enter the valid mail into securelink confirm textbox");
+		log("Enter the valid mail into securelink confirm textbox");
 		jsclick(secureLinkModifyCheckBox);
 		Thread.sleep(2000);
-		Reporter.log("Click the modify check box");
+		log("Click the modify check box");
 		jsclick(secureLinkOKBTN);
-		Reporter.log("Click on securelink dialog ok button");
+		log("Click on securelink dialog ok button");
 		Thread.sleep(5000);
 		sendvalue(secLinkReceipientMailAgain, readFromExMail(2, 0));
-		Reporter.log("Enter recipient mail again");
+		log("Enter recipient mail again");
 		Thread.sleep(2000);
 		sendvalue(secLinkConfirmtMailAgain, readFromExMail(2, 0));
-		Reporter.log("Enter recipient mail in confirm textbox");
+		log("Enter recipient mail in confirm textbox");
 		Thread.sleep(2000);
 		jsclick(secureLinkOKBTNsecond);
 		Thread.sleep(5000);
@@ -1541,8 +1540,8 @@ public class Print extends Computhink.Generic.BaseClass {
 				"Confirm email is incorrect.");
 
 		// Log success message after email is sent
-		Reporter.log("Secure link Mail has sent successfully...");
-		Reporter.log(
+		log("Secure link Mail has sent successfully...");
+		log(
 				"Sending secure link mail from viewer page, selected document from page List was sent successfully. Mail has been received.");
 	}
 
@@ -1551,25 +1550,25 @@ public class Print extends Computhink.Generic.BaseClass {
 		driver.get(
 				"http://10.4.10.21:8080/CVWeb/secureLinkLogin?serverName=TestServer_2024B264bit&roomName=CV2024B2_64bitDB&documentId=19871");
 		Thread.sleep(3000);
-		Reporter.log("Open securelink mail ", true);
+		log("Open securelink mail ");
 		secLinkUserName.sendKeys("nisha.rahamah@computhink.in");
 		Thread.sleep(3000);
-		Reporter.log("Enter user email", true);
+		log("Enter user email");
 		secLinkUserPwrd.sendKeys("72d2371fc8");
 		Thread.sleep(3000);
-		Reporter.log("Enter valid password", true);
+		log("Enter valid password");
 		jsclick(secLinkLogin);
 		Thread.sleep(15000);
-		Reporter.log("Click on login button", true);
+		log("Click on login button");
 		try {
 			if (Lockeddoc.isDisplayed()) {
 				WebElement element1 = driver.findElement(By.xpath("//*[@id=\"ownershipMessageModelOk\"]"));
 				jsclick(element1);
 			}
-			Reporter.log("Open securelink mail ", true);
+			log("Open securelink mail ");
 
 		} catch (Exception e) {
-			Reporter.log("Locked message displayed", true);
+			log("Locked message displayed");
 			Thread.sleep(2000);
 		}
 
@@ -1580,57 +1579,57 @@ public class Print extends Computhink.Generic.BaseClass {
 		} catch (Exception e) {
 			System.out.println("NoAlertPresent");
 		}
-		Reporter.log("Securelink file verified successfully...", true);
+		log("Securelink file verified successfully...");
 	}
 
 	public void SecureLinkFromDocumentList() throws Exception {
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 02: Document send to securelink from Document page");
+		log("Scenario 02: Document send to securelink from Document page");
 		
 		movingElement(RecentTab);
-		Reporter.log("Click on recent folder tab");
+		log("Click on recent folder tab");
 		Thread.sleep(3000);
 		ElementToBeClickable(RecentFolder);
-		Reporter.log("Open the recent folder");
+		log("Open the recent folder");
 		jsclick(RecentFolder);
 
 		Thread.sleep(5000);
-		Reporter.log("Click on document page check box");
+		log("Click on document page check box");
 		WebElement checkbox = driver.findElement(By.xpath("//*[@id=\"documentListTable\"]/tbody/tr[7]/td[1]"));
 		checkbox.click();
 		WebElement doc = driver.findElement(By.xpath("//*[@id=\"pageheader\"]/div[1]/ul/li[5]"));
 		movingElement(doc);
-		Reporter.log("Mouse hover on document tab");
+		log("Mouse hover on document tab");
 		jsclick(secureLinkFromDocTab);
 		Thread.sleep(3000);
 		jsclick(sendToDocTab);
-		Reporter.log("Click sendto submenu securelink option");
+		log("Click sendto submenu securelink option");
 		Thread.sleep(3000);
 		ElementToBeClickable(secureLinkReceipientMail);
 		sendvalue(secureLinkReceipientMail, readFromExMail(2, 0));
-		Reporter.log("Enter the valid email id");
+		log("Enter the valid email id");
 		Thread.sleep(2000);
 		sendvalue(secureLinkConfirmMail, readFromExMail(2, 0));
-		Reporter.log("Enter the mail id in confirm mail textbox");
+		log("Enter the mail id in confirm mail textbox");
 		jsclick(secureLinkModifyCheckBox);
 		Thread.sleep(2000);
-		Reporter.log("Click on modify check box");
+		log("Click on modify check box");
 		jsclick(secureLinkOKBTN);
 		Thread.sleep(5000);
-		Reporter.log("Click on securelink dialog OK button");
+		log("Click on securelink dialog OK button");
 		sendvalue(secLinkReceipientMailAgain, readFromExMail(2, 0));
-		Reporter.log("Enter recipient mail");
+		log("Enter recipient mail");
 		Thread.sleep(2000);
 		sendvalue(secLinkConfirmtMailAgain, readFromExMail(2, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter confirm mail");
+		log("Enter confirm mail");
 		jsclick(secureLinkOKBTNsecond);
 		Thread.sleep(5000);
-		Reporter.log("User clicks on Securelink dialog OK button");
+		log("User clicks on Securelink dialog OK button");
 		jsclick(Refresh_Button(driver));
-		Reporter.log("Secure link sent successfully...");
-		Reporter.log(
+		log("Secure link sent successfully...");
+		log(
 				"Sending secure link mail from document tab, selected document from Document List was sent successfully. Mail has been received.");
 
 		// SoftAssert: Verify if recipient and confirm email addresses are entered
@@ -1655,47 +1654,47 @@ public class Print extends Computhink.Generic.BaseClass {
 	public void SecureLinkFromSearchTab() throws Exception {
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 03: Document send to securelink from Search list page");
+		log("Scenario 03: Document send to securelink from Search list page");
 		Thread.sleep(6000);
-		Reporter.log("Click on search tab");
+		log("Click on search tab");
 		jsclick(SearchTab);
 		Thread.sleep(5000);
-		Reporter.log("Click on find button");
+		log("Click on find button");
 		jsclick(FindButton);
 		Thread.sleep(10000);
 		WebElement checkbox = driver.findElement(By.xpath("(//span[@class='checkmark'])[4]"));
 		jsclick(checkbox);
-		Reporter.log("Click on document page check box");
+		log("Click on document page check box");
 		WebElement doc = driver.findElement(By.xpath("//*[@id=\"pageheader\"]/div[1]/ul/li[5]"));
 		movingElement(doc);
-		Reporter.log("Mouse hover on document tab");
+		log("Mouse hover on document tab");
 
 		jsclick(secureLinkFromDocTab);
-		Reporter.log("Click on sendto submenu");
+		log("Click on sendto submenu");
 		jsclick(sendToDocTab);
 		Thread.sleep(3000);
-		Reporter.log("Click on securelink option");
+		log("Click on securelink option");
 		sendvalue(secureLinkReceipientMail, readFromExMail(1, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter valid email");
+		log("Enter valid email");
 		sendvalue(secureLinkConfirmMail, readFromExMail(1, 0));
 		jsclick(secureLinkModifyCheckBox);
-		Reporter.log("Enter valid email id on confirm mail text box");
+		log("Enter valid email id on confirm mail text box");
 		Thread.sleep(2000);
 		jsclick(secureLinkOKBTN);
-		Reporter.log("Click on secure link ok button");
+		log("Click on secure link ok button");
 		Thread.sleep(5000);
 		sendvalue(secLinkReceipientMailAgain, readFromExMail(1, 0));
-		Reporter.log("Enter recipient mail ");
+		log("Enter recipient mail ");
 		Thread.sleep(2000);
 		sendvalue(secLinkConfirmtMailAgain, readFromExMail(1, 0));
 		Thread.sleep(2000);
-		Reporter.log("Confirm the recipient mail ");
+		log("Confirm the recipient mail ");
 		jsclick(secureLinkOKBTNsecond);
 		Thread.sleep(5000);
-		Reporter.log("Click on securelink dialog OK button");
-		Reporter.log("Securelink sent successfully...");
-		Reporter.log(
+		log("Click on securelink dialog OK button");
+		log("Securelink sent successfully...");
+		log(
 				"Searching the document and select the document from searchList, the selected document was sent successfully... Mail has received.");
 		jsclick(Refresh_Button(driver));
 		Thread.sleep(5000);

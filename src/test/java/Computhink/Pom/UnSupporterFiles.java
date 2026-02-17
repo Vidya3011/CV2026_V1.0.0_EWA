@@ -125,17 +125,17 @@ public class UnSupporterFiles extends BaseClass {
 	}
 
 	public void create_document_Auto() throws Exception {
-		Reporter.log("Scenario 01: Verifying Unsupported Files", true);
+		log("Scenario 01: Verifying Unsupported Files");
 		Thread.sleep(2000);
 		jsclick(NewDocumentID);
-		Reporter.log("Click on New Document tab", true);
+		log("Click on New Document tab");
 		Thread.sleep(2000);
 
 		jsclick(DestinationFolder);
-		Reporter.log("Open Desitination folder dialog", true);
+		log("Open Desitination folder dialog");
 		Thread.sleep(3000);
 		selectElement(NishaCabinet);
-		Reporter.log("Select Folder", true);
+		log("Select Folder");
 		Thread.sleep(3000);
 		selectElement(NishaDrawer);
 
@@ -144,34 +144,34 @@ public class UnSupporterFiles extends BaseClass {
 		Thread.sleep(3000);
 		jsclick(DestinationLocationOKBTN);
 		Thread.sleep(3000);
-		Reporter.log("Click on Destination folder dialog OK button", true);
+		log("Click on Destination folder dialog OK button");
 		getSelect_Document_Type_Dropdown();
-		Reporter.log("Select a Document type", true);
+		log("Select a Document type");
 		Thread.sleep(3000);
 		Actions act = new Actions(driver);
 		try {
 
 			act.click(DocumentCVRep).sendKeys(readFrmXLNEgative(5, 1)).build().perform();
-			Reporter.log("Enter indices value", true);
+			log("Enter indices value");
 		} catch (Exception e) {
 			System.out.println("Document name not enter failed");
 		}
 
 		Thread.sleep(4000);
 		jsclick(CreateBTN);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		Thread.sleep(4000);
 
 		jsclick(Navigate_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
+		log("Click on Navigate button");
 		jsclick(Open_Document);
 		Thread.sleep(6000);
-		Reporter.log("Select and Open Document", true);
+		log("Select and Open Document");
 		
 		Thread.sleep(6000);
 		movingElement(Move_To_PlusIcon);
-		Reporter.log("Select Browse icon", true);
+		log("Select Browse icon");
 		try {
 
 			act.moveToElement(Browse_Option).click().build().perform();
@@ -180,7 +180,7 @@ public class UnSupporterFiles extends BaseClass {
 		}
 
 		Thread.sleep(25000);
-		Reporter.log("Add Unsupported files by using AutoIT script", true);
+		log("Add Unsupported files by using AutoIT script");
 		String path1 = "D:\\UnsupporterFiles";
 		File directory = new File(path1);
 
@@ -205,21 +205,21 @@ public class UnSupporterFiles extends BaseClass {
 					try {
 						// Execute the AutoIt script with the full file paths as argument
 						String command = "D:\\RNishaAutoIt\\FileuploadForFolder.exe " + filePaths.toString();
-						Reporter.log(" Unsupported File names With Extention : " + command, true); // Log the command
+						log(" Unsupported File names With Extention : " + command); // Log the command
 																									// for verification
 						Process process = Runtime.getRuntime().exec(command);
 						process.waitFor();
-						Reporter.log("All Unsupported files are uploaded successful", true);
+						log("All Unsupported files are uploaded successful");
 					} catch (IOException | InterruptedException e) {
 						System.out.println("Upload Failed");
 						e.printStackTrace();
 					}
 				}
 			} else {
-				Reporter.log("No files found in directory: " + path1);
+				log("No files found in directory: " + path1);
 			}
 		} else {
-			Reporter.log("Directory does not exist or is not a directory : " + path1);
+			log("Directory does not exist or is not a directory : " + path1);
 		}
 		Thread.sleep(8000);
 
@@ -232,31 +232,31 @@ public class UnSupporterFiles extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(4000);
-		Reporter.log("Click on save button", true);
+		log("Click on save button");
 		jsclick(SaveTab);
 		Thread.sleep(3000);
 		VisiblityOf(SaveTabOKBTN);
-		Reporter.log("Added Unsupported files are saved successfully...", true);
+		log("Added Unsupported files are saved successfully...");
 		jsclick(SaveTabOKBTN);
 		Thread.sleep(4000);
 
 	}
 
 	public void FirstDocView() throws Exception {
-		Reporter.log("Scenario 02: Verify Unsupported files Download & Offine functionality", true);
+		log("Scenario 02: Verify Unsupported files Download & Offine functionality");
 		Thread.sleep(3000);
 		jsclick(FirstFileThumbnail);
-		Reporter.log("Select unsupported file", true);
+		log("Select unsupported file");
 		Thread.sleep(5000);
 		jsclick(DownloadBTN);
-		Reporter.log(" it will show 'Unable to View dialog' with Offline, Download and Cancel button", true);
+		log(" it will show 'Unable to View dialog' with Offline, Download and Cancel button");
 		try {
 			jsclick(OfflineBTN);
-			Reporter.log("Click on Offline button", true);
+			log("Click on Offline button");
 			Thread.sleep(5000);
-			Reporter.log("Click on offline confirmation dialog OK button", true);
+			log("Click on offline confirmation dialog OK button");
 			jsclick(DownloadConfirmOKBTN);
-			Reporter.log("Document move to offline successful", true);
+			log("Document move to offline successful");
 		} catch (Exception e) {
 			System.out.println("OFfline dialog not visible");
 		}
@@ -265,7 +265,7 @@ public class UnSupporterFiles extends BaseClass {
 
 	public void viewAndDownloadDocs(int numberOfDocs) throws Exception {
 		
-		Reporter.log("Scenario 02:Verify Unsupported files Download & Offine functionality", true);
+		log("Scenario 02:Verify Unsupported files Download & Offine functionality");
 		for (int i = 1; i <= numberOfDocs; i++) {
 			// Construct the XPath with the current index
 			String xpath = "//*[@id='docViewerMetaData']/div[" + i + "]";
@@ -274,9 +274,9 @@ public class UnSupporterFiles extends BaseClass {
 
 			WebElement element = driver.findElement(By.xpath(xpath));
 			jsclick(element);
-			Reporter.log("Select unsupported file", true);
+			log("Select unsupported file");
 			String Uploaded = element.getAttribute("title");
-			Reporter.log("Unsupported file name with file type :" + Uploaded, true);
+			log("Unsupported file name with file type :" + Uploaded);
 
 			try {
 				Thread.sleep(3000);
@@ -290,21 +290,20 @@ public class UnSupporterFiles extends BaseClass {
 			Thread.sleep(5000);
 
 			jsclick(DownloadBTN);
-			Reporter.log(" It will show 'Unable to View dialog' with Offline, Download and Cancel button", true);
+			log(" It will show 'Unable to View dialog' with Offline, Download and Cancel button");
 			Thread.sleep(5000);
 
 			try {
 				jsclick(OfflineBTN);
-				Reporter.log("Select Offline button from the dialog", true);
+				log("Select Offline button from the dialog");
 				Thread.sleep(5000);
-				Reporter.log(" It will show 'page(s) taken offline' dialog on the viewer ", true);
+				log(" It will show 'page(s) taken offline' dialog on the viewer ");
 				jsclick(DownloadConfirmOKBTN);
-				Reporter.log("Click on Document pages offline confimation dialog OK button", true);
-				Reporter.log("Document move to offline successfully", true);
+				log("Click on Document pages offline confimation dialog OK button");
+				log("Document move to offline successfully");
 				Thread.sleep(8000);
-				Reporter.log(
-						"==============================================================================================================================",
-						true);
+				log(
+						"===========================================================================================================================");
 			} catch (Exception e) {
 				System.out.println("Offline dialog not visible for document " + i);
 			}

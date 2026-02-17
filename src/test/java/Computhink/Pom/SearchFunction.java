@@ -393,7 +393,7 @@ public class SearchFunction extends BaseClass {
 			String options = allname.getText();
 			if (options.contains("doc")) {
 				jsclick(metaDataNum2);
-				Reporter.log("Click on metadata option");
+				log("Click on metadata option");
 				break;
 			}
 
@@ -418,7 +418,7 @@ public class SearchFunction extends BaseClass {
 
 	public void SearchDocumentsTabInPage() throws Exception {
 		Thread.sleep(3000);
-		Reporter.log("Open a folder");
+		log("Open a folder");
 		jsclick(Cabinet1);
 
 		// Assert that Cabinet1 is clicked successfully
@@ -426,7 +426,7 @@ public class SearchFunction extends BaseClass {
 		so.assertTrue(Cabinet1.isDisplayed(), "Cabinet1 is not opened successfully!");
 
 		Thread.sleep(3000);
-		Reporter.log("Enter document name in folder search text box");
+		log("Enter document name in folder search text box");
 		jsclick(Drawer2);
 
 		// Assert that Drawer2 is clicked successfully
@@ -434,7 +434,7 @@ public class SearchFunction extends BaseClass {
 
 		Thread.sleep(2000);
 		selectElement(FolderVidya);
-		Reporter.log("It should display the particular document on the page");
+		log("It should display the particular document on the page");
 
 		// Assert that FolderVidya is selected
 		so.assertTrue(FolderVidya.isDisplayed(), "FolderVidya is not selected successfully!");
@@ -597,41 +597,41 @@ public class SearchFunction extends BaseClass {
 	public void SearchTabAssert() throws Exception {
 		SoftAssert softAssert = new SoftAssert();
 
-		Reporter.log("User clicks on Search tab");
+		log("User clicks on Search tab");
 		jsclick(SearchTab);
 		Thread.sleep(5000);
 
 		if (SearchTab.isDisplayed()) {
 
-			Reporter.log("Search tab is displayed successfully.", true);
+			log("Search tab is displayed successfully.");
 		} else {
-			Reporter.log("Search tab is NOT displayed.", true);
+			log("Search tab is NOT displayed.");
 		}
 		softAssert.assertTrue(SearchTab.isDisplayed(), "Search tab is not displayed");
 
 	}
 
 	public void BlankSearch() throws InterruptedException {
-		Reporter.log("Scenario 01: Search tab - blank search");
+		log("Scenario 01: Search tab - blank search");
 		
 		Thread.sleep(3000);
 
 		// Initializing SoftAssert
 		SoftAssert softAssert = new SoftAssert();
 
-		Reporter.log("User clicks on Search tab");
+		log("User clicks on Search tab");
 		jsclick(SearchTab);
 		Thread.sleep(5000);
 
 		if (SearchTab.isDisplayed()) {
 
-			Reporter.log("Search tab is displayed successfully.", true);
+			log("Search tab is displayed successfully.");
 		} else {
-			Reporter.log("Search tab is NOT displayed.", true);
+			log("Search tab is NOT displayed.");
 		}
 		softAssert.assertTrue(SearchTab.isDisplayed(), "Search tab is not displayed");
 
-		Reporter.log("Click on the Find button");
+		log("Click on the Find button");
 		jsclick(FindButton);
 		Thread.sleep(8000);
 		GenerateDocumentCount();
@@ -642,17 +642,17 @@ public class SearchFunction extends BaseClass {
 																								// as needed
 
 		if (documentList.isDisplayed()) {
-			Reporter.log("Document list is displayed after clicking Find button.", true);
+			log("Document list is displayed after clicking Find button.");
 		} else {
-			Reporter.log("Document list is NOT displayed after clicking Find button.", true);
+			log("Document list is NOT displayed after clicking Find button.");
 		}
 		softAssert.assertTrue(documentList.isDisplayed(), "Document list was not displayed after clicking Find button");
 
-		Reporter.log("Click on Clear button", true);
+		log("Click on Clear button");
 
 		jsclick(ClearButton);
 
-		Reporter.log("Searched document list cleared successfully", true);
+		log("Searched document list cleared successfully");
 
 		// Assert that the search results are cleared (i.e., document list is not
 		// displayed after clearing)
@@ -663,32 +663,32 @@ public class SearchFunction extends BaseClass {
 	public void ExactSearchInIndexWithLoadMoreCount() throws InterruptedException, IOException {
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert for collecting multiple assertions
 
-		Reporter.log("Scenario 02: Search - load more count", true);
+		log("Scenario 02: Search - load more count");
 		Thread.sleep(2000);
 
 		// Click Search Tab and check visibility
 		jsclick(SearchTab);
-		Reporter.log("User clicks on Search tab", true);
+		log("User clicks on Search tab");
 		Thread.sleep(5000);
 		softAssert.assertTrue(SearchTab.isDisplayed(), "Search tab is not displayed.");
 
 		if (SearchTab.isDisplayed()) {
-			Reporter.log("Search tab clicked successfully...", true);
+			log("Search tab clicked successfully...");
 		} else {
-			Reporter.log("Search tab not clicked", true);
+			log("Search tab not clicked");
 		}
 
 		// Click Find button and validate that it's clickable or visible
-		Reporter.log("Click on find button", true);
+		log("Click on find button");
 		jsclick(FindButton);
 
 		WebElement documentList = driver.findElement(By.xpath("//*[@id=\"documentListDiv\"]"));
 		Thread.sleep(8000);
 
 		if (documentList.isDisplayed()) {
-			Reporter.log("Document list is displayed after clicking Find button.", true);
+			log("Document list is displayed after clicking Find button.");
 		} else {
-			Reporter.log("Document list is NOT displayed after clicking Find button.", true);
+			log("Document list is NOT displayed after clicking Find button.");
 		}
 		softAssert.assertTrue(documentList.isDisplayed(), "Document list is not visible after clicking Find button.");
 
@@ -696,33 +696,33 @@ public class SearchFunction extends BaseClass {
 		try {
 			movingclkElement(inMiddleDocOFSeachMetaData);
 			Thread.sleep(5000);
-			Reporter.log("Click on metadata option", true);
+			log("Click on metadata option");
 
 			List<WebElement> verifyMetaDataOptions = driver
 					.findElements(By.xpath("(//div[@class=\"detailsModel\"])[1]//span"));
 
 			// Check if "Document" is not listed in metadata options
 			if (!verifyMetaDataOptions.stream().anyMatch(option -> option.getText().equals("Document"))) {
-				Reporter.log("It should list the below-mentioned options:", true);
+				log("It should list the below-mentioned options:");
 				for (WebElement option : verifyMetaDataOptions) {
-					Reporter.log(option.getText(), true); // Print each option
+					log(option.getText()); // Print each option
 				}
 			}
 
-			Reporter.log("Scroll down the searched list; user can now see the 'Load More' button.", true);
+			log("Scroll down the searched list; user can now see the 'Load More' button.");
 			ScrollDownButton();
 			Thread.sleep(5000);
 
 			// Assert that 'Load More' button is visible before clicking
 			softAssert.assertTrue(loadMore.isDisplayed(), "'Load More' button is not visible.");
-			Reporter.log("Click on 'Load More' button", true);
+			log("Click on 'Load More' button");
 			jsclick(loadMore);
 			Thread.sleep(4000);
 
 			if (loadMore.isDisplayed()) {
-				Reporter.log("Load More button clicked", true);
+				log("Load More button clicked");
 			} else {
-				Reporter.log("Load More button not present", true);
+				log("Load More button not present");
 			}
 
 			// After clicking Load More, ensure more results are loaded
@@ -730,53 +730,52 @@ public class SearchFunction extends BaseClass {
 			Thread.sleep(6000);
 			jsclick(afterLoadmoreSeachMetaData);
 			Thread.sleep(5000);
-			Reporter.log(
-					"It should list the next set of documents; click another document and verify metadata options.",
-					true);
+			log(
+					"It should list the next set of documents; click another document and verify metadata options.");
 
 			if (MetaDataAssertVerify.isDisplayed()) {
 				if (!verifyMetaDataOptions.stream().anyMatch(option -> option.getText().equals("Document"))) {
-					Reporter.log("It should list the below-mentioned options:", true);
+					log("It should list the below-mentioned options:");
 					for (WebElement option : verifyMetaDataOptions) {
-						Reporter.log(option.getText(), true);
+						log(option.getText());
 					}
 				} else {
-					Reporter.log("Script failed to expand metadata options.", true);
+					log("Script failed to expand metadata options.");
 				}
 
 				Thread.sleep(8000);
-				Reporter.log("Scroll down the searched list again to show 'Load More' button", true);
+				log("Scroll down the searched list again to show 'Load More' button");
 				ScrollDownButton();
 				jsclick(loadMore);
 				Thread.sleep(3000);
 
 				if (loadMore.isDisplayed()) {
-					Reporter.log("Load More button clicked again", true);
+					log("Load More button clicked again");
 				} else {
-					Reporter.log("Load More button not present", true);
+					log("Load More button not present");
 				}
 			}
 		} catch (Exception e) {
-			Reporter.log("Document not listed or an error occurred during loading more data.", true);
+			log("Document not listed or an error occurred during loading more data.");
 		}
 
 		// Wait for the "No more data found" alert and accept it
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		try {
 			wait.until(ExpectedConditions.alertIsPresent());
-			Reporter.log("It should show 'No more data found' warning alert.", true);
+			log("It should show 'No more data found' warning alert.");
 			acceptAlert(); // Handle the alert
-			Reporter.log("Warning alert displayed successfully.", true);
+			log("Warning alert displayed successfully.");
 		} catch (Exception e) {
-			Reporter.log("No alert is present.", true);
+			log("No alert is present.");
 		}
 
-		Reporter.log("Click on OK button");
-		Reporter.log("It should close the alert dialog successfully.", true);
+		log("Click on OK button");
+		log("It should close the alert dialog successfully.");
 
 		// Clear search
 		jsclick(ClearButton);
-		Reporter.log("Click on clear button", true);
+		log("Click on clear button");
 
 		// Assert all
 		softAssert.assertAll();
@@ -786,11 +785,11 @@ public class SearchFunction extends BaseClass {
 		if (MetaDataAssertVerify.isDisplayed()) {
 			List<WebElement> ExpandMetaData3 = driver
 					.findElements(By.xpath("(//div[@class=\"detailsModel\"])[3]//span"));
-			Reporter.log("It should list below mentioned options:", true);
+			log("It should list below mentioned options:");
 
 			for (WebElement option : ExpandMetaData3) {
 				String opt = option.getText();
-				Reporter.log(opt, true); // This will print each option on a new line
+				log(opt); // This will print each option on a new line
 			}
 		} else {
 			System.out.println("Script is fail to expand metadata option");
@@ -800,24 +799,24 @@ public class SearchFunction extends BaseClass {
 	public void GenerateDocumentCount() {
 
 		String DocumentList = ListedDocumentcount.getText();
-		Reporter.log(DocumentList);
+		log(DocumentList);
 		if (DocumentList.contains("Search")) {
-			Reporter.log("Document list verified succesful", true);
+			log("Document list verified succesful");
 		} else {
-			Reporter.log("Document not listed on the page,Failed", true);
+			log("Document not listed on the page,Failed");
 		}
 	}
 
 	public void ExactSearchInIndex() throws Exception {
 
-		Reporter.log("Scenario 03: Search tab - Index search contains 'Exact Phrase'", true);
+		log("Scenario 03: Search tab - Index search contains 'Exact Phrase'");
 		jsclick(SearchTab);
-		Reporter.log("User clicks on search tab", true);
+		log("User clicks on search tab");
 		Thread.sleep(5000);
 
 		Actions act = new Actions(driver);
 		act.moveToElement(IndexContainsSearch).click().build().perform();
-		Reporter.log("Click on index search contains textbox and select Exact phrase option", true);
+		log("Click on index search contains textbox and select Exact phrase option");
 
 		// Assert that the "IndexContainsSearch" field is visible and editable before
 		// typing
@@ -825,14 +824,14 @@ public class SearchFunction extends BaseClass {
 		softAssert.assertTrue(IndexContainsSearch.isSelected(), "Index search field is not visible.");
 		softAssert.assertTrue(IndexContainsSearch.isEnabled(), "Index search field is not enabled.");
 		if (IndexContainsSearch.isDisplayed()) {
-			Reporter.log("Exact phrase option selected successful", true);
+			log("Exact phrase option selected successful");
 		} else {
-			Reporter.log("Exact phrase option NOT selected successful", true);
+			log("Exact phrase option NOT selected successful");
 		}
 
 		IndexContainsSearch.sendKeys(readFromExSearch(3, 1));
 		Thread.sleep(5000);
-		Reporter.log("Click on find button");
+		log("Click on find button");
 
 		jsclick(FindButton);
 
@@ -840,10 +839,10 @@ public class SearchFunction extends BaseClass {
 		Thread.sleep(8000);
 		WebElement documentList = driver.findElement(By.xpath("//*[@id=\"documentListDiv\"]"));
 		softAssert.assertTrue(documentList.isDisplayed(), "Document list is not displayed after search.");
-		Reporter.log("It should list the document on the page, document displayed successfully...", true);
+		log("It should list the document on the page, document displayed successfully...");
 		String DocumentList = ListedDocumentcount.getText();
-		Reporter.log("Generated Document Count = " + DocumentList);
-		Reporter.log("Search tab: Exact phrase index contains search working fine", true);
+		log("Generated Document Count = " + DocumentList);
+		log("Search tab: Exact phrase index contains search working fine");
 
 		// After selecting a document, validate if the document is selected
 		getRandomSelectDoc();
@@ -853,54 +852,52 @@ public class SearchFunction extends BaseClass {
 
 		softAssert.assertTrue(metaDataNum2.isDisplayed(), "Selected document is not visible.");
 
-		Reporter.log("Click on Clear button", true);
+		log("Click on Clear button");
 		jsclick(ClearButton);
 		Thread.sleep(3000);
 
 		// Add an assert here to confirm the search result is cleared
 
 		// Log results
-		Reporter.log("It should clear the searched document list successfully", true);
+		log("It should clear the searched document list successfully");
 
 	}
 
 	// AlloftheWords search
 	public void TextSearchWithSQLData() throws InterruptedException, IOException {
 
-		Reporter.log("Scenario 19:Search tab- TextContains search 'alloftheword' option", true);
-		Reporter.log(
+		log("Scenario 19:Search tab- TextContains search 'alloftheword' option");
+		log(
 				"NOTE:Start the indexer server then execute the mentioned SQL statement 'ALTER FULLTEXT INDEX ON Indexer START FULL POPULATION\r\n"
-						+ "Select * from Indexer",
-				true);
-		Reporter.log("Click on search tab", true);
+						+ "Select * from Indexer");
+		log("Click on search tab");
 		jsclick(SearchTab);
 		Thread.sleep(3000);
 		fortextcontainsdrpdwnicon.click();
-		Reporter.log("Select text contains 'alloftheword' option", true);
+		log("Select text contains 'alloftheword' option");
 		Thread.sleep(3000);
 		movingclkElement(forallofthewordsinText);
-		Reporter.log("Start the  indexer by using sql statement", true);
+		log("Start the  indexer by using sql statement");
 		movingclkElement(TextContainsSearch);
 		TextContainsSearch.sendKeys(getSearchString());
-		Reporter.log("Click on find button");
-		Reporter.log("It will automatically  list all the indexed document relate to the search", true);
+		log("Click on find button");
+		log("It will automatically  list all the indexed document relate to the search");
 		Thread.sleep(3000);
 		jsclick(FindButton);
-		Reporter.log("Click on find button", true);
+		log("Click on find button");
 		Thread.sleep(10000);
 
 		try {
 			jsclick(opendocfortext);
-			Reporter.log(
-					"open the document from the list, verify the thumbnail it will be highlihted for the particular search.",
-					true);
+			log(
+					"open the document from the list, verify the thumbnail it will be highlihted for the particular search.");
 		} catch (Exception e) {
 
-			Reporter.log("AlertNotPresent");
+			log("AlertNotPresent");
 		}
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-		Reporter.log(
+		log(
 				"open the document from the list, verify the thumbnail it will be highlihted for the particular search.");
 
 		try {
@@ -914,11 +911,11 @@ public class SearchFunction extends BaseClass {
 
 		} catch (Exception e) {
 
-			Reporter.log("AlertNotPresent");
+			log("AlertNotPresent");
 		}
 		Thread.sleep(3000);
 		scrollDown(newdocscroll);
-		// Reporter.log("It should highlight the document on thumbnail page");
+		// log("It should highlight the document on thumbnail page");
 		snap("SearchScrollDownBarIssue");
 		Thread.sleep(8000);
 		jsclick(Refresh_Button(driver));
@@ -928,29 +925,29 @@ public class SearchFunction extends BaseClass {
 
 	// AlloftheWords search
 	public void TextSearchWithAllOftheWords() throws InterruptedException, IOException {
-		Reporter.log("Scenario 20:Search tab- TextContains search 'AtLeasetOneOFTheWord' option");
-		Reporter.log(
+		log("Scenario 20:Search tab- TextContains search 'AtLeasetOneOFTheWord' option");
+		log(
 				"NOTE:Start the indexer server then execute the mentioned SQL statement 'ALTER FULLTEXT INDEX ON Indexer START FULL POPULATION\r\n"
 						+ "Select * from Indexer");
-		Reporter.log("Click on search tab");
+		log("Click on search tab");
 
 		jsclick(SearchTab);
-		// Reporter.log("User click on search tab");
+		// log("User click on search tab");
 		Thread.sleep(3000);
 		jsclick(fortextcontainsdrpdwnicon);
-		Reporter.log("Select text contains 'AtLeastOneOFTheWord' option");
+		log("Select text contains 'AtLeastOneOFTheWord' option");
 		Thread.sleep(3000);
 		movingclkElement(forExactPhraseText);
 
-		Reporter.log("Start the  indexer by using sql statement");
+		log("Start the  indexer by using sql statement");
 		Thread.sleep(2000);
 		jsclick(TextContainsSearch);
-		Reporter.log("It will automatically  list all the indexed document relate to the search");
+		log("It will automatically  list all the indexed document relate to the search");
 		TextContainsSearch.sendKeys(readFromExSearch(2, 4));
 		Thread.sleep(3000);
-		Reporter.log(
+		log(
 				"open the document from the list, verify the thumbnail it will be highlihted for the particular search.");
-		// Reporter.log("It should highlight the document on thumbnail page");
+		// log("It should highlight the document on thumbnail page");
 		jsclick(FindButton);
 		Thread.sleep(10000);
 		try {
@@ -965,7 +962,7 @@ public class SearchFunction extends BaseClass {
 
 		} catch (Exception e) {
 
-			Reporter.log("AlertNotPresent");
+			log("AlertNotPresent");
 		}
 		Thread.sleep(3000);
 		// jsclick(sr.gethighlightdocview());
@@ -977,30 +974,30 @@ public class SearchFunction extends BaseClass {
 
 	// AlloftheWords search
 	public void TextSearchWithAtpartOftheWord() throws InterruptedException, IOException {
-		Reporter.log("Scenario 21:Search tab- TextContains search 'AtPartOFTheWord' option");
-		Reporter.log(
+		log("Scenario 21:Search tab- TextContains search 'AtPartOFTheWord' option");
+		log(
 				"NOTE:Start the indexer server then execute the mentioned SQL statement 'ALTER FULLTEXT INDEX ON Indexer START FULL POPULATION\r\n"
 						+ "Select * from Indexer");
-		Reporter.log("Click on search tab");
+		log("Click on search tab");
 		SearchFunction sr = new SearchFunction();
 		jsclick(SearchTab);
-		Reporter.log("Click on 'AtpartOFtheWord' word submenu");
+		log("Click on 'AtpartOFtheWord' word submenu");
 		Thread.sleep(3000);
-		Reporter.log("It will automatically  list all the indexed document relate to the search");
+		log("It will automatically  list all the indexed document relate to the search");
 		fortextcontainsdrpdwnicon.click();
 		Thread.sleep(3000);
 		try {
 			movingclkElement(foratleasetoneofthewordText);
 		} catch (JavascriptException e) {
-			Reporter.log("JavascriptException Handler");
+			log("JavascriptException Handler");
 		}
 		Thread.sleep(2000);
-		Reporter.log("User click on Find button");
+		log("User click on Find button");
 		movingclkElement(TextContainsSearch);
 		TextContainsSearch.sendKeys(sr.searchStringSQL());
 		Thread.sleep(3000);
 		jsclick(FindButton);
-		Reporter.log(
+		log(
 				"open the document from the list, verify the thumbnail it will be highlihted for the particular search.");
 
 		Thread.sleep(5000);
@@ -1028,8 +1025,8 @@ public class SearchFunction extends BaseClass {
 		snap("SearchScrollDownBarIssue");
 		Thread.sleep(8000);
 		jsclick(Refresh_Button(driver));
-		// Reporter.log("User check the thumbnail view highlighted pages...");
-		// Reporter.log("Textcontains search with 'alloftheword' submenu working fine");
+		// log("User check the thumbnail view highlighted pages...");
+		// log("Textcontains search with 'alloftheword' submenu working fine");
 		// log.info(" verify Search text contains functionality with all of the words
 		// option.");
 	}
@@ -1039,146 +1036,146 @@ public class SearchFunction extends BaseClass {
 		SoftAssert softAssert = new SoftAssert();
 		WebElement documentList = driver.findElement(By.xpath("//*[@id=\"documentListDiv\"]"));
 		softAssert.assertTrue(documentList.isDisplayed(), "Document list is not displayed after clicking Find Button.");
-		Reporter.log("It should display document on the page");
+		log("It should display document on the page");
 
 	}
 
 	// atleast one word
 	public void AtLeastOneWordSeachIndex() throws Exception {
 		
-		Reporter.log("Scenario 04: Search tab- Index contains 'AtleastOneOfTheWord'");
+		log("Scenario 04: Search tab- Index contains 'AtleastOneOfTheWord'");
 
 		// Assert Search Tab visibility and click on it
 		SoftAssert softAssert = new SoftAssert();
 		softAssert.assertTrue(SearchTab.isDisplayed(), "Search Tab is not visible.");
 		jsclick(SearchTab);
-		Reporter.log("User clicks on Search tab");
+		log("User clicks on Search tab");
 		Thread.sleep(3000);
 
 		// Assert dropdown icon visibility and click on it
 		softAssert.assertTrue(forIndxdropdwnicon.isDisplayed(), "Dropdown icon is not visible.");
 		VisiblityOf(forIndxdropdwnicon);
-		Reporter.log("User click on 'AtleastOneOfTheWord' submenu", true);
+		log("User click on 'AtleastOneOfTheWord' submenu");
 		movingclkElement(forIndxdropdwnicon);
 
 		if (foratleastoneword.isDisplayed()) {
 			try {
 				jsclick(foratleastoneword);
-				Reporter.log("'At least one of the word' option selected successful ", true);
+				log("'At least one of the word' option selected successful ");
 			} catch (Exception e) {
-				Reporter.log("Atleaser one of the word is not selected script failed...");
+				log("Atleaser one of the word is not selected script failed...");
 			}
 		} else {
-			Reporter.log("'At least one of the word' option NOT selected ");
+			log("'At least one of the word' option NOT selected ");
 		}
 
 		// Assert IndexContainsSearch visibility and input value
 		softAssert.assertTrue(IndexContainsSearch.isDisplayed(), "IndexContainsSearch text box is not visible.");
 		softAssert.assertTrue(IndexContainsSearch.isEnabled(), "IndexContainsSearch text box is not enabled.");
-		Reporter.log("User enters the value into index contains text box");
+		log("User enters the value into index contains text box");
 		movingclkElement(IndexContainsSearch);
 
 		sendvalue(IndexContainsSearch, readFromExSearch(1, 1));
 		String SentValue = IndexContainsSearch.getAttribute("value");
 
 		if (IndexContainsSearch.isDisplayed()) {
-			Reporter.log("Data entered successful");
-			Reporter.log("Entered Data details:" + SentValue);
+			log("Data entered successful");
+			log("Entered Data details:" + SentValue);
 		} else {
-			Reporter.log("Data NOT enter for search");
+			log("Data NOT enter for search");
 		}
 
 		// Assert FindButton visibility and click on it
 		softAssert.assertTrue(FindButton.isDisplayed(), "Find Button is not visible.");
 		softAssert.assertTrue(FindButton.isEnabled(), "Find Button is not enabled.");
 		movingclkElement(FindButton);
-		Reporter.log("User clicks on find button");
+		log("User clicks on find button");
 		Thread.sleep(10000);
 		GenerateDocumentCount();
 		// Assert document list is displayed
 		WebElement documentList = driver.findElement(By.xpath("//*[@id=\"documentListDiv\"]"));
 		softAssert.assertTrue(documentList.isDisplayed(), "Document list is not displayed after clicking Find Button.");
-		Reporter.log("It should display document on the page");
+		log("It should display document on the page");
 
 		// Validate Search functionality working correctly
-		Reporter.log("Search functionality with exact phrase index contains search working fine");
+		log("Search functionality with exact phrase index contains search working fine");
 
 		// Assert ClearButton visibility and click on it
 		softAssert.assertTrue(ClearButton.isDisplayed(), "Clear Button is not visible.");
 		jsclick(ClearButton);
-		Reporter.log("Click on Clear button");
+		log("Click on Clear button");
 
 		// log.info(" verify Index contains search:atleast one of the words search");
 	}
 
 	// allofthe word search
 	public void E_AllOfTheWordSearchIndex() throws Exception {
-		Reporter.log("Scenario 05:Search tab Index contains 'all of the word'");
+		log("Scenario 05:Search tab Index contains 'all of the word'");
 		
 		Thread.sleep(5000);
 
 		SoftAssert softAssert = new SoftAssert();
 		softAssert.assertTrue(SearchTab.isDisplayed(), "Search Tab is not visible.");
-		Reporter.log("Click on Index contains search 'all of the word' submenu");
+		log("Click on Index contains search 'all of the word' submenu");
 		softAssert.assertTrue(forIndxdropdwnicon.isDisplayed(), "Dropdown icon is not visible.");
 		VisiblityOf(forIndxdropdwnicon);
 		movingclkElement(forIndxdropdwnicon);
-		Reporter.log("Enter value in index contains search textbox");
+		log("Enter value in index contains search textbox");
 
 		if (forAllofthewords.isDisplayed()) {
 			try {
 				jsclick(forAllofthewords);
-				Reporter.log("'All of the word search' option selected successful ", true);
+				log("'All of the word search' option selected successful ");
 			} catch (Exception e) {
 				//
 			}
 
 		} else {
-			Reporter.log("'All of the word search' option NOT selected ");
+			log("'All of the word search' option NOT selected ");
 		}
 
 		softAssert.assertTrue(IndexContainsSearch.isDisplayed(), "IndexContainsSearch text box is not visible.");
 		softAssert.assertTrue(IndexContainsSearch.isEnabled(), "IndexContainsSearch text box is not enabled.");
-		Reporter.log("User enters the value into index contains text box");
+		log("User enters the value into index contains text box");
 		movingclkElement(IndexContainsSearch);
 
 		sendvalue(IndexContainsSearch, readFromExSearch(1, 0));
 		String SentValue = IndexContainsSearch.getAttribute("value");
 
 		if (IndexContainsSearch.isDisplayed()) {
-			Reporter.log("Data entered successful");
-			Reporter.log("Entered Data details:" + SentValue);
+			log("Data entered successful");
+			log("Entered Data details:" + SentValue);
 		} else {
-			Reporter.log("Data NOT enter for search");
+			log("Data NOT enter for search");
 		}
 
-		Reporter.log("Click on find button");
+		log("Click on find button");
 		jsclick(FindButton);
 		Thread.sleep(8000);
 		GenerateDocumentCount();
 
-		Reporter.log("It should display the document on the page, Document dislpayed successfull...", true);
+		log("It should display the document on the page, Document dislpayed successfull...");
 		try {
 
 			movingclkElement(metaDataNum3);
-			Reporter.log("Click on meta data option", true);
+			log("Click on meta data option");
 			metaDataAssertVerification();
-			Reporter.log("Index contains search 'all of the word' working fine...", true);
+			log("Index contains search 'all of the word' working fine...");
 			softAssert.assertTrue(metaDataNum3.isDisplayed(), "Document is not listing on the page");
 
 		}
 
 		catch (Exception e) {
-			Reporter.log("Metadata failed to expand", true);
+			log("Metadata failed to expand");
 		}
 
 		Thread.sleep(8000);
-		Reporter.log("It should display the document on the page, Document dislpayed successfull...", true);
+		log("It should display the document on the page, Document dislpayed successfull...");
 
-		Reporter.log("Index contains search 'all of the word' working fine...", true);
+		log("Index contains search 'all of the word' working fine...");
 
 		Thread.sleep(8000);
-		Reporter.log("Click on clear button", true);
+		log("Click on clear button");
 		jsclick(ClearButton);
 		// log.info(" verify Index contains search:all of the word search");
 		softAssert.assertTrue(ClearButton.isSelected(), "Clear button NOT selected");
@@ -1189,102 +1186,101 @@ public class SearchFunction extends BaseClass {
 
 		Thread.sleep(3000);
 		jsclick(SearchTab);
-		Reporter.log("Scenario 06:Search tab - AppendToHitlist checkbox", true);
+		log("Scenario 06:Search tab - AppendToHitlist checkbox");
 		/*
 		 * try { movingclkElement(IndexContainsSearch); } catch (JavascriptException e)
-		 * { Reporter.log("JavascriptException handled", true); }
+		 * { log("JavascriptException handled"); }
 		 */
-		Reporter.log("Enter the value into index contains search text box", true);
-		Reporter.log("First do a normal search for listing the document purpose ", true);
+		log("Enter the value into index contains search text box");
+		log("First do a normal search for listing the document purpose ");
 		sendvalue(IndexContainsSearch, "Document");// readFromExSearch(1, 4)
 		String SentValue = IndexContainsSearch.getAttribute("value");
 
 		if (IndexContainsSearch.isDisplayed()) {
-			Reporter.log("Data entered successful", true);
-			Reporter.log("Entered Data details:" + SentValue);
+			log("Data entered successful");
+			log("Entered Data details:" + SentValue);
 		} else {
-			Reporter.log("Data NOT enter for search", true);
+			log("Data NOT enter for search");
 		}
-		Reporter.log("Click on find button");
+		log("Click on find button");
 		movingclkElement(FindButton);
 		Thread.sleep(8000);
 		GenerateDocumentCount();
 
 		VerifyDocumentListingOrNot();
-		Reporter.log("It should list the document on document page", true);
+		log("It should list the document on document page");
 		IndexContainsSearch.clear();
-		Reporter.log("Clear the index contains search text box,which has given before for normal search", true);
+		log("Clear the index contains search text box,which has given before for normal search");
 		Thread.sleep(3000);
-		Reporter.log("Click on append to hit list check box", true);
+		log("Click on append to hit list check box");
 
 		AppendToHitlist.click();
 		if (AppendToHitlist.isSelected()) {
-			Reporter.log("Append to hitlist option selected successful", true);
+			log("Append to hitlist option selected successful");
 		} else {
-			Reporter.log("Append to hitlist option NOT selected successful", true);
+			log("Append to hitlist option NOT selected successful");
 		}
-		Reporter.log("After selecting append to hitlist checkbox, Enter the value into index contains search text box ",
-				true);
+		log("After selecting append to hitlist checkbox, Enter the value into index contains search text box ");
 		movingclkElement(IndexContainsSearch);
 		Thread.sleep(2000);
 		sendvalue(IndexContainsSearch, readFromExSearch(2, 3));// dsdfreadFromExSearch(2, 3)
 		String AppendGivenData = IndexContainsSearch.getAttribute("value");
 		Thread.sleep(2000);
 		if (IndexContainsSearch.isDisplayed()) {
-			Reporter.log("Data entered successful", true);
-			Reporter.log("Entered Data details:" + AppendGivenData);
+			log("Data entered successful");
+			log("Entered Data details:" + AppendGivenData);
 		} else {
-			Reporter.log("Data NOT enter for search", true);
+			log("Data NOT enter for search");
 		}
-		Reporter.log("User clicks on find button", true);
+		log("User clicks on find button");
 		movingclkElement(FindButton);
 		Thread.sleep(8000);
 		GenerateDocumentCount();
 		VerifyDocumentListingOrNot();
 
-		Reporter.log("It appends the search document in the listed document", true);
+		log("It appends the search document in the listed document");
 		WebElement AppendDocumentDetails = driver.findElement(By.xpath("(//td[@class=\" customDocName\"])[1]"));
 		String DocName = AppendDocumentDetails.getText();
-		Reporter.log("The given document name must match with the  searched document name,", true);
+		log("The given document name must match with the  searched document name,");
 		if (DocName.isEmpty()) {
-			Reporter.log("Document NOT appends on the page, Failed", true);
+			log("Document NOT appends on the page, Failed");
 		} else {
-			Reporter.log("Document appends on the page successful; given document name : " + AppendGivenData
-					+ "\n Append Document name : " + DocName, true);
+			log("Document appends on the page successful; given document name : " + AppendGivenData
+					+ "\n Append Document name : " + DocName);
 		}
 
 		soft.assertTrue(!DocName.isEmpty(), "Document is failing to list");
-		Reporter.log("===========================================================================", true);
+		log("===========================================================================");
 
 	}
 
 	public void Find_In_Hit_List() throws InterruptedException, IOException {
 
 		Thread.sleep(3000);
-		Reporter.log("scenario 07: Verify search tab - FindInHitlist checkbox");
+		log("scenario 07: Verify search tab - FindInHitlist checkbox");
 
 		FindInHitlist.click();
-		Reporter.log("Enter the value in index contains search textbox");
+		log("Enter the value in index contains search textbox");
 		movingclkElement(FindButton);
-		Reporter.log("Click on find in hitlist check box");
+		log("Click on find in hitlist check box");
 		Thread.sleep(3000);
-		Reporter.log("Click on find button");
+		log("Click on find button");
 		FindInHitlist.click();
 		Thread.sleep(3000);
-		Reporter.log("It should  display only the  searched document on the document page");
+		log("It should  display only the  searched document on the document page");
 		IncludeComments.click();
-		Reporter.log("===========================================================================");
-		Reporter.log("Scneario 08: Search tab - Include comment checkbox");
+		log("===========================================================================");
+		log("Scneario 08: Search tab - Include comment checkbox");
 		Thread.sleep(3000);
 		IndexContainsSearch.clear();
-		Reporter.log("Enter the value in text contains search text box");
+		log("Enter the value in text contains search text box");
 
 		sendvalue(TextContainsSearch, "new");// vidyareadFromExSearch(1, 3)
 
 		movingclkElement(FindButton);
-		Reporter.log("Click on Inclue_comment check box");
+		log("Click on Inclue_comment check box");
 		Thread.sleep(10000);
-		Reporter.log("Click on find button");
+		log("Click on find button");
 		try {
 
 			movingclkElement(Metadata);
@@ -1294,60 +1290,60 @@ public class SearchFunction extends BaseClass {
 					.findElements(By.xpath("(//div[@class=\"detailsModel\"])[1]//span"));
 
 			if (!VerifyMetaDataOptions.contains("Document")) {
-				Reporter.log("It should list below mentioned options:", true);
+				log("It should list below mentioned options:");
 				for (WebElement option : VerifyMetaDataOptions) {
 					String opt = option.getText();
-					Reporter.log(opt, true); // This will print each option on a new line
+					log(opt); // This will print each option on a new line
 				}
 			} else {
 				System.out.println("Script is fail to expand metadata option");
 
 			}
 
-			Reporter.log("It should display the document which is containing the comment..");
+			log("It should display the document which is containing the comment..");
 			Thread.sleep(8000);
-			// Reporter.log("Expected result and actual result is same test case
+			// log("Expected result and actual result is same test case
 			// passed...");
 			jsclick(forComments);
 			Thread.sleep(3000);
 			jsclick(CancelComments);
 			Thread.sleep(5000);
-			Reporter.log("Click  on clear button");
+			log("Click  on clear button");
 		} catch (Exception e) {
 			//
 		}
 		Thread.sleep(2000);
 		jsclick(ClearButton);
-		Reporter.log("It should clear the searched list successfully");
+		log("It should clear the searched list successfully");
 		Thread.sleep(3000);
-		Reporter.log("===========================================================================");
+		log("===========================================================================");
 
 	}
 
 	public void All_Version() throws InterruptedException, IOException {
-		Reporter.log("Scneario 09: Search tab - all version check box");
+		log("Scneario 09: Search tab - all version check box");
 		movingElement(forIndxdropdwnicon);
-		Reporter.log("User enter the value in index contains search text box");
+		log("User enter the value in index contains search text box");
 		jsclick(forExactPhraseinde);
 		sendvalue(IndexContainsSearch, readFromExSearch(2, 0));
 		AllVersion.click();
-		Reporter.log("Click on all version check box");
+		log("Click on all version check box");
 		movingclkElement(FindButton);
-		Reporter.log("Click on find button");
+		log("Click on find button");
 		Thread.sleep(10000);
 		try {
 			jsclick(Metadata);
 		} catch (Exception e) {
 			//
 		}
-		Reporter.log("It should display the document which in containing version");
+		log("It should display the document which in containing version");
 		Thread.sleep(3000);
-		Reporter.log("Click on Clear button");
+		log("Click on Clear button");
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait.until(ExpectedConditions.visibilityOf(forallversionshows));
 			forallversionshows.click();
-			// Reporter.log("All version function working fine");
+			// log("All version function working fine");
 			Thread.sleep(8000);
 		} catch (Exception e) {
 			//
@@ -1363,37 +1359,37 @@ public class SearchFunction extends BaseClass {
 		SoftAssert softAssert = new SoftAssert();
 		
 
-		Reporter.log("Scenario 10: Verify 'Select document location' - folder");
+		log("Scenario 10: Verify 'Select document location' - folder");
 
-		Reporter.log("Click on search tab");
+		log("Click on search tab");
 		jsclick(SearchTab);
 		Thread.sleep(5000);
 
-		Reporter.log("Click on 'Select search location' textbox");
+		log("Click on 'Select search location' textbox");
 		movingElement(Searchlocation); // Ensure the element is visible and interactable
 		softAssert.assertTrue(Searchlocation.isDisplayed(), "Search location textbox is not visible");
 		jsclick(Searchlocation);
 		Thread.sleep(5000);
-		Reporter.log("Search select location opened successful");
+		log("Search select location opened successful");
 		if (SearchSelectLocation.isDisplayed()) {
 			String NameValidation = SearchSelectLocation.getText();
-			Reporter.log(NameValidation, true);
+			log(NameValidation);
 			List<WebElement> CabinetNames = driver
 					.findElements(By.xpath("//*[@id=\"searchDocumentNavigator1\"]//ul//li"));
 			for (WebElement list : CabinetNames) {
 
 				String CabinetDetails = list.getText();
-				Reporter.log("Cabinet list in current room: " + CabinetDetails, true);
+				log("Cabinet list in current room: " + CabinetDetails);
 
 			}
 			softAssert.assertEquals(NameValidation, "Select search location");
 
 		} else {
-			Reporter.log("Search select location is NOT opening successful");
+			log("Search select location is NOT opening successful");
 		}
 		Thread.sleep(5000);
 
-		Reporter.log("Expand a cabinet");
+		log("Expand a cabinet");
 		ElementToBeClickable(cabinet);
 
 		selectElement(cabinet); // Simulate expanding the cabinet
@@ -1401,44 +1397,44 @@ public class SearchFunction extends BaseClass {
 		if (cabinet.isDisplayed()) {
 			String CabName = cabinet.getText();
 
-			Reporter.log(CabName + "Cabinet expanded successfully...", true);
+			log(CabName + "Cabinet expanded successfully...");
 		} else {
-			Reporter.log("There is no cabinet", true);
+			log("There is no cabinet");
 		}
 		softAssert.assertTrue(cabinet.isDisplayed(), "Cabinet is not displayed after clicking");
 		Thread.sleep(5000);
 
-		Reporter.log("Expand a drawer");
+		log("Expand a drawer");
 		ElementToBeClickable(drawer);
 		selectElement(drawer); // Simulate expanding the drawer
 		if (drawer.isDisplayed()) {
 			String DrawerName = drawer.getText();
 
-			Reporter.log(DrawerName + "Drawer expanded successfully...", true);
+			log(DrawerName + "Drawer expanded successfully...");
 		} else {
-			Reporter.log("There is no drawer", true);
+			log("There is no drawer");
 		}
 		softAssert.assertTrue(drawer.isDisplayed(), "Drawer is not displayed after clicking");
 
-		Reporter.log("Select a folder", true);
+		log("Select a folder");
 		Thread.sleep(3000);
 		jsclick(folder);
 		if (folder.isDisplayed()) {
 			String FolderName = folder.getText();
 
-			Reporter.log(FolderName + " Named folder selected successful", true);
+			log(FolderName + " Named folder selected successful");
 		} else {
-			Reporter.log("Folder NOT selected failed", true);
+			log("Folder NOT selected failed");
 		}
 		softAssert.assertTrue(folder.isDisplayed(), "Folder is not selected properly");
 
-		Reporter.log("Click on 'Select search location' dialog OK button", true);
+		log("Click on 'Select search location' dialog OK button");
 		Thread.sleep(3000);
 		jsclick(OKbuttonforsearchlocation);
 
 		softAssert.assertTrue(OKbuttonforsearchlocation.isDisplayed(), "OK button did not function as expected");
 
-		Reporter.log("Click on find button");
+		log("Click on find button");
 		Thread.sleep(2000);
 		jsclick(FindButton);
 		// Soft assertion to validate that search results are displayed
@@ -1446,13 +1442,13 @@ public class SearchFunction extends BaseClass {
 		GenerateDocumentCount();
 		VerifyDocumentListingOrNot();
 		softAssert.assertTrue(FindButton.isDisplayed(), "Search results validation failed");
-		Reporter.log("It should display the particular selected folder documents on the page", true);
+		log("It should display the particular selected folder documents on the page");
 
 		Thread.sleep(6000);
 
-		Reporter.log("Clear search criteria", true);
+		log("Clear search criteria");
 		jsclick(ClearButton);
-		Reporter.log("Page cleared successful");
+		log("Page cleared successful");
 		softAssert.assertTrue(ClearButton.isDisplayed(), "Clear button functionality is not working");
 
 		// log.info("Cabinet/drawer/folder level search in search document location
@@ -1472,28 +1468,28 @@ public class SearchFunction extends BaseClass {
 	private WebElement DataOKButton;
 
 	public void SavedDocumentDateEnter() throws InterruptedException, IOException {
-		Reporter.log("Scenario 25:Verify Date enter functionality");
-		Reporter.log("Click on search tab");
+		log("Scenario 25:Verify Date enter functionality");
+		log("Click on search tab");
 		jsclick(SearchTab);
 		Thread.sleep(5000);
-		Reporter.log("Click on Datefrom");
+		log("Click on Datefrom");
 		jsclick(DateFrom);
 		Thread.sleep(3000);
-		Reporter.log("Enter the datefrom");
+		log("Enter the datefrom");
 		EnterDateFrom.click();
 		Thread.sleep(2000);
-		Reporter.log("Click on ok button");
+		log("Click on ok button");
 		jsclick(DataOKButton);
 		Thread.sleep(2000);
-		Reporter.log("Click on Dateto");
+		log("Click on Dateto");
 		jsclick(DateTo);
 		Thread.sleep(2000);
-		Reporter.log("Enter the Dateto");
+		log("Enter the Dateto");
 		EnterDateTo.click();
-		Reporter.log("Click on ok button");
+		log("Click on ok button");
 		jsclick(DataOKButton);
 		Thread.sleep(2000);
-		Reporter.log("Click on find");
+		log("Click on find");
 		FindButton.click();
 		jsclick(Refresh_Button(driver));
 
@@ -1503,38 +1499,38 @@ public class SearchFunction extends BaseClass {
 	public void DrawerLevelSearch() throws InterruptedException {
 		SoftAssert softAssert = new SoftAssert();
 
-		Reporter.log("Scenario 11: Verify 'Select Document location' - drawer");
+		log("Scenario 11: Verify 'Select Document location' - drawer");
 		
 
-		Reporter.log("Click on search tab");
+		log("Click on search tab");
 		jsclick(SearchTab);
 		Thread.sleep(5000);
 
-		Reporter.log("Click on 'Select Document location' textbox");
+		log("Click on 'Select Document location' textbox");
 		movingElement(Searchlocation); // Used base class
 
-		Reporter.log("Expand a cabinet");
+		log("Expand a cabinet");
 		jsclick(Searchlocation);
 		Thread.sleep(3000);
 		if (SearchSelectLocation.isDisplayed()) {
 			String NameValidation = SearchSelectLocation.getText();
-			Reporter.log(NameValidation, true);
+			log(NameValidation);
 			List<WebElement> CabinetNames = driver
 					.findElements(By.xpath("//*[@id=\"searchDocumentNavigator1\"]//ul//li"));
 			for (WebElement list : CabinetNames) {
 
 				String CabinetDetails = list.getText();
-				Reporter.log("Cabinet list in current room: " + CabinetDetails, true);
+				log("Cabinet list in current room: " + CabinetDetails);
 
 			}
 			softAssert.assertEquals(NameValidation, "Select search location");
 
 		} else {
-			Reporter.log("Search select location is NOT opening successful");
+			log("Search select location is NOT opening successful");
 		}
 		Thread.sleep(5000);
 
-		Reporter.log("Expand a cabinet");
+		log("Expand a cabinet");
 		ElementToBeClickable(cabinet);
 
 		selectElement(cabinet); // Simulate expanding the cabinet
@@ -1542,29 +1538,29 @@ public class SearchFunction extends BaseClass {
 		if (cabinet.isDisplayed()) {
 			String CabName = cabinet.getText();
 
-			Reporter.log(CabName + "Cabinet expanded successfully...", true);
+			log(CabName + "Cabinet expanded successfully...");
 		} else {
-			Reporter.log("There is no cabinet", true);
+			log("There is no cabinet");
 		}
 		softAssert.assertTrue(cabinet.isDisplayed(), "Cabinet is not displayed after clicking");
 		Thread.sleep(5000);
 
-		Reporter.log("Expand a drawer");
+		log("Expand a drawer");
 		ElementToBeClickable(drawer);
 		selectElement(drawer); // Simulate expanding the drawer
 		if (drawer.isDisplayed()) {
 			String DrawerName = drawer.getText();
 
-			Reporter.log(DrawerName + "Drawer expanded successfully...", true);
+			log(DrawerName + "Drawer expanded successfully...");
 		} else {
-			Reporter.log("There is no drawer", true);
+			log("There is no drawer");
 		}
 		softAssert.assertTrue(drawer.isDisplayed(), "Drawer is not displayed after clicking");
 
-		Reporter.log("Click on 'Select Document location' dialog OK button");
+		log("Click on 'Select Document location' dialog OK button");
 		jsclick(OKbuttonforsearchlocation);
 		Thread.sleep(2000);
-		Reporter.log("Click on find button");
+		log("Click on find button");
 		jsclick(FindButton);
 		Thread.sleep(5000);
 		GenerateDocumentCount();
@@ -1573,11 +1569,11 @@ public class SearchFunction extends BaseClass {
 		// Soft Assert: Check if the expected element is displayed
 		softAssert.assertTrue(FindButton.isDisplayed(), "Soft Assert Failed: Expected element not found.");
 
-		Reporter.log("It should display the particular drawer document on the page");
+		log("It should display the particular drawer document on the page");
 		Thread.sleep(6000);
 
 		// Optionally log a message about the status of the assertion
-		Reporter.log("Document list cleared...");
+		log("Document list cleared...");
 
 		// Clear the search (after validation)
 		jsclick(ClearButton);
@@ -1587,35 +1583,35 @@ public class SearchFunction extends BaseClass {
 
 	// Cabinet level search in search document location
 	public void CabinetLevel() throws InterruptedException {
-		Reporter.log("Scenario 12: Verify 'Select Document location'- cabinet ");
+		log("Scenario 12: Verify 'Select Document location'- cabinet ");
 		SoftAssert softAssert = new SoftAssert();
 		
-		Reporter.log("Click on search tab");
+		log("Click on search tab");
 		jsclick(SearchTab);
 		Thread.sleep(5000);
-		Reporter.log("Click on 'Select Document location' textbox");
+		log("Click on 'Select Document location' textbox");
 		movingElement(Searchlocation);// used base class
-		Reporter.log("Expand a cabinet");
+		log("Expand a cabinet");
 		jsclick(Searchlocation);
 		if (SearchSelectLocation.isDisplayed()) {
 			String NameValidation = SearchSelectLocation.getText();
-			Reporter.log(NameValidation, true);
+			log(NameValidation);
 			List<WebElement> CabinetNames = driver
 					.findElements(By.xpath("//*[@id=\"searchDocumentNavigator1\"]//ul//li"));
 			for (WebElement list : CabinetNames) {
 
 				String CabinetDetails = list.getText();
-				Reporter.log("Cabinet list in current room: " + CabinetDetails, true);
+				log("Cabinet list in current room: " + CabinetDetails);
 
 			}
 			softAssert.assertEquals(NameValidation, "Select search location");
 
 		} else {
-			Reporter.log("Search select location is NOT opening successful");
+			log("Search select location is NOT opening successful");
 		}
 		Thread.sleep(5000);
 
-		Reporter.log("Expand a cabinet");
+		log("Expand a cabinet");
 		ElementToBeClickable(cabinet);
 
 		selectElement(cabinet); // Simulate expanding the cabinet
@@ -1623,9 +1619,9 @@ public class SearchFunction extends BaseClass {
 		if (cabinet.isDisplayed()) {
 			String CabName = cabinet.getText();
 
-			Reporter.log(CabName + "Cabinet expanded successfully...", true);
+			log(CabName + "Cabinet expanded successfully...");
 		} else {
-			Reporter.log("There is no cabinet", true);
+			log("There is no cabinet");
 		}
 		softAssert.assertTrue(cabinet.isDisplayed(), "Cabinet is not displayed after clicking");
 		Thread.sleep(5000);
@@ -1633,17 +1629,17 @@ public class SearchFunction extends BaseClass {
 		jsclick(OKbuttonforsearchlocation);
 		Thread.sleep(2000);
 		jsclick(FindButton);
-		Reporter.log("Click on find button");
+		log("Click on find button");
 		Thread.sleep(5000);
 		GenerateDocumentCount();
 		VerifyDocumentListingOrNot();
 		// Assert.assertTrue(sr.getsoftAssertvalidation().isDisplayed());
 		applyWaitsForAll();
-		Reporter.log("It should display the searched cabinet document on the page");
+		log("It should display the searched cabinet document on the page");
 		Thread.sleep(8000);
-		// Reporter.log("Expected actuall result same.. Test Case passed");
+		// log("Expected actuall result same.. Test Case passed");
 		jsclick(ClearButton);
-		Reporter.log("Document list cleared...");
+		log("Document list cleared...");
 		// log.info("Cabinet level search in search document location working fine");
 	}
 
@@ -1652,11 +1648,11 @@ public class SearchFunction extends BaseClass {
 
 		
 
-		Reporter.log("Scenario 13: Verify search tab ('Document Type')");
+		log("Scenario 13: Verify search tab ('Document Type')");
 
-		Reporter.log("Click on document type dropdown");
+		log("Click on document type dropdown");
 
-		Reporter.log("User should select a document type");
+		log("User should select a document type");
 
 		// Click on the document type dropdown icon
 		movingclkElement(forSelectDocdropdownicon);
@@ -1666,10 +1662,10 @@ public class SearchFunction extends BaseClass {
 					.findElements(By.xpath("//*[@class='e-content e-dropdownbase']//ul//li"));
 			for (WebElement list : DropdowndocList) {
 				String DocumentType = list.getText();
-				Reporter.log("Document type List: " + DocumentType);
+				log("Document type List: " + DocumentType);
 			}
 		} else {
-			Reporter.log("Unable to print document type list");
+			log("Unable to print document type list");
 		}
 
 		Thread.sleep(3000);
@@ -1681,10 +1677,10 @@ public class SearchFunction extends BaseClass {
 
 		if (forCVReports.isDisplayed()) {
 
-			Reporter.log("Selected document type details: " + SelectedDocumenttype);
-			Reporter.log("Document type selected successfully");
+			log("Selected document type details: " + SelectedDocumenttype);
+			log("Document type selected successfully");
 		} else {
-			Reporter.log("Document type NOT selected successfully");
+			log("Document type NOT selected successfully");
 		}
 
 		// Assuming this action selects the document type
@@ -1694,7 +1690,7 @@ public class SearchFunction extends BaseClass {
 				"Soft Assert Failed: Document Type dropdown not displayed or selected.");
 
 		jsclick(FindButton);
-		Reporter.log("Click on find button");
+		log("Click on find button");
 
 		Thread.sleep(8000);
 		GenerateDocumentCount();
@@ -1703,19 +1699,19 @@ public class SearchFunction extends BaseClass {
 		if (SearchedListDocumentTypeName.isDisplayed()) {
 			String DocumentTypename = SearchedListDocumentTypeName.getText();
 			softAssert.assertEquals(DocumentTypename, SelectedDocumenttype);
-			Reporter.log("Selected document type name : " + SelectedDocumenttype + "  Listed document type name: "
+			log("Selected document type name : " + SelectedDocumenttype + "  Listed document type name: "
 					+ DocumentTypename + "  Both should be same name");
-			Reporter.log("Document type name matched successfully...");
+			log("Document type name matched successfully...");
 		} else {
-			Reporter.log("Documeny type NOT listed successfully...");
+			log("Documeny type NOT listed successfully...");
 		}
 
 		VerifyDocumentListingOrNot();
 
-		Reporter.log("It should display the searched document type documents on the page");
+		log("It should display the searched document type documents on the page");
 
 		jsclick(ClearButton);
-		Reporter.log("Click on clear button; It should clear the search list ");
+		log("Click on clear button; It should clear the search list ");
 	}
 
 	// enter value in field and select the user
@@ -1723,13 +1719,13 @@ public class SearchFunction extends BaseClass {
 
 		SoftAssert softAssert = new SoftAssert();
 
-		Reporter.log("Scenario 14: Verify Search tab ('document creator')");
+		log("Scenario 14: Verify Search tab ('document creator')");
 
 		
 
 		// Click on search tab
 		jsclick(SearchTab);
-		Reporter.log("Click on the search tab");
+		log("Click on the search tab");
 		Thread.sleep(3000);
 
 		// Select a document creator from the dropdown
@@ -1737,13 +1733,13 @@ public class SearchFunction extends BaseClass {
 
 		Thread.sleep(2000);
 		if (forSelectcreatordropdown.isDisplayed()) {
-			Reporter.log("Document creator dropdown selected successful");
+			log("Document creator dropdown selected successful");
 
 		} else {
-			Reporter.log("Document creator dropdown NOT selected successful");
+			log("Document creator dropdown NOT selected successful");
 		}
 
-		Reporter.log("Select a document creator from the dropdown");
+		log("Select a document creator from the dropdown");
 
 		// Soft assertion: Verify if the document creator dropdown is displayed
 		softAssert.assertTrue(forSelectcreatordropdown.isDisplayed(),
@@ -1762,15 +1758,15 @@ public class SearchFunction extends BaseClass {
 
 			for (WebElement list : ListedCreatorName) {
 				String CreatorName = list.getText();
-				Reporter.log("Creator List: " + CreatorName);
+				log("Creator List: " + CreatorName);
 			}
 		} else {
-			Reporter.log("Document creator list NOT visible");
+			log("Document creator list NOT visible");
 		}
 
-		Reporter.log("Select a specific document creator");
+		log("Select a specific document creator");
 
-		Reporter.log("Selected creator name details :" + SelectedCreator);
+		log("Selected creator name details :" + SelectedCreator);
 
 		// Soft assertion: Verify if the selected creator element is displayed
 		softAssert.assertTrue(forDipakcreator.isDisplayed(),
@@ -1779,7 +1775,7 @@ public class SearchFunction extends BaseClass {
 		// Click the Find button
 		FindButton.click();
 
-		Reporter.log("Click on find button");
+		log("Click on find button");
 
 		Thread.sleep(8000);
 
@@ -1790,15 +1786,15 @@ public class SearchFunction extends BaseClass {
 
 		if (SearchedLstCreatorName.isDisplayed()) {
 			String ListingCreatorName = SearchedLstCreatorName.getText();
-			Reporter.log("Given creator name :" + SelectedCreator + "Should be same as listed creator name: "
+			log("Given creator name :" + SelectedCreator + "Should be same as listed creator name: "
 					+ ListingCreatorName);
 
-			Reporter.log("Document creator name selected successful...");
+			log("Document creator name selected successful...");
 		} else {
-			Reporter.log("Document creator name NOT selected successful...");
+			log("Document creator name NOT selected successful...");
 		}
 
-		Reporter.log("It should display the searched creator documents on the page");
+		log("It should display the searched creator documents on the page");
 
 		// Click the Clear button
 		ClearButton.click();
@@ -1809,31 +1805,31 @@ public class SearchFunction extends BaseClass {
 
 	public void Reject_WF() throws InterruptedException {
 
-		Reporter.log("Scenario 14:Verify Search tab-Workflow status(Reject option)", true);
+		log("Scenario 14:Verify Search tab-Workflow status(Reject option)");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		Reporter.log("Click on workflow status dropdown", true);
+		log("Click on workflow status dropdown");
 		wait.until(ExpectedConditions.elementToBeClickable(forworkflowdropdown));
 
 		(forworkflowdropdown).click();
 		Thread.sleep(2000);
 		if (forworkflowdropdown.isDisplayed()) {
-			Reporter.log("Workflowdropdown option expanded successful", true);
+			log("Workflowdropdown option expanded successful");
 		} else {
-			Reporter.log("Workflowdropdown option NOT expanded successful", true);
+			log("Workflowdropdown option NOT expanded successful");
 		}
 
-		Reporter.log("Select Reject option", true);
+		log("Select Reject option");
 
 		(forworkflowReject).click();
 		if (forworkflowReject.isSelected()) {
-			Reporter.log("Workflowdropdown REJECT option selected successful", true);
+			log("Workflowdropdown REJECT option selected successful");
 		} else {
-			Reporter.log("Workflowdropdown REJECT option NOT selected successful", true);
+			log("Workflowdropdown REJECT option NOT selected successful");
 		}
-		Reporter.log("Click on find button", true);
+		log("Click on find button");
 		Thread.sleep(2000);
 		jsclick(FindButton);
-		Reporter.log("It should display the rejected workflow documents on the page", true);
+		log("It should display the rejected workflow documents on the page");
 		Thread.sleep(8000);
 		GenerateDocumentCount();
 		VerifyDocumentListingOrNot();
@@ -1845,44 +1841,44 @@ public class SearchFunction extends BaseClass {
 
 				jsclick(SummaryBTNverify);
 
-				Reporter.log("Click on summary button", true);
+				log("Click on summary button");
 
 				WebElement table = driver.findElement(By.xpath("//*[@id='summaryShowAll']"));
 
 				// Locate all rows within the table body
 				List<WebElement> rows = table.findElements(By.xpath(".//tbody/tr"));
 
-				Reporter.log("<strong>Reject Document Summary Details Mentioned Below:</strong><br>", true);
+				log("<strong>Reject Document Summary Details Mentioned Below:</strong><br>");
 
 				// Start the HTML table
-				Reporter.log("<table border='1' style='border-collapse: collapse; text-align: center;'>", true);
+				log("<table border='1' style='border-collapse: collapse; text-align: center;'>");
 
-				Reporter.log("Reject Document Summary Details Mentioned Below:", true);
+				log("Reject Document Summary Details Mentioned Below:");
 
 				for (WebElement row : rows) {
 					// Start a new table row
-					Reporter.log("<tr>");
+					log("<tr>");
 
 					// Locate all cells within the current row
 					List<WebElement> cells = row.findElements(By.tagName("td"));
 
 					// Loop through each cell and add it to the table row
 					for (WebElement cell : cells) {
-						Reporter.log("<td>" + cell.getText() + "</td>");
+						log("<td>" + cell.getText() + "</td>");
 					}
 
 					// End the table row
-					Reporter.log("</tr>");
+					log("</tr>");
 				}
 
 				// End the HTML table
-				Reporter.log("</table><br>", true);
+				log("</table><br>");
 			}
 
-			Reporter.log("Summary verified; Rejected Document Listed successfully.");
+			log("Summary verified; Rejected Document Listed successfully.");
 
 		} catch (Exception e) {
-			Reporter.log("Unable to REJECT summary Details; failed");
+			log("Unable to REJECT summary Details; failed");
 		}
 
 		Thread.sleep(3000);
@@ -1890,29 +1886,29 @@ public class SearchFunction extends BaseClass {
 
 		Thread.sleep(3000);
 		if (ClearButton.isDisplayed()) {
-			Reporter.log("Summary cancel button clicked successful", true);
+			log("Summary cancel button clicked successful");
 		} else {
-			Reporter.log("Summary cancel button NOT clicked successfully", true);
+			log("Summary cancel button NOT clicked successfully");
 		}
 
 		jsclick(ClearButton);
-		Reporter.log("Click on clear button", true);
-		Reporter.log("Listed document cleared successfully...");
+		log("Click on clear button");
+		log("Listed document cleared successfully...");
 
-		Reporter.log("=================================================================", true);
+		log("=================================================================");
 
 	}
 
 	public void PendingWorkflow_Document() throws InterruptedException {
-		Reporter.log("Scenario 15:  Verify Search tab-Workflow status(Pending option)");
+		log("Scenario 15:  Verify Search tab-Workflow status(Pending option)");
 
 		forworkflowdropdown.click();// pending
 		Thread.sleep(3000);
-		Reporter.log("Select the workflow dropdown pending Option");
+		log("Select the workflow dropdown pending Option");
 		if (forworkflowdropdown.isDisplayed()) {
-			Reporter.log("Workflowdropdown option expanded successful");
+			log("Workflowdropdown option expanded successful");
 		} else {
-			Reporter.log("Workflowdropdown option NOT expanded successful");
+			log("Workflowdropdown option NOT expanded successful");
 		}
 
 		Thread.sleep(4000);
@@ -1920,10 +1916,10 @@ public class SearchFunction extends BaseClass {
 
 		Thread.sleep(2000);
 
-		Reporter.log("Click on find button");
+		log("Click on find button");
 		jsclick(FindButton);
 
-		Reporter.log("It should display the wrokflow status pending documents on the page");
+		log("It should display the wrokflow status pending documents on the page");
 		Thread.sleep(8000);
 
 		GenerateDocumentCount();
@@ -1936,7 +1932,7 @@ public class SearchFunction extends BaseClass {
 			for (WebElement wf : WorkflowOptions) {
 
 				String WorkflowPendingDocOpt = wf.getText();
-				Reporter.log("Below Mentioned workflow options should be display: <br>" + WorkflowPendingDocOpt);
+				log("Below Mentioned workflow options should be display: <br>" + WorkflowPendingDocOpt);
 			}
 
 			Thread.sleep(8000);
@@ -1945,37 +1941,37 @@ public class SearchFunction extends BaseClass {
 
 			jsclick(SummaryBTNverify);
 
-			Reporter.log("Click on summary button");
+			log("Click on summary button");
 
 			WebElement table = driver.findElement(By.xpath("//*[@id='summaryShowAll']"));
 
 			// Locate all rows within the table body
 			List<WebElement> rows = table.findElements(By.xpath(".//tbody/tr"));
 
-			Reporter.log("<br><strong>Pending Document Summary Details Mentioned Below:</strong><br>", true);
+			log("<br><strong>Pending Document Summary Details Mentioned Below:</strong><br>");
 
 			// Start the HTML table
-			Reporter.log("<table border='1' style='border-collapse: collapse; text-align: center;'>", true);
+			log("<table border='1' style='border-collapse: collapse; text-align: center;'>");
 
-			Reporter.log("Pending Document Summary Details Mentioned Below:");
+			log("Pending Document Summary Details Mentioned Below:");
 
 			for (WebElement row : rows) {
 				// Start a new table row
-				Reporter.log("<tr>");
+				log("<tr>");
 
 				// Locate all cells within the current row
 				List<WebElement> cells = row.findElements(By.tagName("td"));
 
 				// Loop through each cell and add it to the table row
 				for (WebElement cell : cells) {
-					Reporter.log("<td>" + cell.getText() + "</td>");
+					log("<td>" + cell.getText() + "</td>");
 				}
 
 				// End the table row
-				Reporter.log("</tr>");
+				log("</tr>");
 			}
 
-			Reporter.log("</table><br>");
+			log("</table><br>");
 
 			Thread.sleep(3000);
 
@@ -1984,15 +1980,15 @@ public class SearchFunction extends BaseClass {
 		}
 
 		else {
-			Reporter.log("Document not Listing; failed");
+			log("Document not Listing; failed");
 		}
 
 		Thread.sleep(4000);
 		jsclick(ClearButton);
 		// log.info("workflow pending: documents displayed successfully");
-		Reporter.log("Click on clear button");
-		Reporter.log("Listed document cleared successfully...");
-		Reporter.log("===============================================================================");
+		log("Click on clear button");
+		log("Listed document cleared successfully...");
+		log("===============================================================================");
 
 	}
 
@@ -2001,48 +1997,48 @@ public class SearchFunction extends BaseClass {
 
 			jsclick(SummaryBTNverify);
 
-			Reporter.log("Click on summary button");
+			log("Click on summary button");
 
 			WebElement table = driver.findElement(By.xpath("//*[@id='summaryShowAll']"));
 
 			// Locate all rows within the table body
 			List<WebElement> rows = table.findElements(By.xpath(".//tbody/tr"));
 
-			Reporter.log("<br><strong>Worflow Document Summary Details Mentioned Below:</strong><br>", true);
+			log("<br><strong>Worflow Document Summary Details Mentioned Below:</strong><br>");
 
 			// Start the HTML table
-			Reporter.log("<table border='1' style='border-collapse: collapse; text-align: center;'>", true);
+			log("<table border='1' style='border-collapse: collapse; text-align: center;'>");
 
 			for (WebElement row : rows) {
 				// Start a new table row
-				Reporter.log("<tr>");
+				log("<tr>");
 
 				// Locate all cells within the current row
 				List<WebElement> cells = row.findElements(By.tagName("td"));
 
 				// Loop through each cell and add it to the table row
 				for (WebElement cell : cells) {
-					Reporter.log("<td>" + cell.getText() + "</td>");
+					log("<td>" + cell.getText() + "</td>");
 				}
 
 				// End the table row
-				Reporter.log("</tr>");
+				log("</tr>");
 
 			}
 
 			// End the HTML table
-			Reporter.log("</table><br>");
+			log("</table><br>");
 			Thread.sleep(3000);
 			jsclick(CancelSummary);
 
 		} else {
-			Reporter.log("Summary Not verified;Failed.");
+			log("Summary Not verified;Failed.");
 		}
 
 	}
 
 	public void CompletedWF_Document() throws Exception {
-		Reporter.log("Scenario 16: Verify Search tab - Workflow status (Workflow Completed option)");
+		log("Scenario 16: Verify Search tab - Workflow status (Workflow Completed option)");
 		Thread.sleep(4000);
 		SoftAssert Assert = new SoftAssert();
 
@@ -2055,10 +2051,10 @@ public class SearchFunction extends BaseClass {
 		Assert.assertTrue(forworkflowCompleted.isDisplayed(), "Workflow Completed option is not displayed");
 		Thread.sleep(3000);
 		forworkflowCompleted.click();
-		Reporter.log("Selected a workflow dropdown 'Workflow Completed' option");
+		log("Selected a workflow dropdown 'Workflow Completed' option");
 
 		jsclick(FindButton);
-		Reporter.log("User clicked on the Find button");
+		log("User clicked on the Find button");
 
 		Thread.sleep(8000);
 		GenerateDocumentCount();
@@ -2068,25 +2064,25 @@ public class SearchFunction extends BaseClass {
 		Thread.sleep(3000);
 
 		jsclick(ClearButton);
-		Reporter.log("Click on clear button");
+		log("Click on clear button");
 		Thread.sleep(3000);
-		Reporter.log("Listed documents cleared successfully...");
-		Reporter.log("===============================================================================");
+		log("Listed documents cleared successfully...");
+		log("===============================================================================");
 
 		// Scenario 17: Verify Search tab - Workflow status (End Workflow option)
-		Reporter.log("Scenario 17: Verify Search tab - Workflow status (End Workflow option)");
+		log("Scenario 17: Verify Search tab - Workflow status (End Workflow option)");
 
 		forworkflowdropdown.click();
-		Reporter.log("Clicked on workflow dropdown");
+		log("Clicked on workflow dropdown");
 
 		// Verify the "End Workflow" option is selectable
 		Assert.assertTrue(forworkflowEndWorkflow.isDisplayed(), "End Workflow option is not displayed");
 		forworkflowEndWorkflow.click();
-		Reporter.log("Selected a workflow dropdown 'End Workflow' option");
+		log("Selected a workflow dropdown 'End Workflow' option");
 
 		jsclick(FindButton);
 
-		Reporter.log("User clicked on the Find button");
+		log("User clicked on the Find button");
 
 		Thread.sleep(8000);
 		GenerateDocumentCount();
@@ -2094,30 +2090,30 @@ public class SearchFunction extends BaseClass {
 			jsclick(Metadata);
 			VerifySummaryTableDetail();
 		} catch (Exception e) {
-			Reporter.log("Summary NOT able to view");
+			log("Summary NOT able to view");
 		}
 
 		jsclick(ClearButton);
-		Reporter.log("Click on clear button");
+		log("Click on clear button");
 		Thread.sleep(3000);
-		Reporter.log("Listed documents cleared successfully...");
-		Reporter.log("===============================================================================");
+		log("Listed documents cleared successfully...");
+		log("===============================================================================");
 	}
 
 	public void TaskCompletedWFDocument() throws InterruptedException {
 		Thread.sleep(8000);
 		forworkflowdropdown.click();
 		Thread.sleep(8000);
-		Reporter.log("Scenario 18: Verify Search tab-Workflow status(TaskCompleted option)");
+		log("Scenario 18: Verify Search tab-Workflow status(TaskCompleted option)");
 		forworkflowTaskcomplete.click();// taskcompleted
 		if (forworkflowTaskcomplete.isDisplayed()) {
-			Reporter.log("Task completed workflow selected successful");
+			log("Task completed workflow selected successful");
 		} else {
-			Reporter.log("Task completed workflow NOT selected successful");
+			log("Task completed workflow NOT selected successful");
 		}
-		Reporter.log("Select a workflow dropdown  Task completed Option");
+		log("Select a workflow dropdown  Task completed Option");
 		jsclick(FindButton);
-		Reporter.log("Click on find button");
+		log("Click on find button");
 		Thread.sleep(8000);
 		GenerateDocumentCount();
 		try {
@@ -2125,63 +2121,63 @@ public class SearchFunction extends BaseClass {
 			Thread.sleep(3000);
 			VerifySummaryTableDetail();
 		} catch (Exception e) {
-			Reporter.log("SUmmary is NOT opening");
+			log("SUmmary is NOT opening");
 		}
 		jsclick(ClearButton);
 		Thread.sleep(3000);
 
 		Thread.sleep(3000);
 		// log.info("workflow completed: documents displayed successfully");
-		Reporter.log("Click on clear button");
-		Reporter.log("Listed document cleared successfully...");
-		Reporter.log("===============================================================================");
+		log("Click on clear button");
+		log("Listed document cleared successfully...");
+		log("===============================================================================");
 	}
 
 	// showing saved documents
 	public void SavingTheSearchDoc() throws InterruptedException, IOException {
 
 		try {
-			Reporter.log("Select search tab");
+			log("Select search tab");
 			jsclick(saveDropdown);
 		} catch (JavascriptException e) {
 			//
 		}
 
-		Reporter.log("Scenario 18:Verify Select saved search functionality");
+		log("Scenario 18:Verify Select saved search functionality");
 
 		jsclick(SearchTab);
-		Reporter.log("Select search tab");
+		log("Select search tab");
 		jsclick(saveDropdown);
 
-		Reporter.log("Click on new search");
+		log("Click on new search");
 		Thread.sleep(3000);
 		newsearch.click();
-		Reporter.log("Enter value into new search textbox");
+		log("Enter value into new search textbox");
 		newsearchvalueenter.sendKeys(readFromExSearch(3, 0));
 		Thread.sleep(5000);
-		Reporter.log("Enter value in index contains search textbox");
+		log("Enter value in index contains search textbox");
 		sendvalue(IndexContainsSearch, "Document");// readFromExSearch(1, 3)
 		sendvalue(IndexContainsSearch, readFromExSearch(1, 3));
 		movingclkElement(forSelectDocdropdownicon);
-		Reporter.log("Select a document data type");
+		log("Select a document data type");
 		// sr.getforSelectDocdropdown().sendKeys(readFromExSearch(1, 2));
 		Thread.sleep(3000);
-		Reporter.log("Selecct a document creator");
+		log("Selecct a document creator");
 		movingclkElement(forCVReports);
 		FindButton.click();
 		Thread.sleep(5000);
-		Reporter.log("Click on 'select saved search' save icon");
+		log("Click on 'select saved search' save icon");
 		movingElement(savebotton);
 
 		jsclick(savebotton);
 		Thread.sleep(3000);
 		movingclkElement((savedNamecheck));
-		Reporter.log("Mouse hover on saved select search dropdown ");
+		log("Mouse hover on saved select search dropdown ");
 		Thread.sleep(5000);
-		Reporter.log("Click on find");
+		log("Click on find");
 		ClearButton.click();
-		Reporter.log("It should display the searched document on the page");
-		Reporter.log("Search tab: searched documents saved functionality working fine");
+		log("It should display the searched document on the page");
+		log("Search tab: searched documents saved functionality working fine");
 	}
 
 	// TreeIcon search
@@ -2189,43 +2185,43 @@ public class SearchFunction extends BaseClass {
 		
 		SoftAssert softAssert = new SoftAssert(); // Create an instance of SoftAssert
 
-		Reporter.log("Scenario 22: Navigation folder icon search");
+		log("Scenario 22: Navigation folder icon search");
 
 		// Step 1: Click on navigation folder search icon
-		Reporter.log("Click on navigation folder search icon");
+		log("Click on navigation folder search icon");
 		jsclick(fornavigatetofoldersearch);
 		Thread.sleep(3000);
 		if (fornavigatetofoldersearch.isDisplayed()) {
-			Reporter.log("Navigation tree icon selected");
+			log("Navigation tree icon selected");
 		} else {
 
 		}
-		Reporter.log("Navigation tree icon NOT selected");
+		log("Navigation tree icon NOT selected");
 
 		// Step 2: Enter value into navigation folder search textbox
-		Reporter.log("Enter value into navigation folder search textbox");
+		log("Enter value into navigation folder search textbox");
 		searchTree.sendKeys(readFromExSearch(1, 3));
 		String SentValue = searchTree.getAttribute("value");
 		Thread.sleep(3000);
 
 		if (searchTree.isEnabled()) {
-			Reporter.log("Data entered successful; Entered Data Details: " + SentValue);
+			log("Data entered successful; Entered Data Details: " + SentValue);
 		} else {
-			Reporter.log("Failed to enter data");
+			log("Failed to enter data");
 		}
 
 		// Step 3: Press ENTER key
-		Reporter.log("Click on Keyboard ENTER key");
+		log("Click on Keyboard ENTER key");
 		searchTree.sendKeys(Keys.RETURN); // Tree search
 		Thread.sleep(8000);
 
 		// Assertion: Verify folder search dialog is displayed
-		Reporter.log("Folder search dialog should be opened");
+		log("Folder search dialog should be opened");
 		WebElement folderSearchDialog = driver.findElement(By.xpath("//*[@id=\"modelHeaderFolderseachModel\"]/h2"));
 		if (folderSearchDialog.isDisplayed()) {
-			Reporter.log("Folder search icon opened successful");
+			log("Folder search icon opened successful");
 		} else {
-			Reporter.log("Folder search icon NOT opened successful");
+			log("Folder search icon NOT opened successful");
 		}
 
 		softAssert.assertTrue(folderSearchDialog.isDisplayed(), "Folder search dialog is not displayed!");
@@ -2236,7 +2232,7 @@ public class SearchFunction extends BaseClass {
 		WebElement CloseIcon = driver.findElement(By.xpath("//*[@id='FolderSearchModelHeaderClose']"));
 		jsclick(CloseIcon);
 
-		Reporter.log("Click on folder document close icon");
+		log("Click on folder document close icon");
 		Thread.sleep(4000);
 
 		// Assertion: Verify dialog is closed
@@ -2244,7 +2240,7 @@ public class SearchFunction extends BaseClass {
 				"Folder search dialog is still visible after clicking close!");
 
 		// Log success message
-		Reporter.log("TreeIcon search functionality works fine");
+		log("TreeIcon search functionality works fine");
 
 	}
 
@@ -2253,19 +2249,19 @@ public class SearchFunction extends BaseClass {
 		// Step 1: Enter value into quick search textbox
 		Thread.sleep(3000);
 
-		Reporter.log("Scenario 23: Search tab - Quick search");
+		log("Scenario 23: Search tab - Quick search");
 		quicksearch.sendKeys(readFromExSearch(2, 1)); // Input search value
 		String Enteredvalue = quicksearch.getAttribute("value");
-		Reporter.log("Enter value in quick search textbox");
+		log("Enter value in quick search textbox");
 		if (quicksearch.isDisplayed()) {
-			Reporter.log(Enteredvalue + " Data entered and searched successful");
+			log(Enteredvalue + " Data entered and searched successful");
 		} else {
-			Reporter.log("Data is Failing to enter");
+			log("Data is Failing to enter");
 		}
 
 		// Step 2: Press ENTER key to perform the quick search
 		quicksearch.sendKeys(Keys.RETURN); // Perform the search
-		Reporter.log("Click on Keyboard ENTER key");
+		log("Click on Keyboard ENTER key");
 		Thread.sleep(15000);
 		GenerateDocumentCount();
 		VerifyDocumentListingOrNot();
@@ -2281,11 +2277,11 @@ public class SearchFunction extends BaseClass {
 		so.assertTrue(PageTitle.contains("contentverse"), "Page title does not contain the expected search term!");
 
 		// Reporter log for validation
-		Reporter.log("It should display the searched document on the page successfully...");
+		log("It should display the searched document on the page successfully...");
 
 		// Step 4: Refresh the page after validation
 		jsclick(Refresh_Button(driver));
-		Reporter.log("Page refreshed after search.");
+		log("Page refreshed after search.");
 
 		// Final check for SoftAssert
 		// so.assertAll();
@@ -2294,12 +2290,12 @@ public class SearchFunction extends BaseClass {
 
 	public void DocumentSearch() throws Exception {
 
-		Reporter.log("Scenario 24:Folder document search");
+		log("Scenario 24:Folder document search");
 		SearchDocumentsTabInPage();
 
 		jsclick(Refresh_Button(driver));
 		Thread.sleep(5000);
-		Reporter.log("The documents Search from folder completed, working fine");
+		log("The documents Search from folder completed, working fine");
 		// log.info("The documents Search from folder completed, working fine");
 	}
 }

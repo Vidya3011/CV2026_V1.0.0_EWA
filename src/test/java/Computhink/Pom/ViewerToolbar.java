@@ -12,9 +12,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
+import Computhink.Generic.BaseClass;
+
 //NishaR codes
 
-public class ViewerToolbar {
+public class ViewerToolbar extends BaseClass {
 
 	@FindBy(xpath = ("//*[@id='messageButtonOK']"))
 	private WebElement OKbutton;
@@ -295,9 +297,9 @@ public class ViewerToolbar {
 
 	public void setConvToPDF() {
 		action.moveToElement(ConvertToPDF).build().perform();
-		Reporter.log("View as PDF menu icon is selected ", true);
+		log("View as PDF menu icon is selected ");
 		action.click(ConvertToPDFLink).build().perform();
-		Reporter.log("View as PDF link  is selected ", true);
+		log("View as PDF link  is selected ");
 
 	}
 
@@ -312,24 +314,24 @@ public class ViewerToolbar {
 		// JavascriptExecutor executor = (JavascriptExecutor)driver;
 		// executor.executeScript("arguments[0].click()", el1);
 		action.moveToElement(Pagemenu).build().perform();
-		Reporter.log("Page menu icon is selected ", true);
+		log("Page menu icon is selected ");
 		if (Copy.isEnabled()) {
 			action.click(Copy).build().perform();
-			Reporter.log("Copy icon is enabled and selected ", true);
+			log("Copy icon is enabled and selected ");
 		} else {
-			Reporter.log("Copy icon is disabled", true);
+			log("Copy icon is disabled");
 		}
 		OKbutton.click();
-		Reporter.log("Page is copied successfully", true);
+		log("Page is copied successfully");
 		action.moveToElement(Pagemenu).build().perform();
-		Reporter.log("Page menu icon is selected again ", true);
+		log("Page menu icon is selected again ");
 		action.click(Paste).build().perform();
-		Reporter.log("Paste icon is selected ", true);
+		log("Paste icon is selected ");
 
 		// OkBtn.click();
 		action.click(OkBtn).build().perform();
 		((JavascriptExecutor) driver).executeScript("arguments[0.click();", OkBtn);
-		Reporter.log("Page is Pasted successfully", true);
+		log("Page is Pasted successfully");
 	}
 
 	public void SetSplitPageTiff(String fileName, int pos) throws Exception {
@@ -351,9 +353,9 @@ public class ViewerToolbar {
 		 * ((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
 		 */
 		action.moveToElement(Pagemenu).build().perform();
-		// Reporter.log("Page menu icon is selected ", true);
+		// log("Page menu icon is selected ");
 		action.click(Split).build().perform();
-		Reporter.log("Splitting the pages", true);
+		log("Splitting the pages");
 
 		Thread.sleep(2000);
 
@@ -383,10 +385,10 @@ public class ViewerToolbar {
 		 */
 		Thread.sleep(1000);
 		action.moveToElement(Pagemenu).build().perform();
-		Reporter.log("Page menu icon is selected ", true);
+		log("Page menu icon is selected ");
 		Thread.sleep(1000);
 		action.click(Split).build().perform();
-		Reporter.log("Splitting the pages", true);
+		log("Splitting the pages");
 
 		// WebElement splitOkButton =
 		// driver.findElement(By.xpath("//button[@id='splitDocument']"));
@@ -423,14 +425,14 @@ public class ViewerToolbar {
 		 * JavascriptExecutor executor = (JavascriptExecutor)driver;
 		 * executor.executeScript("arguments[0].click()", el1);
 		 */
-		// Reporter.log("Thumbnail is selected ", true);
+		// log("Thumbnail is selected ");
 		// Thread.sleep(2000);
 		DeleteBtn.click();
 		Thread.sleep(2000);
 		DeleteYesBtn.click();
 		Thread.sleep(2000);
 		FileDeleteOk.click();
-		Reporter.log("Document is deleted successfully ", true);
+		log("Document is deleted successfully ");
 
 	}
 
@@ -444,26 +446,26 @@ public class ViewerToolbar {
 		// WebElement el1 = driver.findElement(By.className("thumbnailOptionSelected"));
 		// JavascriptExecutor executor = (JavascriptExecutor)driver;
 		// executor.executeScript("arguments[0].click()", el1);
-		Reporter.log("Thumbnail is selected ", true);
+		log("Thumbnail is selected ");
 		action.moveToElement(Viewmenu).build().perform();
-		Reporter.log("View menu icon is selected ", true);
+		log("View menu icon is selected ");
 		action.click(Fullscreen).build().perform();
-		Reporter.log("FullScreen icon is selected ", true);
+		log("FullScreen icon is selected ");
 		action.moveToElement(Viewmenu).build().perform();
 		action.click(Fullscreen).build().perform();
-		Reporter.log("FullScreen icon is selected again ", true);
+		log("FullScreen icon is selected again ");
 		action.moveToElement(Viewmenu).build().perform();
 		action.click(ShowThumbnail).build().perform();
-		Reporter.log("Show thumbnails icon is selected  ", true);
+		log("Show thumbnails icon is selected  ");
 		action.moveToElement(Viewmenu).build().perform();
 		action.click(ShowThumbnail).build().perform();
-		Reporter.log("Show thumbnails icon is selected again ", true);
+		log("Show thumbnails icon is selected again ");
 	}
 
 	public void SetSavePage() {
 		
 		SaveIcon.click();
-		Reporter.log("Document is Saved successfully ", true);
+		log("Document is Saved successfully ");
 		SaveOKBtn.click();
 
 	}
@@ -474,18 +476,18 @@ public class ViewerToolbar {
 				.until(ExpectedConditions.elementToBeClickable(By.className("thumbnailOptionSelected")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 		action.moveToElement(shareicon).build().perform();
-		Reporter.log("Share icon menu icon is selected ", true);
+		log("Share icon menu icon is selected ");
 		action.click(Mail).build().perform();
-		Reporter.log("Mail icon is selected ", true);
+		log("Mail icon is selected ");
 
 		// driver.switchTo().activeElement().sendKeys(Email_ID);
 		MailEmailID.sendKeys(Email_ID);
-		Reporter.log("Email ID is entered ", true);
+		log("Email ID is entered ");
 		// driver.switchTo().activeElement().sendKeys(Subject);
 		MailSubject.sendKeys(Subject);
-		Reporter.log("Subject is entered ", true);
+		log("Subject is entered ");
 		MailOkBtn.click();
-		Reporter.log("Mail dialog OK button is clicked ", true);
+		log("Mail dialog OK button is clicked ");
 		Thread.sleep(3000);
 		// OKbutton.click();
 		// vidya
@@ -506,12 +508,12 @@ public class ViewerToolbar {
 				.until(ExpectedConditions.elementToBeClickable(By.className("thumbnailOptionSelected")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 		action.moveToElement(shareicon).build().perform();
-		Reporter.log("Share icon menu icon is selected ", true);
+		log("Share icon menu icon is selected ");
 		action.click(PrintDialog).build().perform();
-		Reporter.log("Print icon is selected ", true);
+		log("Print icon is selected ");
 		// driver.switchTo().activeElement().click();
 		PrintOkBtn.click();
-		Reporter.log("Print OK button is clicked ", true);
+		log("Print OK button is clicked ");
 		Thread.sleep(5000);
 		OKbutton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -527,17 +529,17 @@ public class ViewerToolbar {
 				.until(ExpectedConditions.elementToBeClickable(By.className("thumbnailOptionSelected")));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 		action.moveToElement(shareicon).build().perform();
-		Reporter.log("Share icon menu icon is selected ", true);
+		log("Share icon menu icon is selected ");
 		action.click(ExportDialog).build().perform();
-		Reporter.log("Export icon is selected ", true);
+		log("Export icon is selected ");
 		ExportOkBtn.click();
-		Reporter.log("Export OK button is clicked ", true);
+		log("Export OK button is clicked ");
 	}
 
 	public void SetCloseViewer() {
 	
 		CloseVeiwer.click();
-		Reporter.log("Closing the viewer", true);
+		log("Closing the viewer");
 		if (CloseVeiwer.isDisplayed()) {
 			SaveDialogYesButton.click();
 			SaveOKBtn.click();

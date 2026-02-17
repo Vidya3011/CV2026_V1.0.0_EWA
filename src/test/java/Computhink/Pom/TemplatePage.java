@@ -370,7 +370,7 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 
 	public void getVerify_DuplicateTemp_Message() {
 		WebElement Message = Verify_DuplicateTemp_Message;
-		Reporter.log(Message.getText() + " this popup message should show", true);
+		log(Message.getText() + " this popup message should show");
 
 	}
 
@@ -482,7 +482,7 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		String expectedtext = "Please select a folder to create document";
 		String actualtext = FolderSelectMessage.getText();
 		softAssert.assertEquals(actualtext, expectedtext);
-		Reporter.log(FolderSelectMessage.getText() + " this validation message should show", true);
+		log(FolderSelectMessage.getText() + " this validation message should show");
 		movingclkElement(CommentOK);
 		softAssert.assertAll();
 
@@ -493,7 +493,7 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		String expectedtext = "Please add pages to the template before creating!";
 		String actualtext = addpagesMessage.getText();
 		softAssert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(addpagesMessage.getText() + " this validation message should show", true);
+		log(addpagesMessage.getText() + " this validation message should show");
 		movingclkElement(CommentOKbutton);
 		softAssert.assertAll();
 
@@ -504,7 +504,7 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		String expectedtext = "*Template name should be specified.";
 		String actualtext = validationerror.getText();
 		softAssert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(validationerror.getText() + " this validation message should show", true);
+		log(validationerror.getText() + " this validation message should show");
 		softAssert.assertAll();
 
 	}
@@ -514,7 +514,7 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		String expectedtext = "ReportName*   field is required";
 		String actualtext = Reportvaluevalidationerror.getText();
 		softAssert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(Reportvaluevalidationerror.getText() + " this validation message should show", true);
+		log(Reportvaluevalidationerror.getText() + " this validation message should show");
 		jsclick(CommentOKbutton);
 		softAssert.assertAll();
 
@@ -525,7 +525,7 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		String expectedtext = "Please enter file name";
 		String actualtext = Filenamevalidation.getText();
 		softAssert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(Filenamevalidation.getText() + " this validation message should show", true);
+		log(Filenamevalidation.getText() + " this validation message should show");
 		jsclick(CommentOKbutton);
 		softAssert.assertAll();
 
@@ -536,7 +536,7 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		String expectedtext = "Document created successfully";
 		String actualtext = NavigateDoc.getText();
 		softAssert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(NavigateDoc.getText() + " this message should show", true);
+		log(NavigateDoc.getText() + " this message should show");
 		jsclick(NavigateButton);
 		softAssert.assertAll();
 	}
@@ -546,14 +546,14 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		String expectedtext = "Please add form fields before mapping.";
 		String actualtext = Formmappingvalidation.getText();
 		softAssert.assertEquals(actualtext, expectedtext);
-		Reporter.log(Formmappingvalidation.getText() + " this validation message should show", true);
+		log(Formmappingvalidation.getText() + " this validation message should show");
 		jsclick(FormOKbutton);
 		softAssert.assertAll();
 	}
 
 	public void verify_to_CreateorBrowse_Template_Defaultviewing() throws Exception {
 
-		Reporter.log("Test Scenario 1 :Verifying to Create or Browse Template Default Viewing", true);
+		log("Test Scenario 1 :Verifying to Create or Browse Template Default Viewing");
 
 		try {
 			LogDipakUser();
@@ -573,46 +573,46 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 			// Folder navigation dialog not open
 		}
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My preferences option", true);
+		log("Click on My preferences option");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set Default View Option", true);
+		log("Select Office Document and set Default View Option");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set Default View Option", true);
+		log("Select Pdf Document and set Default View Option");
 		movingclkElement(Apply_button);
 		Thread.sleep(2000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getToastmessage();
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 
 		// Validate Template Tab
 
 		if (Templates_MenuOption.isDisplayed()) {
 
-			Reporter.log("Template tab is displayed successfully.", true);
+			log("Template tab is displayed successfully.");
 		} else {
-			Reporter.log("Template tab is NOT displayed.", true);
+			log("Template tab is NOT displayed.");
 		}
 
 		softAssert.assertTrue(Templates_MenuOption.isDisplayed(), "Template tab is not displayed");
 		Thread.sleep(6000);
 		movingclkElement(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 
 		// If Create Template perssion is Denied then Assign Permission to User
 		if (TemplateDeniedmessageok.isDisplayed() == true) {
 			Thread.sleep(3000);
-			Reporter.log("Document Template permission is Denied for Selected User need to assign Document Template permission", true);
+			log("Document Template permission is Denied for Selected User need to assign Document Template permission");
 			getTemplate_Denied_Message_Verify();
 			Thread.sleep(2000);
 			jsclick(TemplateDeniedmessageok);
@@ -621,22 +621,22 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 			LoginAdminUser();
 			movingclkElement(Setting_Icon);
 			Thread.sleep(3000);
-			Reporter.log("Click on Setting Icon", true);
+			log("Click on Setting Icon");
 			Verify_Document_Template_OptionDescription();
 			Thread.sleep(2000);
 			jsclick(Select_Document_Template);
 			Thread.sleep(3000);
-			Reporter.log("Click on Document Template", true);
+			log("Click on Document Template");
 			Verify_Document_Template_AllOptions_onDialog();
 			Thread.sleep(4000);
 			movingclkElement(Select_Userlist);
 			Thread.sleep(3000);
-			Reporter.log("Click on User List dropdown", true);
+			log("Click on User List dropdown");
 			movingclkElement(Select_AllUser);
 			Thread.sleep(3000);
-			Reporter.log("Select all Users from Dropdown", true);
+			log("Select all Users from Dropdown");
 			movingclkElement(TemplateApply);
-			Reporter.log("Click on Apply button", true);
+			log("Click on Apply button");
 			Thread.sleep(2000);
 			getToastmessage();
 			LogoutPage();
@@ -648,23 +648,23 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document page", true);
+		log("Browse Document page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
 		Thread.sleep(6000);
 		try {
@@ -675,43 +675,43 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		jsclick(getSelect_Document_Type_Dropdown());
 		Thread.sleep(8000);
-		Reporter.log("Select Value from Document type Dropdown", true);
+		log("Select Value from Document type Dropdown");
 		Select_ReportName_Test.sendKeys(Templates_excelRead(1, 0));
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		Thread.sleep(8000);
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
 		Thread.sleep(3000);
-		Reporter.log("Browse Document page", true);
+		log("Browse Document page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
 		Thread.sleep(6000);
 		jsclick(Save_Template_Button);
-		Reporter.log("Click on Save Template button", true);
-		Reporter.log("Save Template button clicked successfully", true);
+		log("Click on Save Template button");
+		log("Save Template button clicked successfully");
 		jsclick(Template_Description_No_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description dialog No button", true);
+		log("Click on Template Description dialog No button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click again on Save Template button", true);
+		log("Click again on Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Name Textbox", true);
+		log("Click on Template Name Textbox");
 		Template_NameTextbox.sendKeys(Templates_excelRead(4, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Template Name field ", true);
+		log("Enter value into Template Name field ");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description Textbox", true);
+		log("Click on Template Description Textbox");
 		Template_Description_Messagebox.sendKeys(Templates_excelRead(5, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter Template Description message", true);
+		log("Enter Template Description message");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description Yes button", true);
+		log("Click on Template Description Yes button");
 
 		if (driver.getPageSource()
 				.contains("Template already exists with the same name.Please try creating with a different name.")) {
@@ -723,9 +723,9 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 			Thread.sleep(6000);
 			getMoveto_Templates_Option();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover to Template Tab", true);
+			log("Mousehover to Template Tab");
 			movingclkElement(Select_Created_Template);
-			Reporter.log("Select Created Template Page", true);
+			log("Select Created Template Page");
 			try {
 				WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 				wait2.until(ExpectedConditions.alertIsPresent());
@@ -735,45 +735,45 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 				System.out.println("Alert is not present...");
 			}
 			Thread.sleep(6000);
-			Reporter.log("Created Template page open successfully", true);
+			log("Created Template page open successfully");
 			jsclick(Delete_Template_Button);
 			Thread.sleep(6000);
-			Reporter.log("Click on Delete Template Fab Option", true);
+			log("Click on Delete Template Fab Option");
 			jsclick(Delete_Template_OK_Button);
 			Thread.sleep(6000);
-			Reporter.log("Click on Delete Template Dialog Ok button", true);
-			Reporter.log("Template Deleted Successfully", true);
+			log("Click on Delete Template Dialog Ok button");
+			log("Template Deleted Successfully");
 			Refresh_Button();
 			Thread.sleep(6000);
-			Reporter.log("Click on Refresh button", true);
+			log("Click on Refresh button");
 			movingclkElement(Templates_MenuOption);
 			Thread.sleep(6000);
-			Reporter.log("Click on Template Tab", true);
+			log("Click on Template Tab");
 			jsclick(Destination_Folder_Textbox);
 			Thread.sleep(6000);
-			Reporter.log("Click on Destination Folder Textbox", true);
+			log("Click on Destination Folder Textbox");
 			selectElement(Select_Cabinet1);
 			Thread.sleep(6000);
-			Reporter.log("Expand a Cabinet", true);
+			log("Expand a Cabinet");
 			selectElement(Select_Drawer1);
 			Thread.sleep(6000);
-			Reporter.log("Expand a Drawer", true);
+			log("Expand a Drawer");
 			selectElement(Select_Folder1);
 			Thread.sleep(6000);
-			Reporter.log("select a Folder", true);
+			log("select a Folder");
 			jsclick(OK_Button_BrowseforFolder);
 			Thread.sleep(9000);
-			Reporter.log("Click on Ok button", true);
+			log("Click on Ok button");
 			jsclick(getSelect_Document_Type_Dropdown());
 			Thread.sleep(8000);
-			Reporter.log("Select Value from Document type Dropdown", true);
+			log("Select Value from Document type Dropdown");
 			Select_ReportName_Test.sendKeys(Templates_excelRead(1, 0));
-			Reporter.log("Enter value into Report Name field", true);
+			log("Enter value into Report Name field");
 			Thread.sleep(8000);
 			movingclkElement(Move_To_PlusIcon);
 			getBrowse_Option();
 			Thread.sleep(3000);
-			Reporter.log("Browse Document page", true);
+			log("Browse Document page");
 			Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
 			Thread.sleep(6000);
 			try {
@@ -784,34 +784,34 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 			} catch (Exception e) {
 				System.out.println("Alert is not present...");
 			}
-			Reporter.log("By using AutoIT add file from external folder", true);
+			log("By using AutoIT add file from external folder");
 			Thread.sleep(6000);
 			movingclkElement(Move_To_PlusIcon);
 			Thread.sleep(2000);
 			getBrowse_Option();
 			Thread.sleep(3000);
-			Reporter.log("Browse Document page", true);
+			log("Browse Document page");
 			Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
 			Thread.sleep(6000);
 			jsclick(Save_Template_Button);
-			Reporter.log("Click on Save Template button", true);
-			Reporter.log("Save Template button clicked successfully", true);
+			log("Click on Save Template button");
+			log("Save Template button clicked successfully");
 			Thread.sleep(6000);
 			jsclick(Template_NameTextbox);
 			Thread.sleep(6000);
-			Reporter.log("Click on Template Name Textbox", true);
+			log("Click on Template Name Textbox");
 			Template_NameTextbox.sendKeys(Templates_excelRead(4, 0));
 			Thread.sleep(6000);
-			Reporter.log("Enter value into Template Name field ", true);
+			log("Enter value into Template Name field ");
 			jsclick(Template_Description_Messagebox);
 			Thread.sleep(6000);
-			Reporter.log("Click on Template Description Textbox", true);
+			log("Click on Template Description Textbox");
 			Template_Description_Messagebox.sendKeys(Templates_excelRead(5, 0));
 			Thread.sleep(6000);
-			Reporter.log("Enter Template Description message", true);
+			log("Enter Template Description message");
 			jsclick(Template_Description_OK_button);
 			Thread.sleep(6000);
-			Reporter.log("Click on Template Description Yes button", true);
+			log("Click on Template Description Yes button");
 
 		} else {
 			System.out.println("Template Created succesfully");
@@ -820,17 +820,17 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Template Created succesfully Message", true);
+		log("Verifying Template Created succesfully Message");
 		jsclick(Template_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Verifying to CreateorBrowse Template Defaultviewing", true);
+		log("Click on Ok button");
+		log("Verifying to CreateorBrowse Template Defaultviewing");
 
 	}
 
 	public void Verify_to_Edit_and_Delete_DefaultTemplate() throws Exception {
 
-		Reporter.log("Test Scenario 2: Verifying to  Edit and Delete Default Template", true);
+		log("Test Scenario 2: Verifying to  Edit and Delete Default Template");
 
 		try {
 			LogDipakUser();
@@ -852,9 +852,9 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		movingclkElement(Select_Created_Template);
-		Reporter.log("Select Created Template Page", true);
+		log("Select Created Template Page");
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait2.until(ExpectedConditions.alertIsPresent());
@@ -864,30 +864,30 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Created Template page open successfully", true);
+		log("Created Template page open successfully");
 		jsclick(Click_Edit_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Fab Option", true);
+		log("Click on Edit Template Fab Option");
 		EditTemplate_Description_Messagebox.clear();
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Description Textbox", true);
+		log("Click on Edit Template Description Textbox");
 		EditTemplate_Description_Messagebox.sendKeys(Templates_excelRead(6, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter Message under Description Box", true);
+		log("Enter Message under Description Box");
 		jsclick(EditTemplate_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Dialog Ok button", true);
+		log("Click on Edit Template Dialog Ok button");
 		getEditTemplate_Created_Message_Verify();
-		Reporter.log("Template edited successfully", true);
+		log("Template edited successfully");
 		jsclick(EditTemplate_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Edited Succesfully Ok button", true);
+		log("Click on Template Edited Succesfully Ok button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		movingclkElement(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template Page", true);
+		log("Select Created Template Page");
 		try {
 			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait3.until(ExpectedConditions.alertIsPresent());
@@ -898,16 +898,16 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		}
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Delete Template Fab Option", true);
+		log("Click on Delete Template Fab Option");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Click on Delete Template Dialog Ok button", true);
-		Reporter.log("Template Deleted Successfully", true);
+		log("Click on Delete Template Dialog Ok button");
+		log("Template Deleted Successfully");
 
 	}
 
 	public void verify_CreateorBrowse_Template_Advancedviewing_Officedoc() throws Exception {
 
-		Reporter.log("Test Scenario 3: Verifying to  Create or Browse Template In Advanced Viewing", true);
+		log("Test Scenario 3: Verifying to  Create or Browse Template In Advanced Viewing");
 
 		try {
 			LogDipakUser();
@@ -929,86 +929,86 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_Office_document_Advancedviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set Advanced View Option", true);
+		log("Select Office Document and set Advanced View Option");
 		movingclkElement(Apply_button);
 		Thread.sleep(2000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getToastmessage();
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("selecta  Folder", true);
+		log("selecta  Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button of Browse for folder Dialog", true);
+		log("Click on Ok button of Browse for folder Dialog");
 		jsclick(getSelect_Document_Type_Dropdown());
 		Thread.sleep(8000);
-		Reporter.log("Select Value from Document Type Dropdown ", true);
+		log("Select Value from Document Type Dropdown ");
 		Select_ReportName_Test.sendKeys(Templates_excelRead(1, 0));
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		Thread.sleep(8000);
 		movingclkElement(Move_To_PlusIcon);
 		getBrowse_Option();
 		Thread.sleep(3000);
-		Reporter.log("Browse Document page", true);
+		log("Browse Document page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\OfficeDoc\\FileUploadOfficedoc.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(8000);
 		jsclick(Save_Template_Button);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		jsclick(Template_Description_No_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description Dialog No button", true);
+		log("Click on Template Description Dialog No button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click again on Save Template button", true);
+		log("Click again on Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Name Textbox", true);
+		log("Click on Template Name Textbox");
 		Template_NameTextbox.sendKeys(Templates_excelRead(4, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter Name under Template Name Textbox", true);
+		log("Enter Name under Template Name Textbox");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description Messagebox", true);
+		log("Click on Template Description Messagebox");
 		Template_Description_Messagebox.sendKeys(Templates_excelRead(5, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter Template Description Message Under Description box", true);
+		log("Enter Template Description Message Under Description box");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description box Ok button", true);
+		log("Click on Template Description box Ok button");
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Template created successfully Message", true);
+		log("Verifying Template created successfully Message");
 		jsclick(Template_Created_OK_button);
-		Reporter.log("Click on Template Created Ok button", true);
-		Reporter.log("Verifying to CreateorBrowse Officedoc Template advancedviewing", true);
+		log("Click on Template Created Ok button");
+		log("Verifying to CreateorBrowse Officedoc Template advancedviewing");
 
 	}
 
 	public void Verify_to_Edit_and_Delete_AdvancedTemplate_Officedoc() throws Exception {
 
-		Reporter.log("Test Scenario 4: Verifying to  Edit and Delete Advanced View Officedocument", true);
+		log("Test Scenario 4: Verifying to  Edit and Delete Advanced View Officedocument");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -1029,10 +1029,10 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		movingclkElement(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template page", true);
+		log("Select Created Template page");
 		try {
 			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait3.until(ExpectedConditions.alertIsPresent());
@@ -1043,27 +1043,27 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		}
 		jsclick(Click_Edit_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Fab button", true);
+		log("Click on Edit Template Fab button");
 		EditTemplate_Description_Messagebox.clear();
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Description Messagebox ", true);
+		log("Click on Edit Template Description Messagebox ");
 		EditTemplate_Description_Messagebox.sendKeys(Templates_excelRead(6, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter Message under Edit Template Description Messagebox", true);
+		log("Enter Message under Edit Template Description Messagebox");
 		jsclick(EditTemplate_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getEditTemplate_Created_Message_Verify();
-		Reporter.log("Template edited successfully", true);
+		log("Template edited successfully");
 		jsclick(EditTemplate_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Edited successfully dialog Ok button", true);
+		log("Click on Template Edited successfully dialog Ok button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		movingclkElement(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template page", true);
+		log("Select Created Template page");
 		try {
 			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait3.until(ExpectedConditions.alertIsPresent());
@@ -1074,15 +1074,15 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		}
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Delete Template Fab button", true);
+		log("Click on Delete Template Fab button");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Template Deleted Successfully", true);
+		log("Template Deleted Successfully");
 
 	}
 
 	public void verify_to_Create_Formmapping_PDFTemplate_Advancedviewing() throws Exception {
 
-		Reporter.log("Test Scenario 5: Verifying to  Create Form mapping in Advanced viewing", true);
+		log("Test Scenario 5: Verifying to  Create Form mapping in Advanced viewing");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -1103,98 +1103,98 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getPdf_document_Advancedviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set Advanced view Option", true);
+		log("Select Pdf Document and set Advanced view Option");
 		movingclkElement(Apply_button);
 		Thread.sleep(2000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getToastmessage();
 		Refresh_Button();
 		Thread.sleep(6000);
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Templates", true);
+		log("Folder is selected for Templates");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getSelect_Document_Type_Dropdown());
 		Thread.sleep(8000);
-		Reporter.log("Select value from Document type dropdown", true);
+		log("Select value from Document type dropdown");
 		Select_ReportName_Test.sendKeys(Templates_excelRead(1, 0));
 		Thread.sleep(8000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		movingclkElement(Move_To_PlusIcon);
 		Thread.sleep(2000);
 		getNew_pdf_Document_Option();
 		Thread.sleep(4000);
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		getEnter_pdf_File_Name();
 		Thread.sleep(4000);
-		Reporter.log("Enter Pdf file Name", true);
+		log("Enter Pdf file Name");
 		jsclick(pdfViewer);
 		Thread.sleep(6000);
-		Reporter.log("Click on PdfViewer menu option", true);
+		log("Click on PdfViewer menu option");
 
 		Actions act = new Actions(driver);
 		act.click(Textbox).moveToElement(Add_Textbox_Onpage).click().build().perform();
 
 		Thread.sleep(6000);
-		Reporter.log("Select and Add Textbox on  Page", true);
+		log("Select and Add Textbox on  Page");
 		jsclick(Click_Formmapper);
 		Thread.sleep(6000);
-		Reporter.log("Click on Form mapping Option", true);
+		log("Click on Form mapping Option");
 		getSelect_Formfield();
 		Thread.sleep(6000);
-		Reporter.log("Select Form field", true);
+		log("Select Form field");
 		jsclick(FormOK);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Ok button", true);
+		log("Click on  Ok button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Name Textbox", true);
+		log("Click on Template Name Textbox");
 		Template_NameTextbox.sendKeys(Templates_excelRead(4, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Template Name field", true);
+		log("Enter value into Template Name field");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Template Description Messagebox", true);
+		log("Click on  Template Description Messagebox");
 		Template_Description_Messagebox.sendKeys(Templates_excelRead(5, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter Description Message into Description field", true);
+		log("Enter Description Message into Description field");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Template Created Successfully", true);
+		log("Template Created Successfully");
 		jsclick(Template_Created_OK_button);
-		Reporter.log("Verifying to CreateorBrowse Formmapping Template advancedviewing", true);
+		log("Verifying to CreateorBrowse Formmapping Template advancedviewing");
 		Thread.sleep(6000);
 	}
 
 	public void Verify_to_Edit_and_Delete_Formfield() throws Exception {
 
-		Reporter.log("Test Scenario 6: Verifying to  Edit and Delete Form field", true);
+		log("Test Scenario 6: Verifying to  Edit and Delete Form field");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -1216,10 +1216,10 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		movingclkElement(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template Document page", true);
+		log("Select Created Template Document page");
 		try {
 			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait3.until(ExpectedConditions.alertIsPresent());
@@ -1230,27 +1230,27 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		}
 		jsclick(Click_Edit_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Fab button", true);
+		log("Click on Edit Template Fab button");
 		EditTemplate_Description_Messagebox.clear();
 		Thread.sleep(6000);
-		Reporter.log("Clik on Edit Template Description Messagebox", true);
+		log("Clik on Edit Template Description Messagebox");
 		EditTemplate_Description_Messagebox.sendKeys(Templates_excelRead(6, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter Description Message into Description field", true);
+		log("Enter Description Message into Description field");
 		jsclick(EditTemplate_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getEditTemplate_Created_Message_Verify();
-		Reporter.log("Template edited successfully", true);
+		log("Template edited successfully");
 		jsclick(EditTemplate_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		movingclkElement(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template page", true);
+		log("Select Created Template page");
 		try {
 			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait3.until(ExpectedConditions.alertIsPresent());
@@ -1261,15 +1261,15 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		}
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Delete Template Fab button", true);
+		log("Click on Delete Template Fab button");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Formmapping Template Deleted Successfully", true);
+		log("Formmapping Template Deleted Successfully");
 
 	}
 
 	public void Set_Defaultview() throws Exception {
 
-		Reporter.log("Test Scenario 7: Set Office and Pdf document option in Default view", true);
+		log("Test Scenario 7: Set Office and Pdf document option in Default view");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -1290,34 +1290,34 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Documentand set Default View Option", true);
+		log("Select Office Documentand set Default View Option");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select PdfDocument and set Default View Option", true);
+		log("Select PdfDocument and set Default View Option");
 		movingclkElement(Apply_button);
 		Thread.sleep(2000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getToastmessage();
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	public void Login_Template_permissionassign_User_and_verify_message_Select_Folder_ToCreateDoc() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying message Select Folder To Create Document ", true);
+		log("Test Scenario 1 : Verifying message Select Folder To Create Document ");
 
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 		} catch (Exception e) {
-			Reporter.log(" user alreday Logged", true);
+			log(" user alreday Logged");
 		}
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -1333,38 +1333,38 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Documnet and set as Default view", true);
+		log("Select Office Documnet and set as Default view");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Documnet and set as Default view", true);
+		log("Select Pdf Documnet and set as Default view");
 		movingclkElement(Apply_button);
 		Thread.sleep(2000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getToastmessage();
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 
 		// Validate Template Tab
 
 		if (Templates_MenuOption.isDisplayed()) {
 
-			Reporter.log("Search tab is displayed successfully.", true);
+			log("Search tab is displayed successfully.");
 		} else {
-			Reporter.log("Search tab is NOT displayed.", true);
+			log("Search tab is NOT displayed.");
 		}
 
 		softAssert.assertTrue(Templates_MenuOption.isDisplayed(), "Template tab is not displayed");
 		Thread.sleep(6000);
 		jsclick(Templates_MenuOption);
 		Thread.sleep(3000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 
 		// If Create Template perssion is Denied then Assign Permission to User
 		if (TemplateDeniedmessageok.isDisplayed() == true) {
@@ -1377,23 +1377,23 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 			LoginAdminUser();
 			movingclkElement(Setting_Icon);
 			Thread.sleep(3000);
-			Reporter.log("Click on Setting Icon", true);
+			log("Click on Setting Icon");
 			Verify_Document_Template_OptionDescription();
 			Thread.sleep(2000);
 			jsclick(Select_Document_Template);
 			Thread.sleep(3000);
-			Reporter.log("Click on Document Template", true);
+			log("Click on Document Template");
 			Verify_Document_Template_AllOptions_onDialog();
 			Thread.sleep(4000);
 			movingclkElement(Select_Userlist);
 			Thread.sleep(3000);
-			Reporter.log("Click on User List dropdown", true);
+			log("Click on User List dropdown");
 			movingclkElement(Select_AllUser);
 			Thread.sleep(3000);
-			Reporter.log("Select all Users from Dropdown", true);
+			log("Select all Users from Dropdown");
 			movingclkElement(TemplateApply);
 			Thread.sleep(2000);
-			Reporter.log("Click on Apply button", true);
+			log("Click on Apply button");
 			getToastmessage();
 			LogoutPage();
 			LogDipakUser();
@@ -1404,43 +1404,43 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder TextBox", true);
+		log("Click on Destination Folder TextBox");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getFolderSelectMessage();
 		Thread.sleep(6000);
-		Reporter.log("Verified Select Folder Validation message", true);
+		log("Verified Select Folder Validation message");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getFolderSelectMessage();
 		Thread.sleep(6000);
-		Reporter.log("Verified Select Folder Validation message", true);
+		log("Verified Select Folder Validation message");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getFolderSelectMessage();
 		Thread.sleep(6000);
-		Reporter.log("Verified Select Folder validation message", true);
+		log("Verified Select Folder validation message");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log(" select a Folder", true);
-		Reporter.log("Folder is selected for Templates", true);
+		log(" select a Folder");
+		log("Folder is selected for Templates");
 		jsclick(OK_Button_BrowseforFolder);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		Thread.sleep(6000);
 	}
 
 	public void verify_message_addPages_Using_SaveandClearButton() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying message add Pages Using Save and Clear button ", true);
+		log("Test Scenario 2 : Verifying message add Pages Using Save and Clear button ");
 
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -1456,37 +1456,37 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		getFolder_ErrorMessage();
 		Thread.sleep(6000);
-		Reporter.log("Verified Error message", true);
+		log("Verified Error message");
 		jsclick(savetemp);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		getFolder_ErrorMessage();
 		Thread.sleep(6000);
-		Reporter.log("Verified Error message", true);
+		log("Verified Error message");
 		jsclick(ClearButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Clear button", true);
+		log("Click on Clear button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		getFolder_ErrorMessage();
 		Thread.sleep(6000);
-		Reporter.log("Verified Error message", true);
+		log("Verified Error message");
 		jsclick(savetemp);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		getFolder_ErrorMessage();
 		Thread.sleep(6000);
-		Reporter.log("Verified Error message", true);
-		Reporter.log("Add pages message verified", true);
+		log("Verified Error message");
+		log("Add pages message verified");
 	}
 
 	public void Verify_TextboxName_and_Templatename_validation() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Verifying Textbox Name and Templatename validation ", true);
+		log("Test Scenario 3 : Verifying Textbox Name and Templatename validation ");
 
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -1502,7 +1502,7 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		jsclick(getSelect_Document_Type_Dropdown());
 		Thread.sleep(3000);
-		Reporter.log("Select Value from Document type Dropdown", true);
+		log("Select Value from Document type Dropdown");
 		movingclkElement(Move_To_PlusIcon);
 		Thread.sleep(1000);
 		getBrowse_Option();
@@ -1518,25 +1518,25 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description Ok button", true);
+		log("Click on Template Description Ok button");
 		getvalidationerror();
 		Thread.sleep(6000);
-		Reporter.log("Verified Validation error message", true);
+		log("Verified Validation error message");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Name Textbox", true);
+		log("Click on Template Name Textbox");
 		Template_NameTextbox.sendKeys(Templates_excelRead(4, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter Value Template Name Name Textbox", true);
+		log("Enter Value Template Name Name Textbox");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 
 		if (driver.getPageSource()
 				.contains("Template already exists with the same name.Please try creating with a different name.")) {
@@ -1548,9 +1548,9 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 			Thread.sleep(6000);
 			getMoveto_Templates_Option();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover to Template Tab", true);
+			log("Mousehover to Template Tab");
 			movingclkElement(Select_Created_Template);
-			Reporter.log("Select Created Template Page", true);
+			log("Select Created Template Page");
 			try {
 				WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 				wait2.until(ExpectedConditions.alertIsPresent());
@@ -1560,43 +1560,43 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 				System.out.println("Alert is not present...");
 			}
 			Thread.sleep(6000);
-			Reporter.log("Created Template page open successfully", true);
+			log("Created Template page open successfully");
 			jsclick(Delete_Template_Button);
 			Thread.sleep(6000);
-			Reporter.log("Click on Delete Template Fab Option", true);
+			log("Click on Delete Template Fab Option");
 			jsclick(Delete_Template_OK_Button);
 			Thread.sleep(6000);
-			Reporter.log("Click on Delete Template Dialog Ok button", true);
-			Reporter.log("Template Deleted Successfully", true);
+			log("Click on Delete Template Dialog Ok button");
+			log("Template Deleted Successfully");
 			Refresh_Button();
 			Thread.sleep(6000);
-			Reporter.log("Click on Refresh button", true);
+			log("Click on Refresh button");
 			movingclkElement(Templates_MenuOption);
 			Thread.sleep(6000);
-			Reporter.log("Click on Template Tab", true);
+			log("Click on Template Tab");
 			jsclick(Destination_Folder_Textbox);
 			Thread.sleep(6000);
-			Reporter.log("Click on Destination Folder Textbox", true);
+			log("Click on Destination Folder Textbox");
 			selectElement(Select_Cabinet1);
 			Thread.sleep(6000);
-			Reporter.log("Expand a Cabinet", true);
+			log("Expand a Cabinet");
 			selectElement(Select_Drawer1);
 			Thread.sleep(6000);
-			Reporter.log("Expand a Drawer", true);
+			log("Expand a Drawer");
 			selectElement(Select_Folder1);
 			Thread.sleep(6000);
-			Reporter.log("select a Folder", true);
+			log("select a Folder");
 			jsclick(OK_Button_BrowseforFolder);
 			Thread.sleep(9000);
-			Reporter.log("Click on Ok button", true);
+			log("Click on Ok button");
 			jsclick(getSelect_Document_Type_Dropdown());
 			Thread.sleep(3000);
-			Reporter.log("Select Value from Document type Dropdown", true);
+			log("Select Value from Document type Dropdown");
 			movingclkElement(Move_To_PlusIcon);
 			Thread.sleep(1000);
 			getBrowse_Option();
 			Thread.sleep(3000);
-			Reporter.log("Browse Document page", true);
+			log("Browse Document page");
 			Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
 			Thread.sleep(6000);
 			try {
@@ -1607,34 +1607,34 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 			} catch (Exception e) {
 				System.out.println("Alert is not present...");
 			}
-			Reporter.log("By using AutoIT add file from external folder", true);
+			log("By using AutoIT add file from external folder");
 			Thread.sleep(6000);
 			movingclkElement(Move_To_PlusIcon);
 			Thread.sleep(1000);
 			getBrowse_Option();
 			Thread.sleep(2000);
-			Reporter.log("Browse Document page", true);
+			log("Browse Document page");
 			Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
 			Thread.sleep(6000);
 			jsclick(Save_Template_Button);
-			Reporter.log("Click on Save Template button", true);
-			Reporter.log("Save Template button clicked successfully", true);
+			log("Click on Save Template button");
+			log("Save Template button clicked successfully");
 			Thread.sleep(6000);
 			jsclick(Template_NameTextbox);
 			Thread.sleep(6000);
-			Reporter.log("Click on Template Name Textbox", true);
+			log("Click on Template Name Textbox");
 			Template_NameTextbox.sendKeys(Templates_excelRead(4, 0));
 			Thread.sleep(6000);
-			Reporter.log("Enter value into Template Name field ", true);
+			log("Enter value into Template Name field ");
 			jsclick(Template_Description_Messagebox);
 			Thread.sleep(6000);
-			Reporter.log("Click on Template Description Textbox", true);
+			log("Click on Template Description Textbox");
 			Template_Description_Messagebox.sendKeys(Templates_excelRead(5, 0));
 			Thread.sleep(6000);
-			Reporter.log("Enter Template Description message", true);
+			log("Enter Template Description message");
 			jsclick(Template_Description_OK_button);
 			Thread.sleep(6000);
-			Reporter.log("Click on Template Description Yes button", true);
+			log("Click on Template Description Yes button");
 
 		} else {
 			System.out.println("Template Created succesfully");
@@ -1642,16 +1642,16 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Verified Template created successfully", true);
+		log("Verified Template created successfully");
 		jsclick(Template_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		movingclkElement(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template from Template Tab", true);
+		log("Select Created Template from Template Tab");
 		try {
 			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait3.until(ExpectedConditions.alertIsPresent());
@@ -1662,21 +1662,21 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		}
 		jsclick(Createdoc);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		getReportvaluevalidationerror();
 		Thread.sleep(6000);
-		Reporter.log("Verified validation Error", true);
+		log("Verified validation Error");
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Delete Template Fab button", true);
+		log("Click on Delete Template Fab button");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Template Deleted Successfully", true);
-		Reporter.log("Texbox and Template name validate", true);
+		log("Template Deleted Successfully");
+		log("Texbox and Template name validate");
 	}
 
 	public void Verify_validation_Duplicate_Template_Created() throws Exception {
 
-		Reporter.log("Test Scenario 4 : Verifying validation Duplicate Template Created ", true);
+		log("Test Scenario 4 : Verifying validation Duplicate Template Created ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -1699,57 +1699,57 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set as Default View", true);
+		log("Select Office Document and set as Default View");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select PdfC Document and set as Default View", true);
+		log("Select PdfC Document and set as Default View");
 		movingclkElement(Apply_button);
 		Thread.sleep(4000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getToastmessage();
 		Thread.sleep(4000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Templates", true);
+		log("Folder is selected for Templates");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select Document type dropdown", true);
+		log("Select Document type dropdown");
 		jsclick(Select_ReportName_Test);
 		Thread.sleep(3000);
-		Reporter.log("Click on Report Name textbox", true);
+		log("Click on Report Name textbox");
 		Select_ReportName_Test.sendKeys(Templates_excelRead(1, 0));
-		Reporter.log("Enter Report value into ReportName textbox", true);
+		log("Enter Report value into ReportName textbox");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		Thread.sleep(1000);
 		getBrowse_Option();
 		Thread.sleep(3000);
-		Reporter.log("Browse a Document Page", true);
+		log("Browse a Document Page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
 		Thread.sleep(6000);
 		try {
@@ -1760,7 +1760,7 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(2000);
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait2.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
@@ -1768,75 +1768,75 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		Thread.sleep(1000);
 		getBrowse_Option();
 		Thread.sleep(3000);
-		Reporter.log("Browse a Document Page", true);
+		log("Browse a Document Page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
 		Thread.sleep(6000);
 		jsclick(Save_Template_Button);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		jsclick(Template_Description_No_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description No button", true);
+		log("Click on Template Description No button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Name textbox", true);
+		log("Click on Template Name textbox");
 		Template_NameTextbox.sendKeys(Templates_excelRead(4, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter Template Name", true);
+		log("Enter Template Name");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description messagebox", true);
+		log("Click on Template Description messagebox");
 		Template_Description_Messagebox.sendKeys(Templates_excelRead(5, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter message under Template Description", true);
+		log("Enter message under Template Description");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description dialog OK button", true);
+		log("Click on Template Description dialog OK button");
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Verified Template created successfully", true);
+		log("Verified Template created successfully");
 		jsclick(Template_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Verifying to CreateorBrowse Template Defaultviewing", true);
+		log("Click on Ok button");
+		log("Verifying to CreateorBrowse Template Defaultviewing");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Templates", true);
+		log("Folder is selected for Templates");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select Document type dropdown", true);
+		log("Select Document type dropdown");
 		jsclick(Select_ReportName_Test);
-		Reporter.log("Select Report name textbox", true);
+		log("Select Report name textbox");
 		Select_ReportName_Test.sendKeys(Templates_excelRead(1, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field");
+		log("Enter value into Report Name field");
 		WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait3.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		Thread.sleep(1000);
 		getBrowse_Option();
 		Thread.sleep(3000);
-		Reporter.log("Browse a Document Page", true);
+		log("Browse a Document Page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
 		Thread.sleep(6000);
 		try {
@@ -1847,7 +1847,7 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		}catch(Exception e) {
 			System.out.println("Alert is not Present");
 		}
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(3000);
 		WebDriverWait wait5 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait5.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
@@ -1855,45 +1855,45 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		Thread.sleep(1000);
 		getBrowse_Option();
 		Thread.sleep(3000);
-		Reporter.log("Browse a Document Page", true);
+		log("Browse a Document Page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
 		Thread.sleep(6000);
 		jsclick(Save_Template_Button);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		jsclick(Template_Description_No_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description No button", true);
+		log("Click on Template Description No button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(2000);
-		Reporter.log("Click on Template Name textbox", true);
+		log("Click on Template Name textbox");
 		Template_NameTextbox.sendKeys(Templates_excelRead(4, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter Template Name", true);
+		log("Enter Template Name");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Decription messagebox", true);
+		log("Click on Template Decription messagebox");
 		Template_Description_Messagebox.sendKeys(Templates_excelRead(5, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter message in Template description textbox", true);
+		log("Enter message in Template description textbox");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getVerify_DuplicateTemp_Message();
 		Thread.sleep(6000);
-		Reporter.log("Verified Template already exist validation message", true);
+		log("Verified Template already exist validation message");
 		movingclkElement(Okbutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Nobutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on No button", true);
-		Reporter.log("Duplicate Template not creating validate", true);
+		log("Click on No button");
+		log("Duplicate Template not creating validate");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on  Refresh button", true);
+		log("Click on  Refresh button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
 		movingclkElement(Select_Created_Template);
@@ -1903,21 +1903,21 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 			Alert alt2 = driver.switchTo().alert();
 			alt2.accept();
 		} catch (Exception e) {
-			Reporter.log("Alert not present", true);
+			log("Alert not present");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Select created Template from Template Tab", true);
+		log("Select created Template from Template Tab");
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Delete Template Fab button", true);
+		log("Click on Delete Template Fab button");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Template Deleted Successfully", true);
+		log("Template Deleted Successfully");
 
 	}
 
 	public void verify_to_CreateorBrowse_Template_Advancedviewing_Officedoc() throws Exception {
 
-		Reporter.log("Test Scenario 5 : Verifying to Create or Browse Template Advancedviewing Officedoc", true);
+		log("Test Scenario 5 : Verifying to Create or Browse Template Advancedviewing Officedoc");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -1939,81 +1939,81 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_Office_document_Advancedviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office document and set as Advanced view", true);
+		log("Select Office document and set as Advanced view");
 		movingclkElement(Apply_button);
 		Thread.sleep(2000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getToastmessage();
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Templates Tab", true);
+		log("Click on Templates Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder textbox", true);
+		log("Click on Destination Folder textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Templates", true);
+		log("Folder is selected for Templates");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select Document type dropdown value", true);
+		log("Select Document type dropdown value");
 		jsclick(Select_ReportName_Test);
-		Reporter.log("Click on Report Name", true);
+		log("Click on Report Name");
 		Select_ReportName_Test.sendKeys(Templates_excelRead(1, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		Thread.sleep(1000);
 		getNew_Word_Document_Option();
 		Thread.sleep(2000);
-		Reporter.log("Browse Word document", true);
+		log("Browse Word document");
 		jsclick(OKButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getFilenamevalidation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Validation error", true);
+		log("Verified Validation error");
 		getEnter_Word_File_Name();
 		Thread.sleep(2000);
-		Reporter.log("Enter Word file name", true);
+		log("Enter Word file name");
 		jsclick(Open_Word_page);
 		Thread.sleep(2000);
-		Reporter.log("Select word page", true);
-		Reporter.log("Advanced Viewing New Word Document Created", true);
+		log("Select word page");
+		log("Advanced Viewing New Word Document Created");
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait1.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		getNew_Excel_Spreadsheet_Option();
 		Thread.sleep(6000);
-		Reporter.log("Browse Excel document", true);
+		log("Browse Excel document");
 		jsclick(OKButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getFilenamevalidation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Validation error message", true);
+		log("Verified Validation error message");
 		getEnter_Excel_File_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter Excel file name", true);
+		log("Enter Excel file name");
 		jsclick(Open_Excel_page);
 		Thread.sleep(6000);
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -2022,50 +2022,50 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		Thread.sleep(1000);
 		getBrowse_Option();
 		Thread.sleep(3000);
-		Reporter.log("Browse  Document Page", true);
+		log("Browse  Document Page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\OfficeDoc\\FileUploadOfficedoc.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
-		Reporter.log("Advanced Viewing New Excel Document Created", true);
+		log("Advanced Viewing New Excel Document Created");
 		jsclick(Save_Template_Button);
-		Reporter.log("Save Template button clicked successfully", true);
+		log("Save Template button clicked successfully");
 		jsclick(Template_Description_No_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template description No button", true);
+		log("Click on Template description No button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template name Textbox", true);
+		log("Click on Template name Textbox");
 		Template_NameTextbox.sendKeys(Templates_excelRead(4, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter Template Name", true);
+		log("Enter Template Name");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description messagebox", true);
+		log("Click on Template Description messagebox");
 		Template_Description_Messagebox.sendKeys(Templates_excelRead(5, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter message under Template Description", true);
+		log("Enter message under Template Description");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(8000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Verified Template created successfully", true);
+		log("Verified Template created successfully");
 		jsclick(Template_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Verifying to CreateorBrowse Officedoc Template advancedviewing", true);
+		log("Click on Ok button");
+		log("Verifying to CreateorBrowse Officedoc Template advancedviewing");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		movingclkElement(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select created Template", true);
+		log("Select created Template");
 		try {
 			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait3.until(ExpectedConditions.alertIsPresent());
@@ -2076,19 +2076,19 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		}
 		jsclick(Createdoc);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		getNavigateDoc();
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
+		log("Click on Navigate button");
 		Refresh_Button();
 		Thread.sleep(6000);
 		getMoveto_Templates_Option();
 		Thread.sleep(3000);
-		Reporter.log("Mousehover to Template Tab", true);
-		Reporter.log("Click on Refresh button", true);
+		log("Mousehover to Template Tab");
+		log("Click on Refresh button");
 		movingclkElement(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template", true);
+		log("Select Created Template");
 		try {
 			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait3.until(ExpectedConditions.alertIsPresent());
@@ -2100,15 +2100,15 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Delete Template Fab button", true);
+		log("Click on Delete Template Fab button");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Template Deleted Successfully", true);
+		log("Click on Ok button");
+		log("Template Deleted Successfully");
 	}
 
 	public void verify_Validation_Formmapping_PDFTemplate_Advancedviewing() throws Exception {
 
-		Reporter.log("Test Scenario 6 : Verifying Validation Formmapping PDF Template Advancedviewing ", true);
+		log("Test Scenario 6 : Verifying Validation Formmapping PDF Template Advancedviewing ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2129,76 +2129,76 @@ public class TemplatePage extends Computhink.Generic.BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getPdf_document_Advancedviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf document and set as Advanced view", true);
+		log("Select Pdf document and set as Advanced view");
 		movingclkElement(Apply_button);
 		Thread.sleep(2000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		getToastmessage();
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Templates", true);
+		log("Folder is selected for Templates");
 		OK_Button_BrowseforFolder.click();
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select Document type dropdown", true);
+		log("Select Document type dropdown");
 		jsclick(Select_ReportName_Test);
 		Thread.sleep(6000);
-		Reporter.log("Click on Report Name", true);
+		log("Click on Report Name");
 		Select_ReportName_Test.sendKeys(Templates_excelRead(1, 0));
-		Reporter.log("Enter value Report Name Textbox", true);
+		log("Enter value Report Name Textbox");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingclkElement(Move_To_PlusIcon);
 		Thread.sleep(1000);
 		getNew_pdf_Document_Option();
 		Thread.sleep(6000);
-		Reporter.log("Browse New Pdf document", true);
+		log("Browse New Pdf document");
 		jsclick(OKButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Ok button", true);
+		log("Click on  Ok button");
 		getFilenamevalidation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Validation error message ", true);
+		log("Verified Validation error message ");
 		getEnter_pdf_File_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter value Pdf file name field", true);
+		log("Enter value Pdf file name field");
 		jsclick(Click_Formmapper);
 		Thread.sleep(6000);
-		Reporter.log("Click on Form mapping", true);
+		log("Click on Form mapping");
 		getFormmappingvalidation();
-		Reporter.log("Verified Form mapping validation message", true);
+		log("Verified Form mapping validation message");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Nobutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on No button", true);
+		log("Click on No button");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
-		Reporter.log("Form mapping validation verified", true);
+		log("Click on Refresh button");
+		log("Form mapping validation verified");
 	}
 }

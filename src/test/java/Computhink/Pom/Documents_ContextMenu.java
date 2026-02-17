@@ -430,9 +430,9 @@ public class Documents_ContextMenu extends BaseClass {
 
 	public void getVerify_Ownership_Message() throws InterruptedException {
 		WebElement Message1 = Docownername;
-		Reporter.log(Message1.getText() + " this message should show", true);
+		log(Message1.getText() + " this message should show");
 		WebElement Message2 = openviewonly;
-		Reporter.log(Message2.getText() + " this message should show", true);
+		log(Message2.getText() + " this message should show");
 		jsclick(ownershipmessageok);
 
 	}
@@ -475,49 +475,49 @@ public class Documents_ContextMenu extends BaseClass {
 	public void getVerify_CopyandPaste_Document() throws InterruptedException {
 		jsclick(Copy_ID);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Copy Option", true);
+		log("Click on the Copy Option");
 		element = MoveTo_Menu_Documents;
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
 		Thread.sleep(6000);
-		Reporter.log("Move to the Menu Documents Tab", true);
+		log("Move to the Menu Documents Tab");
 		jsclick(Paste_ID);
-		Reporter.log("Click on the Paste Option", true);
+		log("Click on the Paste Option");
 	}
 
 	public void getVerify_CutandPaste_Document() throws InterruptedException {
 
 		jsclick(Cut_ID);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Cut Option", true);
+		log("Click on the Cut Option");
 		/*
 		 * selectElement(Select_subFolder); Thread.sleep(6000);
-		 * Reporter.log("Select Subfolder", true);
+		 * log("Select Subfolder");
 		 */
 		element = MoveTo_Menu_Documents;
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
 		Thread.sleep(6000);
-		Reporter.log("Move to the Mennu Documents", true);
+		log("Move to the Mennu Documents");
 		jsclick(Paste_ID);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Paste ID", true);
+		log("Click on the Paste ID");
 	}
 
 	public void getVerify_Delete_Document() throws InterruptedException {
 
 		Thread.sleep(6000);
-		Reporter.log("Check the Document ", true);
+		log("Check the Document ");
 		element = MoveTo_Menu_Documents;
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
 		Thread.sleep(6000);
-		Reporter.log("Move to the menu Document Tab", true);
+		log("Move to the menu Document Tab");
 		jsclick(deletedoc);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Delete Document", true);
+		log("Click on the Delete Document");
 		jsclick(deleteOK);
-		Reporter.log("Click on the Ok Button and document deleted successfully", true);
+		log("Click on the Ok Button and document deleted successfully");
 	}
 
 	public void getVerify_CreateFavorites_Document() throws Exception {
@@ -525,21 +525,21 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(checkdoc);
 		Thread.sleep(6000);
-		Reporter.log("Check the Document", true);
+		log("Check the Document");
 		element = MoveTo_Menu_Documents;
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
-		Reporter.log("Move to the Document page", true);
+		log("Move to the Document page");
 		jsclick(createFavorite);
 		Thread.sleep(6000);
-		Reporter.log("Click on the create Favorite Option", true);
+		log("Click on the create Favorite Option");
 		createFavoriteText.clear();
 		Thread.sleep(6000);
-		Reporter.log("Enter the Favorite document name", true);
+		log("Enter the Favorite document name");
 		createFavoriteText.sendKeys(DocumentsContext_excelRead(1, 2));
 		Thread.sleep(6000);
 		jsclick(createFavoriteOK);
-		Reporter.log("Click on the Ok Button", true);
+		log("Click on the Ok Button");
 	}
 
 	public void getOpen_CreateFavorites_Document() throws Exception {
@@ -551,7 +551,7 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(Searchfav);
 		Thread.sleep(6000);
-		Reporter.log("Search Favorite document", true);
+		log("Search Favorite document");
 		Searchfav.sendKeys(DocumentsContext_excelRead(1, 2));
 		Thread.sleep(6000);
 		jsclick(doc);
@@ -572,10 +572,10 @@ public class Documents_ContextMenu extends BaseClass {
 
 		movingclkElement(notification);
 		Thread.sleep(20000);
-		Reporter.log("Click on the Notification Option", true);
+		log("Click on the Notification Option");
 		jsclick(contref);
 		Thread.sleep(6000);
-		Reporter.log("set references notifications", true);
+		log("set references notifications");
 		jsclick(dochistory);
 		Thread.sleep(6000);
 		jsclick(notifylist);
@@ -597,7 +597,7 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(general);
 		Thread.sleep(6000);
-		Reporter.log("Click on the General Option", true);
+		log("Click on the General Option");
 	}
 
 	public void getSave_Signature_Document() throws Exception {
@@ -611,83 +611,83 @@ public class Documents_ContextMenu extends BaseClass {
 
 		jsclick(sendTo);
 		Thread.sleep(2000);
-		Reporter.log("Click on the Sent To Option", true);
+		log("Click on the Sent To Option");
 		jsclick(sendToMail);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Send To then Mail Option", true);
+		log("Click on the Send To then Mail Option");
 		jsclick(converttopdf);
 		Thread.sleep(6000);
-		Reporter.log("Select Convert to pdf Radio button", true);
+		log("Select Convert to pdf Radio button");
 		jsclick(colorexport);
 		Thread.sleep(2000);
-		Reporter.log("Set Export ", true);
+		log("Set Export ");
 		jsclick(pdfquality);
-		Reporter.log("selct Pdf Quality", true);
+		log("selct Pdf Quality");
 		Thread.sleep(2000);
 		Select sel = new Select(pdfquality);
 		sel.selectByVisibleText("Best Quality");
 		Thread.sleep(2000);
-		Reporter.log("set Best Quality dropdown Option", true);
+		log("set Best Quality dropdown Option");
 		jsclick(coverpage);
 		Thread.sleep(2000);
-		Reporter.log("Check Cover page", true);
+		log("Check Cover page");
 		jsclick(compresszip);
 		Thread.sleep(2000);
-		Reporter.log("Check Compress zip", true);
+		log("Check Compress zip");
 		jsclick(sendtopassword);
 		Thread.sleep(2000);
-		Reporter.log("click on the Send to password Textbox", true);
+		log("click on the Send to password Textbox");
 		jsclick(zippassinput);
 		Thread.sleep(2000);
 		zippassinput.sendKeys(DocumentsContext_excelRead(2, 1));
 		Thread.sleep(2000);
-		Reporter.log("Enter password for mail document", true);
+		log("Enter password for mail document");
 		jsclick(Runannotation);
 		Thread.sleep(2000);
-		Reporter.log("Check the Annotation checkbox", true);
+		log("Check the Annotation checkbox");
 		jsclick(toemail);
 		Thread.sleep(2000);
-		Reporter.log("Click on the To Email Textbox", true);
+		log("Click on the To Email Textbox");
 		toemail.sendKeys(DocumentsContext_excelRead(1, 3));
 		Thread.sleep(2000);
 		jsclick(subid);
 		Thread.sleep(2000);
 		subid.sendKeys(DocumentsContext_excelRead(1, 4));
 		Thread.sleep(6000);
-		Reporter.log("enter the Subject", true);
+		log("enter the Subject");
 		jsclick(savesendto);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Ok Button", true);
+		log("Click on the Ok Button");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
 		wait.until(ExpectedConditions.elementToBeClickable(EmailsuccessMessageDialogboxOK));
 		jsclick(EmailsuccessMessageDialogboxOK);
-		Reporter.log("Mail sent successfully and click on the Ok Button", true);
+		log("Mail sent successfully and click on the Ok Button");
 	}
 
 	public void getSentTo_Mail_asReference() throws Exception {
 
 		jsclick(sendTo);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Send To Option", true);
+		log("Click on the Send To Option");
 		jsclick(sendToMail);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Mail Option", true);
+		log("Click on the Mail Option");
 		jsclick(Referencemail);
 		Thread.sleep(6000);
-		Reporter.log("select Reference Email Radio button", true);
+		log("select Reference Email Radio button");
 		Select sel = new Select(pdfquality);
 		sel.selectByVisibleText("Best Quality");
-		Reporter.log("Select and set pdf quality Best Quality", true);
+		log("Select and set pdf quality Best Quality");
 		jsclick(toemail);
 		Thread.sleep(6000);
 		toemail.sendKeys(DocumentsContext_excelRead(1, 3));
 		Thread.sleep(6000);
-		Reporter.log("enter the To Email id", true);
+		log("enter the To Email id");
 		jsclick(subid);
 		Thread.sleep(6000);
 		subid.sendKeys(DocumentsContext_excelRead(1, 4));
 		Thread.sleep(6000);
-		Reporter.log("Enter the Mail subject", true);
+		log("Enter the Mail subject");
 		jsclick(savesendto);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
 		wait.until(ExpectedConditions.elementToBeClickable(EmailsuccessMessageDialogboxOK));
@@ -699,17 +699,17 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(checkdoc);
 		Thread.sleep(6000);
-		Reporter.log("Check the Document", true);
+		log("Check the Document");
 		element = MoveTo_Menu_Documents;
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
-		Reporter.log("Move to the menu Documents Tab", true);
+		log("Move to the menu Documents Tab");
 		jsclick(sendTo);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Send To Option", true);
+		log("Click on the Send To Option");
 		jsclick(sendtoPrint);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Print Option", true);
+		log("Click on the Print Option");
 		jsclick(pageprint);
 		Thread.sleep(6000);
 		jsclick(summaryprint);
@@ -728,17 +728,17 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(checkdoc);
 		Thread.sleep(6000);
-		Reporter.log("Check the document", true);
+		log("Check the document");
 		element = MoveTo_Menu_Documents;
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
-		Reporter.log("Move to the Menu Document tab", true);
+		log("Move to the Menu Document tab");
 		jsclick(sendTo);
 		Thread.sleep(6000);
-		Reporter.log("Move to the Documents tab", true);
+		log("Move to the Documents tab");
 		jsclick(sendexport);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Send To Export Option", true);
+		log("Click on the Send To Export Option");
 		jsclick(retainchkexport);
 		jsclick(Routesummary);
 		Thread.sleep(6000);
@@ -746,23 +746,23 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		Zippassword.sendKeys(DocumentsContext_excelRead(2, 1));
 		Thread.sleep(6000);
-		Reporter.log("enter Zip password", true);
+		log("enter Zip password");
 		jsclick(savesendto);
 		Thread.sleep(19000);
-		Reporter.log("Click on the Ok Button", true);
+		log("Click on the Ok Button");
 		jsclick(checkdoc);
 		Thread.sleep(6000);
-		Reporter.log("Check the document", true);
+		log("Check the document");
 		element = MoveTo_Menu_Documents;
 		Actions action2 = new Actions(driver);
 		action2.moveToElement(element).perform();
-		Reporter.log("Move to the Documents Tab", true);
+		log("Move to the Documents Tab");
 		jsclick(sendTo);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Send To Option", true);
+		log("Click on the Send To Option");
 		jsclick(sendexport);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Export Option", true);
+		log("Click on the Export Option");
 		jsclick(convertpdfexport);
 		jsclick(exportannotation);
 		jsclick(exportwith);
@@ -770,7 +770,7 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		exportPwd.sendKeys(DocumentsContext_excelRead(2, 1));
 		Thread.sleep(6000);
-		Reporter.log("Export document with entering password", true);
+		log("Export document with entering password");
 		jsclick(Zippasswordinput);
 		Thread.sleep(6000);
 		Zippasswordinput.sendKeys(DocumentsContext_excelRead(2, 1));
@@ -781,7 +781,7 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(savesendto);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Ok Button", true);
+		log("Click on the Ok Button");
 	}
 
 	public void getSentTo_SecureLink() throws Exception {
@@ -789,65 +789,65 @@ public class Documents_ContextMenu extends BaseClass {
 		element = MoveTo_Menu_Documents;
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
-		Reporter.log("Move to the Documents Tab", true);
+		log("Move to the Documents Tab");
 		jsclick(sendTo);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Send To Option", true);
+		log("Click on the Send To Option");
 		jsclick(SecureMail);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Secure Mail Option", true);
+		log("Click on the Secure Mail Option");
 		jsclick(recpmail);
 		Thread.sleep(6000);
-		Reporter.log("Enter Recepient mail ID", true);
+		log("Enter Recepient mail ID");
 		recpmail.sendKeys(DocumentsContext_excelRead(1, 3));
 		Thread.sleep(6000);
 		jsclick(Confirmemail);
 		Thread.sleep(6000);
 		Confirmemail.sendKeys(DocumentsContext_excelRead(1, 3));
-		Reporter.log("enter the Confirm mail ID", true);
+		log("enter the Confirm mail ID");
 		Thread.sleep(6000);
 		jsclick(modifychk);
-		Reporter.log("check the Modify check ", true);
+		log("check the Modify check ");
 		jsclick(navigateOK);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Ok Button", true);
+		log("Click on the Ok Button");
 		recpmailsec.sendKeys(DocumentsContext_excelRead(1, 3));
 		jsclick(confirmemailsec);
 		Thread.sleep(6000);
-		Reporter.log("Enter again Confirmation Mail Id", true);
+		log("Enter again Confirmation Mail Id");
 		confirmemailsec.sendKeys(DocumentsContext_excelRead(1, 3));
 		Thread.sleep(6000);
 		jsclick(navigateOK2);
 		Thread.sleep(6000);
-		Reporter.log("click on the Ok Button", true);
+		log("click on the Ok Button");
 	}
 
 	public void getSentTo_GenerateDocumentLink() throws Exception {
 		Thread.sleep(6000);
 		jsclick(checkdoc);
-		Reporter.log("Check the Document", true);
+		log("Check the Document");
 		Thread.sleep(6000);
 		element = MoveTo_Menu_Documents;
 		Actions action = new Actions(driver);
 		action.moveToElement(element).perform();
-		Reporter.log("Move to the Documents Tab", true);
+		log("Move to the Documents Tab");
 		jsclick(sendTo);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Send To Option", true);
+		log("Click on the Send To Option");
 		jsclick(generatedoc);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Generate document link Option", true);
-		Reporter.log("Generated Document link is " + CopyDoclink.getText(), true);
+		log("Click on the Generate document link Option");
+		log("Generated Document link is " + CopyDoclink.getText());
 		Thread.sleep(6000);
 		jsclick(doclinkok);
-		Reporter.log("Click on the Ok Button", true);
+		log("Click on the Ok Button");
 	}
 
 	public void getVerifyWF() throws Exception {
 
 		Thread.sleep(6000);
 		jsclick(accept);
-		Reporter.log("Click on the Accept Option", true);
+		log("Click on the Accept Option");
 		Thread.sleep(6000);
 		jsclick(action);
 		Thread.sleep(6000);
@@ -858,7 +858,7 @@ public class Documents_ContextMenu extends BaseClass {
 		WFComment.sendKeys(DocumentsContext_excelRead(2, 4));
 		Thread.sleep(6000);
 		jsclick(actionOK);
-		Reporter.log("Enter the Comment and Accept the Workflow", true);
+		log("Enter the Comment and Accept the Workflow");
 	}
 
 	public WebElement MoveTo_ToDoList_Option() {
@@ -892,10 +892,10 @@ public class Documents_ContextMenu extends BaseClass {
 
 		jsclick(sendTo);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Send To Option", true);
+		log("Click on the Send To Option");
 		jsclick(sendToMail);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Mail Option ", true);
+		log("Click on the Mail Option ");
 		jsclick(Referencemail);
 		Thread.sleep(6000);
 		Select sel = new Select(pdfquality);
@@ -910,7 +910,7 @@ public class Documents_ContextMenu extends BaseClass {
 		String expectedtext = "Email id should not  be Blank.";
 		String actualtext = messageContent.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verified");
-		Reporter.log(messageContent.getText() + " this validation message should show", true);
+		log(messageContent.getText() + " this validation message should show");
 		jsclick(messageok);
 
 	}
@@ -933,7 +933,7 @@ public class Documents_ContextMenu extends BaseClass {
 		String expectedtext = "Please enter a valid 'To E-mail id'";
 		String actualtext = messageContent.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verified");
-		Reporter.log(messageContent.getText() + " this validation message should show", true);
+		log(messageContent.getText() + " this validation message should show");
 		jsclick(messageok);
 
 	}
@@ -944,18 +944,18 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		toemail.sendKeys(DocumentsContext_excelRead(1, 3));
 		Thread.sleep(6000);
-		Reporter.log("enter the TO Email ID", true);
+		log("enter the TO Email ID");
 		CCEmailID.sendKeys(DocumentsContext_excelRead(3, 4));
 		Thread.sleep(6000);
-		Reporter.log("enter the CC Email ID", true);
+		log("enter the CC Email ID");
 		jsclick(subid);
 		subid.clear();
-		Reporter.log("Enter the Mail subject", true);
+		log("Enter the Mail subject");
 		Thread.sleep(6000);
 		subid.sendKeys(DocumentsContext_excelRead(1, 4));
 		Thread.sleep(6000);
 		jsclick(savesendto);
-		Reporter.log("click on the OK Button", true);
+		log("click on the OK Button");
 	}
 
 	public void getmessagevalidationCCEmailInvalid() {
@@ -963,7 +963,7 @@ public class Documents_ContextMenu extends BaseClass {
 		String expectedtext = "Please enter a valid 'Cc E-mail id'";
 		String actualtext = messageContent.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verified");
-		Reporter.log(messageContent.getText() + " this validation message should show", true);
+		log(messageContent.getText() + " this validation message should show");
 		jsclick(messageok);
 
 	}
@@ -1004,7 +1004,7 @@ public class Documents_ContextMenu extends BaseClass {
 		String expectedtext = "Please enter recipient email id";
 		String actualtext = messageContent.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verified");
-		Reporter.log(messageContent.getText() + " this validation message should show", true);
+		log(messageContent.getText() + " this validation message should show");
 		jsclick(messageok);
 
 	}
@@ -1027,7 +1027,7 @@ public class Documents_ContextMenu extends BaseClass {
 		String expectedtext = "Please enter confirmation email id";
 		String actualtext = messageContent.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verified");
-		Reporter.log(messageContent.getText() + " this validation message should show", true);
+		log(messageContent.getText() + " this validation message should show");
 		jsclick(messageok);
 
 	}
@@ -1059,7 +1059,7 @@ public class Documents_ContextMenu extends BaseClass {
 		String expectedtext = "Please enter a valid  E-mail id";
 		String actualtext = messageContent.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verified");
-		Reporter.log(messageContent.getText() + " this validation message should show", true);
+		log(messageContent.getText() + " this validation message should show");
 		jsclick(messageok);
 
 	}
@@ -1069,7 +1069,7 @@ public class Documents_ContextMenu extends BaseClass {
 		String expectedtext = "Email id Mismatch ";
 		String actualtext = messageContent.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verified");
-		Reporter.log(messageContent.getText() + " this validation message should show", true);
+		log(messageContent.getText() + " this validation message should show");
 		jsclick(messageok);
 
 	}
@@ -1156,16 +1156,16 @@ public class Documents_ContextMenu extends BaseClass {
 
 		Thread.sleep(8000);
 		(accept).click();
-		Reporter.log("Click on the Accept Option", true);
+		log("Click on the Accept Option");
 		Thread.sleep(6000);
 		jsclick(Workflowtask);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Workflow Task Button", true);
+		log("Click on the Workflow Task Button");
 		jsclick(CancelWorkflowtask);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Workflow task Cancel Button", true);
+		log("Click on the Workflow task Cancel Button");
 		jsclick(wfaction);
-		Reporter.log("Click on the Workflow action", true);
+		log("Click on the Workflow action");
 	}
 
 	public void get_comment_Validation() {
@@ -1173,7 +1173,7 @@ public class Documents_ContextMenu extends BaseClass {
 		String expectedtext = "Please enter the comments.";
 		String actualtext = messageContent.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verified");
-		Reporter.log(messageContent.getText() + " this validation message should show", true);
+		log(messageContent.getText() + " this validation message should show");
 		jsclick(messageok);
 
 	}
@@ -1183,15 +1183,15 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(Reject);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Reject Option", true);
+		log("Click on the Reject Option");
 		jsclick(Workflowtask);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Workflwo Task", true);
+		log("Click on the Workflwo Task");
 		jsclick(CancelWorkflowtask);
-		Reporter.log("Click on the Cancel Workflow task Button", true);
+		log("Click on the Cancel Workflow task Button");
 		Thread.sleep(6000);
 		jsclick(wfaction);
-		Reporter.log("Click on the Workflow action", true);
+		log("Click on the Workflow action");
 	}
 
 	public void getVerifyEndWorkflow() throws Exception {
@@ -1199,15 +1199,15 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(EndWorkflow);
 		Thread.sleep(6000);
-		Reporter.log("Click on the End Workflow Option", true);
+		log("Click on the End Workflow Option");
 		jsclick(Workflowtask);
 		Thread.sleep(6000);
-		Reporter.log("click on the Workflow Task Button", true);
+		log("click on the Workflow Task Button");
 		jsclick(CancelWorkflowtask);
 		Thread.sleep(6000);
-		Reporter.log("click on the Cancel Workflow task Button", true);
+		log("click on the Cancel Workflow task Button");
 		jsclick(wfaction);
-		Reporter.log("click on the Workflow action", true);
+		log("click on the Workflow action");
 	}
 
 	public void getverifySummary() throws Exception {
@@ -1221,15 +1221,15 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		jsclick(Comment);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Comment box", true);
+		log("Click on the Comment box");
 		jsclick(Workflowtask);
 		Thread.sleep(6000);
-		Reporter.log("Click on theWorkflow Task Button", true);
+		log("Click on theWorkflow Task Button");
 		jsclick(CancelWorkflowtask);
 		Thread.sleep(6000);
-		Reporter.log("Click on the Workflow task Cancel Button", true);
+		log("Click on the Workflow task Cancel Button");
 		jsclick(wfaction);
-		Reporter.log("Click on the Workflow action", true);
+		log("Click on the Workflow action");
 	}
 
 	public void getMoveTo_Menu_Recent() {
@@ -1239,7 +1239,7 @@ public class Documents_ContextMenu extends BaseClass {
 
 	public void Verify_TakeOwnership_ReleaseOwnership_OnDocuments() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Take Ownership and Release Ownership On Document", true);
+		log("Test Scenario 1 : Verifying Take Ownership and Release Ownership On Document");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -1259,60 +1259,60 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List ", true);
+		log("Check Document from Document List ");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getSelect_Option_TakeOwnership();
 		Thread.sleep(6000);
-		Reporter.log("Click on Take Ownership Option", true);
-		Reporter.log("Document OwnerShip Taken Successfully");
+		log("Click on Take Ownership Option");
+		log("Document OwnerShip Taken Successfully");
 		LogoutPage();
 		LoginAdminUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with New User Credential", true);
+		log("Login EWA with New User Credential");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set as Default View", true);
+		log("Select Office Document and set as Default View");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and Set as Default View", true);
+		log("Select Pdf Document and Set as Default View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(Open_Document);
 		Thread.sleep(6000);
-		Reporter.log("Select and Open Document from Document List", true);
+		log("Select and Open Document from Document List");
 		getVerify_Ownership_Message();
 		Thread.sleep(6000);
-		Reporter.log("Verified Document is in Ownership", true);
+		log("Verified Document is in Ownership");
 		try {
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait1.until(ExpectedConditions.alertIsPresent());
@@ -1322,46 +1322,46 @@ public class Documents_ContextMenu extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Document Open successfully and verified", true);
+		log("Document Open successfully and verified");
 		LogoutPage();
 		LogDipakUser();
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with another user Credential", true);
+		log("Login EWA with another user Credential");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check document from Document List", true);
+		log("Check document from Document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getSelect_Option_ReleaseOwnership();
 		Thread.sleep(6000);
-		Reporter.log("Click on Release Ownership Option ", true);
+		log("Click on Release Ownership Option ");
 		LogoutPage();
 		LoginAdminUser();
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with another User Credential", true);
+		log("Login EWA with another User Credential");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(Open_Document);
 		try {
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -1372,18 +1372,18 @@ public class Documents_ContextMenu extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Take and Release Ownership Functionality verified Successfully");
+		log("Take and Release Ownership Functionality verified Successfully");
 		movingclkElement(closedoc);
 		Thread.sleep(4000);
-		Reporter.log("Document Closed Successfully");
+		log("Document Closed Successfully");
 		LogoutPage();
-		Reporter.log("Login EWA with User Credential", true);
+		log("Login EWA with User Credential");
 		LogDipakUser();
 	}
 
 	public void Verify_Refresh_Option() throws Exception {
 
-		Reporter.log("Test Scenario 2: Verifying Refresh Option", true);
+		log("Test Scenario 2: Verifying Refresh Option");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -1397,38 +1397,38 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check document from Document List", true);
+		log("Check document from Document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getSelect_Option_Refresh();
 		Thread.sleep(6000);
-		Reporter.log("Click Refresh Option", true);
-		Reporter.log("Refresh Functionality verified Successfully on Documents", true);
+		log("Click Refresh Option");
+		log("Refresh Functionality verified Successfully on Documents");
 	}
 
 	public void Verify_Categories_Option() throws Exception {
 
-		Reporter.log("Test Scenario 3:Verifying Categories Option ", true);
+		log("Test Scenario 3:Verifying Categories Option ");
 
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -1439,28 +1439,28 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check document from Document List", true);
+		log("Check document from Document List");
 		getMoveTo_Menu_Documents();
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getSelect_Option_Catagories_andSet_Colors();
 		Thread.sleep(6000);
-		Reporter.log("Click on Catagories option and set Color", true);
-		Reporter.log("Categories on Documents Functionality verified Successfully", true);
+		log("Click on Catagories option and set Color");
+		log("Categories on Documents Functionality verified Successfully");
 
 	}
 
 	public void Verify_copy_and_paste_Option() throws Exception {
 
-		Reporter.log("Test Scenario 4 : Verifying copy and paste Option ", true);
+		log("Test Scenario 4 : Verifying copy and paste Option ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -1473,31 +1473,31 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
 		jsclick(Select_Document);
 		Thread.sleep(6000);
 		getMoveTo_Menu_Documents();
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getVerify_CopyandPaste_Document();
 		Thread.sleep(6000);
-		Reporter.log("Copy and paste Document", true);
-		Reporter.log("copy and paste documents Functionality verified Successfully", true);
+		log("Copy and paste Document");
+		log("copy and paste documents Functionality verified Successfully");
 	}
 
 	public void Verify_cut_and_paste_Option() throws Exception {
 
-		Reporter.log("Test Scenario 5 : Verifying cut and paste Option ", true);
+		log("Test Scenario 5 : Verifying cut and paste Option ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -1508,13 +1508,13 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List", true);
+		log("Check Document from Document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getVerify_CutandPaste_Document();
 		Thread.sleep(6000);
-		Reporter.log("cut and paste Document Functionality verified Successfully", true);
+		log("cut and paste Document Functionality verified Successfully");
 	}
 
 	public void Verify_Delete_Option() throws Exception {
@@ -1524,10 +1524,10 @@ public class Documents_ContextMenu extends BaseClass {
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -1538,24 +1538,24 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		jsclick(CheckfirstDocument);
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 6 : Verifying Delete Option ", true);
+		log("Test Scenario 6 : Verifying Delete Option ");
 		getVerify_Delete_Document();
 		Thread.sleep(6000);
-		Reporter.log("Document Delete Functionality verified Successfully", true);
+		log("Document Delete Functionality verified Successfully");
 	}
 
 	public void Verify_CreateFavorites_Document() throws Exception {
 
-		Reporter.log("Test Scenario 7 : Verifying Create Favorites Document", true);
+		log("Test Scenario 7 : Verifying Create Favorites Document");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -1567,15 +1567,15 @@ public class Documents_ContextMenu extends BaseClass {
 		getVerify_CreateFavorites_Document();
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getOpen_CreateFavorites_Document();
 		Thread.sleep(6000);
-		Reporter.log("CreateFavorites Document Functionality verified Successfully", true);
+		log("CreateFavorites Document Functionality verified Successfully");
 	}
 
 	public void Verify_Notification_on_Document() throws Exception {
 
-		Reporter.log("Test Scenario 9 : Verifying Notification on Document ", true);
+		log("Test Scenario 9 : Verifying Notification on Document ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -1589,60 +1589,60 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List", true);
+		log("Check Document from Document List");
 		movingElement(MoveTo_Menu_Documents);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getVerify_CopyandPaste_Document();
 		Thread.sleep(6000);
-		Reporter.log("Verified Copy and Paste Document", true);
+		log("Verified Copy and Paste Document");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List", true);
+		log("Check Document from Document List");
 		movingElement(MoveTo_Menu_Documents);
 		Thread.sleep(4000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getCreate_Notification_Document();
 		Thread.sleep(6000);
-		Reporter.log("Create and Verifying Notification Document ", true);
+		log("Create and Verifying Notification Document ");
 		getClick_signature_Menuoption();
 		Thread.sleep(6000);
-		Reporter.log("Click on Signature Menu Option", true);
+		log("Click on Signature Menu Option");
 		getinputpassword();
 		Thread.sleep(6000);
-		Reporter.log("Enter a Password", true);
+		log("Enter a Password");
 		getAdd_Signature_Onpage();
 		Thread.sleep(6000);
-		Reporter.log("Add New signature on page", true);
+		log("Add New signature on page");
 		getSave_Signature_Document();
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button and save page", true);
+		log("Click on Save button and save page");
 		movingclkElement(closedoc);
-		Reporter.log("Click on Close button on Viewer", true);
-		Reporter.log("Notification_on_Document Functionality verified Successfully", true);
+		log("Click on Close button on Viewer");
+		log("Notification_on_Document Functionality verified Successfully");
 
 	}
 
 	public void Verify_SendTo_Mail_as_References() throws Exception {
 
-		Reporter.log("Test Scenario 10 : Verifying SendTo Mail as References ", true);
+		log("Test Scenario 10 : Verifying SendTo Mail as References ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -1654,36 +1654,36 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List", true);
+		log("Check Document from Document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(2000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getSentTo_Mail_asReference();
 		Thread.sleep(6000);
-		Reporter.log("SendTo Mail asReference Functionality verified Successfully", true);
+		log("SendTo Mail asReference Functionality verified Successfully");
 	}
 
 	public void Verify_SendTo_Mail_ascopy() throws Exception {
 
-		Reporter.log("Test Scenario 11 : Verifying SendTo Mail as copy ", true);
+		log("Test Scenario 11 : Verifying SendTo Mail as copy ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -1694,27 +1694,27 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List", true);
+		log("Check Document from Document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getSentTo_Mail_asCopy();
 		Thread.sleep(2000);
-		Reporter.log("SendTo Mail asCopy Functionality verified Successfully", true);
+		log("SendTo Mail asCopy Functionality verified Successfully");
 	}
 
 	public void Verify_SendTo_Print() throws Exception {
 
-		Reporter.log("Test Scenario 12 : Verifying SendTo Print ", true);
+		log("Test Scenario 12 : Verifying SendTo Print ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -1727,28 +1727,28 @@ public class Documents_ContextMenu extends BaseClass {
 
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 
 		getSentTo_Print();
-		Reporter.log("SendTo Print Functionality verified Successfully", true);
+		log("SendTo Print Functionality verified Successfully");
 
 	}
 
 	public void Verify_SendTo_Export() throws Exception {
 
-		Reporter.log("Test Scenario 13 : Verifying SendTo Export ", true);
+		log("Test Scenario 13 : Verifying SendTo Export ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -1758,22 +1758,22 @@ public class Documents_ContextMenu extends BaseClass {
 			// Saving dialog not present
 		}
 		getSentTo_Export();
-		Reporter.log("SendTo Export Functionality verified Successfully", true);
+		log("SendTo Export Functionality verified Successfully");
 
 	}
 
 	public void Verify_SendTo_GenerateDocumentLink() throws Exception {
 
-		Reporter.log("Test Scenario 14 : Verifying SendTo Generate Document Link ", true);
+		log("Test Scenario 14 : Verifying SendTo Generate Document Link ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -1784,31 +1784,31 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		getSentTo_GenerateDocumentLink();
 		Thread.sleep(6000);
-		Reporter.log("Document send to Generate Document", true);
-		Reporter.log("SendTo GenerateDocumentLink Functionality verified Successfully", true);
+		log("Document send to Generate Document");
+		log("SendTo GenerateDocumentLink Functionality verified Successfully");
 	}
 
 	public void Verify_SendTo_SecureLink() throws Exception {
 
-		Reporter.log("Test Scenario 15 : Verifying Send To SecureLink ", true);
+		log("Test Scenario 15 : Verifying Send To SecureLink ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 		} catch (Exception e) {
 			System.out.println("User is alreday Logged");
 		}
@@ -1822,24 +1822,24 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List", true);
+		log("Check Document from Document List");
 		getSentTo_SecureLink();
 		Thread.sleep(6000);
-		Reporter.log("SendTo SecureLink Functionality verified Successfully", true);
+		log("SendTo SecureLink Functionality verified Successfully");
 		Refresh_Button();
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		Thread.sleep(6000);
 	}
 
 	public void Verify_BlankToemailID() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Blank To email ID ", true);
+		log("Test Scenario 1 : Verifying Blank To email ID ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -1854,33 +1854,33 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document name ", true);
+		log("Check Document name ");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Documents Tab", true);
+		log("Mousehover to Documents Tab");
 		getVerify_SendTo_Blankemailid();
 		Thread.sleep(6000);
-		Reporter.log("Verified Send To Blank Email ID", true);
+		log("Verified Send To Blank Email ID");
 		getmessagevalidation();
-		Reporter.log("Verified Message Validation", true);
-		Reporter.log("Blank TOEmail ID Verified successfully", true);
+		log("Verified Message Validation");
+		log("Blank TOEmail ID Verified successfully");
 	}
 
 	public void Verify_InvalidToEmailId() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying Invalid To Email Id ", true);
+		log("Test Scenario 2 : Verifying Invalid To Email Id ");
 
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -1890,15 +1890,15 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		getVerify_SendTo_InvalidEmail();
 		Thread.sleep(6000);
-		Reporter.log("Verified Send To Invalid Email ID", true);
+		log("Verified Send To Invalid Email ID");
 		getmessagevalidationInvalid();
-		Reporter.log("Verified message validation", true);
-		Reporter.log("Invalid TOEmail ID Verified successfully", true);
+		log("Verified message validation");
+		log("Invalid TOEmail ID Verified successfully");
 	}
 
 	public void Verify_InvalidCCEmailId() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Verifying Invalid CC Email Id", true);
+		log("Test Scenario 3 : Verifying Invalid CC Email Id");
 
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -1908,15 +1908,15 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		getVerify_SendTo_InvalidCCEmail();
 		Thread.sleep(6000);
-		Reporter.log("Verified Invalid Send TO CC Email ID", true);
+		log("Verified Invalid Send TO CC Email ID");
 		getmessagevalidationCCEmailInvalid();
-		Reporter.log("Verified message validation cc Invalid Email", true);
-		Reporter.log("Invalid CCEmail ID Verified successfully", true);
+		log("Verified message validation cc Invalid Email");
+		log("Invalid CCEmail ID Verified successfully");
 	}
 
 	public void Verify_MailDialog_Cancel_button() throws Exception {
 
-		Reporter.log("Test Scenario 4: Verifying Mail Dialog Cancel button ", true);
+		log("Test Scenario 4: Verifying Mail Dialog Cancel button ");
 
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -1925,22 +1925,22 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		Thread.sleep(6000);
 		jsclick(DialogCancel);
-		Reporter.log("Click on  Mail dialog Cancel button", true);
-		Reporter.log("Mail dialog Cancel button Verified successfully", true);
+		log("Click on  Mail dialog Cancel button");
+		log("Mail dialog Cancel button Verified successfully");
 	}
 
 	public void Verify_PrintDialog_Cancel_button() throws Exception {
 
-		Reporter.log("Test Scenario 5 : Verifying Print Dialog Cancel button ", true);
+		log("Test Scenario 5 : Verifying Print Dialog Cancel button ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 			jsclick(Select_Document);
 			Thread.sleep(6000);
 		} catch (Exception e) {
@@ -1954,27 +1954,27 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Document Tab", true);
+		log("Mousehover to Document Tab");
 		getSentTo_PrintValidation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Send to Print Validation", true);
+		log("Verified Send to Print Validation");
 		jsclick(PrintDialogCancel);
-		Reporter.log("Click on  Print dialog Cancel button", true);
-		Reporter.log("Print dialog Cancel button Verified successfully", true);
+		log("Click on  Print dialog Cancel button");
+		log("Print dialog Cancel button Verified successfully");
 	}
 
 	public void Verify_ExportDialog_Cancel_button() throws Exception {
 
-		Reporter.log("Test Scenario 6 : Verifying Export Dialog Cancel button ", true);
+		log("Test Scenario 6 : Verifying Export Dialog Cancel button ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 			jsclick(Select_Document);
 			Thread.sleep(6000);
 		} catch (Exception e) {
@@ -1988,27 +1988,27 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Document Tab", true);
+		log("Mousehover to Document Tab");
 		getSentTo_ExportCancel();
 		Thread.sleep(6000);
-		Reporter.log("Click on Send TO Export Option", true);
+		log("Click on Send TO Export Option");
 		jsclick(DialogCancel);
-		Reporter.log("Click on Export dialog Cancel button", true);
-		Reporter.log("Export dialog Cancel button Verified successfully", true);
+		log("Click on Export dialog Cancel button");
+		log("Export dialog Cancel button Verified successfully");
 	}
 
 	public void Verify_SecureLink_mailvalidation() throws Exception {
 
-		Reporter.log("Test Scenario 7 : Verifying SecureLink mail validation ", true);
+		log("Test Scenario 7 : Verifying SecureLink mail validation ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(6000);
-			Reporter.log("Mousehover on Recent Tab", true);
+			log("Mousehover on Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(6000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 			jsclick(Select_Document);
 			Thread.sleep(6000);
 		} catch (Exception e) {
@@ -2022,79 +2022,79 @@ public class Documents_ContextMenu extends BaseClass {
 		Thread.sleep(6000);
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Document Tab", true);
+		log("Mousehover to Document Tab");
 		get_SecureLinkblankmail_Validation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Secure Link Mail Validation", true);
+		log("Verified Secure Link Mail Validation");
 		getmessagevalidationBlankmail();
 		Thread.sleep(6000);
-		Reporter.log("Verified message validation blank Mail", true);
+		log("Verified message validation blank Mail");
 		getenter_SecureLinkRecipientaddress();
 		Thread.sleep(6000);
-		Reporter.log("Enter  Secure link Recipient address", true);
+		log("Enter  Secure link Recipient address");
 		getmessagevalidationConfirmmail();
 		Thread.sleep(6000);
-		Reporter.log("Verified message validation Confirm mail", true);
+		log("Verified message validation Confirm mail");
 		getClearRecipientmail();
 		Thread.sleep(6000);
-		Reporter.log("Verifying and clear Recipient Mail address", true);
+		log("Verifying and clear Recipient Mail address");
 		getenter_validemailmessage();
 		Thread.sleep(6000);
-		Reporter.log("Enter  Validation message", true);
+		log("Enter  Validation message");
 		getVerifyMismatch_SecureLink_Confirmmail();
 		Thread.sleep(6000);
-		Reporter.log("Verified Mismatch secure link Confirm mail", true);
+		log("Verified Mismatch secure link Confirm mail");
 		get_Mismatch_validation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Mismatch Validation", true);
+		log("Verified Mismatch Validation");
 		get_Confirmmail_Invalid();
 		Thread.sleep(6000);
-		Reporter.log("Enter Confirm mail Invalid", true);
+		log("Enter Confirm mail Invalid");
 		get_Mismatch_validation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Mismatch Validation", true);
+		log("Verified Mismatch Validation");
 		get_EnterConfirmmail();
 		Thread.sleep(6000);
-		Reporter.log("Enter Confirm Mail ", true);
+		log("Enter Confirm Mail ");
 		jsclick(SecureOK);
 		Thread.sleep(6000);
-		Reporter.log("Click on Secure OK button", true);
+		log("Click on Secure OK button");
 		get_Mismatch_validation();
-		Reporter.log("Verified Mismatch Validation", true);
+		log("Verified Mismatch Validation");
 		getRecepientEmail_SecureLink();
 		Thread.sleep(6000);
-		Reporter.log("Enter Recepient Email securelink", true);
+		log("Enter Recepient Email securelink");
 		get_Mismatch_validation();
-		Reporter.log("Verified Mismatch Validation", true);
+		log("Verified Mismatch Validation");
 		getRecepietConfirmEmail_SecureLink();
 		Thread.sleep(6000);
-		Reporter.log("Enter Recepient Confirm mail", true);
+		log("Enter Recepient Confirm mail");
 		get_Mismatch_validation();
-		Reporter.log("Verified Mismatch Validation", true);
+		log("Verified Mismatch Validation");
 		getRecepietConfirmEmailInvalid_SecureLink();
 		Thread.sleep(6000);
-		Reporter.log("Enter Invalid Recepient Confirm mail", true);
+		log("Enter Invalid Recepient Confirm mail");
 		get_Mismatch_validation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Mismatch Validation", true);
+		log("Verified Mismatch Validation");
 		getenterConfirmRecepietEmail_SecureLink();
 		Thread.sleep(6000);
-		Reporter.log("Enter Confirm Recepient Email", true);
+		log("Enter Confirm Recepient Email");
 		try {
 			jsclick(SecureMessageOK);
 			Thread.sleep(6000);
-			Reporter.log("Click on Secure message Ok button", true);
+			log("Click on Secure message Ok button");
 			jsclick(SecureDialogCancel);
 		} catch (Exception e1) {
 			// Secure link not send
 
 		}
-		Reporter.log("Securelink Mail validation Verified successfully", true);
+		log("Securelink Mail validation Verified successfully");
 	}
 
 	public void Verify_Accept_Workflow_Validation() throws Exception {
 
-		Reporter.log("Test Scenario 8 : Verifying Accept Workflow Validation ", true);
+		log("Test Scenario 8 : Verifying Accept Workflow Validation ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2108,30 +2108,30 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office document and set as Default View", true);
+		log("Select Office document and set as Default View");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf document and set as Default View", true);
+		log("Select Pdf document and set as Default View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Apply button", true);
+		log("Click on  Apply button");
 		MoveTo_ToDoList_Option();
-		Reporter.log("Move to  To Do List Tab ", true);
+		log("Move to  To Do List Tab ");
 		jsclick(Select_All_Item);
 		Thread.sleep(6000);
-		Reporter.log("Click on All Item Option", true);
+		log("Click on All Item Option");
 		jsclick(Open_ToDoDocument);
 		Thread.sleep(6000);
-		Reporter.log("Select and Open To Do List Document", true);
+		log("Select and Open To Do List Document");
 		try {
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait1.until(ExpectedConditions.alertIsPresent());
@@ -2140,43 +2140,43 @@ public class Documents_ContextMenu extends BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present");
 		}
-		Reporter.log("Document open successfully ", true);
+		log("Document open successfully ");
 		Thread.sleep(6000);
 		getVerifyAccept();
 		Thread.sleep(6000);
-		Reporter.log("Verified Accept Tab", true);
+		log("Verified Accept Tab");
 		get_comment_Validation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Comment Validation", true);
+		log("Verified Comment Validation");
 		jsclick(wfactionCancel);
 		Thread.sleep(6000);
-		Reporter.log("Verified Accept Workflow action Cancel button", true);
-		Reporter.log("Accept workflow validation Verified successfully");
+		log("Verified Accept Workflow action Cancel button");
+		log("Accept workflow validation Verified successfully");
 	}
 
 	public void Verify_Reject_Workflow_Validation() throws Exception {
 
-		Reporter.log("Test Scenario 9 : Verifying Reject Workflow Validation", true);
+		log("Test Scenario 9 : Verifying Reject Workflow Validation");
 
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			MoveTo_ToDoList_Option();
-			Reporter.log("Move to  To Do List Tab ", true);
+			log("Move to  To Do List Tab ");
 			jsclick(Select_All_Item);
 			Thread.sleep(6000);
-			Reporter.log("Click on All Item Option", true);
+			log("Click on All Item Option");
 			jsclick(Open_ToDoDocument);
 			Thread.sleep(6000);
-			Reporter.log("Select and Open To Do List Document", true);
+			log("Select and Open To Do List Document");
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait1.until(ExpectedConditions.alertIsPresent());
 			Alert alt = driver.switchTo().alert();
 			alt.accept();
-			Reporter.log("Document open successfully ", true);
+			log("Document open successfully ");
 			Thread.sleep(6000);
 		} catch (Exception e) {
-			Reporter.log(" user alreday Logging and Workflow document open", true);
+			log(" user alreday Logging and Workflow document open");
 		}
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -2185,39 +2185,39 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		getVerifyReject();
 		Thread.sleep(6000);
-		Reporter.log("Verified Reject Tab", true);
+		log("Verified Reject Tab");
 		get_comment_Validation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Comment Validation", true);
+		log("Verified Comment Validation");
 		jsclick(wfactionCancel);
 		Thread.sleep(6000);
-		Reporter.log("Verified Reject Workflow action Cancel button", true);
-		Reporter.log("Reject workflow validation Verified successfully", true);
+		log("Verified Reject Workflow action Cancel button");
+		log("Reject workflow validation Verified successfully");
 
 	}
 
 	public void Verify_EndWorkflow_Workflow_Validation() throws Exception {
 
-		Reporter.log("Test Scenario 10 : Verifying EndWorkflow Workflow Validation ", true);
+		log("Test Scenario 10 : Verifying EndWorkflow Workflow Validation ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			MoveTo_ToDoList_Option();
-			Reporter.log("Move to  To Do List Tab ", true);
+			log("Move to  To Do List Tab ");
 			jsclick(Select_All_Item);
 			Thread.sleep(6000);
-			Reporter.log("Click on All Item Option", true);
+			log("Click on All Item Option");
 			jsclick(Open_ToDoDocument);
 			Thread.sleep(6000);
-			Reporter.log("Select and Open To Do List Document", true);
+			log("Select and Open To Do List Document");
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait1.until(ExpectedConditions.alertIsPresent());
 			Alert alt = driver.switchTo().alert();
 			alt.accept();
-			Reporter.log("Document open successfully ", true);
+			log("Document open successfully ");
 			Thread.sleep(6000);
 		} catch (Exception e) {
-			Reporter.log(" user alreday Logging and Workflow document open", true);
+			log(" user alreday Logging and Workflow document open");
 		}
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -2226,39 +2226,39 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		getVerifyEndWorkflow();
 		Thread.sleep(6000);
-		Reporter.log("Verified End Workflow Tab", true);
+		log("Verified End Workflow Tab");
 		get_comment_Validation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Comment Validation", true);
+		log("Verified Comment Validation");
 		jsclick(wfactionCancel);
 		Thread.sleep(6000);
-		Reporter.log("Verified End Workflow Action Cancel button", true);
-		Reporter.log("End workflow validation Verified successfully", true);
+		log("Verified End Workflow Action Cancel button");
+		log("End workflow validation Verified successfully");
 
 	}
 
 	public void Verify_Summary_Workflow_Validation() throws Exception {
 
-		Reporter.log("Test Scenario 11 : Verifying Summary Workflow Validation", true);
+		log("Test Scenario 11 : Verifying Summary Workflow Validation");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			MoveTo_ToDoList_Option();
-			Reporter.log("Move to  To Do List Tab ", true);
+			log("Move to  To Do List Tab ");
 			jsclick(Select_All_Item);
 			Thread.sleep(6000);
-			Reporter.log("Click on All Item Option", true);
+			log("Click on All Item Option");
 			jsclick(Open_ToDoDocument);
 			Thread.sleep(6000);
-			Reporter.log("Select and Open To Do List Document", true);
+			log("Select and Open To Do List Document");
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait1.until(ExpectedConditions.alertIsPresent());
 			Alert alt = driver.switchTo().alert();
 			alt.accept();
-			Reporter.log("Document open successfully ", true);
+			log("Document open successfully ");
 			Thread.sleep(6000);
 		} catch (Exception e) {
-			Reporter.log(" user alreday Logging and Workflow document open", true);
+			log(" user alreday Logging and Workflow document open");
 		}
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -2267,35 +2267,35 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		getverifySummary();
 		Thread.sleep(6000);
-		Reporter.log("Verified Workflow Summary Tab", true);
+		log("Verified Workflow Summary Tab");
 		jsclick(SummaryCancel);
 		Thread.sleep(6000);
-		Reporter.log("Verified Workflow Summary Cancel button", true);
-		Reporter.log("Summary workflow validation Verified successfully", true);
+		log("Verified Workflow Summary Cancel button");
+		log("Summary workflow validation Verified successfully");
 	}
 
 	public void Verify_Comment_Workflow_Validation() throws Exception {
 
-		Reporter.log("Test Scenario 12 : Verifying Comment Workflow Validation ", true);
+		log("Test Scenario 12 : Verifying Comment Workflow Validation ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
 			MoveTo_ToDoList_Option();
-			Reporter.log("Move to  To Do List Tab ", true);
+			log("Move to  To Do List Tab ");
 			jsclick(Select_All_Item);
 			Thread.sleep(6000);
-			Reporter.log("Click on All Item Option", true);
+			log("Click on All Item Option");
 			jsclick(Open_ToDoDocument);
 			Thread.sleep(6000);
-			Reporter.log("Select and Open To Do List Document", true);
+			log("Select and Open To Do List Document");
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait1.until(ExpectedConditions.alertIsPresent());
 			Alert alt = driver.switchTo().alert();
 			alt.accept();
-			Reporter.log("Document open successfully ", true);
+			log("Document open successfully ");
 			Thread.sleep(6000);
 		} catch (Exception e) {
-			Reporter.log(" user alreday Logging and Workflow document open", true);
+			log(" user alreday Logging and Workflow document open");
 		}
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
@@ -2304,36 +2304,36 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		getverifyComment();
 		Thread.sleep(6000);
-		Reporter.log("Verified Workflow Comment Tab", true);
+		log("Verified Workflow Comment Tab");
 		get_comment_Validation();
 		Thread.sleep(6000);
-		Reporter.log("Verified Workflow Comment Validation", true);
+		log("Verified Workflow Comment Validation");
 		jsclick(wfactionCancel);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Workflow action Cancel button", true);
-		Reporter.log("Comment workflow validation Verified successfully", true);
+		log("Click on  Workflow action Cancel button");
+		log("Comment workflow validation Verified successfully");
 		Refresh_Button();
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	// Offline Document
 
 	public void Create_OfflineDocument() throws Exception {
 
-		Reporter.log("Test Scenario 1:Create Offline Document", true);
+		log("Test Scenario 1:Create Offline Document");
 
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on the Refresh button", true);
+		log("Click on the Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a cabinet", true);
+		log("Expand a cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a drawer", true);
+		log("Expand a drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a folder", true);
+		log("select a folder");
 		jsclick(Open_Document);
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -2344,23 +2344,23 @@ public class Documents_ContextMenu extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Document open Successfully", true);
+		log("Document open Successfully");
 		Thread.sleep(6000);
 		jsclick(SelectCheckbox);
 		Thread.sleep(6000);
-		Reporter.log("Select Document checkbox from Thumbnail", true);
+		log("Select Document checkbox from Thumbnail");
 		jsclick(pageofflinemenu);
 		Thread.sleep(6000);
-		Reporter.log("Click on Offline page menu option", true);
+		log("Click on Offline page menu option");
 		jsclick(clickokbutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Document offline message ok button", true);
-		Reporter.log("Document Created successfully and send to Offline", true);
+		log("Click on Document offline message ok button");
+		log("Document Created successfully and send to Offline");
 	}
 
 	public void Open_Offline_Doc() throws Exception {
 
-		Reporter.log("Test Scenario 2:Open Offline Doc", true);
+		log("Test Scenario 2:Open Offline Doc");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2374,27 +2374,27 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Open_Document);
 		Thread.sleep(6000);
-		Reporter.log("Document page open succesfully", true);
+		log("Document page open succesfully");
 		getVerify_Ownership_Message();
 		jsclick(clickokbutton);
 		Thread.sleep(6000);
-		Reporter.log("Document Is in Offline message showing succesfully open document in View only mode", true);
+		log("Document Is in Offline message showing succesfully open document in View only mode");
 		jsclick(closedoc);
-		Reporter.log("Document page Close succesfully", true);
+		log("Document page Close succesfully");
 	}
 
 	public void Sync_New_Document_onOffline_Doc() throws Exception {
 
-		Reporter.log("Test Scenario 3:Sync New Document on Offline Doc", true);
+		log("Test Scenario 3:Sync New Document on Offline Doc");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2408,23 +2408,23 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Username);
 		Thread.sleep(6000);
-		Reporter.log("Click on Username", true);
+		log("Click on Username");
 		jsclick(offlinedoc);
 		Thread.sleep(6000);
-		Reporter.log("Click on Offline Document option", true);
+		log("Click on Offline Document option");
 		jsclick(checkofflinedoc);
 		Thread.sleep(6000);
-		Reporter.log("Document showing Succesfully under Offline page and select offline document", true);
+		log("Document showing Succesfully under Offline page and select offline document");
 
-		Reporter.log("New document sync successfully", true);
+		log("New document sync successfully");
 	}
 
 	public void Release_Offline_Doc() throws Exception {
 
-		Reporter.log("Test Scenario 4: Release Offline Doc", true);
+		log("Test Scenario 4: Release Offline Doc");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -2438,25 +2438,25 @@ public class Documents_ContextMenu extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Username);
 		Thread.sleep(6000);
-		Reporter.log("Click on Username", true);
+		log("Click on Username");
 		jsclick(offlinedoc);
 		Thread.sleep(6000);
-		Reporter.log("Click on Offline Document option", true);
+		log("Click on Offline Document option");
 		jsclick(checkofflinedoc);
 		Thread.sleep(6000);
-		Reporter.log("Select Offline Document page", true);
+		log("Select Offline Document page");
 		jsclick(ReleaseDoc);
 		Thread.sleep(6000);
-		Reporter.log("Click on Release option and Document Release succesfully", true);
+		log("Click on Release option and Document Release succesfully");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Open_Document);
 		Thread.sleep(6000);
 		try {
@@ -2468,10 +2468,10 @@ public class Documents_ContextMenu extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Document open Successfully", true);
-		Reporter.log("Document Release successfully", true);
+		log("Document open Successfully");
+		log("Document Release successfully");
 		Refresh_Button();
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 
 	}
 

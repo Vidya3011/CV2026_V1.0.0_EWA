@@ -71,11 +71,11 @@ public class Document_Version extends Computhink.Generic.BaseClass {
 	public void getVerify_FirstVersion() {
 		
 		jsclick(CheckFirst_Version);
-		Reporter.log("Select First Version", true);
+		log("Select First Version");
 		String expectedtext = "1.0";
 		String actualtext = Verify_Version1.getText();
 		Assert.assertEquals(actualtext, expectedtext);
-		Reporter.log( Verify_Version1.getText() + " this V/R should show", true);
+		log( Verify_Version1.getText() + " this V/R should show");
 	}
 	
 	@FindBy(xpath = "//*[@id=\"versionRow_2.0\"]/td[1]/input")
@@ -90,41 +90,41 @@ public class Document_Version extends Computhink.Generic.BaseClass {
 public void getVerify_secondVersion() {
 		
 		jsclick(Checksecond_Version);
-		Reporter.log("Select second Version", true);
+		log("Select second Version");
 		String expectedtext = "2.0";
 		String actualtext = Verify_Version2.getText();
 		Assert.assertEquals(actualtext, expectedtext);
-		Reporter.log(Verify_Version2.getText() + " this V/R should show", true);
+		log(Verify_Version2.getText() + " this V/R should show");
 		String expectedtext1 = "Pages Updated";
 		String actualtext1 = Verify_commentversion2.getText();
 		Assert.assertEquals(actualtext1, expectedtext1);
-		Reporter.log( Verify_commentversion2.getText() + " this Comment should show", true);
+		log( Verify_commentversion2.getText() + " this Comment should show");
 	}
 
 public void getVerify_secondVersionupdateComment() {
 	
 	jsclick(Checksecond_Version);
-	Reporter.log("Select second Version", true);
+	log("Select second Version");
 	String expectedtext = "2.0";
 	String actualtext = Verify_Version2.getText();
 	Assert.assertEquals(actualtext, expectedtext);
 	String expectedtext1 = "Document has been Updated Successfully";
 	String actualtext1 = Verify_commentversion2.getText();
 	Assert.assertEquals(actualtext1, expectedtext1);
-	Reporter.log(Verify_commentversion2.getText() + " this Updated Comment should show", true);
+	log(Verify_commentversion2.getText() + " this Updated Comment should show");
 }
 
 public void getVerify_ThirdVersion() {
 	
 	jsclick(Checksecond_Version);
-	Reporter.log("Select second Version", true);
+	log("Select second Version");
 	String expectedtext = "2.0";
 	String actualtext = Verify_Version2.getText();
 	Assert.assertEquals(actualtext, expectedtext);
 	String expectedtext1 = "Document has been Updated Successfully";
 	String actualtext1 = Verify_commentversion2.getText();
 	Assert.assertEquals(actualtext1, expectedtext1);
-	Reporter.log(Verify_commentversion2.getText() + " this Updated Comment should show", true);
+	log(Verify_commentversion2.getText() + " this Updated Comment should show");
 }
 	
 	
@@ -368,7 +368,7 @@ public void getVerify_ThirdVersion() {
 
 	public void Create_Document_Verify_Version() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Create New Document and Verifying Document Versions ", true);
+		log("Test Scenario 1 : Create New Document and Verifying Document Versions ");
 		try {
 			LogDipakUser();
 			Thread.sleep(8000);
@@ -390,34 +390,34 @@ public void getVerify_ThirdVersion() {
 		Thread.sleep(8000);
 		jsclick(Click_New_Document);
 		Thread.sleep(8000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(8000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(8000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(8000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(8000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(8000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(8000);
-		Reporter.log("Select Document type dropdown", true);
+		log("Select Document type dropdown");
 		getEnter_ReportName();
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		movingElement(getMove_To_PlusIcon());
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(2000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		try {
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait1.until(ExpectedConditions.alertIsPresent());
@@ -427,10 +427,10 @@ public void getVerify_ThirdVersion() {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(8000);
-		Reporter.log("PDF Page is uploaded successfully", true);
+		log("PDF Page is uploaded successfully");
 		movingclkElement(Create_button);
 		Thread.sleep(8000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		
 		jsclick(Navigate_button);
 		jsclick(Select_Document);
@@ -443,18 +443,18 @@ public void getVerify_ThirdVersion() {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("PDF is created successfully", true);
+		log("PDF is created successfully");
 		jsclick(Version_Option);
 		Thread.sleep(4000);
-		Reporter.log("Click on Version Option", true);
+		log("Click on Version Option");
 		getVerify_FirstVersion();
-		Reporter.log("Verified Current Document Version Successfully");
+		log("Verified Current Document Version Successfully");
 		
 	}
 
 	public void Add_Page_with_Comment() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Upload and Save New page and Verifying Version with new Comments ", true);
+		log("Test Scenario 2 : Upload and Save New page and Verifying Version with new Comments ");
 		if(Nobutton.isDisplayed()==true) {
 			movingclkElement(Nobutton);
 		}else {
@@ -463,53 +463,53 @@ public void getVerify_ThirdVersion() {
 		Thread.sleep(8000);
 		jsclick(Version_Option);
 		Thread.sleep(4000);
-		Reporter.log("Click on Version Option", true);
+		log("Click on Version Option");
 		jsclick(Fab);
 		Thread.sleep(8000);
 		movingclkElement(FloatingButton);
 		Thread.sleep(8000);
-		Reporter.log("Click on Floating button", true);
+		log("Click on Floating button");
 		jsclick(UploadFab);
 		Thread.sleep(2000);
-		Reporter.log("Click on Upload Fab button", true);
+		log("Click on Upload Fab button");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(8000);
 		jsclick(SaveFab);
 		Thread.sleep(8000);
-		Reporter.log("Click on Save Fab button", true);
+		log("Click on Save Fab button");
 		jsclick(SaveOkButton);
 		Thread.sleep(8000);
-		Reporter.log("Click on Save button", true);
+		log("Click on Save button");
 		jsclick(Version_Option);
 		Thread.sleep(8000);
-		Reporter.log("Click on Version Option", true);
+		log("Click on Version Option");
 		getVerify_secondVersion();
 		Thread.sleep(8000);
-		Reporter.log("Message Verified", true);
+		log("Message Verified");
 		jsclick(Click_Message);
 		Thread.sleep(8000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Comments_Option);
 		Thread.sleep(8000);
-		Reporter.log("Click on Comment Option", true);
+		log("Click on Comment Option");
 		jsclick(Comments_Box);
-		Reporter.log("Click on Comment Textbox", true);
+		log("Click on Comment Textbox");
 		Comments_Box.clear();
 		Comments_Box.sendKeys(DocumentVersion_excelRead(1, 0));
 		Thread.sleep(8000);
-		Reporter.log("Enter Comment into Comment field", true);
+		log("Enter Comment into Comment field");
 		jsclick(Save_Comments);
 		Thread.sleep(8000);
-		Reporter.log("Click on Save button", true);
+		log("Click on Save button");
 		getVerify_secondVersionupdateComment();
 		
-		Reporter.log("Document Version Update with Comments and verified", true);
+		log("Document Version Update with Comments and verified");
 	}
 
 	public void Delete_Page() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Delete Page and Verifying Version ", true);
+		log("Test Scenario 3 : Delete Page and Verifying Version ");
 		if(Nobutton.isDisplayed()==true) {
 			movingclkElement(Nobutton);
 		}else {
@@ -517,33 +517,33 @@ public void getVerify_ThirdVersion() {
 		}
 		jsclick(Select_ThumbnailPage);
 		Thread.sleep(8000);
-		Reporter.log("Check Thumbnail page", true);
+		log("Check Thumbnail page");
 		jsclick(Delete_FabButton);
 		Thread.sleep(8000);
-		Reporter.log("Click on Delete Fab button", true);
+		log("Click on Delete Fab button");
 		jsclick(Delete_Yes);
 		Thread.sleep(8000);
-		Reporter.log("Click on Yes button", true);
+		log("Click on Yes button");
 		jsclick(Delete_Ok);
 		Thread.sleep(8000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(SaveFab);
 		Thread.sleep(8000);
-		Reporter.log("Click on Save Fab button", true);
+		log("Click on Save Fab button");
 		jsclick(SaveOkButton);
 		Thread.sleep(8000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		movingclkElement(Version_Option);
 		Thread.sleep(8000);
-		Reporter.log("Click on Version Option", true);
+		log("Click on Version Option");
 		
 		
-		Reporter.log("Document Page delete and Verified versions", true);
+		log("Document Page delete and Verified versions");
 	}
 
 	public void Delete_All_version_with_Fullscreen() throws Exception {
 
-		Reporter.log("Test Scenario 4 : Verifying Delete All versions and Full Screen Option ", true);
+		log("Test Scenario 4 : Verifying Delete All versions and Full Screen Option ");
 		if(Nobutton.isDisplayed()==true) {
 			movingclkElement(Nobutton);
 		}else {
@@ -551,25 +551,25 @@ public void getVerify_ThirdVersion() {
 		}
 		jsclick(Delete_AllVersions);
 		Thread.sleep(8000);
-		Reporter.log("Click on All Version", true);
+		log("Click on All Version");
 		jsclick(Delete_VersionmessageOk);
 		Thread.sleep(8000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Version_Option);
 		Thread.sleep(8000);
-		Reporter.log("Click on Version Option", true);
+		log("Click on Version Option");
 		jsclick(FullScreen_Fabbutton);
 		Thread.sleep(8000);
-		Reporter.log("Click on Full Screen Fab button", true);
+		log("Click on Full Screen Fab button");
 		jsclick(CloseDoc);
 		Thread.sleep(8000);
-		Reporter.log("Click on the Close button", true);
-		Reporter.log("Verified Delete All versions and Full screen Document from Floating button", true);
+		log("Click on the Close button");
+		log("Verified Delete All versions and Full screen Document from Floating button");
 	}
 
 	public void Add_Annotations() throws Exception {
 
-		Reporter.log("Test Scenario 5 : Verifying set Active version ", true);
+		log("Test Scenario 5 : Verifying set Active version ");
 		if(Nobutton.isDisplayed()==true) {
 			movingclkElement(Nobutton);
 		}else {
@@ -577,25 +577,25 @@ public void getVerify_ThirdVersion() {
 		}
 		Refresh_Button();
 		Thread.sleep(8000);
-		Reporter.log("click on Refresh button ", true);
+		log("click on Refresh button ");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(4000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(4000);
-		Reporter.log("Click on My preferences option", true);
+		log("Click on My preferences option");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(8000);
-		Reporter.log("Select Pdf document and set Default view Option", true);
+		log("Select Pdf document and set Default view Option");
 		movingclkElement(Apply_button);
 		Thread.sleep(4000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(8000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(8000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(8000);
 		jsclick(Select_Document);
@@ -608,72 +608,72 @@ public void getVerify_ThirdVersion() {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("open document from Document List", true);
+		log("open document from Document List");
 		movingElement(FloatingButton);
 		Thread.sleep(8000);
-		Reporter.log("Click on Floating button", true);
+		log("Click on Floating button");
 		jsclick(UploadFab);
 		Thread.sleep(2000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
 		Thread.sleep(8000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		jsclick(FloatingButton);
-		Reporter.log("Click on Floating button", true);
+		log("Click on Floating button");
 		jsclick(SaveFab);
 		Thread.sleep(8000);
-		Reporter.log("Click on Save button", true);
+		log("Click on Save button");
 		jsclick(SaveOkButton);
 		Thread.sleep(9000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Version_Option);
 		Thread.sleep(8000);
-		Reporter.log("Click on Version Option", true);
+		log("Click on Version Option");
 		movingclkElement(Click_signature_Menuoption);
 		Thread.sleep(8000);
-		Reporter.log("Click on signature menu Option", true);
+		log("Click on signature menu Option");
 		try {
 			getinputpassword();
 			Thread.sleep(8000);
-			Reporter.log("Enter a Password", true);
+			log("Enter a Password");
 		} catch (Exception e) {
 			System.out.println("signature is not password protected...");
 		}
 		getAdd_Signature_Onpage();
 		Thread.sleep(8000);
-		Reporter.log("New signature added Successfully on  Document", true);
+		log("New signature added Successfully on  Document");
 		jsclick(Save_button);
 		Thread.sleep(8000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(8000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Version_Option);
 		Thread.sleep(8000);
-		Reporter.log("Click on Version Option", true);
-		Reporter.log("Verifying version Page annotated/modified ", true);
+		log("Click on Version Option");
+		log("Verifying version Page annotated/modified ");
 	}
 
 	public void Set_ActiveVersion() throws Exception {
 
-		Reporter.log("Test Scenario 6 : Verifying set Active version ", true);
+		log("Test Scenario 6 : Verifying set Active version ");
 
 		try {
 			LogDipakUser();
 			Thread.sleep(8000);
 			getMoveTo_Menu_Recent();
 			Thread.sleep(4000);
-			Reporter.log("Move to Recent Tab", true);
+			log("Move to Recent Tab");
 			jsclick(Recent_Folder);
 			Thread.sleep(8000);
-			Reporter.log("Click on Recent Folder", true);
+			log("Click on Recent Folder");
 			Thread.sleep(8000);
 			jsclick(Select_Document);
 			Thread.sleep(8000);
 			Thread.sleep(8000);
-			Reporter.log("Open document from Document List", true);
+			log("Open document from Document List");
 			jsclick(Version_Option);
 			Thread.sleep(8000);
-			Reporter.log("Click on Version Option", true);
+			log("Click on Version Option");
 
 			try {
 				WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -694,20 +694,20 @@ public void getVerify_ThirdVersion() {
 		}
 		jsclick(Set_active_version);
 		Thread.sleep(8000);
-		Reporter.log("select version to set active version", true);
+		log("select version to set active version");
 		jsclick(Set_active_version_button);
-		Reporter.log("Click on Set active Version button", true);
+		log("Click on Set active Version button");
 		Thread.sleep(8000);
 		jsclick(Version_Option);
 		Thread.sleep(9000);
-		Reporter.log("Click on Version Option", true);
-		Reporter.log("Active version set and verified successfully", true);
+		log("Click on Version Option");
+		log("Active version set and verified successfully");
 		
 	}
 
 	public void Update_Doc_Properties() throws Exception {
 
-		Reporter.log("Test Scenario 7 : Update document properties ", true);
+		log("Test Scenario 7 : Update document properties ");
 		if(Nobutton.isDisplayed()==true) {
 			movingclkElement(Nobutton);
 		}else {
@@ -715,24 +715,24 @@ public void getVerify_ThirdVersion() {
 		}
 		jsclick(Update_Button);
 		Thread.sleep(8000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name value from Reportname field", true);
+		log("Clear Report Name value from Reportname field");
 		Update_ReportName.sendKeys(DocumentVersion_excelRead(4, 0));
 		Thread.sleep(8000);
-		Reporter.log("Update Report Name value ", true);
+		log("Update Report Name value ");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(8000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(8000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(CloseDoc);
 		Thread.sleep(8000);
-		Reporter.log("Click on Close button", true);
-		Reporter.log("verified and updated Document properties", true);
+		log("Click on Close button");
+		log("verified and updated Document properties");
 		Refresh_Button();
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		Thread.sleep(8000);
 	}
 }

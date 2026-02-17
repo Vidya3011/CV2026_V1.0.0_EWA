@@ -98,21 +98,21 @@ public class DashBoardPom extends BaseClass {
 
 	public void DashBoardSeachIcon() throws Exception {
 		SoftAssert softAssert = new SoftAssert();
-		Reporter.log("Test scenario 01: Verify 'dashboard search' functionality", true);
+		log("Test scenario 01: Verify 'dashboard search' functionality");
 		Thread.sleep(5000);
 		
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		LogoutPage();
 		LoginAdminUser();
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		movingclkElement(AdminPreference);
 		Thread.sleep(6000);
-		Reporter.log("Click on Admin preferences", true);
+		log("Click on Admin preferences");
 		Thread.sleep(2000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
@@ -125,43 +125,43 @@ public class DashBoardPom extends BaseClass {
 		
 		movingclkElement(AdminApply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		LogoutPage();
 		Thread.sleep(2000);
 		LogDipakUser();
 		Thread.sleep(4000);
-		Reporter.log("Click on dashboard tab", true);
+		log("Click on dashboard tab");
 		softAssert.assertTrue(DashBoardTab.isDisplayed(), "Dashboard tab is not displayed");
 
 		jsclick(DashBoardTab);
 		Thread.sleep(3000);
 
-		Reporter.log("Dashboard opened successfully", true);
+		log("Dashboard opened successfully");
 		movingElement(SearchICon);
 		softAssert.assertTrue(SearchICon.isDisplayed(), "Search icon is not displayed");
 
-		Reporter.log("Click on search icon from the dashboard page", true);
+		log("Click on search icon from the dashboard page");
 		jsclick(SearchICon);
 		Thread.sleep(6000);
 
-		Reporter.log("It will redirect to Search tab successfully...", true);
+		log("It will redirect to Search tab successfully...");
 		jsclick(SearchFindButton);
 		softAssert.assertTrue(SearchFindButton.isDisplayed(), "Find button is not displayed");
 
-		Reporter.log("Click on find button", true);
+		log("Click on find button");
 		Thread.sleep(6000);
-		Reporter.log("Searched document display on the page successfully...", true);
+		log("Searched document display on the page successfully...");
 		// softAssert.assertAll();
 	}
 
 	public void NotificationIcon() throws Exception {
 		SoftAssert softAssert = new SoftAssert();
-		Reporter.log("Scenario 02: Verify dashboard 'Notification' functionality", true);
+		log("Scenario 02: Verify dashboard 'Notification' functionality");
 		try {
 			softAssert.assertTrue(DashBoardTab.isDisplayed(), "Dashboard tab is not displayed");
 
 			jsclick(DashBoardTab);
-			Reporter.log("Click on dashboard tab", true);
+			log("Click on dashboard tab");
 		} catch (Exception e) {
 			//
 		}
@@ -170,112 +170,112 @@ public class DashBoardPom extends BaseClass {
 		movingElement(NotificationICon);
 		softAssert.assertTrue(NotificationICon.isDisplayed(), "Notification icon is not displayed");
 
-		Reporter.log("Click on notification icon", true);
+		log("Click on notification icon");
 		jsclick(NotificationICon);
 		Thread.sleep(8000);
 
-		Reporter.log("It will redirect to Notification tab successfully...", true);
+		log("It will redirect to Notification tab successfully...");
 		jsclick(Refresh_Button(driver));
 		softAssert.assertTrue(Refresh_Button(driver).isDisplayed(), "Refresh button is not displayed");
 
-		Reporter.log("Notification page displayed successfully...", true);
+		log("Notification page displayed successfully...");
 		// softAssert.assertAll();
 	}
 
 	public void TodoListWFDetailsfromDb() throws Exception {
 		SoftAssert softAssert = new SoftAssert();
 		Thread.sleep(6000);
-		Reporter.log("Scenario 03: Verify dashboard 'Todolist' dropdown", true);
+		log("Scenario 03: Verify dashboard 'Todolist' dropdown");
 
 		try {
 			movingclkElement(DashBoardTab);
 			softAssert.assertTrue(DashBoardTab.isDisplayed(), "Dashboard tab is not displayed");
 		} catch (Exception e) {
-			Reporter.log("Click on dashboard tab", true);
+			log("Click on dashboard tab");
 		}
 
-		Reporter.log("Click on dashboard tab", true);
+		log("Click on dashboard tab");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 		wait.until(ExpectedConditions.elementToBeClickable(TodoListDropDownDashBoard));
 
-		Reporter.log("Click on todo list dropdown", true);
+		log("Click on todo list dropdown");
 		Thread.sleep(5000);
 		movingclkElement(TodoListDropDownDashBoard);
 		softAssert.assertTrue(TodoListDropDownDashBoard.isDisplayed(), "Todo List dropdown is not displayed");
 		Thread.sleep(2000);
 
 		jsclick(newItems);
-		Reporter.log("Click on New items option", true);
+		log("Click on New items option");
 		softAssert.assertTrue(newItems.isDisplayed(), "New Items option is not displayed");
 
 		wait.until(ExpectedConditions.elementToBeClickable(TodoListDropDownDashBoard));
 		movingclkElement(TodoListDropDownDashBoard);
-		Reporter.log("It will list the New items workflow documents", true);
+		log("It will list the New items workflow documents");
 		Thread.sleep(6000);
 
-		Reporter.log("Click on Pending items option", true);
+		log("Click on Pending items option");
 		jsclick(pendingItems);
 		softAssert.assertTrue(pendingItems.isDisplayed(), "Pending Items option is not displayed");
 
-		Reporter.log("It will list the Pending items workflow documents", true);
+		log("It will list the Pending items workflow documents");
 		Thread.sleep(3000);
 		movingclkElement(TodoListDropDownDashBoard);
 		softAssert.assertTrue(reviewItems.isDisplayed(), "Review Items option is not displayed");
 
 		jsclick(reviewItems);
 
-		Reporter.log("Click on Reviewed items option", true);
+		log("Click on Reviewed items option");
 		Thread.sleep(3000);
-		Reporter.log("It will list the Reviewed items workflow documents", true);
+		log("It will list the Reviewed items workflow documents");
 		movingclkElement(TodoListDropDownDashBoard);
 		softAssert.assertTrue(sentItems.isDisplayed(), "Sent Items option is not displayed");
 
 		jsclick(sentItems);
 
-		Reporter.log("Click on Sent items option", true);
-		Reporter.log("It will list the Sent items workflow documents", true);
+		log("Click on Sent items option");
+		log("It will list the Sent items workflow documents");
 		Thread.sleep(3000);
 		movingclkElement(TodoListDropDownDashBoard);
 		softAssert.assertTrue(allItems.isDisplayed(), "All Items option is not displayed");
 
 		jsclick(allItems);
 
-		Reporter.log("Click on All items option", true);
+		log("Click on All items option");
 		Thread.sleep(7000);
-		Reporter.log("It will list the All items workflow documents", true);
+		log("It will list the All items workflow documents");
 
 		try {
 			if (nextPage.isDisplayed()) {
 				jsclick(nextPage);
 			}
 		} catch (Exception e) {
-			Reporter.log("No more pages", true);
+			log("No more pages");
 		}
 
 		Thread.sleep(6000);
-		Reporter.log("Click on Next page icon", true);
-		Reporter.log("Page should move to Next page", true);
+		log("Click on Next page icon");
+		log("Page should move to Next page");
 		Thread.sleep(4000);
-		Reporter.log("Todo list dropdown options verified successfully...", true);
+		log("Todo list dropdown options verified successfully...");
 
 		// softAssert.assertAll();
 	}
 
 	public void LogoutfromDb() throws Exception {
 		SoftAssert softAssert = new SoftAssert();
-		Reporter.log("Scenario 08: Verify 'Logout functionality' from the dashboard", true);
+		log("Scenario 08: Verify 'Logout functionality' from the dashboard");
 
-		Reporter.log("Click on dashboard tab", true);
+		log("Click on dashboard tab");
 		Thread.sleep(3000);
 		movingElement(LogoutFromDashBRD);
 
-		Reporter.log("Click on logout icon", true);
+		log("Click on logout icon");
 		softAssert.assertTrue(LogoutFromDashBRD.isDisplayed(), "Logout icon is not displayed");
 		jsclick(LogoutFromDashBRD);
 
-		Reporter.log("Session logged out successfully", true);
+		log("Session logged out successfully");
 		Thread.sleep(6000);
-		Reporter.log("Dashboard logout option verified successfully...", true);
+		log("Dashboard logout option verified successfully...");
 		// softAssert.assertAll();
 	}
 
@@ -285,22 +285,22 @@ public class DashBoardPom extends BaseClass {
 	public void NewDocumentfromDb() throws Exception {
 		SoftAssert softAssert = new SoftAssert();
 		Thread.sleep(4000);
-		Reporter.log("Scenario 06: Verify dashboard 'New document' functionality", true);
+		log("Scenario 06: Verify dashboard 'New document' functionality");
 
 		// Verifying dashboard tab existence before interacting
 		softAssert.assertNotNull(CreateDocDB, "CreateDocDB element is null.");
-		Reporter.log("Click on dashboard tab", true);
+		log("Click on dashboard tab");
 
 		Thread.sleep(3000);
 		movingElement(CreateDocDB);
 
-		Reporter.log("Click on New document icon", true);
+		log("Click on New document icon");
 		jsclick(CreateDocDB);
 
 		// Verifying the navigation to the New document tab
-		Reporter.log("It will redirect to New document tab successfully...", true);
+		log("It will redirect to New document tab successfully...");
 
-		Reporter.log("The New document page opened successfully...", true);
+		log("The New document page opened successfully...");
 		Thread.sleep(10000);
 
 	}
@@ -352,29 +352,29 @@ public class DashBoardPom extends BaseClass {
 			softAssert.assertNotNull(CVSReportICon, "CVSReportICon element is null.");
 			jsclick(CVSReportICon);
 		} catch (Exception e) {
-			Reporter.log("Exception while logging in and accessing dashboard", true);
+			log("Exception while logging in and accessing dashboard");
 		}
 		// Adding assertions for each step
 
-		Reporter.log("Select Contentverse Report icon", true);
+		log("Select Contentverse Report icon");
 		Thread.sleep(5000);
 		Actions act = new Actions(driver);
 
 		softAssert.assertNotNull(CVSReport, "CVSReport element is null.");
 		act.moveToElement(CVSReport).click().build().perform();
 		Thread.sleep(4000);
-		Reporter.log("Select 'Document Report'", true);
+		log("Select 'Document Report'");
 
 		softAssert.assertNotNull(SelectClass, "SelectClass element is null.");
 		Select sel = new Select(SelectClass);
 		sel.selectByVisibleText("Documents Report");
 		Thread.sleep(3000);
-		Reporter.log("Select 'This Week'", true);
+		log("Select 'This Week'");
 
 		softAssert.assertNotNull(DocumentRep, "DocumentRep element is null.");
 		act.moveToElement(DocumentRep).click().build().perform();
 		Thread.sleep(3000);
-		Reporter.log("Click on Generate Button", true);
+		log("Click on Generate Button");
 
 		act.moveToElement(DateInputIcon).click().build().perform();
 		Thread.sleep(3000);
@@ -391,26 +391,26 @@ public class DashBoardPom extends BaseClass {
 			alertIsPresent();
 			acceptAlert();
 		} catch (Exception e) {
-			Reporter.log("No alert present", true);
+			log("No alert present");
 		}
 
-		Reporter.log("It should list the Document Report on the page", true);
+		log("It should list the Document Report on the page");
 
 		jsclick(ExcelExport);
-		Reporter.log("Click on Excel export", true);
+		log("Click on Excel export");
 		Thread.sleep(5000);
 
 		jsclick(PDFExport);
-		Reporter.log("Click on PDF Export", true);
+		log("Click on PDF Export");
 
-		Reporter.log("Generated Document Report has Exported Successfully...", true);
+		log("Generated Document Report has Exported Successfully...");
 
 	}
 
 	public void ContentverseWorkflowReport() throws Exception {
 		SoftAssert softAssert = new SoftAssert();
 
-		Reporter.log("Scenario 07: Verify 'ContentverseReport' - Workflow Status Reports", true);
+		log("Scenario 07: Verify 'ContentverseReport' - Workflow Status Reports");
 		Thread.sleep(4000);
 
 		try {
@@ -422,7 +422,7 @@ public class DashBoardPom extends BaseClass {
 			softAssert.assertNotNull(CVSReportICon, "CVSReportICon element is null.");
 			jsclick(CVSReportICon);
 		} catch (Exception e) {
-			Reporter.log("Exception while logging in and accessing dashboard", true);
+			log("Exception while logging in and accessing dashboard");
 		}
 
 		Thread.sleep(5000);
@@ -431,18 +431,18 @@ public class DashBoardPom extends BaseClass {
 		act.moveToElement(CVSReport).click().build().perform();
 		Thread.sleep(4000);
 
-		Reporter.log("Mouse hover on Document Report dropdown and Select 'Workflow Status Report'", true);
+		log("Mouse hover on Document Report dropdown and Select 'Workflow Status Report'");
 		softAssert.assertNotNull(SelectClass, "SelectClass element is null.");
 		Select sel = new Select(SelectClass);
 		sel.selectByVisibleText("Documents Report");
 		Thread.sleep(3000);
 
-		Reporter.log("Select 'This Week'", true);
+		log("Select 'This Week'");
 		softAssert.assertNotNull(WorkflowStatus, "WorkflowStatus element is null.");
 		act.moveToElement(WorkflowStatus).click().build().perform();
 		Thread.sleep(3000);
 
-		Reporter.log("Click on Generate Button", true);
+		log("Click on Generate Button");
 		softAssert.assertNotNull(DateInputIcon, "DateInputIcon element is null.");
 		act.moveToElement(DateInputIcon).click().build().perform();
 		Thread.sleep(3000);
@@ -459,23 +459,23 @@ public class DashBoardPom extends BaseClass {
 			alertIsPresent();
 			acceptAlert();
 		} catch (Exception e) {
-			Reporter.log("No alert present", true);
+			log("No alert present");
 		}
 
-		Reporter.log("It should list the 'Workflow Status Report' on the page", true);
+		log("It should list the 'Workflow Status Report' on the page");
 		try {
 
 			jsclick(ExcelExport);
-			Reporter.log("Click on Excel export", true);
+			log("Click on Excel export");
 			Thread.sleep(5000);
 
 			jsclick(PDFExport);
-			Reporter.log("Click on PDF Export", true);
+			log("Click on PDF Export");
 		} catch (Exception e) {
-			Reporter.log("Error during export actions", true);
+			log("Error during export actions");
 		}
 
-		Reporter.log("Generated Document Report has Exported Successfully...", true);
+		log("Generated Document Report has Exported Successfully...");
 		softAssert.assertNotNull(CloseIconCVS, "CloseIconCVS element is null.");
 		jsclick(CloseIconCVS);
 
@@ -484,7 +484,7 @@ public class DashBoardPom extends BaseClass {
 	public void ContentverseRejectDocumentInWFReport() throws Exception {
 		SoftAssert softAssert = new SoftAssert();
 		Thread.sleep(4000);
-		Reporter.log("Scenario 08: Verify 'ContentverseReport' - Reject document in workflow Report", true);
+		log("Scenario 08: Verify 'ContentverseReport' - Reject document in workflow Report");
 
 		try {
 			loginRNISHA47();
@@ -495,7 +495,7 @@ public class DashBoardPom extends BaseClass {
 			softAssert.assertNotNull(CVSReportICon, "CVSReportICon element is null.");
 			jsclick(CVSReportICon);
 		} catch (Exception e) {
-			Reporter.log("Exception while logging in and accessing dashboard", true);
+			log("Exception while logging in and accessing dashboard");
 		}
 
 		Actions act = new Actions(driver);
@@ -507,21 +507,20 @@ public class DashBoardPom extends BaseClass {
 			softAssert.assertNotNull(CVSReport, "CVSReport element is null.");
 			act.moveToElement(CVSReport).click().build().perform();
 		} catch (Exception e) {
-			Reporter.log("Error clicking on CVSReport or interacting with it.", true);
+			log("Error clicking on CVSReport or interacting with it.");
 		}
 
 		Thread.sleep(2000);
 
 		try {
-			Reporter.log("Mouse hover on Document Report dropdown and Select 'Reject document in workflow Report'",
-					true);
+			log("Mouse hover on Document Report dropdown and Select 'Reject document in workflow Report");
 			softAssert.assertNotNull(SelectClass, "SelectClass element is null.");
 			Select sel = new Select(SelectClass);
 			sel.selectByVisibleText("Documents Report");
 			Thread.sleep(3000);
-			Reporter.log("Select 'This Week'", true);
+			log("Select 'This Week'");
 		} catch (Exception e) {
-			Reporter.log("Error selecting 'Documents Report' or 'This Week'.", true);
+			log("Error selecting 'Documents Report' or 'This Week'.");
 		}
 
 		try {
@@ -529,10 +528,10 @@ public class DashBoardPom extends BaseClass {
 			act.moveToElement(RejectedDocsInWF).click().build().perform();
 			Thread.sleep(3000);
 		} catch (Exception e) {
-			Reporter.log("Error selecting 'Reject document in workflow Report'.", true);
+			log("Error selecting 'Reject document in workflow Report'.");
 		}
 
-		Reporter.log("Click on Generate Button", true);
+		log("Click on Generate Button");
 		softAssert.assertNotNull(DateInputIcon, "DateInputIcon element is null.");
 		try {
 			act.moveToElement(DateInputIcon).click().build().perform();
@@ -545,7 +544,7 @@ public class DashBoardPom extends BaseClass {
 			softAssert.assertNotNull(ThisWeek, "ThisWeek element is null.");
 			act.moveToElement(ThisWeek).click().build().perform();
 		} catch (Exception e) {
-			Reporter.log("Error selecting 'This Week'.", true);
+			log("Error selecting 'This Week'.");
 		}
 
 		Thread.sleep(4000);
@@ -557,28 +556,28 @@ public class DashBoardPom extends BaseClass {
 			alertIsPresent();
 			acceptAlert();
 		} catch (Exception e) {
-			Reporter.log("No alert present", true);
+			log("No alert present");
 		}
 
-		Reporter.log("It should list the 'Reject document in workflow' Report on the page", true);
+		log("It should list the 'Reject document in workflow' Report on the page");
 
 		try {
 			// softAssert.assertTrue(VisiblityOf(ExcelExport), "ExcelExport element is not
 			// visible.");
 			jsclick(ExcelExport);
-			Reporter.log("Click on Excel export", true);
+			log("Click on Excel export");
 			Thread.sleep(5000);
 
 			// softAssert.assertTrue(VisiblityOf(PDFExport), "PDFExport element is not
 			// visible.");
 			jsclick(PDFExport);
-			Reporter.log("Click on PDF Export", true);
+			log("Click on PDF Export");
 		} catch (Exception e) {
-			Reporter.log("Error exporting the report to Excel or PDF.", true);
+			log("Error exporting the report to Excel or PDF.");
 		}
 
 		Thread.sleep(3000);
-		Reporter.log("Generated Document Report has Exported Successfully...", true);
+		log("Generated Document Report has Exported Successfully...");
 
 		softAssert.assertNotNull(CloseIconCVS, "CloseIconCVS element is null.");
 		jsclick(CloseIconCVS);

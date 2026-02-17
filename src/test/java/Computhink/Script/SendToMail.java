@@ -4,7 +4,6 @@ package Computhink.Script;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import Computhink.Generic.FailedRetry;
 import Computhink.Pom.Print;
 
 public class
@@ -38,7 +37,7 @@ SendToMail extends Computhink.Generic.BaseClass {
 		
 	}
 
-	@Test(priority = 3, retryAnalyzer = FailedRetry.class)
+	@Test(priority = 3)
 	public void TC_B_Email_Copy_WithMsgBox_SubjectBox() throws Exception {
 		Print pojo = new Print();
 		pojo.Email_Copy_WithMsgBox_SubjectBox();

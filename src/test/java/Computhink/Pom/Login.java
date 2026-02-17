@@ -60,12 +60,12 @@ public class Login extends BaseClass {
 
 	SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert to capture all assertions
 
-	public static void loginwithoutUsername() throws Exception {
+	public  void loginwithoutUsername() throws Exception {
 
-		Reporter.log("Do not entered username into username field", true);
+		log("Do not entered username into username field");
 		
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(1, 1));
-		Reporter.log("Enter valid Password into Password field", true);
+		log("Enter valid Password into Password field");
 		
 		RoomSelectionCVS();
 		
@@ -74,12 +74,12 @@ public class Login extends BaseClass {
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
-			Reporter.log("Enter a valid captch under textbox", true);
+			log("Enter a valid captch under textbox");
 		} catch (Exception e) {
 			// captch is not displayed
 		}
 		driver.findElement(By.id("submitid")).click();
-		Reporter.log("Click on the Login button", true);
+		log("Click on the Login button");
 		
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -90,13 +90,13 @@ public class Login extends BaseClass {
 		}
 	}
 
-	public static void loginwithoutPassword() throws Exception {
+	public void loginwithoutPassword() throws Exception {
 
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(1, 0));
-		Reporter.log("Enter valid Username into Username field", true);
+		log("Enter valid Username into Username field");
 		driver.findElement(By.id("loginPassword")).clear();
 		
-		Reporter.log("Do not entered password into password field", true);
+		log("Do not entered password into password field");
 		
 		RoomSelectionCVS();
 		
@@ -105,12 +105,12 @@ public class Login extends BaseClass {
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
-			Reporter.log("Enter a valid captch under textbox", true);
+			log("Enter a valid captch under textbox");
 		} catch (Exception e) {
 			// captch is not displayed
 		}
 		driver.findElement(By.id("submitid")).click();
-		Reporter.log("Click on the Login button", true);
+		log("Click on the Login button");
 		
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -126,19 +126,19 @@ public class Login extends BaseClass {
 		SoftAssert as = new SoftAssert();
 		driver.findElement(By.xpath("//input[@id='userName']")).clear();
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(1, 0));
-		Reporter.log("Enter valid Username into Username field", true);
+		log("Enter valid Username into Username field");
 		
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(1, 1));
-		Reporter.log("Enter valid Password into Password field", true);
+		log("Enter valid Password into Password field");
 		WebElement room = driver.findElement(By.xpath("//select[@id='rooms']"));
 		as.assertTrue(room.isDisplayed(), "Room selection dropdown is not displayed.");
 		Select sel = new Select(room);
 		sel.selectByIndex(0);
-		Reporter.log("Not select Room", true);
+		log("Not select Room");
 		
 		// Validate that the room has been selected correctly
 		String selectedRoom = sel.getFirstSelectedOption().getText();
-		Reporter.log("Selected Room name: " + selectedRoom, true);
+		log("Selected Room name: " + selectedRoom);
 		as.assertEquals(selectedRoom, "Room selection is not correct."); // Assuming "Room 3" is the option
 		
 
@@ -147,12 +147,12 @@ public class Login extends BaseClass {
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
-			Reporter.log("Enter a valid captch under textbox", true);
+			log("Enter a valid captch under textbox");
 		} catch (Exception e) {
 			// captch is not displayed
 		}
 		driver.findElement(By.id("submitid")).click();
-		Reporter.log("Click on the Login button", true);
+		log("Click on the Login button");
 		
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -167,11 +167,11 @@ public class Login extends BaseClass {
 
 		driver.findElement(By.xpath("//input[@id='userName']")).clear();
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(2, 1));
-		Reporter.log("Enter Invalid Username into Username field", true);
+		log("Enter Invalid Username into Username field");
 		driver.findElement(By.id("loginPassword")).clear();
 		
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(1, 1));
-		Reporter.log("Enter valid Password into Password field", true);
+		log("Enter valid Password into Password field");
 		
 		RoomSelectionCVS();
 		try {
@@ -179,19 +179,19 @@ public class Login extends BaseClass {
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
-			Reporter.log("Enter a valid captch under textbox", true);
+			log("Enter a valid captch under textbox");
 		} catch (Exception e) {
 			// captch is not displayed
 		}
 		driver.findElement(By.id("submitid")).click();
-		Reporter.log("Click on the Login button", true);
+		log("Click on the Login button");
 		
 
 		try {
 			WebElement sessionmsg = driver.findElement(By.xpath("//*[@id=\"cvModelLoginValidationMessageMulti\"]"));
 			WebElement sessionmsgNO = driver.findElement(By.xpath("//*[@id=\"cvModelLoginValidationCancelMulti\"]"));
 			if (sessionmsg.isDisplayed()) {
-				Reporter.log("Session is already active in same browser. \r\n" + " Do you want to create new session?");
+				log("Session is already active in same browser. \r\n" + " Do you want to create new session?");
 				jsclick(sessionmsgNO); // Click the No button
 			}
 		} catch (Exception e1) {
@@ -204,11 +204,11 @@ public class Login extends BaseClass {
 		
 		driver.findElement(By.xpath("//input[@id='userName']")).clear();
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(1, 0));
-		Reporter.log("Enter valid Username into Username field", true);
+		log("Enter valid Username into Username field");
 		driver.findElement(By.id("loginPassword")).clear();
 		
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(2, 1));
-		Reporter.log("Enter Invalid Password into Password field", true);
+		log("Enter Invalid Password into Password field");
 		
 		RoomSelectionCVS();
 		try {
@@ -216,12 +216,12 @@ public class Login extends BaseClass {
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
-			Reporter.log("Enter a valid captch under textbox", true);
+			log("Enter a valid captch under textbox");
 		} catch (Exception e) {
 			// captch is not displayed
 		}
 		driver.findElement(By.id("submitid")).click();
-		Reporter.log("Click on the Login button", true);
+		log("Click on the Login button");
 		
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -234,7 +234,7 @@ public class Login extends BaseClass {
 			WebElement sessionmsg = driver.findElement(By.xpath("//*[@id=\"cvModelLoginValidationMessage\"]"));
 			WebElement sessionmsgNO = driver.findElement(By.xpath("//*[@id=\"cvModelLoginValidationCancel\"]"));
 			if (sessionmsg.isDisplayed()) {
-				Reporter.log("Session for Dipak  is already active.Do you want to create new session?");
+				log("Session for Dipak  is already active.Do you want to create new session?");
 				jsclick(sessionmsgNO); // Click the No button
 			}
 		} catch (Exception e1) {
@@ -247,7 +247,7 @@ public class Login extends BaseClass {
 		String expectedtext = "Please enter username";
 		String actualtext = Usernameerror.getText();
 		softAssert.assertEquals(actualtext, expectedtext);
-		Reporter.log(Usernameerror.getText() + " validation message should show", true);
+		log(Usernameerror.getText() + " validation message should show");
 
 	}
 
@@ -256,7 +256,7 @@ public class Login extends BaseClass {
 		String expectedtext = "Please enter password";
 		String actualtext = Passworderror.getText();
 		softAssert.assertEquals(actualtext, expectedtext);
-		Reporter.log(Passworderror.getText() + " validation message should show", true);
+		log(Passworderror.getText() + " validation message should show");
 
 	}
 
@@ -265,8 +265,7 @@ public class Login extends BaseClass {
 		String expectedtext = "Select a room";
 		String actualtext = error.getText();
 		softAssert.assertEquals(actualtext, expectedtext);
-		Reporter.log(error.getText() + "validation message should show when none of above room selected for Login",
-				true);
+		log(error.getText() + "validation message should show when none of above room selected for Log");
 
 	}
 
@@ -275,7 +274,7 @@ public class Login extends BaseClass {
 		String expectedtext = "Session is already active in same browser. \r\n" + " Do you want to create new session?";
 		String actualtext = SessionActive.getText();
 		softAssert.assertEquals(actualtext, expectedtext);
-		Reporter.log(SessionActive.getText() + " this validation message should show", true);
+		log(SessionActive.getText() + " this validation message should show");
 
 	}
 
@@ -285,8 +284,8 @@ public class Login extends BaseClass {
 
 		Login pojo = new Login();
 
-		Reporter.log("Test Scenario 2 : Verifying Login EWA with blank username ", true);
-		Login.loginwithoutUsername();
+		log("Test Scenario 2 : Verifying Login EWA with blank username ");
+		pojo.loginwithoutUsername();
 		pojo.getUsernameerror();
 	}
 
@@ -294,9 +293,9 @@ public class Login extends BaseClass {
 
 		Login pojo = new Login();
 
-		Reporter.log("Test Scenario 3 : Verifying Login EWA with blank password", true);
+		log("Test Scenario 3 : Verifying Login EWA with blank password");
 		
-		Login.loginwithoutPassword();
+		pojo.loginwithoutPassword();
 		pojo.getPassworderror();
 	}
 
@@ -304,7 +303,7 @@ public class Login extends BaseClass {
 
 		Login pojo = new Login();
 
-		Reporter.log("Test Scenario 4 : Verifying Login EWA without selecting roomname ", true);
+		log("Test Scenario 4 : Verifying Login EWA without selecting roomname ");
 		
 		pojo.loginwithoutRoomname();
 		pojo.getRoomerror();
@@ -314,7 +313,7 @@ public class Login extends BaseClass {
 
 		Login pojo = new Login();
 
-		Reporter.log("Test Scenario 5 : Verifying Login EWA with invalid username ", true);
+		log("Test Scenario 5 : Verifying Login EWA with invalid username ");
 		
 		pojo.InvalidUsername();
 
@@ -323,7 +322,7 @@ public class Login extends BaseClass {
 	public void Verifying_Login_EWA_with_Invalid_Password() throws Exception {
 
 		Login pojo = new Login();
-		Reporter.log("Test Scenario 6 : Verifying Login EWA with invalid password ", true);
+		log("Test Scenario 6 : Verifying Login EWA with invalid password ");
 		
 		pojo.InvalidPassword();
 		pojo.getUsernotexist();
@@ -333,34 +332,34 @@ public class Login extends BaseClass {
 
 	public void Verifying_No_button_of_Session_for_user_is_already_active_dialog_box() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying No button of Session for user is already active dialog box ", true);
+		log("Test Scenario 1 : Verifying No button of Session for user is already active dialog box ");
 		Already_Logged_User();
 		
-		Reporter.log("Verified No button of Session for user is already active dialog box ", true);
+		log("Verified No button of Session for user is already active dialog box ");
 
 	}
 
 	public void Verifying_Yes_button_of_Session_for_user_is_already_active_dialog_box() throws Exception {
 
-		Reporter.log("Test Scenario 7 : Verifying Yes button of Session for user is already active dialog box ", true);
+		log("Test Scenario 7 : Verifying Yes button of Session for user is already active dialog box ");
 		ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(0));
 		launchUrl();
 		LogDipakUser();
-		Reporter.log("Verified Yes button of Session for user is already active dialog box ", true);
+		log("Verified Yes button of Session for user is already active dialog box ");
 
 	}
 
 	public void Verifying_Browser_Allowing_Only_OneUser_Login() throws Exception {
 
-		Reporter.log("Test Scenario 10 : Verifying Browser Allowing Only OneUser Login ", true);
+		log("Test Scenario 10 : Verifying Browser Allowing Only OneUser Login ");
 
 		ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(0));
 		launchUrl();
 		LoginAdminUser();
-		Reporter.log("Verified If User Session is active but we Closed Browser then it should "
-				+ "allowing to Login to EWA for Any User without Showing Login validation", true);
+		log("Verified If User Session is active but we Closed Browser then it should "
+				+ "allowing to Login to EWA for Any User without Showing Login validation");
 		// Validate If User is active in Browser try To Login Deferenet User in Same
 		// Browser
 
@@ -377,7 +376,7 @@ public class Login extends BaseClass {
 		SoftAssert as = new SoftAssert();
 
 		// Log and print the launched URL
-		Reporter.log("Launched Contentverse URL Details : " + currentUrl, true);
+		log("Launched Contentverse URL Details : " + currentUrl);
 
 		// Check if the URL contains the expected path
 		if (currentUrl.contains("8080/CVWeb/cvLgn")) {
@@ -390,7 +389,7 @@ public class Login extends BaseClass {
 					"The URL is not valid. Expected a URL starting with http://10.4.10.x:8080/CVWeb/cvLgn");
 		} else {
 			// If URL does not contain the expected path, log a failure (optional)
-			Reporter.log("Invalid URL path: " + currentUrl);
+			log("Invalid URL path: " + currentUrl);
 			System.out.println("Invalid URL path: " + currentUrl);
 		}
 
@@ -404,10 +403,10 @@ public class Login extends BaseClass {
 			// Assert the title is exactly as expected
 			as.assertEquals(title, "Contentverse", "Page title is not as expected.");
 			System.out.println("Page title name is : " + title);
-			Reporter.log("Page title name is : " + title);
+			log("Page title name is : " + title);
 		} else {
 			System.out.println("Page Not launched Successfully: Expected title not found.");
-			Reporter.log("Page Not launched Successfully: Expected title not found.");
+			log("Page Not launched Successfully: Expected title not found.");
 		}
 
 		// Validate Computhink Logo

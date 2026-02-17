@@ -207,7 +207,7 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 
 	public void getClick_FileInfo_OkButton_withFileName() {
 		WebElement Filename = Click_FileInfo_OkButton_withFileName;
-		Reporter.log("File name is:" + Filename.getText() + "this message should show", true);
+		log("File name is:" + Filename.getText() + "this message should show");
 		WebElement ele = RemarkOk;
 		ele.click();
 	}
@@ -217,7 +217,7 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		String expectedtext = "Please select a folder to create document";
 		String actualtext = FolderSelectMessage.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verified");
-		Reporter.log(FolderSelectMessage.getText() + "this validation message should show", true);
+		log(FolderSelectMessage.getText() + "this validation message should show");
 		jsclick(CommentOK);
 	}
 
@@ -226,7 +226,7 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		String expectedtext = "ReportName*  	field is required";
 		String actualtext = Reportvaluevalidationerror.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(Reportvaluevalidationerror.getText() + "this validation message should show", true);
+		log(Reportvaluevalidationerror.getText() + "this validation message should show");
 		jsclick(CommentOKbutton);
 	}
 
@@ -235,13 +235,13 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		String expectedtext = "Document created successfully";
 		String actualtext = NavigateDoc.getAttribute("value");
 		softassert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(NavigateDoc.getText() + "this message should show", true);
+		log(NavigateDoc.getText() + "this message should show");
 		jsclick(NavigateButton);
 	}
 
 	public void Upload_and_verify_Allowing_Percentage_Characterfile() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Upload and Verifying Allowing Percentage Characterfile", true);
+		log("Test Scenario 1 : Upload and Verifying Allowing Percentage Characterfile");
 		try {
 			jsclick(Cancel_Button_BrowseforFolder);
 			Thread.sleep(2000);
@@ -257,36 +257,36 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(NewDocuments_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Create New Documents", true);
+		log("Folder is selected for Create New Documents");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select value from Document Type dropdown Option", true);
+		log("Select value from Document Type dropdown Option");
 		Enter_Report_Name_Text.sendKeys(Specialchar_excelRead(1, 0));
-		Reporter.log("Enter Value into Report Name field", true);
+		log("Enter Value into Report Name field");
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Percentage%.tif");
 		Thread.sleep(4000);
@@ -300,26 +300,26 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		movingclkElement(Create_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
+		log("Click on Navigate button");
 		jsclick(Open_Document);
 		Thread.sleep(6000);
-		Reporter.log("Select and Open Document", true);
+		log("Select and Open Document");
 		Thread.sleep(6000);
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Percentage Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Ok button");
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Percentage Characterfile");
+		log("****************************************************************************************************************");
 
 	}
 
@@ -331,41 +331,41 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 2 : Upload and Verifying Allowing Tile Characterfile", true);
+		log("Test Scenario 2 : Upload and Verifying Allowing Tile Characterfile");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(2, 0));
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Tile~.TIF");
 		Thread.sleep(4000);
 		jsclick(Open_Tile_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Ok button", true);
+		log("Click on  Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Tile Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Tile Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Atrate_Characterfile() throws Exception {
@@ -376,43 +376,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 3  Upload and Verifying Allowing Atrate Characterfile", true);
+		log("Test Scenario 3  Upload and Verifying Allowing Atrate Characterfile");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(3, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\At the rate @.xls");
 		Thread.sleep(4000);
 		jsclick(Open_Attherate_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Atrate Characterfile", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Atrate Characterfile");
 		Thread.sleep(6000);
-		Reporter.log("****************************************************************************************************************", true);
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Hash_Characterfile() throws Exception {
@@ -423,42 +423,42 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 4 :Upload and Verifying Allowing Hash Characterfile ", true);
+		log("Test Scenario 4 :Upload and Verifying Allowing Hash Characterfile ");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(4, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Hash #.TIF");
 		Thread.sleep(4000);
 		jsclick(Open_Hash_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Hash Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Hash Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Dollar_Characterfile() throws Exception {
@@ -469,42 +469,42 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 5 :Upload and Verifying Allowing Dollar Characterfile", true);
+		log("Test Scenario 5 :Upload and Verifying Allowing Dollar Characterfile");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(5, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Dollar $.jpg");
 		Thread.sleep(4000);
 		jsclick(Open_Dollar_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Dollar Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Dollar Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Plus_Characterfile() throws Exception {
@@ -515,44 +515,44 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 6 :Upload and Verifying Allowing Plus Characterfile", true);
+		log("Test Scenario 6 :Upload and Verifying Allowing Plus Characterfile");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(6, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Plus +.TIF");
 		Thread.sleep(4000);
 		jsclick(Open_Plus_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Plus Characterfile", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Plus Characterfile");
 		Thread.sleep(6000);
-		Reporter.log("****************************************************************************************************************", true);
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Caret_Characterfile() throws Exception {
@@ -563,43 +563,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 7 : Upload and Verifying Allowing Caret Characterfile", true);
+		log("Test Scenario 7 : Upload and Verifying Allowing Caret Characterfile");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(7, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Caret ^.TIF");
 		Thread.sleep(4000);
 		jsclick(Open_Caret_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Caret Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Caret Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Equals_Characterfile() throws Exception {
@@ -610,43 +610,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 8 :Upload and Verifying Allowing Equals Characterfile ", true);
+		log("Test Scenario 8 :Upload and Verifying Allowing Equals Characterfile ");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(8, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Equal to =.TIF");
 		Thread.sleep(4000);
 		jsclick(Open_Equals_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Equals Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Equals Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_SingleQuote_Characterfile() throws Exception {
@@ -657,43 +657,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 9 :Upload and Verifying Allowing SingleQuote Characterfile ", true);
+		log("Test Scenario 9 :Upload and Verifying Allowing SingleQuote Characterfile ");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(9, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Single Quote '.png");
 		Thread.sleep(4000);
 		jsclick(Open_SingleQuote_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing SingleQuote Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing SingleQuote Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Comma_Characterfile() throws Exception {
@@ -704,43 +704,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 10 :Upload and Verifying Allowing Comma Characterfile", true);
+		log("Test Scenario 10 :Upload and Verifying Allowing Comma Characterfile");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(10, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Comm,.DOCX");
 		Thread.sleep(4000);
 		jsclick(Open_Comma_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Comma Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Comma Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Exclamatory_Characterfile() throws Exception {
@@ -751,43 +751,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 11 :Upload and Verifying Allowing Exclamatory Characterfile ", true);
+		log("Test Scenario 11 :Upload and Verifying Allowing Exclamatory Characterfile ");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(11, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Exclamatory !.csv");
 		Thread.sleep(4000);
 		jsclick(Open_Exclamatory_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Exclamatory Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Exclamatory Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Hyphen_Characterfile() throws Exception {
@@ -798,43 +798,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 12 :Upload and Verifying Allowing Hyphen Characterfile ", true);
+		log("Test Scenario 12 :Upload and Verifying Allowing Hyphen Characterfile ");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(12, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Hyphen -.tif");
 		Thread.sleep(4000);
 		jsclick(Open_Hyphen_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Hyphen Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Hyphen Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_RoundBrackets_Characterfile() throws Exception {
@@ -845,43 +845,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 13 :Upload and Verifying Allowing RoundBrackets Characterfile", true);
+		log("Test Scenario 13 :Upload and Verifying Allowing RoundBrackets Characterfile");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(13, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Round Brackets().docx");
 		Thread.sleep(4000);
 		jsclick(Open_RoundBrackets_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing RoundBrackets Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing RoundBrackets Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Accent_Characterfile() throws Exception {
@@ -892,43 +892,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 14 : Upload and Verifying Allowing Accent Characterfile", true);
+		log("Test Scenario 14 : Upload and Verifying Allowing Accent Characterfile");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(14, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Accent `.pdf");
 		Thread.sleep(4000);
 		jsclick(Open_Accent_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Accent Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Accent Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Ampersant_Characterfile() throws Exception {
@@ -939,43 +939,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 15 :Upload and Verifying Allowing Ampersant Characterfile ", true);
+		log("Test Scenario 15 :Upload and Verifying Allowing Ampersant Characterfile ");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(15, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Ampersant &.djvu");
 		Thread.sleep(4000);
 		jsclick(Open_Ampersant_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 		Thread.sleep(6000);
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Ampersant Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Ampersant Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Underscore_Characterfile() throws Exception {
@@ -986,43 +986,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 16 :Upload and Verifying Allowing Underscore Characterfile", true);
+		log("Test Scenario 16 :Upload and Verifying Allowing Underscore Characterfile");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(16, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Underscore _.pdf");
 		Thread.sleep(4000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		jsclick(Open_Underscore_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Underscore Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Underscore Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Flowerbracket_Characterfile() throws Exception {
@@ -1033,43 +1033,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 17 : Upload and Verifying Allowing Flowerbracket Characterfile", true);
+		log("Test Scenario 17 : Upload and Verifying Allowing Flowerbracket Characterfile");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(17, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Flower or Curly bracket {}.JPG");
 		Thread.sleep(4000);
 		jsclick(Open_Flowerbracket_Page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Flowerbracket Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Flowerbracket Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_Squarebracket_Characterfile() throws Exception {
@@ -1080,43 +1080,43 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 18 : Upload and Verifying Allowing Squarebracket Characterfile ", true);
+		log("Test Scenario 18 : Upload and Verifying Allowing Squarebracket Characterfile ");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(18, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Square Bracket [].tiff");
 		Thread.sleep(4000);
 		jsclick(Open_Squarebracket_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Squarebracket Characterfile", true);
-		Reporter.log("****************************************************************************************************************", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Squarebracket Characterfile");
+		log("****************************************************************************************************************");
 	}
 
 	public void Upload_and_verify_Allowing_SemiColon_Characterfile() throws Exception {
@@ -1127,51 +1127,51 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			// Saving dialog not present
 		}
 		Thread.sleep(6000);
-		Reporter.log("Test Scenario 19 :Upload and Verifying Allowing SemiColon Characterfile ", true);
+		log("Test Scenario 19 :Upload and Verifying Allowing SemiColon Characterfile ");
 		jsclick(Update_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		Update_ReportName.clear();
-		Reporter.log("Clear Report Name", true);
+		log("Clear Report Name");
 		Update_ReportName.sendKeys(Specialchar_excelRead(19, 0));
 		Thread.sleep(2000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		getMove_To_PlusIcon();
 		Thread.sleep(2000);
-		Reporter.log("Browse Document Page from Local Path", true);
+		log("Browse Document Page from Local Path");
 		//Upload file by using Browse option
 		Browse_Option.sendKeys("D:\\DipakAutoit\\AllFiles\\Semi Colon ;.tif");
 		Thread.sleep(4000);
 		jsclick(Open_SemiColon_page);
 		Thread.sleep(6000);
-		Reporter.log("Select Uploaded Page", true);
+		log("Select Uploaded Page");
 
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button menu Option", true);
+		log("Click on Save button menu Option");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update Save button", true);
+		log("Click on Update Save button");
 		jsclick(Update_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Properties_option);
-		Reporter.log("Click on Properties Option from Document Viewer menu", true);
-		Reporter.log("Upload and Verifying Allowing Semicolon Characterfile", true);
+		log("Click on Properties Option from Document Viewer menu");
+		log("Upload and Verifying Allowing Semicolon Characterfile");
 		Thread.sleep(6000);
-		Reporter.log("****************************************************************************************************************", true);
+		log("****************************************************************************************************************");
 	}
 	
 	public void Verify_All_filetypes (int numberOfDocs) throws Exception {
 		
 	
 		
-		Reporter.log("Scenario 20:Verify All Uploaded file types", true);
+		log("Scenario 20:Verify All Uploaded file types");
 		
 		for (int i = 1; i <= numberOfDocs; i++) {
 			// Construct the XPath with the current index
@@ -1180,14 +1180,14 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 			System.out.println("print the downloaded xpath details" + xpath);
 			WebElement element = driver.findElement(By.xpath(xpath));
 			jsclick(element);
-			Reporter.log("Select Uploaded file", true);
+			log("Select Uploaded file");
 			String Uploaded = element.getAttribute("title");
-			Reporter.log("Uploaded file name with file type is :" + Uploaded, true);
+			log("Uploaded file name with file type is :" + Uploaded);
 			Thread.sleep(5000);
 			movingclkElement(closedoc);
 			Thread.sleep(3000);
 			LogoutPage();
-			Reporter.log("=====================================================================================", true);
+			log("=====================================================================================");
 		}
 	}
 
@@ -1198,68 +1198,68 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		} else {
 			// Saving dialog not present
 		}
-		Reporter.log("Test Scenario 1 : Verifying Destination Folder ", true);
+		log("Test Scenario 1 : Verifying Destination Folder ");
 		Thread.sleep(8000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(NewDocuments_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getFolderSelectMessage();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Validation Message", true);
+		log("Verifying Validation Message");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getFolderSelectMessage();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Validation message", true);
+		log("Verifying Validation message");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getFolderSelectMessage();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Validation message", true);
+		log("Verifying Validation message");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Templates", true);
+		log("Folder is selected for Templates");
 		jsclick(OK_Button_BrowseforFolder);
-		Reporter.log("Select Folder message verified", true);
+		log("Select Folder message verified");
 		Thread.sleep(6000);
 	}
 
 	public void Verify_Asterrisk_Field() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying Asterrisk Field ", true);
+		log("Test Scenario 2 : Verifying Asterrisk Field ");
 		Thread.sleep(6000);
 		jsclick(getSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select value from Document type dropdown", true);
+		log("Select value from Document type dropdown");
 		jsclick(Create_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		getReportvaluevalidationerror();
 		Thread.sleep(6000);
-		Reporter.log("Verifi validation message", true);
-		Reporter.log("Asterisk field verified", true);
+		log("Verifi validation message");
+		log("Asterisk field verified");
 	}
 
 	public void Create_Emptypage_Document() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Create Empty page Document ", true);
+		log("Test Scenario 3 : Create Empty page Document ");
 		if (Nobutton.isDisplayed() == true) {
 			movingclkElement(Nobutton);
 		} else {
@@ -1268,17 +1268,17 @@ public class SpecialCharFilenames extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		Enter_Report_Name_Text.sendKeys(Specialchar_excelRead(1, 0));
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		jsclick(Create_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		getNavigateDoc();
-		Reporter.log("Click on Navigate button", true);
-		Reporter.log("Empty page document Created successfully", true);
+		log("Click on Navigate button");
+		log("Empty page document Created successfully");
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 }

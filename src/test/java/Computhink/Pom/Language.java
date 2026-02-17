@@ -899,25 +899,25 @@ public class Language extends BaseClass {
 
 	public void loginwithoutUsername() throws Exception {
 		driver.findElement(By.xpath("//input[@id='userName']")).clear();
-		Reporter.log("Do not entered username into username field", true);
+		log("Do not entered username into username field");
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(1, 1));
-		Reporter.log("Enter valid Password into Password field", true);
+		log("Enter valid Password into Password field");
 		WebElement room = driver.findElement(By.xpath("//select[@id='rooms']"));
 		Select sel = new Select(room);
 		sel.selectByVisibleText(ExcelLogin(1, 2));
-		Reporter.log("Select a Room", true);
+		log("Select a Room");
 		Thread.sleep(3000);
 		try {
 			Thread.sleep(6000);
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
-			Reporter.log("Enter a valid captch under textbox", true);
+			log("Enter a valid captch under textbox");
 		} catch (Exception e) {
 			// captch is not displayed
 		}
 		driver.findElement(By.id("submitid")).click();
-		Reporter.log("Click on the Login button", true);
+		log("Click on the Login button");
 		Thread.sleep(6000);
 
 		try {
@@ -932,25 +932,25 @@ public class Language extends BaseClass {
 	public void loginwithoutPassword() throws Exception {
 
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(1, 0));
-		Reporter.log("Enter valid Username into Username field", true);
+		log("Enter valid Username into Username field");
 		driver.findElement(By.id("loginPassword")).clear();
-		Reporter.log("Do not entered password into password field", true);
+		log("Do not entered password into password field");
 		WebElement room = driver.findElement(By.xpath("//select[@id='rooms']"));
 		Select sel = new Select(room);
 		sel.selectByVisibleText(ExcelLogin(1, 2));
-		Reporter.log("Select a Room", true);
+		log("Select a Room");
 		Thread.sleep(3000);
 		try {
 			Thread.sleep(6000);
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
-			Reporter.log("Enter a valid captch under textbox", true);
+			log("Enter a valid captch under textbox");
 		} catch (Exception e) {
 			// captch is not displayed
 		}
 		driver.findElement(By.id("submitid")).click();
-		Reporter.log("Click on the Login button", true);
+		log("Click on the Login button");
 		Thread.sleep(6000);
 
 		try {
@@ -966,25 +966,25 @@ public class Language extends BaseClass {
 
 		driver.findElement(By.xpath("//input[@id='userName']")).clear();
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(1, 0));
-		Reporter.log("Enter valid Username into Username field", true);
+		log("Enter valid Username into Username field");
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(1, 1));
-		Reporter.log("Enter valid Password into Password field", true);
+		log("Enter valid Password into Password field");
 		WebElement room = driver.findElement(By.xpath("//select[@id='rooms']"));
 		Select sel = new Select(room);
 		sel.selectByIndex(0);
-		Reporter.log("Select Please select a room Option", true);
+		log("Select Please select a room Option");
 		Thread.sleep(3000);
 		try {
 			Thread.sleep(6000);
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
-			Reporter.log("Enter a valid captch under textbox", true);
+			log("Enter a valid captch under textbox");
 		} catch (Exception e) {
 			// captch is not displayed
 		}
 		driver.findElement(By.id("submitid")).click();
-		Reporter.log("Click on the Login button", true);
+		log("Click on the Login button");
 		Thread.sleep(6000);
 
 		try {
@@ -1001,7 +1001,7 @@ public class Language extends BaseClass {
 		String expectedtext = "Please enter username";
 		String actualtext = Usernameerror.getText();
 		Assert.assertEquals(actualtext, expectedtext);
-		Reporter.log(Usernameerror.getText() + " validation message should show", true);
+		log(Usernameerror.getText() + " validation message should show");
 
 	}
 
@@ -1010,7 +1010,7 @@ public class Language extends BaseClass {
 		String expectedtext = "Please enter password";
 		String actualtext = Passworderror.getText();
 		Assert.assertEquals(actualtext, expectedtext);
-		Reporter.log(Passworderror.getText() + " validation message should show", true);
+		log(Passworderror.getText() + " validation message should show");
 
 	}
 
@@ -1019,8 +1019,7 @@ public class Language extends BaseClass {
 		String expectedtext = "Select a room";
 		String actualtext = Roomerror.getText();
 		Assert.assertEquals(actualtext, expectedtext);
-		Reporter.log(Roomerror.getText() + " validation message should show when none of above room selected for Login",
-				true);
+		log(Roomerror.getText() + " validation message should show when none of above room selected for Login");
 
 	}
 
@@ -1028,26 +1027,26 @@ public class Language extends BaseClass {
 
 		driver.findElement(By.xpath("//input[@id='userName']")).clear();
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(1, 1));
-		Reporter.log("Enter Invalid Username into Username field", true);
+		log("Enter Invalid Username into Username field");
 		driver.findElement(By.id("loginPassword")).clear();
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(1, 1));
-		Reporter.log("Enter valid Password into Password field", true);
+		log("Enter valid Password into Password field");
 		WebElement room = driver.findElement(By.xpath("//select[@id='rooms']"));
 		Select sel = new Select(room);
 		sel.selectByVisibleText(ExcelLogin(1, 2));
-		Reporter.log("Select a Room", true);
+		log("Select a Room");
 		Thread.sleep(3000);
 		try {
 			Thread.sleep(6000);
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
-			Reporter.log("Enter a valid captch under textbox", true);
+			log("Enter a valid captch under textbox");
 		} catch (Exception e) {
 			// captch is not displayed
 		}
 		driver.findElement(By.id("submitid")).click();
-		Reporter.log("Click on the Login button", true);
+		log("Click on the Login button");
 		Thread.sleep(6000);
 
 		try {
@@ -1063,35 +1062,35 @@ public class Language extends BaseClass {
 
 		driver.findElement(By.xpath("//input[@id='userName']")).clear();
 		driver.findElement(By.xpath("//input[@id='userName']")).sendKeys(ExcelLogin(1, 0));
-		Reporter.log("Enter valid Username into Username field", true);
+		log("Enter valid Username into Username field");
 		driver.findElement(By.id("loginPassword")).clear();
 		driver.findElement(By.id("loginPassword")).sendKeys(ExcelLogin(1, 0));
-		Reporter.log("Enter Invalid Password into Password field", true);
+		log("Enter Invalid Password into Password field");
 		WebElement room = driver.findElement(By.xpath("//select[@id='rooms']"));
 		Select sel = new Select(room);
 		sel.selectByVisibleText(ExcelLogin(1, 2));
-		Reporter.log("Select a Room", true);
+		log("Select a Room");
 		Thread.sleep(3000);
 		try {
 			Thread.sleep(6000);
 			WebElement Captch = driver.findElement(By.xpath("//*[@id=\"image\"]"));
 			WebElement enterCaptch = driver.findElement(By.xpath("//*[@id=\"captchaInput\"]"));
 			enterCaptch.sendKeys(Captch.getText());
-			Reporter.log("Enter a valid captch under textbox", true);
+			log("Enter a valid captch under textbox");
 		} catch (Exception e) {
 			// captch is not displayed
 		}
 		driver.findElement(By.id("submitid")).click();
-		Reporter.log("Click on the Login button", true);
+		log("Click on the Login button");
 		Thread.sleep(6000);
 
 		try {
 			WebElement sessionmsg = driver.findElement(By.xpath("//*[@id=\"cvModelLoginValidationMessage\"]"));
 			WebElement sessionmsgNO = driver.findElement(By.xpath("//*[@id=\"cvModelLoginValidationCancel\"]"));
-			Reporter.log(sessionmsg.getText() + "this message is displayed", true);
+			log(sessionmsg.getText() + "this message is displayed");
 			sessionmsgNO.click();
 			Thread.sleep(2000);
-			Reporter.log("Click on the No button", true);
+			log("Click on the No button");
 
 		} catch (Exception e1) {
 			// Session message is not displayed
@@ -1111,7 +1110,7 @@ public class Language extends BaseClass {
 		String expectedtext = "The username or password was incorrect";
 		String actualtext = Usernotexist.getText();
 		Assert.assertEquals(actualtext, expectedtext);
-		Reporter.log(Usernotexist.getText() + " validation message should show", true);
+		log(Usernotexist.getText() + " validation message should show");
 
 	}
 
@@ -1120,7 +1119,7 @@ public class Language extends BaseClass {
 		String expectedtext = "The username or password was incorrect";
 		String actualtext = Invalidpassword.getText();
 		Assert.assertEquals(actualtext, expectedtext);
-		Reporter.log(Invalidpassword.getText() + " validation message should show", true);
+		log(Invalidpassword.getText() + " validation message should show");
 
 	}
 
@@ -1130,7 +1129,7 @@ public class Language extends BaseClass {
 		String expectedtext2 = "Mon compte";
 		String actualtext2 = MyaccountText.getText();
 		Assert.assertEquals(actualtext2, expectedtext2, "Laguage verification failed");
-		Reporter.log("Change Laguage in French and My Account Text is: " + MyaccountText.getText(), true);
+		log("Change Laguage in French and My Account Text is: " + MyaccountText.getText());
 
 	}
 
@@ -1140,7 +1139,7 @@ public class Language extends BaseClass {
 		String expectedtext2 = "Mijn rekening";
 		String actualtext2 = MyaccountText.getText();
 		Assert.assertEquals(actualtext2, expectedtext2, "Laguage verification failed");
-		Reporter.log("Change Laguage in Dutch and My Account Text is: " + MyaccountText.getText(), true);
+		log("Change Laguage in Dutch and My Account Text is: " + MyaccountText.getText());
 
 	}
 
@@ -1150,7 +1149,7 @@ public class Language extends BaseClass {
 		String expectedtext2 = "";
 		String actualtext2 = MyaccountText.getText();
 		Assert.assertEquals(actualtext2, expectedtext2, "Laguage verification failed");
-		Reporter.log("Change Laguage in Hindi and My Account Text is: " + MyaccountText.getText(), true);
+		log("Change Laguage in Hindi and My Account Text is: " + MyaccountText.getText());
 
 	}
 
@@ -1160,7 +1159,7 @@ public class Language extends BaseClass {
 		String expectedtext2 = "My Account";
 		String actualtext2 = MyaccountText.getText();
 		Assert.assertEquals(actualtext2, expectedtext2, "Laguage verification failed");
-		Reporter.log("Change Laguage in English and My Account Text is: " + MyaccountText.getText(), true);
+		log("Change Laguage in English and My Account Text is: " + MyaccountText.getText());
 
 	}
 
@@ -1170,7 +1169,7 @@ public class Language extends BaseClass {
 		String expectedtext2 = "Mi cuenta";
 		String actualtext2 = MyaccountText.getText();
 		Assert.assertEquals(actualtext2, expectedtext2, "Laguage verification failed");
-		Reporter.log("Change Laguage in spanish and My Account Text is : " + MyaccountText.getText(), true);
+		log("Change Laguage in spanish and My Account Text is : " + MyaccountText.getText());
 
 	}
 
@@ -1200,7 +1199,7 @@ public class Language extends BaseClass {
 
 	public void getClick_FileInfo_OkButton_withFileName() {
 		WebElement Filename = Click_FileInfo_OkButton_withFileName;
-		Reporter.log("File name is:" + Filename.getText(), true);
+		log("File name is:" + Filename.getText());
 		WebElement ele = RemarkOk;
 		ele.click();
 
@@ -1377,7 +1376,7 @@ public class Language extends BaseClass {
 
 	public void getVerify_DuplicateTemp_Message() {
 		WebElement Message = Verify_DuplicateTemp_Message;
-		Reporter.log(Message.getText(), true);
+		log(Message.getText());
 
 	}
 
@@ -1386,7 +1385,7 @@ public class Language extends BaseClass {
 		String expectedtext = "Please select a folder to create document";
 		String actualtext = FolderSelectMessage.getText();
 		Assert.assertEquals(actualtext, expectedtext);
-		Reporter.log(FolderSelectMessage.getText(), true);
+		log(FolderSelectMessage.getText());
 		jsclick(CommentOK);
 	}
 
@@ -1395,7 +1394,7 @@ public class Language extends BaseClass {
 		String expectedtext = "Please add pages to the template before creating!";
 		String actualtext = addpagesMessage.getText();
 		Assert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(addpagesMessage.getText(), true);
+		log(addpagesMessage.getText());
 		jsclick(CommentOKbutton);
 
 	}
@@ -1405,7 +1404,7 @@ public class Language extends BaseClass {
 		String expectedtext = "*Template name should be specified.";
 		String actualtext = validationerror.getText();
 		Assert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(validationerror.getText(), true);
+		log(validationerror.getText());
 
 	}
 
@@ -1414,7 +1413,7 @@ public class Language extends BaseClass {
 		String expectedtext = "ReportName*  	field is required";
 		String actualtext = Reportvaluevalidationerror.getText();
 		Assert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(Reportvaluevalidationerror.getText(), true);
+		log(Reportvaluevalidationerror.getText());
 		jsclick(CommentOKbutton);
 
 	}
@@ -1424,7 +1423,7 @@ public class Language extends BaseClass {
 		String expectedtext = "Please enter file name ";
 		String actualtext = Filenamevalidation.getText();
 		Assert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(Filenamevalidation.getText(), true);
+		log(Filenamevalidation.getText());
 		jsclick(CommentOKbutton);
 
 	}
@@ -1434,7 +1433,7 @@ public class Language extends BaseClass {
 		String expectedtext = "Document created successfully";
 		String actualtext = NavigateDoc.getText();
 		Assert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log(NavigateDoc.getText(), true);
+		log(NavigateDoc.getText());
 		jsclick(NavigateButton);
 
 	}
@@ -1444,7 +1443,7 @@ public class Language extends BaseClass {
 		String expectedtext = "Please add form fields before mapping.";
 		String actualtext = Formmappingvalidation.getText();
 		Assert.assertEquals(actualtext, expectedtext);
-		Reporter.log(Formmappingvalidation.getText(), true);
+		log(Formmappingvalidation.getText());
 		jsclick(FormOKbutton);
 
 	}
@@ -1459,13 +1458,13 @@ public class Language extends BaseClass {
 
 	public void getVerify_Loadmorecount_Searchresult() throws Exception {
 		WebElement count = Verify_Loadmorecount_Searchresult;
-		Reporter.log("The " + count.getText());
+		log("The " + count.getText());
 
 	}
 
 	public void getVerify_Loadmorecount_Document_Folder() throws Exception {
 		WebElement DocDisplay = Verify_Loadmorecount_Document_Folder;
-		Reporter.log("Verify and " + DocDisplay.getText());
+		log("Verify and " + DocDisplay.getText());
 
 	}
 
@@ -1501,17 +1500,17 @@ public class Language extends BaseClass {
 		String expectedtext = "DATE 123";
 		String actualtext = DATE.getText();
 		Assert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log("Indices01 value displayed successfully" + DATE.getText(), true);
+		log("Indices01 value displayed successfully" + DATE.getText());
 		Thread.sleep(4000);
 		String expectedtext1 = "NUMERIC 123";
 		String actualtext1 = NUMERIC.getText();
 		Assert.assertEquals(actualtext1, expectedtext1, "Text verification failed");
-		Reporter.log("Indices02 value displayed successfully" + NUMERIC.getText(), true);
+		log("Indices02 value displayed successfully" + NUMERIC.getText());
 		Thread.sleep(4000);
 		String expectedtext2 = "TEXT KEY";
 		String actualtext2 = TEXT.getText();
 		Assert.assertEquals(actualtext2, expectedtext2, "Text verification failed");
-		Reporter.log("Indices03 value displayed successfully" + TEXT.getText(), true);
+		log("Indices03 value displayed successfully" + TEXT.getText());
 
 	}
 
@@ -1575,7 +1574,7 @@ public class Language extends BaseClass {
 		String expectedtext = "DOCUMENT SIZE";
 		String actualtext = DocumentSize.getText();
 		Assert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log("Indices value displayed successfully" + DocumentSize.getText(), true);
+		log("Indices value displayed successfully" + DocumentSize.getText());
 
 	}
 
@@ -1586,7 +1585,7 @@ public class Language extends BaseClass {
 		String expectedtext = "CURRENT DATE";
 		String actualtext = Currentdate.getText();
 		Assert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log("Indices value displayed successfully" + Currentdate.getText(), true);
+		log("Indices value displayed successfully" + Currentdate.getText());
 
 	}
 
@@ -1597,7 +1596,7 @@ public class Language extends BaseClass {
 		String expectedtext = "REPORTNAME";
 		String actualtext = REPORTNAME.getText();
 		Assert.assertEquals(actualtext, expectedtext, "Text verification failed");
-		Reporter.log("Indices value displayed successfully" + REPORTNAME.getText(), true);
+		log("Indices value displayed successfully" + REPORTNAME.getText());
 
 	}
 
@@ -1684,7 +1683,7 @@ public class Language extends BaseClass {
 		String expectedtext2 = "WORKFLOW STATUS";
 		String actualtext2 = WORKFLOWSTATUS.getText();
 		Assert.assertEquals(actualtext2, expectedtext2, "Text verification failed");
-		Reporter.log("Indices value displayed successfully" + WORKFLOWSTATUS.getText(), true);
+		log("Indices value displayed successfully" + WORKFLOWSTATUS.getText());
 
 	}
 
@@ -1786,10 +1785,10 @@ public class Language extends BaseClass {
 		jsclick(customdoc);
 		Thread.sleep(6000);
 		WebElement Message1 = Docownername;
-		Reporter.log("Take Ownership Message " + Message1.getText(), true);
+		log("Take Ownership Message " + Message1.getText());
 		Thread.sleep(4000);
 		WebElement Message2 = openviewonly;
-		Reporter.log("Take Ownership Message " + Message2.getText(), true);
+		log("Take Ownership Message " + Message2.getText());
 		Thread.sleep(4000);
 		jsclick(ownershipok);
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -2020,7 +2019,7 @@ public class Language extends BaseClass {
 		String expectedtext = "MORTHWEST MEDICAT";
 		String actualtext = ReportNameValueBeforeDoc.getText();
 		Assert.assertEquals(actualtext, expectedtext);
-		Reporter.log("Report Name is: " + ReportNameValueBeforeDoc.getText(), true);
+		log("Report Name is: " + ReportNameValueBeforeDoc.getText());
 
 	}
 
@@ -2029,7 +2028,7 @@ public class Language extends BaseClass {
 		String expectedtext = "Export Documentary Credit (DC) Bill Ne";
 		String actualtext = ReportNameValueAfterDoc.getText();
 		Assert.assertEquals(actualtext, expectedtext);
-		Reporter.log("Report Name is: " + ReportNameValueAfterDoc.getText(), true);
+		log("Report Name is: " + ReportNameValueAfterDoc.getText());
 	}
 
 	public void getMoveTo_Menu_Recent() {
@@ -2041,140 +2040,140 @@ public class Language extends BaseClass {
 
 	public void verify_Spanish_Language() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Spanish Language ", true);
+		log("Test Scenario 1 : Verifying Spanish Language ");
 		Refresh_Button();
 		Thread.sleep(8000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(4000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(4000);
-		Reporter.log("Click on My Preferences option", true);
+		log("Click on My Preferences option");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(4000);
-		Reporter.log("Select Office document and set as Default View", true);
+		log("Select Office document and set as Default View");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(4000);
-		Reporter.log("Select Pdf Document and set as Default view", true);
+		log("Select Pdf Document and set as Default view");
 		movingclkElement(Apply_button);
 		Thread.sleep(4000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		LogoutPage();
 		jsclick(Spanish_Language);
 		Thread.sleep(4000);
-		Reporter.log("Click on Spanish Language", true);
+		log("Click on Spanish Language");
 		LogDipakUser();
 		Thread.sleep(4000);
-		Reporter.log("Login EWA With User credential", true);
+		log("Login EWA With User credential");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Username);
 		Thread.sleep(4000);
-		Reporter.log("Click on Username", true);
+		log("Click on Username");
 		Spanish_Myaccount_Text_Laguage();
 		Thread.sleep(4000);
-		Reporter.log("Verified My Account name in Spanish laguage", true);
+		log("Verified My Account name in Spanish laguage");
 		LogoutPage();
 		Thread.sleep(4000);
-		Reporter.log("Click on Logout Option", true);
-		Reporter.log("Spanish Language verified Successfully", true);
+		log("Click on Logout Option");
+		log("Spanish Language verified Successfully");
 	}
 
 	public void verify_French_Language() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying French Language ", true);
+		log("Test Scenario 2 : Verifying French Language ");
 		jsclick(French_Language);
 		Thread.sleep(4000);
-		Reporter.log("Click on French Language", true);
+		log("Click on French Language");
 		LogDipakUser();
 		Thread.sleep(4000);
-		Reporter.log("Login EWA with User credential ", true);
+		log("Login EWA with User credential ");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Username);
 		Thread.sleep(4000);
-		Reporter.log("Click on Username", true);
+		log("Click on Username");
 		French_Myaccount_Text_Laguage();
 		Thread.sleep(4000);
-		Reporter.log("Verified My Account text in French Language", true);
+		log("Verified My Account text in French Language");
 		LogoutPage();
 		Thread.sleep(4000);
-		Reporter.log("Click on Logout Option", true);
-		Reporter.log("French Language verified Successfully", true);
+		log("Click on Logout Option");
+		log("French Language verified Successfully");
 	}
 
 	public void verify_Dutch_Language() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Verifying Dutch Language ", true);
+		log("Test Scenario 3 : Verifying Dutch Language ");
 		jsclick(Dutch_Language);
 		Thread.sleep(4000);
-		Reporter.log("Click on Dutch Language", true);
+		log("Click on Dutch Language");
 		LogDipakUser();
 		Thread.sleep(4000);
-		Reporter.log("Login EWA with User credential ", true);
+		log("Login EWA with User credential ");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Username);
 		Thread.sleep(4000);
-		Reporter.log("Click on Username", true);
+		log("Click on Username");
 		Dutch_Myaccount_Text_Laguage();
 		Thread.sleep(4000);
-		Reporter.log("Verified My Account text in Dutch language", true);
+		log("Verified My Account text in Dutch language");
 		LogoutPage();
 		Thread.sleep(4000);
-		Reporter.log("Click on Logout Option", true);
-		Reporter.log("Dutch Language verified Successfully", true);
+		log("Click on Logout Option");
+		log("Dutch Language verified Successfully");
 	}
 
 	public void verify_Hindi_Language() throws Exception {
 
-		Reporter.log("Test Scenario 4 : Verifying Hindi Language ", true);
+		log("Test Scenario 4 : Verifying Hindi Language ");
 		jsclick(Hindi_Language);
 		Thread.sleep(4000);
-		Reporter.log("Click on Hindi Language", true);
+		log("Click on Hindi Language");
 		LogDipakUser();
 		Thread.sleep(4000);
-		Reporter.log("Login EWA with User credential", true);
+		log("Login EWA with User credential");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Username);
 		Thread.sleep(4000);
-		Reporter.log("Click on Username", true);
+		log("Click on Username");
 		//Hindi_Myaccount_Text_Laguage();
 		Thread.sleep(4000);
-		Reporter.log("Verified My Account Text in Hindi Language", true);
+		log("Verified My Account Text in Hindi Language");
 		LogoutPage();
 		Thread.sleep(4000);
-		Reporter.log("Click on Logout Option", true);
-		Reporter.log("Hindi Language verified Successfully", true);
+		log("Click on Logout Option");
+		log("Hindi Language verified Successfully");
 	}
 
 	public void verify_English_Language() throws Exception {
 
-		Reporter.log("Test Scenario 5 : Verifying English Language ", true);
+		log("Test Scenario 5 : Verifying English Language ");
 		jsclick(English_Language);
 		Thread.sleep(4000);
-		Reporter.log("Click on English Language Option", true);
+		log("Click on English Language Option");
 		LogDipakUser();
 		Thread.sleep(4000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with User credential", true);
+		log("Login EWA with User credential");
 		jsclick(Username);
 		Thread.sleep(4000);
-		Reporter.log("Click on Username", true);
+		log("Click on Username");
 		English_Myaccount_Text_Laguage();
 		Thread.sleep(4000);
-		Reporter.log("Verified My Account in English Language", true);
+		log("Verified My Account in English Language");
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
-		Reporter.log("English Language verified Successfully", true);
+		log("Click on Refresh button");
+		log("English Language verified Successfully");
 
 	}
 
@@ -2182,60 +2181,60 @@ public class Language extends BaseClass {
 
 	public void CreateandOpen_NewDocument_Dutch_Language() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying Create and Open New Document Dutch Language ", true);
+		log("Test Scenario 1 : Verifying Create and Open New Document Dutch Language ");
 		Refresh_Button();
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office documentv and set as Default View", true);
+		log("Select Office documentv and set as Default View");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf documentv and set as Default View", true);
+		log("Select Pdf documentv and set as Default View");
 		getSelect_Dropdown_Actual_Size();
 		Thread.sleep(6000);
-		Reporter.log("Select Viewer zoom and set as Actual Size", true);
+		log("Select Viewer zoom and set as Actual Size");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		LogoutPage();
 		jsclick(Dutch_Language);
 		Thread.sleep(6000);
-		Reporter.log("Click on Dutch Language", true);
+		log("Click on Dutch Language");
 		LogDipakUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with User credential", true);
+		log("Login EWA with User credential");
 		Refresh_Button();
 		Thread.sleep(6000);
 		jsclick(NewDocuments_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Documents Tab", true);
+		log("Click on New Documents Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Create New Documents", true);
+		log("Folder is selected for Create New Documents");
 		OK_Button_BrowseforFolder.click();
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getgetSelect_Document_Type_Dropdown();
 		Thread.sleep(6000);
-		Reporter.log("Select a Document Type dropdown", true);
+		log("Select a Document Type dropdown");
 		Enter_Report_Name_Text.sendKeys(Language_excelRead(11, 2));
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		movingclkElement(getMove_To_PlusIcon());
@@ -2243,7 +2242,7 @@ public class Language extends BaseClass {
 		Thread.sleep(6000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Hyphen.exe");
 		Thread.sleep(6000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		try {
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait1.until(ExpectedConditions.alertIsPresent());
@@ -2253,207 +2252,207 @@ public class Language extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Document Uploaded successfully", true);
+		log("Document Uploaded successfully");
 		jsclick(ClickOCR);
 		Thread.sleep(6000);
-		Reporter.log("Click on OCR menu Option", true);
+		log("Click on OCR menu Option");
 		getSet_OCR_ToDocumentPDF();
 		Thread.sleep(6000);
-		Reporter.log("Set OCR On page", true);
+		log("Set OCR On page");
 		jsclick(ReportName);
 		Thread.sleep(6000);
-		Reporter.log("Click on Report Name and set OCR Value as Report Name", true);
+		log("Click on Report Name and set OCR Value as Report Name");
 		jsclick(Create_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
+		log("Click on Navigate button");
 		getOCRReportnamevalidation_BeforeCreateDOC();
 		Thread.sleep(6000);
-		Reporter.log("Verifying OCR Report name ", true);
+		log("Verifying OCR Report name ");
 		jsclick(ReportNameValueBeforeDoc);
 		Thread.sleep(6000);
-		Reporter.log("Report name Verified and Open Document", true);
+		log("Report name Verified and Open Document");
 		getClick_FileInfo_Option();
 		Thread.sleep(6000);
-		Reporter.log("Click on File Info Menu Option", true);
+		log("Click on File Info Menu Option");
 		getClick_FileInfo_OkButton_withFileName();
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("New Document Create and open in Dutch language", true);
+		log("Click on Ok button");
+		log("New Document Create and open in Dutch language");
 
 	}
 
 	public void Verify_OCR_afterCreatingDocument() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying OCR after Creating Document ", true);
+		log("Test Scenario 2 : Verifying OCR after Creating Document ");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		movingElement(getMove_To_PlusIcon());
 		getBrowse_Option();
 		Thread.sleep(3000);
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Runtime.getRuntime()
 				.exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Underscore.exe");
 		Thread.sleep(6000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		jsclick(Open_Underscore_page);
 		Thread.sleep(6000);
-		Reporter.log("Open Document Page from Document List", true);
+		log("Open Document Page from Document List");
 		jsclick(UpdateDutch_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		jsclick(ClickOCR);
 		Thread.sleep(6000);
-		Reporter.log("Click on OCR button", true);
+		log("Click on OCR button");
 		getSet_OCR_ToDocument();
 		Thread.sleep(6000);
-		Reporter.log("Set OCR To Document", true);
+		log("Set OCR To Document");
 		jsclick(ReportName);
 		Thread.sleep(6000);
-		Reporter.log("Click on Report Name and set OCR Extarcted Name", true);
+		log("Click on Report Name and set OCR Extarcted Name");
 		jsclick(DutchSave_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button", true);
+		log("Click on Save button");
 		jsclick(DutchUpdate_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button", true);
+		log("Click on Save button");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(DutchProperties_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Properties Option", true);
+		log("Click on Properties Option");
 		movingclkElement(closedoc);
 		Thread.sleep(6000);
-		Reporter.log("Close the document Page", true);
+		log("Close the document Page");
 		getOCRReportnamevalidation_AfterCreateDOC();
 		Thread.sleep(6000);
-		Reporter.log("Verifying OCR Name as Document name", true);
+		log("Verifying OCR Name as Document name");
 		jsclick(ReportNameValueAfterDoc);
-		Reporter.log("After Creating Document OCR Functionality verified Sucessfully", true);
+		log("After Creating Document OCR Functionality verified Sucessfully");
 
 	}
 
 	public void Addsignature_Dutch_Language() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Add signature Dutch Language ", true);
+		log("Test Scenario 3 : Add signature Dutch Language ");
 		Thread.sleep(6000);
 		jsclick(Click_signature_Menuoption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Signature menu Option", true);
+		log("Click on Signature menu Option");
 		try {
 			getinputpassword();
 			Thread.sleep(6000);
-			Reporter.log("Enter a Password", true);
+			log("Enter a Password");
 		} catch (Exception e) {
 			System.out.println("signature is not password protected...");
 		}
 		getAdd_Signature_Onpage();
 		Thread.sleep(6000);
-		Reporter.log("Add signature on page", true);
-		Reporter.log("signature added Successfully on  Document", true);
+		log("Add signature on page");
+		log("signature added Successfully on  Document");
 	}
 
 	public void getAddRedaction_Dutch_Language() throws Exception {
 
-		Reporter.log("Test Scenario 4 : Add Redaction Dutch Language ", true);
+		log("Test Scenario 4 : Add Redaction Dutch Language ");
 		Thread.sleep(6000);
 		getMove_to_Annotation_Option_inViewer();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Annotation menu Option", true);
+		log("Mousehover on Annotation menu Option");
 		getRedaction_Option();
 		Thread.sleep(6000);
-		Reporter.log("Click on Redaction Option", true);
+		log("Click on Redaction Option");
 		getSet_Redaction_ToDocument();
 		Thread.sleep(6000);
-		Reporter.log("Set Redaction on Page", true);
+		log("Set Redaction on Page");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button", true);
+		log("Click on Save button");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Redaction added Successfully on  Document", true);
+		log("Click on Ok button");
+		log("Redaction added Successfully on  Document");
 	}
 
 	public void getShowHideThumbnail_Dutch_Language() throws Exception {
 
-		Reporter.log("Test Scenario 5 : Show Hide Thumbnail Dutch Language ", true);
+		log("Test Scenario 5 : Show Hide Thumbnail Dutch Language ");
 		Thread.sleep(6000);
 		jsclick(showHideThumbnail);
 		Thread.sleep(6000);
-		Reporter.log("Click on Show Hide Thumbnail", true);
+		log("Click on Show Hide Thumbnail");
 		jsclick(showHideThumbnail);
 		Thread.sleep(6000);
-		Reporter.log("Verifying showing Thumbnail and Again Click Show Hide Thumbnail", true);
+		log("Verifying showing Thumbnail and Again Click Show Hide Thumbnail");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
-		Reporter.log("Show Hide Thumbnail options verified", true);
+		log("Click on Refresh button");
+		log("Show Hide Thumbnail options verified");
 	}
 
 	// Create Template in Dutch laguage
 
 	public void getverify_to_CreateorBrowse_Template_Defaultviewing() throws Exception {
 
-		Reporter.log("Test Scenario 6 : Verifying to Create or Browse Template Default viewing ", true);
+		log("Test Scenario 6 : Verifying to Create or Browse Template Default viewing ");
 		Refresh_Button();
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office document and set as Default View", true);
+		log("Select Office document and set as Default View");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf document and set as Default View", true);
+		log("Select Pdf document and set as Default View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Templates", true);
+		log("Folder is selected for Templates");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getgetSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select Document type dropdown", true);
+		log("Select Document type dropdown");
 		jsclick(Enter_Report_Name_Text);
 		Thread.sleep(6000);
-		Reporter.log("Click on Report Name", true);
+		log("Click on Report Name");
 		getSelect_ReportName_Testvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter Report Name", true);
+		log("Enter Report Name");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		movingclkElement(getMove_To_PlusIcon());
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(6000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
 		try {
@@ -2464,56 +2463,56 @@ public class Language extends BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait2.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		movingclkElement(getMove_To_PlusIcon());
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(6000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		jsclick(Save_Template_Button);
-		Reporter.log("Save Template button clicked successfully", true);
+		log("Save Template button clicked successfully");
 		jsclick(Template_Description_No_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on No button", true);
+		log("Click on No button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Name Textbox", true);
+		log("Click on Template Name Textbox");
 		getTemplate_NameTextboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter Template Name into Template Name field", true);
+		log("Enter Template Name into Template Name field");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description message box", true);
+		log("Click on Template Description message box");
 		getEditTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter Template Description message into Description field", true);
+		log("Enter Template Description message into Description field");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Verified Template Created successfully", true);
+		log("Verified Template Created successfully");
 		jsclick(Template_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Verifying to CreateorBrowse Template Defaultviewing", true);
+		log("Verifying to CreateorBrowse Template Defaultviewing");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	public void getVerify_to_Edit_and_Delete_DefaultTemplate() throws Exception {
 
-		Reporter.log("Test Scenario 7 : Verifying to Edit and Delete Default Template ", true);
+		log("Test Scenario 7 : Verifying to Edit and Delete Default Template ");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Template Tab", true);
+		log("Mousehover on Template Tab");
 		jsclick(Select_Created_Template);
 		try {
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -2524,390 +2523,390 @@ public class Language extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template", true);
+		log("Select Created Template");
 		jsclick(Click_Edit_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Fab button", true);
+		log("Click on Edit Template Fab button");
 		EditTemplate_Description_Messagebox.clear();
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description message box", true);
+		log("Click on Template Description message box");
 		getEditTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Edit Template Description", true);
+		log("Edit Template Description");
 		jsclick(EditTemplate_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getEditTemplate_Created_Message_Verify();
-		Reporter.log("Template edited successfully", true);
+		log("Template edited successfully");
 		jsclick(EditTemplate_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Ok button", true);
+		log("Click on  Ok button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Template Tab", true);
+		log("Mousehover on Template Tab");
 		jsclick(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template", true);
+		log("Select Created Template");
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Delete Template Fab button", true);
+		log("Click on  Delete Template Fab button");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Click on  Ok button", true);
-		Reporter.log("Template Deleted Successfully", true);
+		log("Click on  Ok button");
+		log("Template Deleted Successfully");
 
 	}
 
 	public void getverify_to_CreateorBrowse_Template_Advancedviewing_OfficeDoc() throws Exception {
 
-		Reporter.log("Test Scenario 8 : Verifying to Create or Browse Template Advanced viewing OfficeDoc ", true);
+		log("Test Scenario 8 : Verifying to Create or Browse Template Advanced viewing OfficeDoc ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Advancedviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set as Advanced View", true);
+		log("Select Office Document and set as Advanced View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Template Tab", true);
+		log("Mousehover on Template Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Destination Folder Textbox", true);
+		log("Click on  Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Templates", true);
+		log("Folder is selected for Templates");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getgetSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select Document Type dropdown", true);
+		log("Select Document Type dropdown");
 		jsclick(Enter_Report_Name_Text);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Report Name Textbox", true);
+		log("Click on  Report Name Textbox");
 		getSelect_ReportName_Testvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter value Report Name field", true);
+		log("Enter value Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		movingclkElement(getMove_To_PlusIcon());
 		getBrowse_Option();
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Thread.sleep(6000);
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\OfficeDoc\\FileUploadOfficeDoc.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		jsclick(Save_Template_Button);
-		Reporter.log("Save Template button clicked successfully", true);
+		log("Save Template button clicked successfully");
 		jsclick(Template_Description_No_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on No button", true);
+		log("Click on No button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Name  Textbox", true);
+		log("Click on Template Name  Textbox");
 		getTemplate_NameTextboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter value Template Name field", true);
+		log("Enter value Template Name field");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description messagebox", true);
+		log("Click on Template Description messagebox");
 		getTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter message Template Description field", true);
+		log("Enter message Template Description field");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Template Created successfully Verified", true);
+		log("Template Created successfully Verified");
 		jsclick(Template_Created_OK_button);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Verifying to CreateorBrowse OfficeDoc Template advancedviewing", true);
+		log("Click on Ok button");
+		log("Verifying to CreateorBrowse OfficeDoc Template advancedviewing");
 
 	}
 
 	public void getVerify_to_Edit_and_Delete_AdvancedTemplate_OfficeDoc() throws Exception {
 
-		Reporter.log("Test Scenario 9 : Verifying to Edit and Delete Advanced Template Office Doc ", true);
+		log("Test Scenario 9 : Verifying to Edit and Delete Advanced Template Office Doc ");
 		Refresh_Button();
 		Thread.sleep(6000);
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Template Tab", true);
+		log("Mousehover on Template Tab");
 		jsclick(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template", true);
+		log("Select Created Template");
 		jsclick(Click_Edit_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template", true);
+		log("Click on Edit Template");
 		EditTemplate_Description_Messagebox.clear();
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Description messagebox", true);
+		log("Click on Edit Template Description messagebox");
 		getEditTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Edit Template Description", true);
+		log("Edit Template Description");
 		jsclick(EditTemplate_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getEditTemplate_Created_Message_Verify();
-		Reporter.log("Template edited successfully", true);
+		log("Template edited successfully");
 		jsclick(EditTemplate_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Template Tab", true);
+		log("Mousehover on Template Tab");
 		jsclick(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template", true);
+		log("Select Created Template");
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Delete Template Fab button", true);
+		log("Click on Delete Template Fab button");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Template Deleted Successfully", true);
+		log("Template Deleted Successfully");
 
 	}
 
 	public void getverify_to_Create_Formmapping_PDFTemplate_Advancedviewing() throws Exception {
 
-		Reporter.log("Test Scenario 10 : Verifying to Create Formmapping PDF Template Advanced viewing ", true);
+		log("Test Scenario 10 : Verifying to Create Formmapping PDF Template Advanced viewing ");
 		Refresh_Button();
 		Thread.sleep(6000);
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getPdf_document_Advancedviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set as Advanced View", true);
+		log("Select Pdf Document and set as Advanced View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		Destination_Folder_Textbox.click();
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Templates", true);
+		log("Folder is selected for Templates");
 		OK_Button_BrowseforFolder.click();
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getgetSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select Document type dropdown", true);
+		log("Select Document type dropdown");
 		jsclick(Enter_Report_Name_Text);
 		Thread.sleep(6000);
-		Reporter.log("Click on Report Name Textbox", true);
+		log("Click on Report Name Textbox");
 		getSelect_ReportName_Testvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter value Report Name field", true);
+		log("Enter value Report Name field");
 		getMove_To_PlusIcon();
 		getNew_pdf_Document_Option();
 		Thread.sleep(6000);
-		Reporter.log("Browse a Document", true);
+		log("Browse a Document");
 		getEnter_pdf_File_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter Pdf File Name", true);
+		log("Enter Pdf File Name");
 		jsclick(pdfViewer);
 		Thread.sleep(6000);
-		Reporter.log("Click on Pdf Viewerr", true);
+		log("Click on Pdf Viewerr");
 		jsclick(Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Textbox", true);
+		log("Click on Textbox");
 		jsclick(Add_Textbox_Onpage);
 		Thread.sleep(6000);
-		Reporter.log("Select and add Textbox on  Page", true);
+		log("Select and add Textbox on  Page");
 		jsclick(Click_Formmapper);
-		Reporter.log("Click on  Form mapping", true);
+		log("Click on  Form mapping");
 		getSelect_Formfield();
 		Thread.sleep(6000);
-		Reporter.log("Select Form field", true);
+		log("Select Form field");
 		jsclick(FormOK);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template name textbox", true);
+		log("Click on Template name textbox");
 		getTemplate_NameTextboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter Template Name", true);
+		log("Enter Template Name");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description messagebox", true);
+		log("Click on Template Description messagebox");
 		getTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter message in Template Description", true);
+		log("Enter message in Template Description");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Verified Template Created successfully", true);
+		log("Verified Template Created successfully");
 		jsclick(Template_Created_OK_button);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Verifying to CreateorBrowse Formmapping Template advancedviewing", true);
+		log("Click on Ok button");
+		log("Verifying to CreateorBrowse Formmapping Template advancedviewing");
 
 	}
 
 	public void getVerify_to_Edit_and_Delete_Formfield() throws Exception {
 
-		Reporter.log("Test Scenario 11: Verifying to Edit and Delete Form field ", true);
+		log("Test Scenario 11: Verifying to Edit and Delete Form field ");
 		Refresh_Button();
 		Thread.sleep(6000);
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Template Tab", true);
+		log("Mousehover on Template Tab");
 		jsclick(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template", true);
+		log("Select Created Template");
 		jsclick(Click_Edit_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Fab button", true);
+		log("Click on Edit Template Fab button");
 		EditTemplate_Description_Messagebox.clear();
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Description messagebox", true);
+		log("Click on Edit Template Description messagebox");
 		getEditTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Edit a Template", true);
+		log("Edit a Template");
 		jsclick(EditTemplate_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getEditTemplate_Created_Message_Verify();
-		Reporter.log("Template edited successfully", true);
+		log("Template edited successfully");
 		jsclick(EditTemplate_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Template Tab", true);
+		log("Mousehover on Template Tab");
 		jsclick(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template", true);
+		log("Select Created Template");
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Delete Template Fab button", true);
+		log("Click on Delete Template Fab button");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Formmapping Template Deleted Successfully", true);
+		log("Formmapping Template Deleted Successfully");
 	}
 
 	public void getSet_Defaultview() throws Exception {
 
-		Reporter.log("Test Scenario 12 :Set Default view ", true);
+		log("Test Scenario 12 :Set Default view ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set as Default view", true);
+		log("Select Office Document and set as Default view");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set as Default view", true);
+		log("Select Pdf Document and set as Default view");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 	}
 
 	// Verifying Load more in Search and Folder in Spanish laguage
 
 	public void getVerify_Load_MoreCount_On_Search() throws Exception {
 
-		Reporter.log("Test Scenario 13 : Verifying Load More Count On Search ", true);
+		log("Test Scenario 13 : Verifying Load More Count On Search ");
 		Refresh_Button();
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Setting Icon", true);
+		log("Click on  Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getEnter_Loadmorecount();
 		Thread.sleep(6000);
-		Reporter.log("Enter Load more count", true);
+		log("Enter Load more count");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		getVerify_Loadmorecount_Searchresult();
 		Thread.sleep(6000);
-		Reporter.log("Verified Load more count on Search Result", true);
+		log("Verified Load more count on Search Result");
 		jsclick(Loadmorebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Load More button", true);
+		log("Click on Load More button");
 		getVerify_Loadmorecount_Searchresult();
 		Thread.sleep(6000);
-		Reporter.log("Minumum number of Load More count on Search Verified successfully", true);
+		log("Minumum number of Load More count on Search Verified successfully");
 	}
 
 	public void getVerify_Load_MoreCount_On_Folder() throws Exception {
 
-		Reporter.log("Test Scenario 14 : Verifying Load More Count On Folder ", true);
+		log("Test Scenario 14 : Verifying Load More Count On Folder ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		getVerify_Loadmorecount_Document_Folder();
 		Thread.sleep(6000);
-		Reporter.log("Verified Load More count On Folder Document", true);
+		log("Verified Load More count On Folder Document");
 		jsclick(Loadmorebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Load more button", true);
+		log("Click on Load more button");
 		getVerify_Loadmorecount_Document_Folder();
 		Thread.sleep(6000);
-		Reporter.log("Minumum number of Load More count on Folder Verified successfully", true);
+		log("Minumum number of Load More count on Folder Verified successfully");
 
 	}
 
@@ -2917,27 +2916,27 @@ public class Language extends BaseClass {
 
 	public void getOpen_Custom_List_Dialog_And_Verify_Title_Roomcolumn() throws InterruptedException {
 
-		Reporter.log("Test Scenario 15 : Open Custom List Dialog And Verifying Title Room column ", true);
+		log("Test Scenario 15 : Open Custom List Dialog And Verifying Title Room column ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		try {
 			Verify_Reset_CustomColumsnRoom();
 			Thread.sleep(6000);
-			Reporter.log("Click on Reset Column Option", true);
+			log("Click on Reset Column Option");
 			jsclick(Reset_Column_OK_Button);
-			Reporter.log("Click on Ok button", true);
+			log("Click on Ok button");
 			Thread.sleep(6000);
-			Reporter.log("Custom columns Reset Successfully on Room Level", true);
+			log("Custom columns Reset Successfully on Room Level");
 			movingElement(MoveTo_Menu_RoomName);
 			Thread.sleep(6000);
 		} catch (Exception e) {
@@ -2945,140 +2944,140 @@ public class Language extends BaseClass {
 		}
 		jsclick(CustomColumnOptionRoom);
 		Thread.sleep(12000);
-		Reporter.log("Click on Custom Column Option", true);
+		log("Click on Custom Column Option");
 		gettitelvalidation();
-		Reporter.log("Custom List title validate", true);
+		log("Custom List title validate");
 	}
 
 	public void getVerify__Text_of_Custom_List_Dialog_Roomcolumn() throws InterruptedException {
 
-		Reporter.log("Test Scenario 16 : Verifying  Text of Custom List Dialog Room column ", true);
+		log("Test Scenario 16 : Verifying  Text of Custom List Dialog Room column ");
 		Thread.sleep(6000);
 		getextvalidation();
-		Reporter.log("Custom List Dialog Text verified", true);
+		log("Custom List Dialog Text verified");
 	}
 
 	public void getSet_And_Verify_Custom_Columns_NodeLevel() throws Exception {
 
-		Reporter.log("Test Scenario 17 : Set And Verifying Custom Columns Node Level ", true);
+		log("Test Scenario 17 : Set And Verifying Custom Columns Node Level ");
 		Thread.sleep(6000);
 		getSearchBoxIndices1();
 		Thread.sleep(6000);
-		Reporter.log("Enter Indices Value In Search box", true);
+		log("Enter Indices Value In Search box");
 		jsclick(Select_Indices01);
 		Thread.sleep(6000);
-		Reporter.log("Select Entered Indices", true);
+		log("Select Entered Indices");
 		getSearchBoxIndices2();
 		Thread.sleep(6000);
-		Reporter.log("Enter Indices Value In Search box", true);
+		log("Enter Indices Value In Search box");
 		jsclick(Select_Indices02);
 		Thread.sleep(6000);
-		Reporter.log("Select Entered Indices", true);
+		log("Select Entered Indices");
 		getSearchBoxIndices3();
 		Thread.sleep(6000);
-		Reporter.log("Enter Indices Value In Search box", true);
+		log("Enter Indices Value In Search box");
 		jsclick(Select_Indices03);
 		Thread.sleep(6000);
-		Reporter.log("Select Entered Indices", true);
+		log("Select Entered Indices");
 		jsclick(Ok_Button_CustomList);
-		Reporter.log("All Indices Selected Successfully", true);
+		log("All Indices Selected Successfully");
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		Verify_CompactView_checkbox();
 		Thread.sleep(6000);
-		Reporter.log("Check Compact View Checkbox", true);
+		log("Check Compact View Checkbox");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		Verify_Indicess_Value();
 		Thread.sleep(6000);
-		Reporter.log("Custom Columns is set Node Level successfully", true);
+		log("Custom Columns is set Node Level successfully");
 
 	}
 
 	public void getVerify_Default_Custom_Columns() throws InterruptedException {
 
-		Reporter.log("Test Scenario 18 : Verifying Default Custom Columns ", true);
+		log("Test Scenario 18 : Verifying Default Custom Columns ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Roomname  Tab", true);
+		log("Mousehover on Roomname  Tab");
 		jsclick(CustomColumnOptionRoom);
 		Thread.sleep(6000);
-		Reporter.log("Click on Custom Columns Option", true);
+		log("Click on Custom Columns Option");
 		Default_Button_CustomList();
 		Thread.sleep(6000);
-		Reporter.log("Click on Custom List Default button", true);
+		log("Click on Custom List Default button");
 		jsclick(Ok_Button_CustomList);
-		Reporter.log("Set and Verifying Default Custom columns successfully", true);
+		log("Set and Verifying Default Custom columns successfully");
 	}
 
 	public void getVerify_Cancel_Button_of_CustomList() throws InterruptedException {
 
-		Reporter.log("Test Scenario 19 : Verifying Cancel button of Custom List ", true);
+		log("Test Scenario 19 : Verifying Cancel button of Custom List ");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover on Roomname Tab", true);
+		log("Mousehover on Roomname Tab");
 		jsclick(CustomColumnOptionRoom);
 		Thread.sleep(6000);
-		Reporter.log("Click on Custom Column Option", true);
+		log("Click on Custom Column Option");
 		Cancel_Button_CustomList();
-		Reporter.log("Cancle button is clicked", true);
-		Reporter.log("Verified Cancel button of Custom List ", true);
+		log("Cancle button is clicked");
+		log("Verified Cancel button of Custom List ");
 	}
 
 	public void getVerify_Custom_Columns_RoomLevel() throws InterruptedException {
 
-		Reporter.log("Test Scenario 20 : Verifying Custom Columns Room Level ", true);
+		log("Test Scenario 20 : Verifying Custom Columns Room Level ");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover on Roomname Tab", true);
+		log("Mousehover on Roomname Tab");
 		jsclick(CustomColumnOptionRoom);
 		Thread.sleep(6000);
-		Reporter.log("Click on Custom Column Option", true);
+		log("Click on Custom Column Option");
 		jsclick(Click_DropdownOption);
-		Reporter.log("Click on dropdown Option", true);
+		log("Click on dropdown Option");
 		Select_DropdownValue();
 		Thread.sleep(6000);
-		Reporter.log("Select Dropdown Value", true);
+		log("Select Dropdown Value");
 		jsclick(Set_RoomLevel_Indices);
 		Thread.sleep(6000);
-		Reporter.log("Set Room Level Indices", true);
+		log("Set Room Level Indices");
 		jsclick(Ok_Button_CustomList);
-		Reporter.log("Indices is Selected Successfully for RoomLevel", true);
+		log("Indices is Selected Successfully for RoomLevel");
 
 	}
 
 	public void getVerify_Reset_Columns_Functionality() throws InterruptedException {
 
-		Reporter.log("Test Scenario 21 : Verifying Reset Columns Functionality ", true);
+		log("Test Scenario 21 : Verifying Reset Columns Functionality ");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover on Roomname Tab", true);
+		log("Mousehover on Roomname Tab");
 		jsclick(Room_Reset_CustomColumns);
 		Thread.sleep(6000);
-		Reporter.log("Click on Reset Columns", true);
+		log("Click on Reset Columns");
 		jsclick(Reset_Column_OK_Button);
-		Reporter.log("Custom columns Reset Successfully", true);
+		log("Custom columns Reset Successfully");
 
 	}
 
@@ -3086,19 +3085,19 @@ public class Language extends BaseClass {
 
 	public void getOpen_Custom_List_Dialog_And_Verify_Title_Searchcolumn() throws InterruptedException {
 
-		Reporter.log("Test Scenario 22:Open Custom List Dialog And Verifying Title Search column ", true);
+		log("Test Scenario 22:Open Custom List Dialog And Verifying Title Search column ");
 		MoveTo_Search_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Search Tab", true);
+		log("Mousehover on Search Tab");
 		try {
 			Verify_Reset_CustomColumsnSearch();
 			Thread.sleep(6000);
-			Reporter.log("Click on Reset Column Option", true);
+			log("Click on Reset Column Option");
 			jsclick(Reset_Column_OK_Button);
 			Thread.sleep(6000);
-			Reporter.log("Click on Ok button", true);
+			log("Click on Ok button");
 			Thread.sleep(6000);
-			Reporter.log("Custom columns Reset Successfully on Search Level", true);
+			log("Custom columns Reset Successfully on Search Level");
 			movingElement(MoveTo_Search_Option);
 			Thread.sleep(6000);
 		} catch (Exception e) {
@@ -3106,93 +3105,93 @@ public class Language extends BaseClass {
 		}
 		jsclick(Search_Custom_Columns_option);
 		Thread.sleep(12000);
-		Reporter.log("Click on  Custom Column Option", true);
+		log("Click on  Custom Column Option");
 		getSearch_titelvalidation();
-		Reporter.log("Search Custom List title validate", true);
+		log("Search Custom List title validate");
 	}
 
 	public void getVerify__Text_of_Custom_List_Dialog_Searchcolumn() throws InterruptedException {
 
-		Reporter.log("Test Scenario 23 :Verifying  Text of Custom List Dialog Search column ", true);
+		log("Test Scenario 23 :Verifying  Text of Custom List Dialog Search column ");
 		Thread.sleep(6000);
 		getSearch_textvalidation();
-		Reporter.log("Search Custom List Dialog Text verified", true);
+		log("Search Custom List Dialog Text verified");
 	}
 
 	public void getVerify_Set_Custom_Columns_for_Search() throws Exception {
 
-		Reporter.log("Test Scenario 24 : Verifying Set Custom Columns for Search ", true);
+		log("Test Scenario 24 : Verifying Set Custom Columns for Search ");
 		Thread.sleep(6000);
 		getSearchBoxIndices4();
 		Thread.sleep(6000);
-		Reporter.log("Search Indices 1 in Search box", true);
+		log("Search Indices 1 in Search box");
 		jsclick(Search_Select_Indices01);
 		Thread.sleep(6000);
-		Reporter.log("Select Search Indices 1", true);
+		log("Select Search Indices 1");
 		getSearchBoxIndices5();
 		Thread.sleep(6000);
-		Reporter.log("Search Indices 2 in Search box", true);
+		log("Search Indices 2 in Search box");
 		jsclick(Search_Select_Indices02);
 		Thread.sleep(6000);
-		Reporter.log("Select Search Indices 2", true);
+		log("Select Search Indices 2");
 		getSearchBoxIndices6();
 		Thread.sleep(6000);
-		Reporter.log("Search Indices 3 in Search box", true);
+		log("Search Indices 3 in Search box");
 		jsclick(Search_Select_Indices03);
 		Thread.sleep(6000);
-		Reporter.log("Select Search Indices 3", true);
+		log("Select Search Indices 3");
 		jsclick(Search_Ok_Button_CustomList);
-		Reporter.log("All Indices Selected Successfully", true);
+		log("All Indices Selected Successfully");
 		Thread.sleep(6000);
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		jsclick(Document_Location);
 		Thread.sleep(6000);
-		Reporter.log("Click on Document Location", true);
+		log("Click on Document Location");
 		selectElement(Search_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Search_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Search_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Folder", true);
+		log("Expand a Folder");
 		jsclick(Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		Search_Verify_Indicess_Value4();
 		Thread.sleep(6000);
-		Reporter.log("Verified Selected Indices 1", true);
+		log("Verified Selected Indices 1");
 		Search_Verify_Indicess_Value5();
 		Thread.sleep(6000);
-		Reporter.log("Verified Selected Indices 2", true);
+		log("Verified Selected Indices 2");
 		Search_Verify_Indicess_Value6();
 		Thread.sleep(6000);
-		Reporter.log("Verified Selected Indices 3", true);
-		Reporter.log("Custom column is set successfully for Search Functionality", true);
+		log("Verified Selected Indices 3");
+		log("Custom column is set successfully for Search Functionality");
 	}
 
 	public void getVerify_Reset_Columns_for_Search() throws InterruptedException {
 
-		Reporter.log("Test Scenario 25 : Verifying Reset Columns for Search ", true);
+		log("Test Scenario 25 : Verifying Reset Columns for Search ");
 		MoveTo_Search_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Search Tab", true);
+		log("Mousehover on Search Tab");
 		jsclick(Search_ResetColumn);
 		Thread.sleep(6000);
-		Reporter.log("Click on Reset Column", true);
+		log("Click on Reset Column");
 		jsclick(Reset_Column_OK_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Find button", true);
-		Reporter.log("Reset Custom Columns Successfully for Search", true);
+		log("Click on  Find button");
+		log("Reset Custom Columns Successfully for Search");
 
 	}
 
@@ -3200,21 +3199,21 @@ public class Language extends BaseClass {
 
 	public void getOpen_Custom_List_Dialog_And_Verify_Title_ToDoList() throws InterruptedException {
 
-		Reporter.log("Test Scenario 26 : Open Custom List Dialog And Verifying Title ToDoList ", true);
+		log("Test Scenario 26 : Open Custom List Dialog And Verifying Title ToDoList ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		MoveTo_ToDoList_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on ToDoList Tab", true);
+		log("Mousehover on ToDoList Tab");
 		try {
 			Verify_Reset_CustomColumsnTodolist();
 			Thread.sleep(6000);
-			Reporter.log("Click on Reset Column Option", true);
+			log("Click on Reset Column Option");
 			jsclick(Reset_Column_OK_Button);
-			Reporter.log("Click on Ok button", true);
+			log("Click on Ok button");
 			Thread.sleep(6000);
-			Reporter.log("Custom columns Reset Successfully on TodoList Level", true);
+			log("Custom columns Reset Successfully on TodoList Level");
 			movingElement(MoveTo_ToDoList_Option);
 			Thread.sleep(6000);
 		} catch (Exception e) {
@@ -3222,87 +3221,87 @@ public class Language extends BaseClass {
 		}
 		jsclick(ToDoList_Custom_Columns_option);
 		Thread.sleep(12000);
-		Reporter.log("Click on  Custom Column Option", true);
+		log("Click on  Custom Column Option");
 		ToDoList_titelvalidation();
-		Reporter.log("ToDoList Custom List title validate", true);
+		log("ToDoList Custom List title validate");
 	}
 
 	public void getVerify__Text_of_Custom_List_Dialog_ToDoList() throws Exception {
 
-		Reporter.log("Test Scenario 27 : Verifying  Text of Custom List Dialog ToDoList ", true);
+		log("Test Scenario 27 : Verifying  Text of Custom List Dialog ToDoList ");
 		Thread.sleep(6000);
 		ToDoList_textvalidation();
 		Thread.sleep(6000);
-		Reporter.log("Custom List Dialog Text verified", true);
+		log("Custom List Dialog Text verified");
 		jsclick(ToDoList_Select_Indices01);
 		Thread.sleep(6000);
-		Reporter.log("Select Indices 1", true);
+		log("Select Indices 1");
 		jsclick(ToDoList_Ok_Button_CustomList);
-		Reporter.log("Click on  Ok button", true);
-		Reporter.log("Indices Selected Successfully", true);
+		log("Click on  Ok button");
+		log("Indices Selected Successfully");
 	}
 
 	public void getVerify_Set_Custom_Columns_for_ToDoList() throws Exception {
 
-		Reporter.log("Test Scenario 28 : Verifying Set Custom Columns for ToDoList ", true);
+		log("Test Scenario 28 : Verifying Set Custom Columns for ToDoList ");
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		jsclick(sendWorkflow);
 		Thread.sleep(6000);
-		Reporter.log("Click on SendToWorkflow Option", true);
+		log("Click on SendToWorkflow Option");
 		jsclick(WFAssign);
 		Thread.sleep(6000);
-		Reporter.log("Send document to Workflow", true);
+		log("Send document to Workflow");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List", true);
+		log("Check Document from Document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getVerify_CopyandPaste_Document();
 		Thread.sleep(6000);
-		Reporter.log("Copy and Paste Document Successfully", true);
+		log("Copy and Paste Document Successfully");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		MoveTo_ToDoList_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on ToDoList Tab", true);
+		log("Mousehover on ToDoList Tab");
 		jsclick(Select_All_Item);
 		Thread.sleep(6000);
-		Reporter.log("Click on All Item Option", true);
-		Reporter.log("Custom column is set successfully for ToDoList Functionality", true);
+		log("Click on All Item Option");
+		log("Custom column is set successfully for ToDoList Functionality");
 	}
 
 	public void getReset_Custom_Columns_for_ToDoList() throws InterruptedException {
 
-		Reporter.log("Test Scenario 29 : Reset Custom Columns for ToDoList ", true);
+		log("Test Scenario 29 : Reset Custom Columns for ToDoList ");
 		Thread.sleep(6000);
 		MoveTo_ToDoList_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on ToDoList Tab", true);
+		log("Mousehover on ToDoList Tab");
 		jsclick(To_Do_Resetcolumn_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Reset Column Option", true);
+		log("Click on Reset Column Option");
 		jsclick(Reset_Column_OK_Button);
-		Reporter.log("ToDoList Custom column Reset Successfully", true);
+		log("ToDoList Custom column Reset Successfully");
 
 	}
 
@@ -3310,224 +3309,224 @@ public class Language extends BaseClass {
 
 	public void getVerify_Refresh_Option() throws Exception {
 
-		Reporter.log("Test Scenario 30 : Verifying Refresh Option ", true);
+		log("Test Scenario 30 : Verifying Refresh Option ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getSelect_Option_Refresh();
 		Thread.sleep(6000);
-		Reporter.log("Click on Reffresh Option", true);
-		Reporter.log("Refresh Functionality verified Successfully on Documents", true);
+		log("Click on Reffresh Option");
+		log("Refresh Functionality verified Successfully on Documents");
 	}
 
 	public void getVerify_Categories_Option() throws Exception {
 
-		Reporter.log("Test Scenario 31 : Verifying Categories Option ", true);
+		log("Test Scenario 31 : Verifying Categories Option ");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getSelect_Option_Catagories_andSet_Colors();
-		Reporter.log("Click on  Catagories Option and set", true);
-		Reporter.log("Categories on Documents Functionality verified Successfully", true);
+		log("Click on  Catagories Option and set");
+		log("Categories on Documents Functionality verified Successfully");
 
 	}
 
 	public void getVerify_copy_and_paste_Option() throws Exception {
 
-		Reporter.log("Test Scenario 32 : Verifying copy and paste Option ", true);
+		log("Test Scenario 32 : Verifying copy and paste Option ");
 		Thread.sleep(6000);
 		getMoveTo_Menu_Documents();
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getVerify_CopyandPaste_Document();
 		Thread.sleep(6000);
-		Reporter.log("copy and paste Documents Functionality verified Successfully", true);
+		log("copy and paste Documents Functionality verified Successfully");
 	}
 
 	public void getVerify_cut_and_paste_Option() throws Exception {
 
-		Reporter.log("Test Scenario 33 : Verifying cut and paste Option ", true);
+		log("Test Scenario 33 : Verifying cut and paste Option ");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getVerify_CutandPaste_Document();
 		Thread.sleep(6000);
-		Reporter.log("cut and paste Document Functionality verified Successfully", true);
+		log("cut and paste Document Functionality verified Successfully");
 	}
 
 	public void getVerify_Delete_Option() throws Exception {
 
-		Reporter.log("Test Scenario 34 : Verifying Delete Option ", true);
+		log("Test Scenario 34 : Verifying Delete Option ");
 		getVerify_Delete_Document();
 		Thread.sleep(6000);
-		Reporter.log("Document Delete Functionality verified Successfully", true);
+		log("Document Delete Functionality verified Successfully");
 	}
 
 	public void Verify_CreateFavorites_Documents() throws Exception {
 
-		Reporter.log("Test Scenario 35 : Verifying Create Favorites Document ", true);
+		log("Test Scenario 35 : Verifying Create Favorites Document ");
 		Verify_CreateFavorites_Document();
-		Reporter.log("Verified Create Favorites Document ", true);
+		log("Verified Create Favorites Document ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getOpen_CreateFavorites_Document();
-		Reporter.log("CreateFavorites Document Functionality verified Successfully", true);
+		log("CreateFavorites Document Functionality verified Successfully");
 	}
 
 	public void getVerify_Notification_on_Document() throws Exception {
 
-		Reporter.log("Test Scenario 36 : Verifying Notification on Document ", true);
+		log("Test Scenario 36 : Verifying Notification on Document ");
 
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getVerify_CopyandPaste_Document();
 		Thread.sleep(6000);
-		Reporter.log("Copy and Paste Document", true);
+		log("Copy and Paste Document");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getCreate_Notification_Document();
 		Thread.sleep(6000);
-		Reporter.log("Create Notification on Document", true);
+		log("Create Notification on Document");
 		jsclick(Click_signature_Menuoption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Signature option", true);
+		log("Click on Signature option");
 		getinputpassword();
 		Thread.sleep(6000);
-		Reporter.log("Enter a Password", true);
+		log("Enter a Password");
 		getAdd_Signature_Onpage();
 		Thread.sleep(6000);
-		Reporter.log("Add signature on page", true);
+		log("Add signature on page");
 		getSave_Signature_Document();
 		Thread.sleep(6000);
-		Reporter.log("Click save button and save added signature", true);
+		log("Click save button and save added signature");
 		movingclkElement(closedoc);
-		Reporter.log("Close Document", true);
-		Reporter.log("Notification_on_Document Functionality verified Successfully", true);
+		log("Close Document");
+		log("Notification_on_Document Functionality verified Successfully");
 
 	}
 
 	public void getVerify_SendTo_Mail() throws Exception {
 
-		Reporter.log("Test Scenario 37 : Verifying SendTo Mail ", true);
+		log("Test Scenario 37 : Verifying SendTo Mail ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check a Document from document List", true);
+		log("Check a Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getSentTo_Mail_asReference();
 		Thread.sleep(6000);
-		Reporter.log("SendTo Mail asReference Functionality verified Successfully", true);
+		log("SendTo Mail asReference Functionality verified Successfully");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		getSentTo_Mail_asCopy();
 		Thread.sleep(6000);
-		Reporter.log("SendTo Mail asCopy Functionality verified Successfully", true);
+		log("SendTo Mail asCopy Functionality verified Successfully");
 	}
 
 	public void getVerify_SendTo_Print() throws Exception {
 
-		Reporter.log("Test Scenario 38 : Verifying Send To Print ", true);
+		log("Test Scenario 38 : Verifying Send To Print ");
 		getSentTo_Print();
-		Reporter.log("SendTo Print Functionality verified Successfully", true);
+		log("SendTo Print Functionality verified Successfully");
 
 	}
 
 	public void getVerify_SendTo_Export() throws Exception {
 
-		Reporter.log("Test Scenario 39 : Verifying Send To Export ", true);
+		log("Test Scenario 39 : Verifying Send To Export ");
 		getSentTo_Export();
-		Reporter.log("SendTo Export Functionality verified Successfully", true);
+		log("SendTo Export Functionality verified Successfully");
 
 	}
 
 	public void getVerify_SendTo_GenerateDocumentLink() throws Exception {
 
-		Reporter.log("Test Scenario 40 : Verifying SendTo Generate Document Link ", true);
+		log("Test Scenario 40 : Verifying SendTo Generate Document Link ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		getSentTo_GenerateDocumentLink();
 		Thread.sleep(6000);
-		Reporter.log("Send document to Generate Document Link", true);
+		log("Send document to Generate Document Link");
 		Refresh_Button();
-		Reporter.log("Click on Refresh button", true);
-		Reporter.log("SendTo GenerateDocumentLink Functionality verified Successfully", true);
+		log("Click on Refresh button");
+		log("SendTo GenerateDocumentLink Functionality verified Successfully");
 	}
 
 	public void getVerify_SendTo_SecureLink() throws Exception {
 
-		Reporter.log("Test Scenario 41 : Verifying SendTo SecureLink ", true);
+		log("Test Scenario 41 : Verifying SendTo SecureLink ");
 		Thread.sleep(6000);
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover on Recent Tab", true);
+		log("Mousehover on Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getSentTo_SecureLink();
 		Thread.sleep(6000);
-		Reporter.log("Send document to Secure Link", true);
+		log("Send document to Secure Link");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
-		Reporter.log("SendTo SecureLink Functionality verified Successfully", true);
+		log("Click on Refresh button");
+		log("SendTo SecureLink Functionality verified Successfully");
 
 	}
 
@@ -3535,64 +3534,64 @@ public class Language extends BaseClass {
 
 	public void CreateandOpen_NewDocument_Spanish_Language_with_OCR() throws Exception {
 
-		Reporter.log("Test Scenario 1 :Create and Open New Document Spanish Language with OCR Functionality ", true);
+		log("Test Scenario 1 :Create and Open New Document Spanish Language with OCR Functionality ");
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences OptionS", true);
+		log("Click on My Preferences OptionS");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office document and set as Default View", true);
+		log("Select Office document and set as Default View");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set as Default View", true);
+		log("Select Pdf Document and set as Default View");
 		getSelect_Dropdown_Actual_Size();
 		Thread.sleep(6000);
-		Reporter.log("Select Viewer zoom and set as Actual size Option", true);
+		log("Select Viewer zoom and set as Actual size Option");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		LogoutPage();
 		jsclick(Spanish_Language);
 		Thread.sleep(6000);
-		Reporter.log("Click on Spanish Laguage Option", true);
+		log("Click on Spanish Laguage Option");
 		LogDipakUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with User credintial", true);
+		log("Login EWA with User credintial");
 		jsclick(NewDocuments_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Documents Tab", true);
+		log("Click on New Documents Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log(" select a Folder", true);
-		Reporter.log("Folder is selected for Create New Documents", true);
+		log(" select a Folder");
+		log("Folder is selected for Create New Documents");
 		OK_Button_BrowseforFolder.click();
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getgetSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select Document type Dropdown", true);
+		log("Select Document type Dropdown");
 		Enter_Report_Name_Text.sendKeys(Language_excelRead(10, 2));
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		movingElement(getMove_To_PlusIcon());
 		getBrowse_Option();
 		Thread.sleep(3000);
-		Reporter.log("Browse Document Page", true);
+		log("Browse Document Page");
 		Runtime.getRuntime()
 				.exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Underscore.exe");
 		Thread.sleep(6000);
@@ -3604,253 +3603,253 @@ public class Language extends BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		jsclick(ClickOCR);
 		Thread.sleep(6000);
-		Reporter.log("Click on OCR menu Option", true);
+		log("Click on OCR menu Option");
 		getSet_OCR_ToDocument();
 		Thread.sleep(6000);
-		Reporter.log("Set OCR and Extract Report Name", true);
+		log("Set OCR and Extract Report Name");
 		jsclick(ReportName);
 		Thread.sleep(6000);
-		Reporter.log("Click on Report Name Message", true);
+		log("Click on Report Name Message");
 		jsclick(Create_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Navigate button", true);
+		log("Click on Navigate button");
 		getOCRReportnamevalidation_AfterCreateDOC();
 		Thread.sleep(6000);
-		Reporter.log("Validate Document name with Report name", true);
+		log("Validate Document name with Report name");
 		jsclick(ReportNameValueAfterDoc);
 		Thread.sleep(6000);
-		Reporter.log("Verifying after create Document OCR Report name", true);
+		log("Verifying after create Document OCR Report name");
 		getClick_FileInfo_Option();
 		Thread.sleep(6000);
-		Reporter.log("Click on File Info Menu option", true);
+		log("Click on File Info Menu option");
 		getClick_FileInfo_OkButton_withFileName();
 		Thread.sleep(6000);
-		Reporter.log("Verifying file name and Click on  Ok button", true);
-		Reporter.log("New Document Create and open in Spanish language", true);
-		Reporter.log("OCR Functionality verified successfully", true);
+		log("Verifying file name and Click on  Ok button");
+		log("New Document Create and open in Spanish language");
+		log("OCR Functionality verified successfully");
 		movingElement(getMove_To_PlusIcon());
 		getBrowse_Option();
 		Thread.sleep(6000);
-		Reporter.log("Browse Document page", true);
+		log("Browse Document page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\Sample exe file Special characters\\Allowing files\\Hyphen.exe");
 		Thread.sleep(6000);
 		jsclick(Open_Hyphen_page);
 		Thread.sleep(6000);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		jsclick(UpdateSpanish_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Update button", true);
+		log("Click on Update button");
 		jsclick(ClickOCR);
 		Thread.sleep(6000);
-		Reporter.log("Click on OCR menu Option", true);
+		log("Click on OCR menu Option");
 		getSet_OCR_ToDocumentPDF();
 		Thread.sleep(6000);
-		Reporter.log("Set Ocr to Document page", true);
+		log("Set Ocr to Document page");
 		jsclick(ReportName);
 		Thread.sleep(6000);
-		Reporter.log("Click on Report Name", true);
+		log("Click on Report Name");
 		jsclick(SpanishSave_UpdateButton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save button", true);
+		log("Click on Save button");
 		jsclick(SpanishUpdate_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save menu button", true);
+		log("Click on Save menu button");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(SpanishProperties_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Properties Option", true);
+		log("Click on Properties Option");
 		movingclkElement(closedoc);
 		Thread.sleep(6000);
-		Reporter.log("Click on Viewer Close button ", true);
+		log("Click on Viewer Close button ");
 		getOCRReportnamevalidation_BeforeCreateDOC();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Report Name as Document Name", true);
+		log("Verifying Report Name as Document Name");
 		jsclick(ReportNameValueBeforeDoc);
 		Thread.sleep(6000);
-		Reporter.log("OCR Functionality Verified successfully", true);
+		log("OCR Functionality Verified successfully");
 	}
 
 	public void Addsignature_Spanish_Language() throws Exception {
 
-		Reporter.log("Test Scenario 2 :Add signature Spanish Language ", true);
+		log("Test Scenario 2 :Add signature Spanish Language ");
 		Thread.sleep(6000);
 		jsclick(Click_signature_Menuoption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Signature menu Option", true);
+		log("Click on Signature menu Option");
 		try {
 			getinputpassword();
 			Thread.sleep(6000);
-			Reporter.log("Enter Signature password in password textbox", true);
+			log("Enter Signature password in password textbox");
 		} catch (Exception e) {
 			System.out.println("signature is not password protected...");
 		}
 		getAdd_Signature_Onpage();
 		Thread.sleep(6000);
-		Reporter.log("Click on signature menu and add signature on  Page", true);
-		Reporter.log("signature added Successfully on  Document", true);
+		log("Click on signature menu and add signature on  Page");
+		log("signature added Successfully on  Document");
 	}
 
 	public void AddRedaction_Spanish_Language() throws Exception {
 
-		Reporter.log("Test Scenario 3 :Add Redaction Spanish Language", true);
+		log("Test Scenario 3 :Add Redaction Spanish Language");
 		Thread.sleep(6000);
 		getMove_to_Annotation_Option_inViewer();
 		Thread.sleep(6000);
-		Reporter.log("Move to Annotation menu Option in Viewer", true);
+		log("Move to Annotation menu Option in Viewer");
 		getRedaction_Option();
 		Thread.sleep(6000);
-		Reporter.log("Select Redaction from Annotation Menu", true);
+		log("Select Redaction from Annotation Menu");
 		getSet_Redaction_ToDocument();
 		Thread.sleep(6000);
-		Reporter.log("Set Redaction on Page", true);
+		log("Set Redaction on Page");
 		jsclick(Save_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on save button", true);
+		log("Click on save button");
 		jsclick(DocumentSave_Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Redaction added Successfully on  Document", true);
+		log("Click on Ok button");
+		log("Redaction added Successfully on  Document");
 	}
 
 	public void ShowHideThumbnail_Spanish_Language() throws Exception {
 
-		Reporter.log("Test Scenario 4 :Show Hide Thumbnail Spanish Language", true);
+		log("Test Scenario 4 :Show Hide Thumbnail Spanish Language");
 		Thread.sleep(6000);
 		jsclick(showHideThumbnail);
 		Thread.sleep(6000);
-		Reporter.log("Click on Show Hide Thumbnail Menu Option", true);
+		log("Click on Show Hide Thumbnail Menu Option");
 		jsclick(showHideThumbnail);
 		Thread.sleep(6000);
-		Reporter.log("again Click on Show Hide Thumbnail Menu Option", true);
+		log("again Click on Show Hide Thumbnail Menu Option");
 		Refresh_Button();
-		Reporter.log("Click on Refresh button", true);
-		Reporter.log("Show Hide Thumbnail options verified", true);
+		log("Click on Refresh button");
+		log("Show Hide Thumbnail options verified");
 	}
 
 	// Create Template in Spanish laguage
 
 	public void verify_to_CreateorBrowse_Template_Defaultviewing() throws Exception {
 
-		Reporter.log("Test Scenario 5 :Verifying to Create or Browse Template Default viewing ", true);
+		log("Test Scenario 5 :Verifying to Create or Browse Template Default viewing ");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set as Default View", true);
+		log("Select Office Document and set as Default View");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set as Default View", true);
+		log("Select Pdf Document and set as Default View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Templates", true);
+		log("Folder is selected for Templates");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getgetSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select Document Type value", true);
+		log("Select Document Type value");
 		jsclick(Enter_Report_Name_Text);
 		Thread.sleep(6000);
-		Reporter.log("Click on Report Name textbox", true);
+		log("Click on Report Name textbox");
 		getSelect_ReportName_Testvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait1.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		movingclkElement(getMove_To_PlusIcon());
 		getBrowse_Option();
 		Thread.sleep(6000);
-		Reporter.log("Browse Document page", true);
+		log("Browse Document page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScriptpdf.exe");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.alertIsPresent());
 		Alert alt = driver.switchTo().alert();
 		alt.accept();
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait2.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		movingclkElement(getMove_To_PlusIcon());
 		getBrowse_Option();
 		Thread.sleep(6000);
-		Reporter.log("Browse Document page2", true);
+		log("Browse Document page2");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\FileUploadScript.exe");
 		jsclick(Save_Template_Button);
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		jsclick(Template_Description_No_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description No button ", true);
+		log("Click on Template Description No button ");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Name Textbox", true);
+		log("Click on Template Name Textbox");
 		getTemplate_NameTextboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter Template Name", true);
+		log("Enter Template Name");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description messagebox", true);
+		log("Click on Template Description messagebox");
 		getTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter message under Template Description message box", true);
+		log("Enter message under Template Description message box");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description Ok button", true);
+		log("Click on Template Description Ok button");
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Verified Template created successfully", true);
+		log("Verified Template created successfully");
 		jsclick(Template_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Verifying to CreateorBrowse Template Defaultviewing", true);
+		log("Click on Ok button");
+		log("Verifying to CreateorBrowse Template Defaultviewing");
 		Refresh_Button();
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		Thread.sleep(6000);
 
 	}
 
 	public void Verify_to_Edit_and_Delete_DefaultTemplate() throws Exception {
 
-		Reporter.log("Test Scenario 6 :Verifying to Edit and Delete Default Template ", true);
+		log("Test Scenario 6 :Verifying to Edit and Delete Default Template ");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		jsclick(Select_Created_Template);
 		try {
 			WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -3861,393 +3860,393 @@ public class Language extends BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Select and open Created Template", true);
+		log("Select and open Created Template");
 		jsclick(Click_Edit_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Fab button", true);
+		log("Click on Edit Template Fab button");
 		EditTemplate_Description_Messagebox.clear();
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Description and Clear it", true);
+		log("Click on Edit Template Description and Clear it");
 		getEditTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter message into Edited messagebox field", true);
+		log("Enter message into Edited messagebox field");
 		jsclick(EditTemplate_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getEditTemplate_Created_Message_Verify();
-		Reporter.log("Template edited successfully", true);
+		log("Template edited successfully");
 		jsclick(EditTemplate_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Verifying Template edited successfully and click on  Ok button", true);
+		log("Verifying Template edited successfully and click on  Ok button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		jsclick(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template ", true);
+		log("Select Created Template ");
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Delete Template Fab button", true);
+		log("Click on Delete Template Fab button");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Template Deleted Successfully", true);
+		log("Click on Ok button");
+		log("Template Deleted Successfully");
 
 	}
 
 	public void verify_to_CreateorBrowse_Template_Advancedviewing_OfficeDoc() throws Exception {
 
-		Reporter.log("Test Scenario 7 :Verifying to Create or Browse Template Advanced viewing Office Doc", true);
+		log("Test Scenario 7 :Verifying to Create or Browse Template Advanced viewing Office Doc");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_Office_document_Advancedviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set as Advanced view", true);
+		log("Select Office Document and set as Advanced view");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("Folder is selected for Templates", true);
+		log("Folder is selected for Templates");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getgetSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select Document Type Dropdown", true);
+		log("Select Document Type Dropdown");
 		jsclick(Enter_Report_Name_Text);
 		Thread.sleep(6000);
-		Reporter.log("Click on Report name", true);
+		log("Click on Report name");
 		getSelect_ReportName_Testvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Report name field", true);
+		log("Enter value into Report name field");
 		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait2.until(ExpectedConditions.elementToBeClickable(getMove_To_PlusIcon()));
 		movingclkElement(getMove_To_PlusIcon());
 		getBrowse_Option();
 		Thread.sleep(6000);
-		Reporter.log("Browse Document page", true);
+		log("Browse Document page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\OfficeDoc\\FileUploadOfficeDoc.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		Thread.sleep(6000);
 		jsclick(Save_Template_Button);
-		Reporter.log("Save Template button clicked successfully", true);
+		log("Save Template button clicked successfully");
 		jsclick(Template_Description_No_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on No button", true);
+		log("Click on No button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Save Template button", true);
+		log("Click on Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Name Textbox", true);
+		log("Click on Template Name Textbox");
 		getTemplate_NameTextboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter value into Template Name textbox", true);
+		log("Enter value into Template Name textbox");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description messagebox", true);
+		log("Click on Template Description messagebox");
 		getTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter Template Description", true);
+		log("Enter Template Description");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Verified and Template created succesfully", true);
+		log("Verified and Template created succesfully");
 		jsclick(Template_Created_OK_button);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Verifying to CreateorBrowse OfficeDoc Template advancedviewing", true);
+		log("Click on Ok button");
+		log("Verifying to CreateorBrowse OfficeDoc Template advancedviewing");
 
 	}
 
 	public void Verify_to_Edit_and_Delete_AdvancedTemplate_OfficeDoc() throws Exception {
 
-		Reporter.log("Test Scenario 8 :Verifying to Edit and Delete Advanced Template Office Doc", true);
+		log("Test Scenario 8 :Verifying to Edit and Delete Advanced Template Office Doc");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		jsclick(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template", true);
+		log("Select Created Template");
 		jsclick(Click_Edit_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Fab button", true);
+		log("Click on Edit Template Fab button");
 		EditTemplate_Description_Messagebox.clear();
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template description messagebox", true);
+		log("Click on Edit Template description messagebox");
 		getEditTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter message in Edit Template Description", true);
+		log("Enter message in Edit Template Description");
 		jsclick(EditTemplate_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getEditTemplate_Created_Message_Verify();
-		Reporter.log("Template edited successfully", true);
+		log("Template edited successfully");
 		jsclick(EditTemplate_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		jsclick(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template", true);
+		log("Select Created Template");
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Delete Template Fab button", true);
+		log("Click on Delete Template Fab button");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Template Deleted Successfully", true);
+		log("Template Deleted Successfully");
 
 	}
 
 	public void verify_to_Create_Formmapping_PDFTemplate_Advanced_viewing() throws Exception {
 
-		Reporter.log("Test Scenario 9 :Verifying to Create Formmapping PDFTemplate Advanced viewing", true);
+		log("Test Scenario 9 :Verifying to Create Formmapping PDFTemplate Advanced viewing");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getPdf_document_Advancedviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set as Advanced View", true);
+		log("Select Pdf Document and set as Advanced View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Templates_MenuOption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Tab", true);
+		log("Click on Template Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Destination Folder TextBox", true);
+		log("Click on Destination Folder TextBox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
-		Reporter.log("Folder is selected for Templates", true);
+		log("select a Folder");
+		log("Folder is selected for Templates");
 		jsclick(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(getgetSelect_Document_Type_Dropdown());
 		Thread.sleep(6000);
-		Reporter.log("Select Document type dropdown ", true);
+		log("Select Document type dropdown ");
 		jsclick(Enter_Report_Name_Text);
 		Thread.sleep(6000);
-		Reporter.log("Click on Report name Textbox", true);
+		log("Click on Report name Textbox");
 		getSelect_ReportName_Testvalue();
 		Thread.sleep(3000);
-		Reporter.log("Enter value into Report name field", true);
+		log("Enter value into Report name field");
 		getMove_To_PlusIcon();
 		getNew_pdf_Document_Option();
 		Thread.sleep(6000);
-		Reporter.log("Browse Document", true);
+		log("Browse Document");
 		getEnter_pdf_File_Name();
 		Thread.sleep(6000);
-		Reporter.log("Enter pdf file name", true);
+		log("Enter pdf file name");
 		jsclick(pdfViewer);
 		Thread.sleep(6000);
-		Reporter.log("Click on Pdf Viewer Option", true);
+		log("Click on Pdf Viewer Option");
 		jsclick(Textbox);
 		Thread.sleep(6000);
-		Reporter.log("Select TextBox from Viewer", true);
+		log("Select TextBox from Viewer");
 		jsclick(Add_Textbox_Onpage);
 		Thread.sleep(6000);
-		Reporter.log("Select and add Textbox on  Page", true);
+		log("Select and add Textbox on  Page");
 		jsclick(Click_Formmapper);
 		Thread.sleep(6000);
-		Reporter.log("Click on Form mapping Option", true);
+		log("Click on Form mapping Option");
 		getSelect_Formfield();
 		Thread.sleep(6000);
-		Reporter.log("Select Form field", true);
+		log("Select Form field");
 		jsclick(FormOK);
 		Thread.sleep(6000);
-		Reporter.log("Click on Form mapping dialog Ok button", true);
+		log("Click on Form mapping dialog Ok button");
 		jsclick(Save_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Save Template button", true);
+		log("Click on  Save Template button");
 		jsclick(Template_NameTextbox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template name Textbox", true);
+		log("Click on Template name Textbox");
 		getTemplate_NameTextboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter Template name", true);
+		log("Enter Template name");
 		jsclick(Template_Description_Messagebox);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template Description message box", true);
+		log("Click on Template Description message box");
 		getTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter message Template Description box", true);
+		log("Enter message Template Description box");
 		jsclick(Template_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getTemplate_Created_Message_Verify();
 		Thread.sleep(6000);
-		Reporter.log("Template Created Successfully Verified", true);
+		log("Template Created Successfully Verified");
 		jsclick(Template_Created_OK_button);
-		Reporter.log("Click on ok button", true);
-		Reporter.log("Verifying to CreateorBrowse Formmapping Template advancedviewing", true);
+		log("Click on ok button");
+		log("Verifying to CreateorBrowse Formmapping Template advancedviewing");
 
 	}
 
 	public void Verify_to_Edit_and_Delete_Formfield() throws Exception {
 
-		Reporter.log("Test Scenario 10 :Verifying to Edit and Delete Form field ", true);
+		log("Test Scenario 10 :Verifying to Edit and Delete Form field ");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		jsclick(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select created Template", true);
+		log("Select created Template");
 		jsclick(Click_Edit_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Fab button", true);
+		log("Click on Edit Template Fab button");
 		EditTemplate_Description_Messagebox.clear();
 		Thread.sleep(6000);
-		Reporter.log("Click on Edit Template Description message box", true);
+		log("Click on Edit Template Description message box");
 		getEditTemplate_Description_Messageboxvalue();
 		Thread.sleep(6000);
-		Reporter.log("Enter message in Edit Template Description messagebox", true);
+		log("Enter message in Edit Template Description messagebox");
 		jsclick(EditTemplate_Description_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		getEditTemplate_Created_Message_Verify();
-		Reporter.log("Template edited successfully", true);
+		log("Template edited successfully");
 		jsclick(EditTemplate_Created_OK_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Template edited Ok button", true);
+		log("Click on Template edited Ok button");
 		getMoveto_Templates_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Template Tab", true);
+		log("Mousehover to Template Tab");
 		jsclick(Select_Created_Template);
 		Thread.sleep(6000);
-		Reporter.log("Select Created Template", true);
+		log("Select Created Template");
 		jsclick(Delete_Template_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Delete Template button", true);
+		log("Click on Delete Template button");
 		jsclick(Delete_Template_OK_Button);
-		Reporter.log("Click on OK button", true);
-		Reporter.log("Formmapping Template Deleted Successfully", true);
+		log("Click on OK button");
+		log("Formmapping Template Deleted Successfully");
 
 	}
 
 	public void Set_Defaultview() throws Exception {
 
-		Reporter.log("Test Scenario 11 : Set Defaultview", true);
+		log("Test Scenario 11 : Set Defaultview");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set as Default View", true);
+		log("Select Office Document and set as Default View");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set as Default View", true);
+		log("Select Pdf Document and set as Default View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 	}
 
 	// Verifying Load more in Search and Folder in Spanish laguage
 
 	public void Verify_Load_MoreCount_On_Search() throws Exception {
 
-		Reporter.log("Test Scenario 12 :Verifying Load More Count On Search ", true);
+		log("Test Scenario 12 :Verifying Load More Count On Search ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click My Preferences", true);
+		log("Click My Preferences");
 		getEnter_Loadmorecount();
 		Thread.sleep(6000);
-		Reporter.log("Enter Load more value", true);
+		log("Enter Load more value");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		getVerify_Loadmorecount_Searchresult();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Load more count Search", true);
+		log("Verifying Load more count Search");
 		jsclick(Loadmorebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Load more button", true);
+		log("Click on Load more button");
 		getVerify_Loadmorecount_Searchresult();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Load more Result", true);
-		Reporter.log("Minumum number of Load More count on Search Verified successfully", true);
+		log("Verifying Load more Result");
+		log("Minumum number of Load More count on Search Verified successfully");
 
 	}
 
 	public void Verify_Load_MoreCount_On_Folder() throws Exception {
 
-		Reporter.log("Test Scenario 13 :Verifying Load More Count On Folder", true);
+		log("Test Scenario 13 :Verifying Load More Count On Folder");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log(" select a Folder", true);
+		log(" select a Folder");
 		getVerify_Loadmorecount_Document_Folder();
 		Thread.sleep(6000);
-		Reporter.log("Verified Load more count On Folder Document", true);
+		log("Verified Load more count On Folder Document");
 		jsclick(Loadmorebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Load more button", true);
+		log("Click on Load more button");
 		getVerify_Loadmorecount_Document_Folder();
-		Reporter.log("Verifying Load more count Document Folder", true);
+		log("Verifying Load more count Document Folder");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
-		Reporter.log("Minumum number of Load More count on Folder Verified successfully", true);
+		log("Click on Refresh button");
+		log("Minumum number of Load More count on Folder Verified successfully");
 
 	}
 
@@ -4257,31 +4256,31 @@ public class Language extends BaseClass {
 
 	public void Open_Custom_List_Dialog_And_Verify_Title_Roomcolumn() throws InterruptedException {
 
-		Reporter.log("Test Scenario 14 :Open Custom List Dialog And Verifying Title Room column ", true);
+		log("Test Scenario 14 :Open Custom List Dialog And Verifying Title Room column ");
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		try {
 			Verify_Reset_CustomColumsnRoom();
 			Thread.sleep(6000);
-			Reporter.log("Click on Reset Column Option", true);
+			log("Click on Reset Column Option");
 			jsclick(Reset_Column_OK_Button);
-			Reporter.log("Click on Ok button", true);
+			log("Click on Ok button");
 			Thread.sleep(6000);
-			Reporter.log("Custom columns Reset Successfully on Room Level", true);
+			log("Custom columns Reset Successfully on Room Level");
 			movingElement(MoveTo_Menu_RoomName);
 			Thread.sleep(6000);
 		} catch (Exception e) {
@@ -4289,143 +4288,143 @@ public class Language extends BaseClass {
 		}
 		jsclick(CustomColumnOptionRoom);
 		Thread.sleep(12000);
-		Reporter.log("Click on Custom Column Option", true);
+		log("Click on Custom Column Option");
 		gettitelvalidation();
-		Reporter.log("Custom List title validate", true);
+		log("Custom List title validate");
 	}
 
 	public void Verify__Text_of_Custom_List_Dialog_Roomcolumn() throws InterruptedException {
 
-		Reporter.log("Test Scenario 15 :Verifying  Text of Custom List Dialog Roomcolumn ", true);
+		log("Test Scenario 15 :Verifying  Text of Custom List Dialog Roomcolumn ");
 		Thread.sleep(6000);
 		getextvalidation();
-		Reporter.log("Custom List Dialog Text verified", true);
+		log("Custom List Dialog Text verified");
 	}
 
 	public void Set_And_Verify_Custom_Columns_NodeLevel() throws Exception {
 
-		Reporter.log("Test Scenario 16 :Set And Verifying Custom Columns NodeLevel", true);
+		log("Test Scenario 16 :Set And Verifying Custom Columns NodeLevel");
 		Thread.sleep(6000);
 		getSearchBoxIndices1();
 		Thread.sleep(6000);
-		Reporter.log("Enter Indices 1 value in search Box", true);
+		log("Enter Indices 1 value in search Box");
 		jsclick(Select_Indices01);
 		Thread.sleep(6000);
-		Reporter.log("Select Entered Indices 1 Value", true);
+		log("Select Entered Indices 1 Value");
 		getSearchBoxIndices2();
 		Thread.sleep(6000);
-		Reporter.log("Enter Indices 2 value in search Box", true);
+		log("Enter Indices 2 value in search Box");
 		jsclick(Select_Indices02);
 		Thread.sleep(6000);
-		Reporter.log("Select Entered Indices 2 Value", true);
+		log("Select Entered Indices 2 Value");
 		getSearchBoxIndices3();
 		Thread.sleep(6000);
-		Reporter.log("Enter Indices 3 value in search Box", true);
+		log("Enter Indices 3 value in search Box");
 		jsclick(Select_Indices03);
 		Thread.sleep(6000);
-		Reporter.log("Select Entered Indices 3 Value", true);
+		log("Select Entered Indices 3 Value");
 		jsclick(Ok_Button_CustomList);
-		Reporter.log("Indices Selected Successfully", true);
+		log("Indices Selected Successfully");
 		Thread.sleep(6000);
 		movingclkElement(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		Verify_CompactView_checkbox();
 		Thread.sleep(6000);
-		Reporter.log("Check Compact View Checkbox", true);
+		log("Check Compact View Checkbox");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		Verify_Indicess_Value();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Added Indices Value", true);
-		Reporter.log("Custom Columns is set Node Level successfully", true);
+		log("Verifying Added Indices Value");
+		log("Custom Columns is set Node Level successfully");
 
 	}
 
 	public void Verify_Default_Custom_Columns() throws InterruptedException {
 
-		Reporter.log("Test Scenario 17 : Verifying Default Custom Columns", true);
+		log("Test Scenario 17 : Verifying Default Custom Columns");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Click on Room name Tab", true);
+		log("Click on Room name Tab");
 		jsclick(CustomColumnOptionRoom);
 		Thread.sleep(6000);
 		Default_Button_CustomList();
 		Thread.sleep(6000);
-		Reporter.log("Click on Custom List dialog Default ButtonC", true);
+		log("Click on Custom List dialog Default ButtonC");
 		jsclick(Ok_Button_CustomList);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Set and Verifying Default Custom columns successfully", true);
+		log("Click on Ok button");
+		log("Set and Verifying Default Custom columns successfully");
 
 	}
 
 	public void Verify_Cancel_Button_of_CustomList() throws InterruptedException {
 
-		Reporter.log("Test Scenario 18 :Verifying Cancel button of Custom List ", true);
+		log("Test Scenario 18 :Verifying Cancel button of Custom List ");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(CustomColumnOptionRoom);
 		Thread.sleep(6000);
-		Reporter.log("Click on Custom Column Option", true);
+		log("Click on Custom Column Option");
 		Cancel_Button_CustomList();
-		Reporter.log("Click on Custom Column Cancel button", true);
+		log("Click on Custom Column Cancel button");
 
 	}
 
 	public void Verify_Custom_Columns_RoomLevel() throws InterruptedException {
 
-		Reporter.log("Test Scenario 19 :Verifying Custom Columns Room Level", true);
+		log("Test Scenario 19 :Verifying Custom Columns Room Level");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(CustomColumnOptionRoom);
 		Thread.sleep(6000);
-		Reporter.log("Click on Custom Column Option", true);
+		log("Click on Custom Column Option");
 		jsclick(Click_DropdownOption);
-		Reporter.log("Click on  Custom columns Dropdown option and select Indices Level", true);
+		log("Click on  Custom columns Dropdown option and select Indices Level");
 		Select_DropdownValue();
 		Thread.sleep(6000);
-		Reporter.log("Select Room Level Indices", true);
+		log("Select Room Level Indices");
 		jsclick(Set_RoomLevel_Indices);
 		Thread.sleep(6000);
 		jsclick(Ok_Button_CustomList);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Indices is Selected Successfully for RoomLevel", true);
+		log("Click on Ok button");
+		log("Indices is Selected Successfully for RoomLevel");
 
 	}
 
 	public void Verify_Reset_Columns_Functionality() throws InterruptedException {
 
-		Reporter.log("Test Scenario 20 :Verifying Reset Columns Functionality ", true);
+		log("Test Scenario 20 :Verifying Reset Columns Functionality ");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Room_Reset_CustomColumns);
 		Thread.sleep(6000);
-		Reporter.log("Click on Reset Custom column Option", true);
+		log("Click on Reset Custom column Option");
 		jsclick(Reset_Column_OK_Button);
-		Reporter.log("Click on Ok button ", true);
-		Reporter.log("Custom columns Reset Successfully", true);
+		log("Click on Ok button ");
+		log("Custom columns Reset Successfully");
 
 	}
 
@@ -4433,19 +4432,19 @@ public class Language extends BaseClass {
 
 	public void Open_Custom_List_Dialog_And_Verify_Title_Searchcolumn() throws InterruptedException {
 
-		Reporter.log("Test Scenario 21 : Open Custom List Dialog And Verifying Title Search column ", true);
+		log("Test Scenario 21 : Open Custom List Dialog And Verifying Title Search column ");
 		MoveTo_Search_Option();
 		Thread.sleep(6000);
-		Reporter.log("	Mousehover to Search Tab", true);
+		log("	Mousehover to Search Tab");
 		try {
 			Verify_Reset_CustomColumsnSearch();
 			Thread.sleep(6000);
-			Reporter.log("Click on Reset Column Option", true);
+			log("Click on Reset Column Option");
 			jsclick(Reset_Column_OK_Button);
 			Thread.sleep(6000);
-			Reporter.log("Click on Ok button", true);
+			log("Click on Ok button");
 			Thread.sleep(6000);
-			Reporter.log("Custom columns Reset Successfully on Search Level", true);
+			log("Custom columns Reset Successfully on Search Level");
 			movingElement(MoveTo_Search_Option);
 			Thread.sleep(6000);
 		} catch (Exception e) {
@@ -4453,99 +4452,99 @@ public class Language extends BaseClass {
 		}
 		jsclick(Search_Custom_Columns_option);
 		Thread.sleep(12000);
-		Reporter.log("Click on Custom Column Option", true);
+		log("Click on Custom Column Option");
 		getSearch_titelvalidation();
-		Reporter.log("Search Custom List title validate", true);
+		log("Search Custom List title validate");
 
 	}
 
 	public void Verify__Text_of_Custom_List_Dialog_Searchcolumn() throws InterruptedException {
 
-		Reporter.log("Test Scenario 22 : Verifying Text of Custom List Dialog Search column ", true);
+		log("Test Scenario 22 : Verifying Text of Custom List Dialog Search column ");
 		Thread.sleep(6000);
 		getSearch_textvalidation();
-		Reporter.log("Search Custom List Dialog Text verified", true);
+		log("Search Custom List Dialog Text verified");
 
 	}
 
 	public void Verify_Set_Custom_Columns_for_Search() throws Exception {
 
-		Reporter.log("Test Scenario 23 :Verifying Set Custom Columns for Search ", true);
+		log("Test Scenario 23 :Verifying Set Custom Columns for Search ");
 		Thread.sleep(6000);
 		getSearchBoxIndices4();
 		Thread.sleep(6000);
-		Reporter.log("Enter Indices 4 value in Search Box", true);
+		log("Enter Indices 4 value in Search Box");
 		jsclick(Search_Select_Indices01);
 		Thread.sleep(6000);
-		Reporter.log("Select Search Indices ", true);
+		log("Select Search Indices ");
 		getSearchBoxIndices5();
 		Thread.sleep(6000);
-		Reporter.log("Enter Indices 5 value in Search Box", true);
+		log("Enter Indices 5 value in Search Box");
 		jsclick(Search_Select_Indices02);
 		Thread.sleep(6000);
-		Reporter.log("Select Search Indices ", true);
+		log("Select Search Indices ");
 		getSearchBoxIndices6();
 		Thread.sleep(6000);
-		Reporter.log("Enter Indices 6 value in Search Box", true);
+		log("Enter Indices 6 value in Search Box");
 		jsclick(Search_Select_Indices03);
 		Thread.sleep(6000);
-		Reporter.log("Select Search Indices", true);
+		log("Select Search Indices");
 		jsclick(Search_Ok_Button_CustomList);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("Indices Selected Successfully", true);
+		log("Click on Ok button");
+		log("Indices Selected Successfully");
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Click_Search_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Search Tab", true);
+		log("Click on Search Tab");
 		jsclick(Document_Location);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Document Location textbox", true);
+		log("Click on  Document Location textbox");
 		selectElement(Search_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Search_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Search_Folder);
 		Thread.sleep(6000);
-		Reporter.log(" select a Folder", true);
+		log(" select a Folder");
 		jsclick(Ok_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
+		log("Click on Find button");
 		Search_Verify_Indicess_Value4();
 		Thread.sleep(6000);
-		Reporter.log("Verified added Indices Custom Columns", true);
+		log("Verified added Indices Custom Columns");
 		Search_Verify_Indicess_Value5();
 		Thread.sleep(6000);
-		Reporter.log("Verified Indices Value", true);
+		log("Verified Indices Value");
 		Search_Verify_Indicess_Value6();
 		Thread.sleep(6000);
-		Reporter.log("Custom column is set successfully for Search Functionality", true);
+		log("Custom column is set successfully for Search Functionality");
 
 	}
 
 	public void Verify_Reset_Columns_for_Search() throws InterruptedException {
 
-		Reporter.log("Test Scenario 24 :Verifying Reset Columns for Search ", true);
+		log("Test Scenario 24 :Verifying Reset Columns for Search ");
 		MoveTo_Search_Option();
 		Thread.sleep(6000);
-		Reporter.log("	Mousehover to Search Tab", true);
+		log("	Mousehover to Search Tab");
 		jsclick(Search_ResetColumn);
 		Thread.sleep(6000);
-		Reporter.log("Click on Reset Columns Option", true);
+		log("Click on Reset Columns Option");
 		jsclick(Reset_Column_OK_Button);
 		Thread.sleep(6000);
-		Reporter.log("Verifying pop up and click on  Ok button", true);
+		log("Verifying pop up and click on  Ok button");
 		jsclick(Find_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Find button", true);
-		Reporter.log("Reset Custom Columns Successfully for Search", true);
+		log("Click on Find button");
+		log("Reset Custom Columns Successfully for Search");
 
 	}
 
@@ -4553,21 +4552,21 @@ public class Language extends BaseClass {
 
 	public void Open_Custom_List_Dialog_And_Verify_Title_ToDoList() throws InterruptedException {
 
-		Reporter.log("Test Scenario 25 : Open Custom List Dialog And Verifying Title ToDoList ", true);
+		log("Test Scenario 25 : Open Custom List Dialog And Verifying Title ToDoList ");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		MoveTo_ToDoList_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to ToDoList Tab", true);
+		log("Mousehover to ToDoList Tab");
 		try {
 			Verify_Reset_CustomColumsnTodolist();
 			Thread.sleep(6000);
-			Reporter.log("Click on Reset Column Option", true);
+			log("Click on Reset Column Option");
 			jsclick(Reset_Column_OK_Button);
-			Reporter.log("Click on Ok button", true);
+			log("Click on Ok button");
 			Thread.sleep(6000);
-			Reporter.log("Custom columns Reset Successfully on TodoList Level", true);
+			log("Custom columns Reset Successfully on TodoList Level");
 			movingElement(MoveTo_ToDoList_Option);
 			Thread.sleep(6000);
 		} catch (Exception e) {
@@ -4575,91 +4574,91 @@ public class Language extends BaseClass {
 		}
 		jsclick(ToDoList_Custom_Columns_option);
 		Thread.sleep(12000);
-		Reporter.log("Click on Custom Column Option", true);
+		log("Click on Custom Column Option");
 		ToDoList_titelvalidation();
-		Reporter.log("ToDoList Custom List title validate", true);
+		log("ToDoList Custom List title validate");
 
 	}
 
 	public void Verify__Text_of_Custom_List_Dialog_ToDoList() throws Exception {
 
-		Reporter.log("Test Scenario 26 :Verifying  Text of Custom List Dialog ToDoList", true);
+		log("Test Scenario 26 :Verifying  Text of Custom List Dialog ToDoList");
 		Thread.sleep(6000);
 		ToDoList_textvalidation();
 		Thread.sleep(6000);
-		Reporter.log("Verified TodoList Custom column dialog Text", true);
-		Reporter.log("Custom List Dialog Text verified", true);
+		log("Verified TodoList Custom column dialog Text");
+		log("Custom List Dialog Text verified");
 
 	}
 
 	public void Verify_Set_Custom_Columns_for_ToDoList() throws Exception {
 
-		Reporter.log("Test Scenario 27 :Verifying Set Custom Columns for ToDoList ", true);
+		log("Test Scenario 27 :Verifying Set Custom Columns for ToDoList ");
 		jsclick(ToDoList_Select_Indices01);
 		Thread.sleep(6000);
 		jsclick(ToDoList_Ok_Button_CustomList);
-		Reporter.log("Indices value Selected Successfully", true);
+		log("Indices value Selected Successfully");
 		Thread.sleep(6000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document page", true);
+		log("Check Document page");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Move to Documents Tab", true);
+		log("Move to Documents Tab");
 		jsclick(sendWorkflow);
 		Thread.sleep(6000);
-		Reporter.log("Click on Send to Workflow", true);
+		log("Click on Send to Workflow");
 		jsclick(WFAssign);
 		Thread.sleep(6000);
-		Reporter.log("Select and click Workflow name", true);
+		log("Select and click Workflow name");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check document page from document list", true);
+		log("Check document page from document list");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Documents Tab", true);
+		log("Mousehover to Documents Tab");
 		getVerify_CopyandPaste_Document();
 		Thread.sleep(6000);
-		Reporter.log("Select Document and do Copy and Paste Document successfully", true);
+		log("Select Document and do Copy and Paste Document successfully");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		MoveTo_ToDoList_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to ToDoList Tab", true);
+		log("Mousehover to ToDoList Tab");
 		jsclick(Select_All_Item);
 		Thread.sleep(6000);
-		Reporter.log("Click on All Item Option", true);
+		log("Click on All Item Option");
 		ToDoList_Verify_Indicess_Value();
-		Reporter.log("Custom column is set successfully for ToDoList Functionality", true);
+		log("Custom column is set successfully for ToDoList Functionality");
 
 	}
 
 	public void Reset_Custom_Columns_for_ToDoList() throws InterruptedException {
 
-		Reporter.log("Test Scenario 28 :Reset Custom Columns for ToDoList ", true);
+		log("Test Scenario 28 :Reset Custom Columns for ToDoList ");
 		Thread.sleep(6000);
 		MoveTo_ToDoList_Option();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to ToDoList Tab", true);
+		log("Mousehover to ToDoList Tab");
 		jsclick(To_Do_Resetcolumn_Option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Reset Column", true);
+		log("Click on Reset Column");
 		jsclick(Reset_Column_OK_Button);
-		Reporter.log("Click on Ok button", true);
-		Reporter.log("ToDoList Custom column Reset Successfully", true);
+		log("Click on Ok button");
+		log("ToDoList Custom column Reset Successfully");
 
 	}
 
@@ -4667,7 +4666,7 @@ public class Language extends BaseClass {
 
 	public void Verify_Refresh_Option() throws Exception {
 
-		Reporter.log("Test Scenario 29  Verifying Refresh Option ", true);
+		log("Test Scenario 29  Verifying Refresh Option ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -4676,88 +4675,88 @@ public class Language extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Documents Tab", true);
+		log("Mousehover to Documents Tab");
 		getSelect_Option_Refresh();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
-		Reporter.log("Refresh Functionality verified Successfully on Documents", true);
+		log("Click on Refresh button");
+		log("Refresh Functionality verified Successfully on Documents");
 	}
 
 	public void Verify_Categories_Option() throws Exception {
 
-		Reporter.log("Test Scenario 30 : Verifying Categories Option ", true);
+		log("Test Scenario 30 : Verifying Categories Option ");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
-		Reporter.log("Mousehover to Documents Tab", true);
+		log("Mousehover to Documents Tab");
 		getSelect_Option_Catagories_andSet_Colors();
-		Reporter.log("Select Option Catagories and set Color", true);
-		Reporter.log("Categories on Documents Functionality verified Successfully", true);
+		log("Select Option Catagories and set Color");
+		log("Categories on Documents Functionality verified Successfully");
 
 	}
 
 	public void Verify_copy_and_paste_Option() throws Exception {
 
-		Reporter.log("Test Scenario 31 :Verifying copy and paste Option ", true);
+		log("Test Scenario 31 :Verifying copy and paste Option ");
 		Thread.sleep(6000);
 		getMoveTo_Menu_Documents();
-		Reporter.log("Mousehover to Documents Tab", true);
+		log("Mousehover to Documents Tab");
 		getVerify_CopyandPaste_Document();
 		Thread.sleep(6000);
-		Reporter.log("Verified Copy and Paste Document successfully", true);
+		log("Verified Copy and Paste Document successfully");
 
 	}
 
 	public void Verify_cut_and_paste_Option() throws Exception {
 
-		Reporter.log("Test Scenario 32 :Verifying cut and paste Option ", true);
+		log("Test Scenario 32 :Verifying cut and paste Option ");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Documents Tab", true);
+		log("Mousehover to Documents Tab");
 		getVerify_CutandPaste_Document();
 		Thread.sleep(6000);
-		Reporter.log("cut and paste Document Functionality verified Successfully", true);
+		log("cut and paste Document Functionality verified Successfully");
 	}
 
 	public void Verify_Delete_Option() throws Exception {
 
-		Reporter.log("Test Scenario 33 :Verifying Delete Option", true);
+		log("Test Scenario 33 :Verifying Delete Option");
 		getVerify_Delete_Document();
 		Thread.sleep(6000);
-		Reporter.log("Document Delete Functionality verified Successfully", true);
+		log("Document Delete Functionality verified Successfully");
 	}
 
 	public void Verify_CreateFavorites_Document() throws Exception {
 
-		Reporter.log("Test Scenario 34 :Verifying Create Favorites Document", true);
+		log("Test Scenario 34 :Verifying Create Favorites Document");
 		Verify_CreateFavorites_Document();
-		Reporter.log("Verified and Create Favorites Document", true);
+		log("Verified and Create Favorites Document");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getOpen_CreateFavorites_Document();
-		Reporter.log("CreateFavorites Document Functionality verified Successfully", true);
+		log("CreateFavorites Document Functionality verified Successfully");
 	}
 
 	public void Verify_Notification_on_Document() throws Exception {
 
-		Reporter.log("Test Scenario 35 : Verifying Notification on Document ", true);
+		log("Test Scenario 35 : Verifying Notification on Document ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -4766,51 +4765,51 @@ public class Language extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
-		Reporter.log("Mousehover to Documents Tab", true);
+		log("Mousehover to Documents Tab");
 		getVerify_CopyandPaste_Document();
 		Thread.sleep(6000);
-		Reporter.log("Verified Copy and Paste Document successfully", true);
+		log("Verified Copy and Paste Document successfully");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Documents Tab", true);
+		log("Mousehover to Documents Tab");
 		getCreate_Notification_Document();
 		Thread.sleep(6000);
-		Reporter.log("Verified and Create Notification on Document", true);
+		log("Verified and Create Notification on Document");
 		jsclick(Click_signature_Menuoption);
 		Thread.sleep(6000);
-		Reporter.log("Click on Signature menu option", true);
+		log("Click on Signature menu option");
 		getinputpassword();
 		Thread.sleep(6000);
-		Reporter.log("Enter a Password", true);
+		log("Enter a Password");
 		getAdd_Signature_Onpage();
 		Thread.sleep(6000);
-		Reporter.log("add signature successfully on page ", true);
+		log("add signature successfully on page ");
 		getSave_Signature_Document();
 		Thread.sleep(6000);
-		Reporter.log("Click on save document menu option", true);
+		log("Click on save document menu option");
 		movingclkElement(closedoc);
-		Reporter.log("Click on Close document Viewer option", true);
-		Reporter.log("Notification_on_Document Functionality verified Successfully");
+		log("Click on Close document Viewer option");
+		log("Notification_on_Document Functionality verified Successfully");
 
 	}
 
 	public void Verify_SendTo_Mail() throws Exception {
 
-		Reporter.log("Test Scenario 36 :Verifying SendTo Mail ", true);
+		log("Test Scenario 36 :Verifying SendTo Mail ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -4819,52 +4818,52 @@ public class Language extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Documents Tab", true);
+		log("Mousehover to Documents Tab");
 		getSentTo_Mail_asReference();
 		Thread.sleep(6000);
-		Reporter.log("SendTo Mail asReference Functionality verified Successfully", true);
+		log("SendTo Mail asReference Functionality verified Successfully");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Documents Tab", true);
+		log("Mousehover to Documents Tab");
 		getSentTo_Mail_asCopy();
 		Thread.sleep(6000);
-		Reporter.log("SendTo Mail asCopy Functionality verified Successfully", true);
+		log("SendTo Mail asCopy Functionality verified Successfully");
 	}
 
 	public void Verify_SendTo_Print() throws Exception {
 
-		Reporter.log("Test Scenario 37 :Verifying Send To Print", true);
+		log("Test Scenario 37 :Verifying Send To Print");
 		getSentTo_Print();
-		Reporter.log("SendTo Print Functionality verified Successfully");
+		log("SendTo Print Functionality verified Successfully");
 
 	}
 
 	public void Verify_SendTo_Export() throws Exception {
 
-		Reporter.log("Test Scenario 38 :Verifying Send To Export ", true);
+		log("Test Scenario 38 :Verifying Send To Export ");
 		getSentTo_Export();
-		Reporter.log("SendTo Export Functionality verified Successfully", true);
+		log("SendTo Export Functionality verified Successfully");
 
 	}
 
 	public void Verify_SendTo_GenerateDocumentLink() throws Exception {
 
-		Reporter.log("Test Scenario 39:Verifying Send To Generate DocumentLink ", true);
+		log("Test Scenario 39:Verifying Send To Generate DocumentLink ");
 		try {
 			LogDipakUser();
 			Thread.sleep(6000);
@@ -4873,38 +4872,38 @@ public class Language extends BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		getSentTo_GenerateDocumentLink();
 		Thread.sleep(6000);
-		Reporter.log("Verified and sent Generate Document Link", true);
+		log("Verified and sent Generate Document Link");
 		Refresh_Button();
-		Reporter.log("Click on Refresh button", true);
-		Reporter.log("SendTo GenerateDocumentLink Functionality verified Successfully", true);
+		log("Click on Refresh button");
+		log("SendTo GenerateDocumentLink Functionality verified Successfully");
 	}
 
 	public void Verify_SendTo_SecureLink() throws Exception {
 
-		Reporter.log("Test Scenario 40 :Verifying Send To SecureLink ", true);
+		log("Test Scenario 40 :Verifying Send To SecureLink ");
 		Thread.sleep(6000);
 		getMoveTo_Menu_Recent();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Recent Tab", true);
+		log("Mousehover to Recent Tab");
 		jsclick(Recent_Folder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Recent Folder", true);
+		log("Click on Recent Folder");
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from document List", true);
+		log("Check Document from document List");
 		getSentTo_SecureLink();
 		Thread.sleep(6000);
-		Reporter.log("Verifying and send document to Secure link", true);
-		Reporter.log("SendTo SecureLink Functionality verified Successfully", true);
+		log("Verifying and send document to Secure link");
+		log("SendTo SecureLink Functionality verified Successfully");
 
 	}
 
@@ -4914,7 +4913,7 @@ public class Language extends BaseClass {
 
 		Language pojo = new Language();
 
-		Reporter.log("Test Scenario 2 : Verifying Login EWA with blank username ", true);
+		log("Test Scenario 2 : Verifying Login EWA with blank username ");
 		pojo.loginwithoutUsername();
 		Thread.sleep(2000);
 		pojo.getUsernameerror();
@@ -4924,7 +4923,7 @@ public class Language extends BaseClass {
 
 		Language pojo = new Language();
 
-		Reporter.log("Test Scenario 3 : Verifying Login EWA with blank password", true);
+		log("Test Scenario 3 : Verifying Login EWA with blank password");
 		Thread.sleep(2000);
 		pojo.loginwithoutPassword();
 		Thread.sleep(2000);
@@ -4935,7 +4934,7 @@ public class Language extends BaseClass {
 
 		Language pojo = new Language();
 
-		Reporter.log("Test Scenario 4 : Verifying Login EWA without selecting roomname ", true);
+		log("Test Scenario 4 : Verifying Login EWA without selecting roomname ");
 		Thread.sleep(2000);
 		pojo.loginwithoutRoomname();
 		Thread.sleep(2000);
@@ -4946,7 +4945,7 @@ public class Language extends BaseClass {
 
 		Language pojo = new Language();
 
-		Reporter.log("Test Scenario 5 : Verifying Login EWA with invalid username ", true);
+		log("Test Scenario 5 : Verifying Login EWA with invalid username ");
 		Thread.sleep(2000);
 		pojo.InvalidUsername();
 		Thread.sleep(4000);
@@ -4957,7 +4956,7 @@ public class Language extends BaseClass {
 	public void Verifying_Login_EWA_with_Invalid_Password() throws Exception {
 
 		Language pojo = new Language();
-		Reporter.log("Test Scenario 6 : Verifying Login EWA with invalid password ", true);
+		log("Test Scenario 6 : Verifying Login EWA with invalid password ");
 		Thread.sleep(2000);
 		pojo.InvalidPassword();
 		Thread.sleep(4000);
@@ -4965,20 +4964,20 @@ public class Language extends BaseClass {
 
 	public void Verifying_No_button_of_Session_for_user_is_already_active_dialog_box() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Verifying No button of Session for user is already active dialog box ", true);
+		log("Test Scenario 1 : Verifying No button of Session for user is already active dialog box ");
 		Already_Logged_User();
 		Thread.sleep(2000);
-		Reporter.log("Verified No button of Session for user is already active dialog box ", true);
+		log("Verified No button of Session for user is already active dialog box ");
 
 	}
 
 	public void Verifying_Yes_button_of_Session_for_user_is_already_active_dialog_box() throws Exception {
 
-		Reporter.log("Test Scenario 7 : Verifying Yes button of Session for user is already active dialog box ", true);
+		log("Test Scenario 7 : Verifying Yes button of Session for user is already active dialog box ");
 		Thread.sleep(2000);
 		LogDipakUser();
 		Thread.sleep(2000);
-		Reporter.log("Verified Yes button of Session for user is already active dialog box ", true);
+		log("Verified Yes button of Session for user is already active dialog box ");
 		Refresh_Button();
 	}
 }

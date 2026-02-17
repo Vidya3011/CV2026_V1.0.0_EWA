@@ -362,7 +362,7 @@ public class Security extends Computhink.Generic.BaseClass {
 	}
 
 	public void getaddvalidationmessage() {
-		Reporter.log(Groupaddvalidation.getText() + " this validation message should show", true);
+		log(Groupaddvalidation.getText() + " this validation message should show");
 
 	}
 
@@ -396,7 +396,7 @@ public class Security extends Computhink.Generic.BaseClass {
 
 	public void All_permission_To_Cabinet() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Give All permission for Cabinet ", true);
+		log("Test Scenario 1 : Give All permission for Cabinet ");
 		try {
 			LogDipakUser();
 			Thread.sleep(5000);
@@ -411,70 +411,70 @@ public class Security extends Computhink.Generic.BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Username);
 		Thread.sleep(6000);
-		Reporter.log("Click on Username", true);
+		log("Click on Username");
 		jsclick(Logout);
 		Thread.sleep(6000);
-		Reporter.log("Click on Logout Option", true);
+		log("Click on Logout Option");
 		LoginAdminUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with  User", true);
+		log("Login EWA with  User");
 		selectElement(Select_Cabinet);
 		Thread.sleep(3000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(2000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Security Option", true);
+		log("Click on  Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Security dialog Add button", true);
+		log("Click on  Security dialog Add button");
 		jsclick(Selectcvnamedgrp);
 		Thread.sleep(6000);
-		Reporter.log("Select User Group", true);
+		log("Select User Group");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		try {
 			getaddvalidationmessage();
 			Thread.sleep(6000);
-			Reporter.log("Verifying Validation message", true);
+			log("Verifying Validation message");
 			jsclick(Closebutton);
 		} catch (Exception e) {
 			// Group is not already added
 		}
 		getSelect_Added_CvnamedGroup();
 		Thread.sleep(6000);
-		Reporter.log("Select Added Group", true);
+		log("Select Added Group");
 		jsclick(NewEntry);
 		Thread.sleep(3000);
-		Reporter.log("Click on  New Entry Security button", true);
+		log("Click on  New Entry Security button");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign all permission to Group", true);
+		log("Assign all permission to Group");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Apply button", true);
+		log("Click on Security dialog Apply button");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Security dialog Add button", true);
+		log("Click on  Security dialog Add button");
 		jsclick(cvnamedDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Click_UserGroup Downarrow which you want to select", true);
+		log("Click_UserGroup Downarrow which you want to select");
 		jsclick(SelectcvnamedUser);
 		Thread.sleep(6000);
-		Reporter.log("Select User from Group", true);
+		log("Select User from Group");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		try {
 			getaddvalidationmessage();
 			Thread.sleep(6000);
-			Reporter.log("Verifying Validation message", true);
+			log("Verifying Validation message");
 			jsclick(Closebutton);
 		} catch (Exception e) {
 			// Group is not already added
@@ -482,81 +482,81 @@ public class Security extends Computhink.Generic.BaseClass {
 
 		getSelect_Added_User_Folder();
 		Thread.sleep(6000);
-		Reporter.log("Select a User", true);
+		log("Select a User");
 		jsclick(NewEntry);
-		Reporter.log("Click on  New Enty button", true);
+		log("Click on  New Enty button");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign all permission to User", true);
+		log("Assign all permission to User");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Apply button", true);
+		log("Click on Security dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(5000);
 		LogoutPage();
-		Reporter.log("Click on  Security dialog Ok button", true);
-		Reporter.log("All permission should be given for Cabinet", true);
+		log("Click on  Security dialog Ok button");
+		log("All permission should be given for Cabinet");
 	}
 
 	public void Verify_Permission_CabinetLevel() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying All permission for Cabinet", true);
+		log("Test Scenario 2 : Verifying All permission for Cabinet");
 
 		LogDipakUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with User credential", true);
+		log("Login EWA with User credential");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set Default View", true);
+		log("Select Office Document and set Default View");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set Default View", true);
+		log("Select Pdf Document and set Default View");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Apply button", true);
+		log("Click on Security dialog Apply button");
 		Refresh_Button();
 		Thread.sleep(8000);
 		jsclick(Click_New_Document);
 		Thread.sleep(4000);
-		Reporter.log("Click on New Document Tab", true);
+		log("Click on New Document Tab");
 		jsclick(Destination_Folder_Textbox);
 		Thread.sleep(4000);
-		Reporter.log("Click on Destination Folder Textbox", true);
+		log("Click on Destination Folder Textbox");
 		selectElement(Select_Cabinet1);
 		Thread.sleep(2000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer1);
 		Thread.sleep(3000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder1);
 		Thread.sleep(2000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		movingclkElement(OK_Button_BrowseforFolder);
 		Thread.sleep(6000);
-		Reporter.log("Click on Ok button ", true);
+		log("Click on Ok button ");
 		getSelect_Document_Type_Dropdown();
 		Thread.sleep(4000);
-		Reporter.log("Select Value from Document type dropdown", true);
+		log("Select Value from Document type dropdown");
 		getEnter_ReportName();
 		Thread.sleep(3000);
-		Reporter.log("Enter value into Report Name field", true);
+		log("Enter value into Report Name field");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(Move_To_PlusIcon));
 		movingElement(Move_To_PlusIcon);
 		getBrowse_Option();
 		Thread.sleep(3000);
-		Reporter.log("Browse a Document Page", true);
+		log("Browse a Document Page");
 		Runtime.getRuntime().exec("D:\\DipakAutoit\\PdfDoc\\FileUploadUpdate.exe");
-		Reporter.log("By using AutoIT add file from external folder", true);
+		log("By using AutoIT add file from external folder");
 		try {
 			WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 			wait1.until(ExpectedConditions.alertIsPresent());
@@ -568,22 +568,22 @@ public class Security extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		movingclkElement(Create_button);
 		Thread.sleep(4000);
-		Reporter.log("Click on Create button", true);
+		log("Click on Create button");
 		jsclick(Navigate_button);
 		Thread.sleep(7000);
 		Refresh_Button();
 		Thread.sleep(8000);
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		
 		Thread.sleep(1000);
 		softAssert.assertTrue(cutnode.isEnabled());
@@ -617,17 +617,17 @@ public class Security extends Computhink.Generic.BaseClass {
 		
 		jsclick(Select_DocumentList);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List ", true);
+		log("Check Document from Document List ");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(2000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		softAssert.assertTrue(doclistcut.isEnabled());
 		softAssert.assertTrue(doclistcopy.isEnabled());
 		softAssert.assertTrue(doclistdelete.isEnabled());
 		Thread.sleep(1000);
 		jsclick(sendTo);
 		Thread.sleep(1000);
-		Reporter.log("Click on the Send To Option", true);
+		log("Click on the Send To Option");
 		softAssert.assertTrue(Verify_sendTomail_option.isEnabled());
 		softAssert.assertTrue(Verify_sendToprint_option.isEnabled());
 		softAssert.assertTrue(Verify_sendToExport_option.isEnabled());
@@ -636,7 +636,7 @@ public class Security extends Computhink.Generic.BaseClass {
 		Thread.sleep(1000);
 		jsclick(Open_Document_UnderFolder);
 		Thread.sleep(9000);
-		Reporter.log("Click on Document from Document List", true);
+		log("Click on Document from Document List");
 		try {
 			getVerify_Ownership_Message();
 			Thread.sleep(6000);
@@ -652,51 +652,51 @@ public class Security extends Computhink.Generic.BaseClass {
 			System.out.println("Alert is not present...");
 		}
 		Thread.sleep(8000);
-		Reporter.log("Document Open successfully", true);
+		log("Document Open successfully");
 		jsclick(Select_Document);
 		Thread.sleep(8000);
-		Reporter.log("Click on First Page Thumbnail", true);
+		log("Click on First Page Thumbnail");
 		softAssert.assertTrue(Verify_Share_Document_Option_Disable.isEnabled());
 		softAssert.assertTrue(DeleteFromViewer.isEnabled());
 		softAssert.assertTrue(DeleteFromFab.isEnabled());
 		Thread.sleep(2000);
 		movingclkElement(Close_Document);
 		Thread.sleep(2000);
-		Reporter.log("Verified All permission for Cabinet", true);
+		log("Verified All permission for Cabinet");
 		LogoutPage();
-		Reporter.log("Logout the user account ", true);
+		log("Logout the user account ");
 	}
 
 	public void Remove_All_permission_Cabinet() throws Exception {
 
-		Reporter.log("Test Scenario 3 : Remove All permission To  for Cabinet", true);
+		log("Test Scenario 3 : Remove All permission To  for Cabinet");
 
 		LoginAdminUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with admin User ", true);
+		log("Login EWA with admin User ");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		getSelect_Added_User();
 		Thread.sleep(6000);
-		Reporter.log("Select added User", true);
+		log("Select added User");
 		jsclick(Remove_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Remove button", true);
+		log("Click on Remove button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
-		Reporter.log("Added Remove Successfully on Cabinet level", true);
+		log("Click on Security dialog Ok button");
+		log("Added Remove Successfully on Cabinet level");
 	}
 
 	public void Set_Delete_Denied_onFolder() throws Exception {
 
-		Reporter.log("Test Scenario 4 : Set Delete permission Denied for Folder", true);
+		log("Test Scenario 4 : Set Delete permission Denied for Folder");
 		try {
 			LoginAdminUser();
 			Thread.sleep(5000);
@@ -711,82 +711,82 @@ public class Security extends Computhink.Generic.BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Add button", true);
+		log("Click on Security dialog Add button");
 		jsclick(cvnamedDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Select Click_UserGroup Group", true);
+		log("Select Click_UserGroup Group");
 		jsclick(SelectcvnamedUser);
 		Thread.sleep(6000);
-		Reporter.log("Select User from Group", true);
+		log("Select User from Group");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		try {
 			getaddvalidationmessage();
 			Thread.sleep(6000);
-			Reporter.log("Verifying Valialidation message", true);
+			log("Verifying Valialidation message");
 			jsclick(Closebutton);
 		} catch (Exception e) {
 			// Group is not already added
 		}
 		getSelect_Added_User_Folder();
 		Thread.sleep(6000);
-		Reporter.log("Select added User", true);
+		log("Select added User");
 		jsclick(NewEntry);
-		Reporter.log("Click on New Entry button", true);
+		log("Click on New Entry button");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign Permission to added User", true);
+		log("Assign Permission to added User");
 		jsclick(Delete_Permission);
 		Thread.sleep(6000);
-		Reporter.log("Denied Delete Permission for Folder", true);
+		log("Denied Delete Permission for Folder");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Apply button", true);
+		log("Click on Security dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
-		Reporter.log("Delete permission should be Denied Selected  for Drawer", true);
+		log("Click on Security dialog Ok button");
+		log("Delete permission should be Denied Selected  for Drawer");
 		LogoutPage();
 		Thread.sleep(6000);
 	}
 
 	public void Verify_Delete_permission_Denied_Folder() throws Exception {
 
-		Reporter.log("Test Scenario 5 : Verifying Delete permission Denied for Folder ", true);
+		log("Test Scenario 5 : Verifying Delete permission Denied for Folder ");
 
 		LogDipakUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with User Credential ", true);
+		log("Login EWA with User Credential ");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(7000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		Thread.sleep(2000);
 
 		if (Security_option.isEnabled()) {
@@ -804,10 +804,10 @@ public class Security extends Computhink.Generic.BaseClass {
 		Thread.sleep(3000);
 		jsclick(Select_DocumentList);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List ", true);
+		log("Check Document from Document List ");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(2000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 
 		if (doclistdelete.isEnabled()) {
 			System.out.println("delete option found enabled");
@@ -816,7 +816,7 @@ public class Security extends Computhink.Generic.BaseClass {
 		}
 
 		jsclick(Open_Document_UnderFolder);
-		Reporter.log("Open Document from document List ", true);
+		log("Open Document from document List ");
 		try {
 			getVerify_Ownership_Message();
 			Thread.sleep(6000);
@@ -831,11 +831,11 @@ public class Security extends Computhink.Generic.BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("Document Open successfully", true);
+		log("Document Open successfully");
 		Thread.sleep(9000);
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Select First page Thumbnail", true);
+		log("Select First page Thumbnail");
 
 		if (DeleteFromViewer.isEnabled()) {
 			System.out.println("delete option found enabled from viewer");
@@ -849,10 +849,10 @@ public class Security extends Computhink.Generic.BaseClass {
 		}
 
 		Thread.sleep(6000);
-		Reporter.log("Verified Delete Option is Disable from Fab button and Delete Menu Option", true);
+		log("Verified Delete Option is Disable from Fab button and Delete Menu Option");
 		movingclkElement(Close_Document);
 		Thread.sleep(5000);
-		Reporter.log("Click on Cross button and Close Document", true);
+		log("Click on Cross button and Close Document");
 		LogoutPage();
 		Thread.sleep(5000);
 
@@ -860,42 +860,42 @@ public class Security extends Computhink.Generic.BaseClass {
 
 	public void Remove_Delete_Denied_Folder() throws Exception {
 
-		Reporter.log("Test Scenario 6 : Remove Delete Permission Denied for Folder", true);
+		log("Test Scenario 6 : Remove Delete Permission Denied for Folder");
 
 		LoginAdminUser();
 		Thread.sleep(5000);
-		Reporter.log("Login EWA with  User", true);
+		log("Login EWA with  User");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(7000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover into Roomname Tab", true);
+		log("Mousehover into Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		getSelect_Added_User();
 		Thread.sleep(6000);
-		Reporter.log("Select added User", true);
+		log("Select added User");
 		jsclick(Remove_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Remove button", true);
+		log("Click on Remove button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
-		Reporter.log("Added user Remove Successfully on Folder level", true);
-		Reporter.log("Delete permission is denied for Folder verified Successfully...");
+		log("Click on Security dialog Ok button");
+		log("Added user Remove Successfully on Folder level");
+		log("Delete permission is denied for Folder verified Successfully...");
 
 	}
 
 	public void Share_permission_Denied_Folder() throws Exception {
 
-		Reporter.log("Test Scenario 7 : Share permission Denied for Folder ", true);
+		log("Test Scenario 7 : Share permission Denied for Folder ");
 
 		try {
 			LoginAdminUser();
@@ -911,90 +911,90 @@ public class Security extends Computhink.Generic.BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname ", true);
+		log("Mousehover to Roomname ");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Add button", true);
+		log("Click on Security dialog Add button");
 		jsclick(cvnamedDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Click on Click_UserGroup Group", true);
+		log("Click on Click_UserGroup Group");
 		jsclick(SelectcvnamedUser);
 		Thread.sleep(6000);
-		Reporter.log("Select from Group", true);
+		log("Select from Group");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		try {
 			getaddvalidationmessage();
 			Thread.sleep(6000);
-			Reporter.log("Verifying Validation message", true);
+			log("Verifying Validation message");
 			jsclick(Closebutton);
 		} catch (Exception e) {
 			// Group is not already added
 		}
 		getSelect_Added_User_Folder();
 		Thread.sleep(6000);
-		Reporter.log("Select added User", true);
+		log("Select added User");
 		jsclick(NewEntry);
-		Reporter.log("Click on New Entry button", true);
+		log("Click on New Entry button");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign permission to Selected ", true);
+		log("Assign permission to Selected ");
 		jsclick(Share_Permission);
 		Thread.sleep(6000);
-		Reporter.log("Denied Share permission to Selected ", true);
+		log("Denied Share permission to Selected ");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Apply button", true);
+		log("Click on Security dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
-		Reporter.log("Share permission should be Denied Selected  for Folder", true);
+		log("Click on Security dialog Ok button");
+		log("Share permission should be Denied Selected  for Folder");
 		jsclick(Username);
 		Thread.sleep(6000);
-		Reporter.log("Click on Username", true);
+		log("Click on Username");
 		jsclick(Logout);
 		Thread.sleep(6000);
-		Reporter.log("Click on Logout Option", true);
+		log("Click on Logout Option");
 		LogDipakUser();
 		Thread.sleep(2000);
-		Reporter.log("Login EWA with User Credential", true);
+		log("Login EWA with User Credential");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(Select_DocumentList);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List ", true);
+		log("Check Document from Document List ");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(2000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		jsclick(sendTo);
 		Thread.sleep(1000);
-		Reporter.log("Click on the Send To Option", true);
+		log("Click on the Send To Option");
 		getVerify_DisableOptions_FromDocList();
 		Thread.sleep(2000);
 		jsclick(Open_Document_UnderFolder);
@@ -1012,50 +1012,50 @@ public class Security extends Computhink.Generic.BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("Document open successfully under Folder", true);
+		log("Document open successfully under Folder");
 		Thread.sleep(6000);
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on First page Thumbnail", true);
+		log("Click on First page Thumbnail");
 		getVerify_Share_Document_Option_Disable();
 		Thread.sleep(6000);
-		Reporter.log("Verified Share option is Disable from Viewer menu", true);
+		log("Verified Share option is Disable from Viewer menu");
 		movingclkElement(Close_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on Cross button and Close document", true);
+		log("Click on Cross button and Close document");
 		LogoutPage();
 		LoginAdminUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with admin User ", true);
+		log("Login EWA with admin User ");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Tab", true);
+		log("Click on Security Tab");
 		getSelect_Added_User_Folder();
 		Thread.sleep(6000);
-		Reporter.log("Select added User ", true);
+		log("Select added User ");
 		jsclick(Remove_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Remove button", true);
+		log("Click on Remove button");
 		jsclick(Ok_button_SecurityDialog);
-		Reporter.log("Click on  Security dialog Ok button", true);
-		Reporter.log("Added  Remove Successfully on Folder level", true);
-		Reporter.log("Share permission is denied for Folder verified Successfully...");
+		log("Click on  Security dialog Ok button");
+		log("Added  Remove Successfully on Folder level");
+		log("Share permission is denied for Folder verified Successfully...");
 	}
 
 	public void Modify_Denied_Subfolder() throws Exception {
 
-		Reporter.log("Test Scenario 8 : Verifying Modify Permissions Denied on subFolder ", true);
+		log("Test Scenario 8 : Verifying Modify Permissions Denied on subFolder ");
 		try {
 			LoginAdminUser();
 			Thread.sleep(5000);
@@ -1070,80 +1070,80 @@ public class Security extends Computhink.Generic.BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(15000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		selectElement(Select_subFolder);
 		Thread.sleep(6000);
-		Reporter.log("select a SubFolder", true);
+		log("select a SubFolder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Add button", true);
+		log("Click on Security Dialog Add button");
 		jsclick(cvnamedDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Select Cvnamed Group", true);
+		log("Select Cvnamed Group");
 		jsclick(SelectcvnamedUser);
 		Thread.sleep(3000);
-		Reporter.log("Select User from Group", true);
+		log("Select User from Group");
 		movingclkElement(Ok_button_UserDialog);
 		Thread.sleep(3000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		try {
 			getaddvalidationmessage();
 			Thread.sleep(6000);
-			Reporter.log("Verifying Validation message", true);
+			log("Verifying Validation message");
 			jsclick(Closebutton);
 		} catch (Exception e) {
 			// Group is not already added
 		}
 		getSelect_Added_User_Folder();
 		Thread.sleep(6000);
-		Reporter.log("Select added User", true);
+		log("Select added User");
 		jsclick(NewEntry);
-		Reporter.log("Click on  New Entry button", true);
+		log("Click on  New Entry button");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign all permission to Selected ", true);
+		log("Assign all permission to Selected ");
 		jsclick(Modify_Permission);
 		Thread.sleep(6000);
-		Reporter.log("Denied Modify Permission to Selected ", true);
+		log("Denied Modify Permission to Selected ");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Apply button", true);
+		log("Click on Security dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
-		Reporter.log("Click on the Ok button", true);
-		Reporter.log("Modify permission should be Denied Selected  for SubFolder", true);
+		log("Click on the Ok button");
+		log("Modify permission should be Denied Selected  for SubFolder");
 		LogoutPage();
 		LogDipakUser();
-		Reporter.log("Login EWA with User Credential", true);
+		log("Login EWA with User Credential");
 		Thread.sleep(6000);
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a  Drawer", true);
+		log("Expand a  Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		selectElement(Select_subFolder);
 		Thread.sleep(6000);
-		Reporter.log("select a SubFolder", true);
+		log("select a SubFolder");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		Thread.sleep(1000);
 		softAssert.assertTrue(Renamenode.isEnabled());
 		softAssert.assertTrue(copynode.isEnabled());
@@ -1151,14 +1151,14 @@ public class Security extends Computhink.Generic.BaseClass {
 		Thread.sleep(3000);
 		jsclick(Select_DocumentList);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List ", true);
+		log("Check Document from Document List ");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(2000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		softAssert.assertTrue(doclistcopy.isEnabled());
 		Thread.sleep(2000);
 		jsclick(Open_subfolder_Document);
-		Reporter.log("Click on SubFolder Document", true);
+		log("Click on SubFolder Document");
 		try {
 			getVerify_Ownership_Message();
 			Thread.sleep(6000);
@@ -1173,11 +1173,11 @@ public class Security extends Computhink.Generic.BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("Document Open successfully", true);
+		log("Document Open successfully");
 		Thread.sleep(11000);
 		jsclick(Select_Document);
 		Thread.sleep(9000);
-		Reporter.log("Select First page Thumbnail", true);
+		log("Select First page Thumbnail");
 		softAssert.assertTrue(DeleteFromViewer.isEnabled());
 		softAssert.assertTrue(DeleteFromFab.isEnabled());
 		softAssert.assertTrue(saveviewer.isEnabled());
@@ -1185,44 +1185,44 @@ public class Security extends Computhink.Generic.BaseClass {
 		Thread.sleep(3000);
 		movingclkElement(Close_Document);
 		Thread.sleep(3000);
-		Reporter.log("Click on Cross button and Close Document", true);
+		log("Click on Cross button and Close Document");
 		LogoutPage();
 		LoginAdminUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with  User", true);
+		log("Login EWA with  User");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		selectElement(Select_subFolder);
 		Thread.sleep(6000);
-		Reporter.log(" select a SubFolder", true);
+		log(" select a SubFolder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		getSelect_Added_User_Folder();
 		Thread.sleep(6000);
-		Reporter.log("Select Added User", true);
+		log("Select Added User");
 		jsclick(Remove_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Security dialog Remove button", true);
+		log("Click on  Security dialog Remove button");
 		jsclick(Ok_button_SecurityDialog);
-		Reporter.log("Click on  Security dialog Ok button", true);
-		Reporter.log("Added  Remove Successfully on subFolder level", true);
-		Reporter.log("Modify permission is denied for Subfolder verified Successfully...");
+		log("Click on  Security dialog Ok button");
+		log("Added  Remove Successfully on subFolder level");
+		log("Modify permission is denied for Subfolder verified Successfully...");
 	}
 
 	public void Diffrenet_permissions_Group() throws Exception {
 
-		Reporter.log("Test Scenario 9 : Give Different permission To Group for AllNodes", true);
+		log("Test Scenario 9 : Give Different permission To Group for AllNodes");
 		try {
 			LoginAdminUser();
 			Thread.sleep(5000);
@@ -1239,211 +1239,211 @@ public class Security extends Computhink.Generic.BaseClass {
 		Thread.sleep(6000);
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(2000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Add button", true);
+		log("Click on Security dialog Add button");
 		jsclick(cvadminsDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Click on cvadmins Group Name", true);
+		log("Click on cvadmins Group Name");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		try {
 			getaddvalidationmessage();
 			Thread.sleep(6000);
-			Reporter.log("Verifying Group added already Validation Message", true);
+			log("Verifying Group added already Validation Message");
 			jsclick(Closebutton);
 		} catch (Exception e) {
 			// Group is not already added
 		}
 		getSelect_Added_Group();
 		Thread.sleep(6000);
-		Reporter.log("Select Added Group", true);
+		log("Select Added Group");
 		jsclick(NewEntry);
 		Thread.sleep(3000);
-		Reporter.log("Click on  New Entry Security button", true);
+		log("Click on  New Entry Security button");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign all permission to Group", true);
+		log("Assign all permission to Group");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Apply button", true);
+		log("Click on Security dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
-		Reporter.log("Click on  Security dialog Ok button", true);
-		Reporter.log("All permission should be given to  for Cabinet", true);
+		log("Click on  Security dialog Ok button");
+		log("All permission should be given to  for Cabinet");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Add button", true);
+		log("Click on Security dialog Add button");
 		jsclick(cvadminsDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Select cvadmins Group", true);
+		log("Select cvadmins Group");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		try {
 			getaddvalidationmessage();
 		} catch (Exception e) {
 			System.out.println("Validation message not showing");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Verifying Validation message", true);
+		log("Verifying Validation message");
 		jsclick(Closebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Close button", true);
+		log("Click on Close button");
 		getSelect_Added_Group();
 		Thread.sleep(6000);
-		Reporter.log("Select Added Group", true);
+		log("Select Added Group");
 		jsclick(NewEntry);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Entry button", true);
+		log("Click on New Entry button");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign all permission to Group", true);
+		log("Assign all permission to Group");
 		jsclick(Delete_Permission);
 		Thread.sleep(6000);
-		Reporter.log("Denied Delete permission to Group", true);
+		log("Denied Delete permission to Group");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Apply button", true);
+		log("Click on Security Dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Ok button", true);
-		Reporter.log("Delete permission should be Denied Selected  for Drawer", true);
+		log("Click on Security Dialog Ok button");
+		log("Delete permission should be Denied Selected  for Drawer");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Add button", true);
+		log("Click on Security Dialog Add button");
 		jsclick(cvadminsDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Select cvadmins Group", true);
+		log("Select cvadmins Group");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		getaddvalidationmessage();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Validation message", true);
+		log("Verifying Validation message");
 		jsclick(Closebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Close button", true);
+		log("Click on Close button");
 		getSelect_Added_Group();
 		Thread.sleep(6000);
-		Reporter.log("Select added Group", true);
+		log("Select added Group");
 		jsclick(NewEntry);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Entry button", true);
+		log("Click on New Entry button");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign all permission to selected Group", true);
+		log("Assign all permission to selected Group");
 		jsclick(Share_Permission);
 		Thread.sleep(6000);
-		Reporter.log("Denied share permission", true);
+		log("Denied share permission");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Apply button", true);
+		log("Click on Security Dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Ok button", true);
-		Reporter.log("Share permission should be Denied Selected  for Folder", true);
+		log("Click on Security Dialog Ok button");
+		log("Share permission should be Denied Selected  for Folder");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		selectElement(Select_subFolder);
 		Thread.sleep(6000);
-		Reporter.log("select a SubFolder", true);
+		log("select a SubFolder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Add button", true);
+		log("Click on Security Dialog Add button");
 		jsclick(cvadminsDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Select cvadmins Group ", true);
+		log("Select cvadmins Group ");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog  Ok button", true);
+		log("Click on Security dialog  Ok button");
 		getaddvalidationmessage();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Validation Message", true);
+		log("Verifying Validation Message");
 		jsclick(Closebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Close button", true);
+		log("Click on Close button");
 		getSelect_Added_Group();
 		Thread.sleep(6000);
-		Reporter.log("Select added Group", true);
+		log("Select added Group");
 		jsclick(NewEntry);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Entry Tab", true);
+		log("Click on New Entry Tab");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign all Permission to Group", true);
+		log("Assign all Permission to Group");
 		jsclick(Modify_Permission);
 		Thread.sleep(6000);
-		Reporter.log("Denied Modify Permission", true);
+		log("Denied Modify Permission");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Apply button", true);
+		log("Click on Security dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
-		Reporter.log("Modify permission should be Denied Selected  for SubFolder", true);
+		log("Click on Security dialog Ok button");
+		log("Modify permission should be Denied Selected  for SubFolder");
 
 	}
 
 	public void Verify_Respective_Group_permission() throws Exception {
 
-		Reporter.log("Test Scenario 10 :Verifying Respective permission To Group for AllNodes ", true);
+		log("Test Scenario 10 :Verifying Respective permission To Group for AllNodes ");
 
 		try {
 			LoginAdminUser();
@@ -1451,7 +1451,7 @@ public class Security extends Computhink.Generic.BaseClass {
 		} catch (Exception e) {
 			System.out.println("User is already Logged");
 		}
-		Reporter.log("Login with Security permission assign Group", true);
+		log("Login with Security permission assign Group");
 		try {
 			Thread.sleep(2000);
 			jsclick(CancelSecuritydialog);
@@ -1460,55 +1460,55 @@ public class Security extends Computhink.Generic.BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Setting_Icon);
 		Thread.sleep(6000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
-		Reporter.log("Click on My Preferences Option", true);
+		log("Click on My Preferences Option");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Office Document and set Default View Option ", true);
+		log("Select Office Document and set Default View Option ");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(6000);
-		Reporter.log("Select Pdf Document and set Default View Option", true);
+		log("Select Pdf Document and set Default View Option");
 		movingclkElement(Apply_button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Apply button", true);
+		log("Click on Security Dialog Apply button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(2000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		softAssert.assertTrue(deletenode.isEnabled());
 		Thread.sleep(6000);
-		Reporter.log("Delete permission should be Denied Selected  for Drawer", true);
+		log("Delete permission should be Denied Selected  for Drawer");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(9000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		jsclick(Select_DocumentList);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List ", true);
+		log("Check Document from Document List ");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(2000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		jsclick(sendTo);
 		Thread.sleep(1000);
-		Reporter.log("Click on the Send To Option", true);
+		log("Click on the Send To Option");
 		getVerify_DisableOptions_FromDocList();
 		Thread.sleep(2000);
 		jsclick(Open_Document_UnderFolder);
@@ -1526,34 +1526,34 @@ public class Security extends Computhink.Generic.BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("Document open successfully under Folder", true);
+		log("Document open successfully under Folder");
 		Thread.sleep(6000);
 		jsclick(Select_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on First page Thumbnail", true);
+		log("Click on First page Thumbnail");
 		getVerify_Share_Document_Option_Disable();
 		Thread.sleep(6000);
-		Reporter.log("Verified Share option is Disable from Viewer menu", true);
+		log("Verified Share option is Disable from Viewer menu");
 		movingclkElement(Close_Document);
 		Thread.sleep(6000);
-		Reporter.log("Click on Cross button and Close document", true);
+		log("Click on Cross button and Close document");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		selectElement(Select_subFolder);
 		Thread.sleep(6000);
-		Reporter.log("select a SubFolder", true);
+		log("select a SubFolder");
 		getMoveTo_Menu_RoomName();
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		Thread.sleep(1000);
 		softAssert.assertTrue(Renamenode.isEnabled());
 		softAssert.assertTrue(copynode.isEnabled());
@@ -1561,14 +1561,14 @@ public class Security extends Computhink.Generic.BaseClass {
 		Thread.sleep(2000);
 		jsclick(Select_DocumentList);
 		Thread.sleep(6000);
-		Reporter.log("Check Document from Document List ", true);
+		log("Check Document from Document List ");
 		getMoveTo_Menu_Documents();
 		Thread.sleep(2000);
-		Reporter.log("Mousehover on Documents Tab", true);
+		log("Mousehover on Documents Tab");
 		softAssert.assertTrue(doclistcopy.isEnabled());
 		Thread.sleep(2000);
 		jsclick(Open_subfolder_Document);
-		Reporter.log("Click on SubFolder Document", true);
+		log("Click on SubFolder Document");
 		try {
 			getVerify_Ownership_Message();
 			Thread.sleep(6000);
@@ -1583,11 +1583,11 @@ public class Security extends Computhink.Generic.BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		Reporter.log("Document Open successfully", true);
+		log("Document Open successfully");
 		Thread.sleep(11000);
 		jsclick(Select_Document);
 		Thread.sleep(9000);
-		Reporter.log("Select First page Thumbnail", true);
+		log("Select First page Thumbnail");
 		softAssert.assertTrue(DeleteFromViewer.isEnabled());
 		softAssert.assertTrue(DeleteFromFab.isEnabled());
 		softAssert.assertTrue(saveviewer.isEnabled());
@@ -1595,213 +1595,213 @@ public class Security extends Computhink.Generic.BaseClass {
 		Thread.sleep(3000);
 		movingclkElement(Close_Document);
 		Thread.sleep(3000);
-		Reporter.log("Click on Cross button and Close Document", true);
+		log("Click on Cross button and Close Document");
 		LogoutPage();
 		Thread.sleep(6000);
 		LoginAdminUser();
 		Thread.sleep(6000);
-		Reporter.log("Login EWA with  User", true);
+		log("Login EWA with  User");
 		selectElement(Select_Cabinet);
 		Thread.sleep(3000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(2000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Security Option", true);
+		log("Click on  Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on  Security dialog Add button", true);
+		log("Click on  Security dialog Add button");
 		jsclick(cvnamedDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Select Click_UserGroup Group", true);
+		log("Select Click_UserGroup Group");
 		jsclick(SelectcvnamedUser);
 		Thread.sleep(6000);
-		Reporter.log("Select User from Group", true);
+		log("Select User from Group");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		try {
 			getaddvalidationmessage();
 			Thread.sleep(6000);
-			Reporter.log("Verifying Validation message", true);
+			log("Verifying Validation message");
 			jsclick(Closebutton);
 		} catch (Exception e) {
 			// Group is not already added
 		}
 		getSelect_Added_User_Folder();
 		Thread.sleep(6000);
-		Reporter.log("Select User", true);
+		log("Select User");
 		jsclick(NewEntry);
-		Reporter.log("Click on  New Enty button", true);
+		log("Click on  New Enty button");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign all to permission to cabinet", true);
+		log("Assign all to permission to cabinet");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Apply button", true);
+		log("Click on Security dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(5000);
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Add button", true);
+		log("Click on Security dialog Add button");
 		jsclick(cvadminsDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Select cvadmins Group", true);
+		log("Select cvadmins Group");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		try {
 			getaddvalidationmessage();
 		} catch (Exception e) {
 			System.out.println("Validation message not showing");
 		}
 		Thread.sleep(6000);
-		Reporter.log("Verifying Validation message", true);
+		log("Verifying Validation message");
 		jsclick(Closebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Close button", true);
+		log("Click on Close button");
 		getSelect_Added_Group();
 		Thread.sleep(6000);
-		Reporter.log("Select Added Group", true);
+		log("Select Added Group");
 		jsclick(NewEntry);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Entry button", true);
+		log("Click on New Entry button");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign all permission to Group", true);
+		log("Assign all permission to Group");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Apply button", true);
+		log("Click on Security Dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Ok button", true);
+		log("Click on Security Dialog Ok button");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Add button", true);
+		log("Click on Security Dialog Add button");
 		jsclick(cvadminsDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Select cvadmins Group", true);
+		log("Select cvadmins Group");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		getaddvalidationmessage();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Validation message", true);
+		log("Verifying Validation message");
 		jsclick(Closebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Close button", true);
+		log("Click on Close button");
 		getSelect_Added_Group();
 		Thread.sleep(6000);
-		Reporter.log("Select added Group", true);
+		log("Select added Group");
 		jsclick(NewEntry);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Entry button", true);
+		log("Click on New Entry button");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign all permission to selected Group", true);
+		log("Assign all permission to selected Group");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Apply button", true);
+		log("Click on Security Dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Ok button", true);
+		log("Click on Security Dialog Ok button");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		selectElement(Select_Drawer);
 		Thread.sleep(6000);
-		Reporter.log("Expand a Drawer", true);
+		log("Expand a Drawer");
 		selectElement(Select_Folder);
 		Thread.sleep(6000);
-		Reporter.log("select a Folder", true);
+		log("select a Folder");
 		selectElement(Select_subFolder);
 		Thread.sleep(6000);
-		Reporter.log("select a SubFolder", true);
+		log("select a SubFolder");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(6000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security Dialog Add button", true);
+		log("Click on Security Dialog Add button");
 		jsclick(cvadminsDownarrow);
 		Thread.sleep(6000);
-		Reporter.log("Select cvadmins Group ", true);
+		log("Select cvadmins Group ");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog  Ok button", true);
+		log("Click on Security dialog  Ok button");
 		getaddvalidationmessage();
 		Thread.sleep(6000);
-		Reporter.log("Verifying Validation Message", true);
+		log("Verifying Validation Message");
 		jsclick(Closebutton);
 		Thread.sleep(6000);
-		Reporter.log("Click on Close button", true);
+		log("Click on Close button");
 		getSelect_Added_Group();
 		Thread.sleep(6000);
-		Reporter.log("Select added Group", true);
+		log("Select added Group");
 		jsclick(NewEntry);
 		Thread.sleep(6000);
-		Reporter.log("Click on New Entry Tab", true);
+		log("Click on New Entry Tab");
 		getDoubleClick_CrossBar();
 		Thread.sleep(6000);
-		Reporter.log("Assign all Permission to Group", true);
+		log("Assign all Permission to Group");
 		jsclick(Apply_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Apply button", true);
+		log("Click on Security dialog Apply button");
 		jsclick(Ok_button_SecurityDialog);
 		Thread.sleep(6000);
-		Reporter.log("Click on Security dialog Ok button", true);
+		log("Click on Security dialog Ok button");
 		LogoutPage();
 		LogDipakUser();
 		Thread.sleep(5000);
 		Refresh_Button();
 		Thread.sleep(4000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 	}
 
 	public void Security_Dialog_Cancel_Button() throws Exception {
 
-		Reporter.log("Test Scenario 1 : Open Security Dialog And Verifying Title and Cancel button ", true);
+		log("Test Scenario 1 : Open Security Dialog And Verifying Title and Cancel button ");
 		try {
 			LogDipakUser();
 			Thread.sleep(5000);
@@ -1817,41 +1817,41 @@ public class Security extends Computhink.Generic.BaseClass {
 		Thread.sleep(7000);
 		Refresh_Button();
 		Thread.sleep(7000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		jsclick(Setting_Icon);
 		Thread.sleep(7000);
-		Reporter.log("Click on Setting Icon", true);
+		log("Click on Setting Icon");
 		jsclick(My_Preferencesetting);
 		Thread.sleep(7000);
-		Reporter.log("Click on My Preferences", true);
+		log("Click on My Preferences");
 		getSelect_Office_document_Defaultviewing();
 		Thread.sleep(7000);
-		Reporter.log("Select Office Document and set as Default View", true);
+		log("Select Office Document and set as Default View");
 		getPdf_document_Defaultviewing();
 		Thread.sleep(7000);
-		Reporter.log("Select Pdf Document and set as Default View", true);
+		log("Select Pdf Document and set as Default View");
 		movingclkElement(Apply_button);
 		Thread.sleep(7000);
-		Reporter.log("Click on Apply button", true);
+		log("Click on Apply button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(7000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(7000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(7000);
-		Reporter.log("Click on Security Option", true);
-		Reporter.log("Security dialog title Verified", true);
+		log("Click on Security Option");
+		log("Security dialog title Verified");
 		jsclick(Cancel_Button_SecurityDialog);
 		Thread.sleep(7000);
-		Reporter.log("Click on cancel button", true);
-		Reporter.log("Open security dialog Verifying title and cancel button successfully", true);
+		log("Click on cancel button");
+		log("Open security dialog Verifying title and cancel button successfully");
 	}
 
 	public void Added_Users_Validation() throws Exception {
 
-		Reporter.log("Test Scenario 2 : Verifying Already added  showing Validation ", true);
+		log("Test Scenario 2 : Verifying Already added  showing Validation ");
 		try {
 			LogDipakUser();
 			Thread.sleep(5000);
@@ -1866,44 +1866,44 @@ public class Security extends Computhink.Generic.BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(7000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(7000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(7000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(7000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(7000);
-		Reporter.log("Click on Security dialog Add button", true);
+		log("Click on Security dialog Add button");
 		jsclick(cvnamedDownarrow);
 		Thread.sleep(7000);
-		Reporter.log("Select Cvnamed Group", true);
+		log("Select Cvnamed Group");
 		jsclick(SelectcvnamedUser);
 		Thread.sleep(7000);
-		Reporter.log("Select from Group", true);
+		log("Select from Group");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(7000);
-		Reporter.log("Click on Security Dialog Ok button", true);
+		log("Click on Security Dialog Ok button");
 		try {
 			getaddvalidationmessage();
 			Thread.sleep(7000);
-			Reporter.log("Verified Validation Message", true);
+			log("Verified Validation Message");
 			jsclick(Closebutton);
 		} catch (Exception e) {
 			// Group is not already added
 		}
 		jsclick(Cancel_Button_SecurityDialog);
 		Thread.sleep(7000);
-		Reporter.log("Click on Cancel button", true);
-		Reporter.log("Already added showing validation Verified", true);
+		log("Click on Cancel button");
+		log("Already added showing validation Verified");
 	}
 
 	public void Added_Group_Validation() throws Exception {
-		Reporter.log("Test Scenario 3 : Verifying Already added Group showing Validation ", true);
+		log("Test Scenario 3 : Verifying Already added Group showing Validation ");
 		try {
 			LogDipakUser();
 			Thread.sleep(5000);
@@ -1918,40 +1918,40 @@ public class Security extends Computhink.Generic.BaseClass {
 		}
 		Refresh_Button();
 		Thread.sleep(7000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		selectElement(Select_Cabinet);
 		Thread.sleep(7000);
-		Reporter.log("Expand a Cabinet", true);
+		log("Expand a Cabinet");
 		getMoveTo_Menu_RoomName();
 		Thread.sleep(7000);
-		Reporter.log("Mousehover to Roomname Tab", true);
+		log("Mousehover to Roomname Tab");
 		jsclick(Security_option);
 		Thread.sleep(7000);
-		Reporter.log("Click on Security Option", true);
+		log("Click on Security Option");
 		jsclick(Add_Button);
 		Thread.sleep(7000);
-		Reporter.log("Click on Security dialog Add button", true);
+		log("Click on Security dialog Add button");
 		jsclick(cvadminsDownarrow);
 		Thread.sleep(7000);
-		Reporter.log("Click on cvadmins Group", true);
+		log("Click on cvadmins Group");
 		jsclick(Ok_button_UserDialog);
 		Thread.sleep(7000);
-		Reporter.log("Click on Ok button", true);
+		log("Click on Ok button");
 		try {
 			getaddvalidationmessage();
 			Thread.sleep(7000);
-			Reporter.log("Verifying Validation message", true);
+			log("Verifying Validation message");
 			jsclick(Closebutton);
 		} catch (Exception e) {
 			// Group is not already added
 		}
 		jsclick(Cancel_Button_SecurityDialog);
 		Thread.sleep(7000);
-		Reporter.log("Click on Cancel button", true);
-		Reporter.log("Already added Group showing validation Verified", true);
+		log("Click on Cancel button");
+		log("Already added Group showing validation Verified");
 		Refresh_Button();
 		Thread.sleep(6000);
-		Reporter.log("Click on Refresh button", true);
+		log("Click on Refresh button");
 		
 	}
 }

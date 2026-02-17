@@ -263,24 +263,24 @@ public class AnnotaionsPom extends BaseClass {
 
 	public void RedactionAnnotation() throws Exception {
 
-		Reporter.log("Scenario 2: Open the document and Add Redaction Annotation on the page");
+		log("Scenario 2: Open the document and Add Redaction Annotation on the page");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		jsclick(RoomContextTab);
 		Thread.sleep(4000);
-		Reporter.log("Click on room context menu tab");
+		log("Click on room context menu tab");
 
 		jsclick(Cabinet);
-		// Reporter.log("Click on the cabinet");
+		// log("Click on the cabinet");
 
 		Thread.sleep(3000);
 		ElementToBeClickable(Drawer);
 		selectElement(Drawer);
-		// Reporter.log("Click on the drawer");
+		// log("Click on the drawer");
 
 		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(Folder));
 		selectElement(Folder);
-		// Reporter.log("Open the folder");
+		// log("Open the folder");
 		Thread.sleep(8000);
 		AdvancedViewer an = new AdvancedViewer();
 		an.create_document_Auto();
@@ -301,56 +301,56 @@ public class AnnotaionsPom extends BaseClass {
 		Thread.sleep(3000);
 		movingElement(AnnotationTab);
 
-		Reporter.log("Mouse hover on the annotation icon");
+		log("Mouse hover on the annotation icon");
 		VisiblityOf(Redaction);
-		Reporter.log("Click on Redaction button");
+		log("Click on Redaction button");
 		Thread.sleep(2000);
 		// WebElement fabbtn = driver.findElement(By.xpath("//*[@id=\"fabButton\"]"));
 		Actions act = new Actions(driver);
 		act.click(Redaction).clickAndHold(Page).moveToElement(fabbtn).release().build().perform();
 		Thread.sleep(3000);
-		Reporter.log("Create redaction on the page");
+		log("Create redaction on the page");
 
 		sendvalue(RedName, readFromRoomCntxt(1, 2));
-		Reporter.log("Enter the name(label) for the redaction");
+		log("Enter the name(label) for the redaction");
 
 		Thread.sleep(2000);
 		sendvalue(RedactionPassword, readFromRoomCntxt(2, 2));
-		Reporter.log("Enter a password to the lock Redaction dialog box");
+		log("Enter a password to the lock Redaction dialog box");
 
 		Thread.sleep(3000);
 		sendvalue(RedactionCnfrmPassword, readFromRoomCntxt(2, 2));
-		Reporter.log("Confirm a password to the lock Redaction dialog box");
+		log("Confirm a password to the lock Redaction dialog box");
 
 		Thread.sleep(3000);
 		jsclick(RedactionOKBTN);
-		Reporter.log("Click Redaction dialog OK button");
+		log("Click Redaction dialog OK button");
 		Thread.sleep(8000);
 
 		movingElement(AnnotationTab);
-		Reporter.log("Mouse hover on annotation tool icon");
+		log("Mouse hover on annotation tool icon");
 		Thread.sleep(3000);
-		Reporter.log("Redaction added on the page successfully...");
+		log("Redaction added on the page successfully...");
 
 		VisiblityOf(UnLockRedaction);
-		Reporter.log("Click on unlock redaction button in the annotation submenu");
+		log("Click on unlock redaction button in the annotation submenu");
 		jsclick(UnLockRedaction);
 		Thread.sleep(3000);
 		sendvalue(unRedactionPassword, readFromRoomCntxt(2, 2));
-		Reporter.log("Click Redaction dialog OK button");
+		log("Click Redaction dialog OK button");
 		Thread.sleep(3000);
 		jsclick(unRedactionPwdOKBTN);
-		Reporter.log("Enter a valid password into the unlock Redaction dialog box");
+		log("Enter a valid password into the unlock Redaction dialog box");
 		Thread.sleep(6000);
-		Reporter.log("The Redaction got unlocked successfully...");
+		log("The Redaction got unlocked successfully...");
 
 		act.click(showstickynote).sendKeys(Keys.DELETE).build().perform();
-		// Reporter.log("Delete the Redaction, the Redaction got deleted
+		// log("Delete the Redaction, the Redaction got deleted
 		// successfully...");
 		Thread.sleep(10000);
 
 		jsclick(SaveTab);
-		Reporter.log("Create Redaction and Unlock Redaction Verified successfully...");
+		log("Create Redaction and Unlock Redaction Verified successfully...");
 		Thread.sleep(3000);
 		VisiblityOf(SaveTabOKBTN);
 		jsclick(SaveTabOKBTN);
@@ -360,21 +360,21 @@ public class AnnotaionsPom extends BaseClass {
 
 	public void WorkflowCreateDocument() throws Exception {
 
-		Reporter.log("Scenario 2:Open the document and Add Redaction Annotation on the page");
+		log("Scenario 2:Open the document and Add Redaction Annotation on the page");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		jsclick(RoomContextTab);
 		Thread.sleep(4000);
-		Reporter.log("Click on room context menu tab");
+		log("Click on room context menu tab");
 		jsclick(Cabinet);
-		// Reporter.log("Click on the cabinet");
+		// log("Click on the cabinet");
 		Thread.sleep(3000);
 		ElementToBeClickable(Drawer);
 		selectElement(Drawer);
-		// Reporter.log("Click on the drawer");
+		// log("Click on the drawer");
 		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(Folder));
 		selectElement(Folder);
-		// Reporter.log("Open the folder");
+		// log("Open the folder");
 		Thread.sleep(3000);
 		AdvancedViewer an = new AdvancedViewer();
 		an.create_document_Auto();
@@ -399,21 +399,21 @@ public class AnnotaionsPom extends BaseClass {
 	public void RegisterCustomStampAnnotation() throws Exception {
 		
 
-		Reporter.log("Scenario 2:Open the document and Add Register custom stamp Annotation on the page");
+		log("Scenario 2:Open the document and Add Register custom stamp Annotation on the page");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		jsclick(RoomContextTab);
 		Thread.sleep(4000);
-		Reporter.log("Click on room context menu tab");
+		log("Click on room context menu tab");
 		jsclick(Cabinet);
-		// Reporter.log("Click on the cabinet");
+		// log("Click on the cabinet");
 		Thread.sleep(3000);
 		ElementToBeClickable(Drawer);
 		selectElement(Drawer);
-		// Reporter.log("Click on the drawer");
+		// log("Click on the drawer");
 		Thread.sleep(4000);
 		wait.until(ExpectedConditions.elementToBeClickable(Folder));
 		selectElement(Folder);
-		// Reporter.log("Open the folder");
+		// log("Open the folder");
 		Thread.sleep(8000);
 		AdvancedViewer an = new AdvancedViewer();
 		an.create_document_Auto();
@@ -435,20 +435,20 @@ public class AnnotaionsPom extends BaseClass {
 		Thread.sleep(7000);
 		movingElement(AnnotationTab);
 
-		Reporter.log("Mouse hover on the annotation icon");
+		log("Mouse hover on the annotation icon");
 
 	}
 
 	public void HighLighFunction() throws Exception {
 		
 
-		Reporter.log("Scenario 03: Verify Highlight annotation");
+		log("Scenario 03: Verify Highlight annotation");
 
 		movingElement(AnnotationTab);
-		Reporter.log("Click on annotation icon");
+		log("Click on annotation icon");
 
 		VisiblityOf(HighLight);
-		Reporter.log("Click on highlight tool button");
+		log("Click on highlight tool button");
 		Thread.sleep(3000);
 
 		Actions act = new Actions(driver);
@@ -456,14 +456,14 @@ public class AnnotaionsPom extends BaseClass {
 
 		act.click(HighLight).clickAndHold(Page).moveToElement(fabbtn).release().build().perform();
 		Thread.sleep(8000);
-		Reporter.log("Highlight a portion of the page");
+		log("Highlight a portion of the page");
 
 		jsclick(SaveTab);
 		Thread.sleep(3000);
-		Reporter.log("Click on save icon");
+		log("Click on save icon");
 
 		VisiblityOf(SaveTabOKBTN);
-		Reporter.log("The Highlight annotation has been updated on the document page successfully");
+		log("The Highlight annotation has been updated on the document page successfully");
 
 		jsclick(SaveTabOKBTN);
 		Thread.sleep(8000);
@@ -473,19 +473,19 @@ public class AnnotaionsPom extends BaseClass {
 	public void StickyNoteAnnotation() throws Exception {
 		
 
-		Reporter.log("Scenario 04: Verify Sticky note annotation");
+		log("Scenario 04: Verify Sticky note annotation");
 
 		// Mouse hover on annotation icon
 		movingElement(AnnotationTab);
 		VisiblityOf(StickyNote);
-		Reporter.log("Click on Sticky Note tool button");
+		log("Click on Sticky Note tool button");
 
 		Thread.sleep(3000);
 
 		try {
 			Actions act = new Actions(driver);
 			act.click(StickyNote).moveToElement(Page).click().build().perform();
-			Reporter.log("Click on the page and add stickynote");
+			log("Click on the page and add stickynote");
 		} catch (JavascriptException e) {
 			System.out.println("JavaScript Exception handled...");
 		}
@@ -493,21 +493,21 @@ public class AnnotaionsPom extends BaseClass {
 		Thread.sleep(5000);
 
 		sendvalue(stickyNoteTextbOX, "automationNishaR");
-		Reporter.log("Sticky note tool dialog opened, Place comments on the stickynote dialog box");
+		log("Sticky note tool dialog opened, Place comments on the stickynote dialog box");
 
 		Thread.sleep(5000);
 		jsclick(stickyNoteTextbOXokBTN);
-		Reporter.log("Click on the stickynote tool dialog box OK button");
+		log("Click on the stickynote tool dialog box OK button");
 		Thread.sleep(10000);
 
 		// Moving to Save tab
 		ElementToBeClickable(SaveTab);
 		jsclick(SaveTab);
-		Reporter.log("Click on save button");
+		log("Click on save button");
 		Thread.sleep(3000);
 
 		VisiblityOf(SaveTabOKBTN);
-		Reporter.log("The StickyNote annotation has been updated on the document page successfully");
+		log("The StickyNote annotation has been updated on the document page successfully");
 
 		jsclick(SaveTabOKBTN);
 		Thread.sleep(8000);
@@ -517,18 +517,18 @@ public class AnnotaionsPom extends BaseClass {
 	public void RubberStampAnnotation() throws Exception {
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 05: Verify RubberStamp annotation");
+		log("Scenario 05: Verify RubberStamp annotation");
 		movingElement(AnnotationTab);
-		Reporter.log("Mouse hover on annotation icon");
+		log("Mouse hover on annotation icon");
 		VisiblityOf(RubberStamp);
-		Reporter.log("Click on the Rubber Stamp tool button");
+		log("Click on the Rubber Stamp tool button");
 
 		// SoftAssert to check if RubberStamp element is clickable and visible
 		softAssert.assertTrue(RubberStamp.isDisplayed(), "RubberStamp button is not visible.");
 
 		Actions act = new Actions(driver);
 		ElementToBeClickable(RubberStamp);
-		Reporter.log("Drag the Rubber stamp on the page");
+		log("Drag the Rubber stamp on the page");
 
 		// Perform action to drag the RubberStamp
 		act.click(RubberStamp).clickAndHold(Page).moveToElement(rectanglerelease).release().build().perform();
@@ -540,7 +540,7 @@ public class AnnotaionsPom extends BaseClass {
 
 		Thread.sleep(5000);
 		jsclick(stickyNoteTextbOXokBTN);
-		Reporter.log("Choose Rubber stamp from the dropdown list and click on annotation properties dialog OK button");
+		log("Choose Rubber stamp from the dropdown list and click on annotation properties dialog OK button");
 
 		// SoftAssert: Verify that stickyNoteTextbOXokBTN is visible and clickable
 		softAssert.assertTrue(stickyNoteTextbOXokBTN.isDisplayed(), "StickyNote OK button is not visible.");
@@ -548,7 +548,7 @@ public class AnnotaionsPom extends BaseClass {
 		// Moving to Save tab
 		ElementToBeClickable(SaveTab);
 		jsclick(SaveTab);
-		Reporter.log("Click on save button");
+		log("Click on save button");
 
 		Thread.sleep(3000);
 
@@ -556,7 +556,7 @@ public class AnnotaionsPom extends BaseClass {
 		softAssert.assertTrue(SaveTab.isDisplayed(), "Save button is not visible.");
 
 		VisiblityOf(SaveTabOKBTN);
-		Reporter.log("The Rubber stamp annotation has been updated on the document page successfully");
+		log("The Rubber stamp annotation has been updated on the document page successfully");
 
 		// SoftAssert: Verify that SaveTabOKBTN is visible and clickable
 		softAssert.assertTrue(SaveTabOKBTN.isDisplayed(), "Save Tab OK button is not visible.");
@@ -569,13 +569,13 @@ public class AnnotaionsPom extends BaseClass {
 	public void StampAnnotation() throws Exception {
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 07: Verify Stamp annotation tool");
+		log("Scenario 07: Verify Stamp annotation tool");
 		Thread.sleep(4000);
-		Reporter.log("Switch to the second page");
+		log("Switch to the second page");
 		jsclick(StampPage);
-		Reporter.log("Mouse hover on annotation tool icon");
+		log("Mouse hover on annotation tool icon");
 		Thread.sleep(8000);
-		Reporter.log("Click on Stamp annotation tool button");
+		log("Click on Stamp annotation tool button");
 
 		movingElement(AnnotationTab);
 		VisiblityOf(Stampannota);
@@ -587,11 +587,11 @@ public class AnnotaionsPom extends BaseClass {
 		Actions act = new Actions(driver);
 		act.click(Stampannota).clickAndHold(Page).moveToElement(rectanglerelease).release().build().perform();
 		Thread.sleep(5000);
-		Reporter.log("Drag on the page, it will open the add picture dialog box");
+		log("Drag on the page, it will open the add picture dialog box");
 
 		movingclkElement(openfileStamp);
 		Thread.sleep(8000);
-		Reporter.log("Click on choose file");
+		log("Click on choose file");
 
 		// SoftAssert: Verify if the file input button is visible and clickable
 		softAssert.assertTrue(openfileStamp.isDisplayed(), "Open file button is not visible.");
@@ -599,25 +599,25 @@ public class AnnotaionsPom extends BaseClass {
 		// Using AutoIT to add an image
 		Runtime.getRuntime().exec("D:\\RNishaAutoIt\\FlowerOrCurlyBracket.exe");
 		Thread.sleep(15000);
-		Reporter.log("Add the image from folder by using Auto IT");
+		log("Add the image from folder by using Auto IT");
 
 		jsclick(openfileStampOKBTN);
 		Thread.sleep(5000);
-		Reporter.log("Click on add picture dialog OK button");
+		log("Click on add picture dialog OK button");
 
 		// SoftAssert: Verify if the OK button on the file dialog is clickable
 		softAssert.assertTrue(openfileStampOKBTN.isDisplayed(), "OK button on the file dialog is not visible.");
 
 		ElementToBeClickable(SaveTab);
 		jsclick(SaveTab);
-		Reporter.log("Click on save button");
+		log("Click on save button");
 		Thread.sleep(3000);
 
 		// SoftAssert: Verify if the Save button is clickable
 		softAssert.assertTrue(SaveTab.isDisplayed(), "Save button is not visible or clickable.");
 
 		VisiblityOf(SaveTabOKBTN);
-		Reporter.log("The Stamp annotation has been updated on the document page successfully");
+		log("The Stamp annotation has been updated on the document page successfully");
 
 		// SoftAssert: Verify if the OK button after saving is visible
 		softAssert.assertTrue(SaveTabOKBTN.isDisplayed(), "Save Tab OK button is not visible.");
@@ -630,7 +630,7 @@ public class AnnotaionsPom extends BaseClass {
 	public void PolygonAnnotation() throws Exception {
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 11: Verify polygon annotation");
+		log("Scenario 11: Verify polygon annotation");
 		Thread.sleep(2000);
 
 		Actions act = new Actions(driver);
@@ -638,20 +638,20 @@ public class AnnotaionsPom extends BaseClass {
 			
 			act.moveToElement(AnnotationTab).perform();
 		} catch (JavascriptException e) {
-			Reporter.log("Exception Handled");
+			log("Exception Handled");
 		}
 
-		Reporter.log("Mouse hover on annotation tool icon");
+		log("Mouse hover on annotation tool icon");
 		VisiblityOf(polygon);
 		Thread.sleep(5000);
 
 		// SoftAssert: Verify if the polygon tool is visible and clickable
 		softAssert.assertTrue(polygon.isDisplayed(), "Polygon tool is not visible.");
 
-		Reporter.log("Click on polygon tool button");
+		log("Click on polygon tool button");
 		act.click(polygon).clickAndHold(Page).moveToElement(rectanglerelease).click(Page).build().perform();
 
-		Reporter.log(
+		log(
 				"Draw the polygon on the page. The Polygon annotation has been updated on the document page successfully.");
 
 	}
@@ -659,12 +659,12 @@ public class AnnotaionsPom extends BaseClass {
 	public void LineAnnotation() throws Exception {
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 08: Verify Line annotation");
+		log("Scenario 08: Verify Line annotation");
 		Thread.sleep(4000);
 
-		Reporter.log("Mouse hover on annotation tool icon");
+		log("Mouse hover on annotation tool icon");
 		movingElement(AnnotationTab);
-		Reporter.log("Click on the line tool button");
+		log("Click on the line tool button");
 
 		// SoftAssert: Verify if the Line tool is visible before interacting
 		softAssert.assertTrue(Line.isDisplayed(), "Line annotation tool is not visible.");
@@ -674,53 +674,53 @@ public class AnnotaionsPom extends BaseClass {
 
 		Actions act = new Actions(driver);
 		act.click(Line).clickAndHold(Page).moveToElement(ReleseForAnnotation).release().build().perform();
-		Reporter.log("Draw the line on the page");
+		log("Draw the line on the page");
 
 		Thread.sleep(8000);
 		jsclick(SaveTab);
-		Reporter.log("Click on the save button");
+		log("Click on the save button");
 		Thread.sleep(3000);
 
 		// SoftAssert: Verify if the SaveTab OK button is visible
 		softAssert.assertTrue(SaveTabOKBTN.isDisplayed(), "SaveTab OK button is not visible.");
 
-		Reporter.log("The line annotation has been updated on the document page successfully");
+		log("The line annotation has been updated on the document page successfully");
 		jsclick(SaveTabOKBTN);
 		Thread.sleep(8000);
 
-		Reporter.log("==============================================================================");
+		log("==============================================================================");
 
 	}
 
 	public void rectangleAnnotation() throws Exception {
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 06: Verify Rectangle annotation tool");
+		log("Scenario 06: Verify Rectangle annotation tool");
 		movingElement(AnnotationTab);
-		Reporter.log("Mouse hover on annotation tool icon");
+		log("Mouse hover on annotation tool icon");
 
 		// SoftAssert: Verify if the Rectangle tool is visible before interacting
 		softAssert.assertTrue(Rectangle.isDisplayed(), "Rectangle annotation tool is not visible.");
 
 		VisiblityOf(Rectangle);
 		Thread.sleep(8000);
-		Reporter.log("Click on the rectangle tool button");
+		log("Click on the rectangle tool button");
 
 		
 		Actions act = new Actions(driver);
 		act.click(Rectangle).clickAndHold(Page).moveToElement(PageCloseIcon).release().build().perform();
 		Thread.sleep(8000);
-		Reporter.log("Draw the rectangle shape on the page");
+		log("Draw the rectangle shape on the page");
 
 		// Save the annotation
 		jsclick(SaveTab);
 		Thread.sleep(3000);
-		Reporter.log("Click on save button");
+		log("Click on save button");
 
 		// SoftAssert: Verify if the SaveTab OK button is visible
 		softAssert.assertTrue(SaveTabOKBTN.isDisplayed(), "SaveTab OK button is not visible.");
 
-		Reporter.log("The Rectangle annotation has been updated on the document page successfully");
+		log("The Rectangle annotation has been updated on the document page successfully");
 		jsclick(SaveTabOKBTN);
 		Thread.sleep(15000);
 
@@ -729,16 +729,16 @@ public class AnnotaionsPom extends BaseClass {
 	public void ellipseAnnotation() throws Exception {
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 9: Verify ellipse annotation");
+		log("Scenario 9: Verify ellipse annotation");
 
 		movingElement(AnnotationTab);
-		Reporter.log("Mouse hover on the annotation tool icon");
+		log("Mouse hover on the annotation tool icon");
 
 		// SoftAssert: Verify if the Ellipse tool is visible before interacting
 		softAssert.assertTrue(ellipse.isDisplayed(), "Ellipse annotation tool is not visible.");
 
 		VisiblityOf(ellipse);
-		Reporter.log("Click on ellipse tool button");
+		log("Click on ellipse tool button");
 		Thread.sleep(3000);
 
 		try {
@@ -749,18 +749,18 @@ public class AnnotaionsPom extends BaseClass {
 			System.out.println("Exception handled");
 		}
 
-		Reporter.log("Draw the ellipse on the page");
+		log("Draw the ellipse on the page");
 
 		// Save the annotation
 		jsclick(SaveTab);
 		Thread.sleep(3000);
-		Reporter.log("Click on save button");
+		log("Click on save button");
 
 		// SoftAssert: Verify if the SaveTab OK button is visible
 		softAssert.assertTrue(SaveTabOKBTN.isDisplayed(), "SaveTab OK button is not visible.");
 
 		jsclick(SaveTabOKBTN);
-		Reporter.log("The ellipse annotation has been updated on the document page successfully");
+		log("The ellipse annotation has been updated on the document page successfully");
 
 		Thread.sleep(15000);
 
@@ -776,12 +776,12 @@ public class AnnotaionsPom extends BaseClass {
 
 		SoftAssert softAssert = new SoftAssert(); // Initialize SoftAssert
 
-		Reporter.log("Scenario 10: Verify Signature annotation");
+		log("Scenario 10: Verify Signature annotation");
 
 		// Mouse hover on annotation tool icon
 		movingElement(AnnotationTab);
 		VisiblityOf(Singature);
-		Reporter.log("Click on signature tool button");
+		log("Click on signature tool button");
 		Thread.sleep(3000);
 
 		Actions act = new Actions(driver);
@@ -791,7 +791,7 @@ public class AnnotaionsPom extends BaseClass {
 
 		ElementToBeClickable(Singature);
 		jsclick(Singature);
-		Reporter.log("Single click on the page");
+		log("Single click on the page");
 		Thread.sleep(3000);
 
 		try {
@@ -804,35 +804,35 @@ public class AnnotaionsPom extends BaseClass {
 			Thread.sleep(8000);
 		} catch (Exception e) {
 			// If password dialog box is not present
-			Reporter.log("Password dialog box not present");
+			log("Password dialog box not present");
 			Thread.sleep(2000);
 			act.click(Page).release().build().perform();
 			Thread.sleep(8000);
 		}
 
-		Reporter.log("Add the signature on the page");
+		log("Add the signature on the page");
 
 		// Save the annotation
 		jsclick(SaveTab);
 		Thread.sleep(3000);
-		Reporter.log("Click on save button");
+		log("Click on save button");
 
 		// SoftAssert: Verify if the SaveTab OK button is visible
 		softAssert.assertTrue(SaveTabOKBTN.isDisplayed(), "SaveTab OK button is not visible.");
 
 		jsclick(SaveTabOKBTN);
-		Reporter.log("The Signature annotation has been updated on the document page successfully");
+		log("The Signature annotation has been updated on the document page successfully");
 
 		Thread.sleep(10000);
 
 	}
 
 	public void closeAndReopenThePage() throws Exception {
-		Reporter.log("Scenario 12:Close and reopen the document to check whether the annotations are visible or not");
+		log("Scenario 12:Close and reopen the document to check whether the annotations are visible or not");
 		jsclick(PageCloseIcon);
-		Reporter.log("Click on close icon");
+		log("Click on close icon");
 		VisiblityOf(OpenDocument1);
-		Reporter.log("Reopen the document again");
+		log("Reopen the document again");
 		jsclick(OpenDocument1);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		try {
@@ -841,12 +841,12 @@ public class AnnotaionsPom extends BaseClass {
 				acceptAlert();
 			}
 		} catch (Exception e) {
-			Reporter.log("Page alert is not present");
+			log("Page alert is not present");
 		}
 		Thread.sleep(3000);
-		Reporter.log("All the added annotations are visible on the page successfully... ");
+		log("All the added annotations are visible on the page successfully... ");
 		// jsclick(StampPage);
-		Reporter.log("All updated annotations are visible on the second page, there is no data loss");
+		log("All updated annotations are visible on the second page, there is no data loss");
 
 	}
 

@@ -7,6 +7,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -15,6 +17,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -49,14 +53,12 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.asserts.SoftAssert;
-
 import Computhink.Pom.ToDoListTab;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 //Dipak Automation codes
 
 public class BaseClass {
-
 
 	public static Alert a;
 	public static Actions a1;
@@ -66,32 +68,55 @@ public class BaseClass {
 	public static TakesScreenshot ts;
 	public static ToDoListTab todo;
 
-	
 //********************Select Browser for EWA Automation scripts****************************************//
 
 	protected static WebDriver driver;
+	protected WebDriverWait wait;
+	protected static Logger log = LogManager.getLogger(BaseClass.class);
+	
+	// ================= DOWNLOAD DIRECTORY =================
+	private static final String DOWNLOAD_DIR =
+	        System.getProperty("user.dir") + File.separator + "downloads";
+	// ======================================================
+
+
+//****************************************	All in one Browser Setting *******************************************//
 
 	// 🔴 CHANGE BROWSER ONLY HERE
-	private static final String BROWSER = "Chrome";
-	// Chrome | Edge | Firefox
+	// 🔴 Browser value from Jenkins / Maven / Local
+	// Default = Chrome if nothing is passed
+	
+	private static final String BROWSER =
+	        System.getProperty("browser", "Chrome");
+	
+
+		// Chrome | Edge | Firefox
+
+	// =================== DRIVER ACCESS ===================
 
 	@BeforeClass(alwaysRun = true)
 	public void setUp() {
-		loadBrowser(BROWSER);
+
+	    System.out.println("Running tests on browser: " + BROWSER);
+	    new File(DOWNLOAD_DIR).mkdirs();
+	    loadBrowser(BROWSER);
+	    wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		
 	}
 
-	private static void loadBrowser(String browserName) {
+	private void loadBrowser(String browserName) {
 
 		if (browserName.equalsIgnoreCase("Chrome")) {
-
 			WebDriverManager.chromedriver().setup();
-
 			ChromeOptions options = new ChromeOptions();
 
 			// ================= HEADLESS MODE (CHROME) =================
 			// 👉 Uncomment below lines to run in Headless mode
 			// options.addArguments("--headless=new");
 			// options.addArguments("--window-size=1920,1080");
+			// options.addArguments("--disable-gpu");
+			// options.addArguments("--no-sandbox");
+			// options.addArguments("--disable-dev-shm-usage");
 			// ===========================================================
 
 			// Remove "Chrome is being controlled by automated software"
@@ -106,15 +131,17 @@ public class BaseClass {
 			prefs.put("profile.default_content_setting_values.media_stream_mic", 2);
 			prefs.put("download.prompt_for_download", false);
 			prefs.put("safebrowsing.enabled", true);
+			prefs.put("download.default_directory", DOWNLOAD_DIR); // 🔽 ADD THIS
 
 			options.setExperimentalOption("prefs", prefs);
-
+			options.setAcceptInsecureCerts(true);
 			options.addArguments("--disable-notifications");
 			options.addArguments("--disable-infobars");
 			options.addArguments("--disable-extensions");
 			options.addArguments("--remote-allow-origins=*");
 
 			driver = new ChromeDriver(options);
+			
 
 		} else if (browserName.equalsIgnoreCase("Edge")) {
 
@@ -128,8 +155,30 @@ public class BaseClass {
 			// options.addArguments("--window-size=1920,1080");
 			// ========================================================
 
+			// Remove "Edge is being controlled by automated software"
+			options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+			options.setExperimentalOption("useAutomationExtension", false);
+
+			// Disable permission popups + auto download
+			Map<String, Object> prefs = new HashMap<>();
+			prefs.put("profile.default_content_setting_values.notifications", 2);
+			prefs.put("profile.default_content_setting_values.geolocation", 2);
+			prefs.put("profile.default_content_setting_values.media_stream_camera", 2);
+			prefs.put("profile.default_content_setting_values.media_stream_mic", 2);
+			prefs.put("download.prompt_for_download", false);
+			prefs.put("safebrowsing.enabled", true);
+			prefs.put("download.default_directory", DOWNLOAD_DIR); // 🔥 ADDED
+
+
+			options.setExperimentalOption("prefs", prefs);
+			options.setAcceptInsecureCerts(true);
 			options.addArguments("--disable-notifications");
+			options.addArguments("--disable-infobars");
+			options.addArguments("--disable-extensions");
+			options.addArguments("--remote-allow-origins=*");
+
 			driver = new EdgeDriver(options);
+			
 
 		} else if (browserName.equalsIgnoreCase("Firefox")) {
 
@@ -146,21 +195,32 @@ public class BaseClass {
 			options.addPreference("dom.webnotifications.enabled", false);
 			options.addPreference("browser.download.prompt_for_download", false);
 
+			options.addPreference("browser.download.dir", DOWNLOAD_DIR);  // 🔥 ADDED
+			options.addPreference("browser.download.folderList", 2);      // 🔥 ADDED
+			options.addPreference("browser.helperApps.neverAsk.saveToDisk",
+			        "application/pdf,application/octet-stream,text/csv,application/vnd.ms-excel"); // 🔥 ADDED
+			options.addPreference("pdfjs.disabled", true); // 🔥 ADDED
+
+			options.setAcceptInsecureCerts(true);
 			driver = new FirefoxDriver(options);
+			
 
 		} else {
 			throw new RuntimeException("Unsupported browser: " + browserName);
 		}
 
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().deleteAllCookies();
+		
 	}
 
+	// ======================= TEARDOWN =======================
 	@AfterClass(alwaysRun = false)
 	public void tearDown() {
 		if (driver != null) {
 			driver.quit();
+			
 		}
 	}
 
@@ -225,7 +285,7 @@ public class BaseClass {
 
 	public static void launchUrl() throws Exception {
 		driver.get(ExcelLogin(1, 3));
-		//ContentVerseURLAndTitleAssertValidation();
+		// ContentVerseURLAndTitleAssertValidation();
 		Reporter.log("EWA URL launched successfull");
 	}
 
@@ -261,7 +321,6 @@ public class BaseClass {
 		String username = ExcelLogin(1, 0);
 		UserName.clear();
 		UserName.sendKeys(username);
-	
 
 		// Validate the username entered
 		as.assertEquals(UserName.getAttribute("value"), username, "Entered username is not correct.");
@@ -274,10 +333,10 @@ public class BaseClass {
 		passwordField.clear();
 		passwordField.sendKeys(ExcelLogin(1, 1));// password
 		Reporter.log("Enter valid password into password field", true);
-
+		Thread.sleep(2000);
 		// Validate that the password has been entered correctly
 		as.assertEquals(passwordField.getAttribute("value"), "syntax@10", "Password is not entered correctly.");
-
+		Thread.sleep(1000);
 		RoomSelectionCVS();
 
 		// Check for Captcha and validate if displayed
@@ -297,9 +356,8 @@ public class BaseClass {
 		WebElement LoginBTN = driver.findElement(By.id("submitid"));
 		as.assertTrue(LoginBTN.isDisplayed(), "Login button is not displayed.");
 		as.assertTrue(LoginBTN.isEnabled(), "Login button is not enabled.");
-
+		Thread.sleep(2000);
 		jsclick(LoginBTN); // Perform the click action using JavaScript click
-		
 
 		// Check for session message and handle it
 		try {
@@ -335,7 +393,6 @@ public class BaseClass {
 	public static void Already_Logged_User() throws Exception {
 
 		SoftAssert as = new SoftAssert(); // Initialize SoftAssert to capture all assertions
-		
 
 		// Find and validate Username input field
 		WebElement UserName = driver.findElement(By.xpath("//input[@id='userName']"));
@@ -345,7 +402,6 @@ public class BaseClass {
 
 		String username = ExcelLogin(1, 0);
 		UserName.sendKeys(username);
-		
 
 		// Validate the username entered
 		as.assertEquals(UserName.getAttribute("value"), username, "Entered username is not correct.");
@@ -382,7 +438,6 @@ public class BaseClass {
 		as.assertTrue(LoginBTN.isEnabled(), "Login button is not enabled.");
 
 		jsclick(LoginBTN); // Perform the click action using JavaScript click
-		
 
 		// Check for session message and handle it
 		try {
@@ -427,7 +482,6 @@ public class BaseClass {
 
 		String username = ExcelLogin(2, 0);
 		UserName.sendKeys(username);
-		
 
 		// Validate the username entered
 		as.assertEquals(UserName.getAttribute("value"), username, "Entered username is not correct.");
@@ -462,9 +516,8 @@ public class BaseClass {
 		WebElement LoginBTN = driver.findElement(By.id("submitid"));
 		as.assertTrue(LoginBTN.isDisplayed(), "Login button is not displayed.");
 		as.assertTrue(LoginBTN.isEnabled(), "Login button is not enabled.");
-
+		Thread.sleep(2000);
 		jsclick(LoginBTN); // Perform the click action using JavaScript click
-		
 
 		// Check for session message and handle it
 		try {
@@ -508,7 +561,6 @@ public class BaseClass {
 
 	public static void loginRNISHA47() throws Exception {
 		SoftAssert as = new SoftAssert(); // Initialize SoftAssert to capture all assertions
-	
 
 		// Find and validate Username input field
 		WebElement UserName = driver.findElement(By.xpath("//input[@id='userName']"));
@@ -520,7 +572,6 @@ public class BaseClass {
 												// 7.vidyaAssuming this method reads the username from an external
 												// source
 		UserName.sendKeys(username);
-		
 
 		// Validate the username entered
 		as.assertEquals(UserName.getAttribute("value"), username, "Entered username is not correct.");
@@ -557,7 +608,6 @@ public class BaseClass {
 		as.assertTrue(LoginBTN.isEnabled(), "Login button is not enabled.");
 
 		jsclick(LoginBTN); // Perform the click action using JavaScript click
-	
 
 		// Check for session message and handle it
 		try {
@@ -581,7 +631,6 @@ public class BaseClass {
 		SoftAssert as = new SoftAssert(); // Initialize SoftAssert to capture all assertions
 
 		// Wait for the page to load
-		
 
 		// Find and validate Username input field
 		WebElement UserName = driver.findElement(By.xpath("//input[@id='userName']"));
@@ -591,7 +640,6 @@ public class BaseClass {
 
 		String username = readFromExLogin(2, 0); // Assuming this method reads the username from an external source
 		UserName.sendKeys(username);
-		
 
 		// Validate the username entered
 		as.assertEquals(UserName.getAttribute("value"), username, "Entered username is not correct.");
@@ -627,7 +675,6 @@ public class BaseClass {
 		as.assertTrue(LoginBTN.isEnabled(), "Login button is not enabled.");
 
 		jsclick(LoginBTN); // Perform the click action using JavaScript click
-	
 
 		// Check for session message and handle it
 		try {
@@ -1687,6 +1734,13 @@ public class BaseClass {
 		sl.selectByVisibleText(text);
 
 	}
+	
+	// 42.
+		public static void selectDropDownByIndex(WebElement element, int index) {
+			sl = new Select(element);
+			sl.selectByIndex(index);
+
+		}
 
 	public static void EndTime() {
 		Date d = new Date();
@@ -1695,12 +1749,6 @@ public class BaseClass {
 		System.out.println("Test Execution End Time :" + currentDateTime);
 	}
 
-	// 42.
-	public static void selectDropDownByIndex(WebElement element, int index) {
-		sl = new Select(element);
-		sl.selectByIndex(index);
-
-	}
 
 	// 43.
 	public static void deselectDropDownByValue(WebElement element, String text) {
@@ -1799,5 +1847,33 @@ public class BaseClass {
 		wait.until(ExpectedConditions.elementToBeClickable(ele));
 
 	}
-}
 
+	// ===========================Reporter
+	// message===========================================================
+
+	protected void log(String message) {
+
+		Listeners.extentTest.get().info(message);
+		Reporter.log(message);
+	}
+
+	// =================== SCREENSHOT (FOR LISTENER) ===================
+
+	public String takeScreenshot(String testName) {
+		String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+
+		String screenshotPath = System.getProperty("user.dir") + "/reports/Screenshots/" + testName + "_" + timestamp
+				+ ".png";
+
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		File dest = new File(screenshotPath);
+
+		try {
+			FileUtils.copyFile(src, dest);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return screenshotPath;
+
+	}
+}

@@ -1984,7 +1984,7 @@ public class Language1 extends BaseClass {
 		WebElement ro = driver.findElement(By.xpath("//option[text()= 'CVWin19Server.Win2019_TestRoom']"));
 		ro.click();
 		driver.findElement(By.id("submitid")).click();
-		Reporter.log("Login button clicked successfully", true);
+		log("Login button clicked successfully");
 		try {
 			WebElement sessionmsgYes = driver.findElement(By.xpath(" //button[@id='cvModelLoginValidationOk']"));
 			sessionmsgYes.click();
