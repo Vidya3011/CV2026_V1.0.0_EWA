@@ -31,6 +31,7 @@ public class RoomContextMenu extends BaseClass {
 
 	public RoomContextMenu() {
 		PageFactory.initElements(driver, this);
+		
 	}
 
 	@FindBy(xpath = ("//*[@id='navigationMenuBtn']"))

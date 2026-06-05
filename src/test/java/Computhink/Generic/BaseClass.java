@@ -210,7 +210,7 @@ public class BaseClass {
 		}
 
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().deleteAllCookies();
 		
 	}
@@ -808,7 +808,6 @@ public class BaseClass {
 		SoftAssert as = new SoftAssert(); // Initialize SoftAssert to capture all assertions
 
 		// Wait for the page to load
-		Thread.sleep(4000);
 
 		// Find and validate Username input field
 		WebElement UserName = driver.findElement(By.xpath("//input[@id='userName']"));

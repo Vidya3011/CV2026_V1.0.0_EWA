@@ -3,28 +3,108 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="Computhink.Generic.ListenersRetry"/>
-    <listener class-name="Computhink.Generic.CustomTestLisner"/>
+    <listener class-name="Computhink.Generic.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Test 5(failed)">
+  <test thread-count="5" name="Test1(failed)">
     <classes>
-      <class name="Computhink.Script.DashBoardScript">
+      <class name="Computhink.Script.Login_Validation">
         <methods>
-          <include name="ladBrowser"/>
-          <include name="TodoListWFDetailsDashBoardFunctionality"/>
+          <include name="TC_03_Verifying_No_button_of_Session_for_user_is_already_active_dialog_box"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC_06_Verifying_Login_EWA_without_Selecting_Roomname"/>
+          <include name="TC_05_Verifying_Login_EWA_with_blank_Password"/>
+          <include name="TC_07_Verifying_Login_EWA_with_Invalid_Username"/>
+          <include name="TC_04_Verifying_Login_EWA_with_blank_Username"/>
+          <include name="TC_08_Verifying_Login_EWA_with_Invalid_Password"/>
+          <include name="TC_01_ContentVerseURLAndTitleValidation"/>
         </methods>
-      </class> <!-- Computhink.Script.DashBoardScript -->
+      </class> <!-- Computhink.Script.Login_Validation -->
     </classes>
-  </test> <!-- Test 5(failed) -->
-  <test thread-count="5" name="Test12(failed)">
+  </test> <!-- Test1(failed) -->
+  <test thread-count="5" name="Test3(failed)">
     <classes>
-      <class name="Computhink.Script.RegisterStamp__Advanced_Viewing">
+      <class name="Computhink.Script.Templates_Test">
         <methods>
-          <include name="TestCase_3_Dynamic_Stamp"/>
-          <include name="TestCase_4_Standard_Stamp"/>
-          <include name="TestCase_5_Custom_Stamp"/>
-          <include name="ladBrowser"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC_01_verify_to_CreateorBrowse_Template_Defaultviewing"/>
+          <include name="TC_02_Verify_to_Edit_and_Delete_DefaultTemplate"/>
         </methods>
-      </class> <!-- Computhink.Script.RegisterStamp__Advanced_Viewing -->
+      </class> <!-- Computhink.Script.Templates_Test -->
     </classes>
-  </test> <!-- Test12(failed) -->
+  </test> <!-- Test3(failed) -->
+  <test thread-count="5" name="Test4(failed)">
+    <classes>
+      <class name="Computhink.Script.Negative_Templates">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC_03_Verify_TextboxName_and_Templatename_validation"/>
+          <include name="Login_EWA"/>
+        </methods>
+      </class> <!-- Computhink.Script.Negative_Templates -->
+    </classes>
+  </test> <!-- Test4(failed) -->
+  <test thread-count="5" name="Test5(failed)">
+    <classes>
+      <class name="Computhink.Script.Security_dialog_Test">
+        <methods>
+          <include name="setUp"/>
+          <include name="TC_08_Verify_Modify_Permissions_Denied_on_subFolder"/>
+          <include name="TC_09_Give_Different_permission_To_Group_for_AllNodes"/>
+          <include name="tearDown"/>
+          <include name="TC_10_Verify_Respective_permission_To_Group_for_AllNodes"/>
+        </methods>
+      </class> <!-- Computhink.Script.Security_dialog_Test -->
+    </classes>
+  </test> <!-- Test5(failed) -->
+  <test thread-count="5" name="Test6(failed)">
+    <classes>
+      <class name="Computhink.Script.Negative_Securitydialog">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC_02_Verify_Already_added_showing_Validation"/>
+        </methods>
+      </class> <!-- Computhink.Script.Negative_Securitydialog -->
+    </classes>
+  </test> <!-- Test6(failed) -->
+  <test thread-count="5" name="Test17(failed)">
+    <classes>
+      <class name="Computhink.Script.My_Preferences_Enable_Dashboard">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC_01_Verify_Enable_Dashboard"/>
+        </methods>
+      </class> <!-- Computhink.Script.My_Preferences_Enable_Dashboard -->
+    </classes>
+  </test> <!-- Test17(failed) -->
+  <test thread-count="5" name="Test27(failed)">
+    <classes>
+      <class name="Computhink.Script.Language_Test">
+        <methods>
+          <include name="TC_01_verify_Spanish_Language"/>
+          <include name="setUp"/>
+          <include name="TC_03_verify_Dutch_Language"/>
+          <include name="tearDown"/>
+          <include name="TC_05_verify_English_Language"/>
+          <include name="TC_04_verify_Hindi_Language"/>
+          <include name="TC_02_verify_French_Language"/>
+        </methods>
+      </class> <!-- Computhink.Script.Language_Test -->
+    </classes>
+  </test> <!-- Test27(failed) -->
+  <test thread-count="5" name="Test31(failed)">
+    <classes>
+      <class name="Computhink.Script.Special_Char_FileNames">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="TC_20_Verify_All_filetypes"/>
+        </methods>
+      </class> <!-- Computhink.Script.Special_Char_FileNames -->
+    </classes>
+  </test> <!-- Test31(failed) -->
 </suite> <!-- Failed suite [Suite] -->

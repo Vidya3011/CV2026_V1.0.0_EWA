@@ -1,0 +1,16 @@
+[Documents File]
+[documents]
+document1=CVReports	"D:\Aip images\*.pdf"
+doc1.fields=ReportName
+doc1.field1=Test 1
+doc1.location=Tomcate64bitServer/AIP Cabinet/AIP Drawer/AIP Folder
+doc1.create_location=True
+doc1.append=true
+doc1.delete_images=False
+document2=CVReports	"D:\Aip images\*.*"
+doc2.fields=ReportName
+doc2.field1=Test 2
+doc2.location=Tomcate64bitServer/AIP Cabinet/AIP Drawer/AIP Folder
+doc2.create_location=True
+doc2.append=false
+doc2.delete_images=False

@@ -3,13 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Computhink.Script.Login_Validation">
+      <class name="Computhink.Script.Negative_Securitydialog">
         <methods>
           <include name="setUp"/>
+          <include name="TC_03_Verify_Already_addedGroup_showing_Validation"/>
           <include name="tearDown"/>
-          <include name="TC_01_ContentVerseURLAndTitleValidation"/>
+          <include name="TC_02_Verify_Already_added_showing_Validation"/>
+          <include name="Login_EWA"/>
+          <include name="TC_01_Open_Security_Dialog_And_Verify_Title_and_Cancel_Button"/>
         </methods>
-      </class> <!-- Computhink.Script.Login_Validation -->
+      </class> <!-- Computhink.Script.Negative_Securitydialog -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

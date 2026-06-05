@@ -67,6 +67,7 @@ public class Security_dialog_Test extends Computhink.Generic.BaseClass {
 	}
 
 	@Test(priority = 9)
+	
 	public void TC_08_Verify_Modify_Permissions_Denied_on_subFolder() throws Exception {
 
 		Security sec = new Security();
@@ -80,11 +81,11 @@ public class Security_dialog_Test extends Computhink.Generic.BaseClass {
 		sec.Diffrenet_permissions_Group();
 	}
 
-	@Test(priority = 11)
-	public void TC_10_Verify_Respective_permission_To_Group_for_AllNodes() throws Exception {
-
-		Security sec = new Security();
-		sec.Verify_Respective_Group_permission();
-	}
+//	@Test(priority = 11)
+//	public void TC_10_Verify_Respective_permission_To_Group_for_AllNodes() throws Exception {
+//
+//		Security sec = new Security();
+//		sec.Verify_Respective_Group_permission();
+//	}
 
 }

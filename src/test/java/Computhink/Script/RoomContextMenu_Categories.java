@@ -27,6 +27,7 @@ public class RoomContextMenu_Categories extends BaseClass {
 		
 
 	}
+	
 
 	@Test(priority = 3)
 	public void TC_2_CategoriesPublic() throws Exception {

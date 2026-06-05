@@ -48,6 +48,7 @@ public class Templates_Test extends Computhink.Generic.BaseClass {
 		pojo.Verify_to_Edit_and_Delete_AdvancedTemplate_Officedoc();
 	}
 
+	
 	@Test(priority = 6)
 	public void TC_05_verify_to_Create_Formmapping_PDFTemplate_Advancedviewing() throws Exception {
 

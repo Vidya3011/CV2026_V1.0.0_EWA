@@ -9,6 +9,7 @@ import Computhink.Pom.RoomContextMenu;
 
  public class RoomContextMenu_CopyPaste extends BaseClass {
 	
+	 
 	public static Actions act;
 
 	@Test(priority = 1)

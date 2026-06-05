@@ -36,6 +36,7 @@ RoomContextFunction_TakeOwnerShip_ReleaseOwnerShip extends Computhink.Generic.Ba
 		RoomContextMenu rm = new RoomContextMenu();
 		rm.GrantSuperivorPermission();
 
+		
 
 	}
 

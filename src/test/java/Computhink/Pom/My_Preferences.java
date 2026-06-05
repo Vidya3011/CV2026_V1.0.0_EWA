@@ -22,51 +22,57 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 import Computhink.Generic.BaseClass;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 
 public class My_Preferences extends BaseClass {
 
-	//public static WebElement element = null;
+	// public static WebElement element = null;
 	private static final boolean False = false;
 
 	public My_Preferences() {
-	 PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);
+		
 
 	}
 
-	// Craete doc Script 
+	// Craete doc Script
 
-		@FindBy(xpath = ".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/a[1]")
-		private WebElement Select_Cabinet2;
+	@FindBy(xpath = ".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/a[1]")
+	private WebElement Select_Cabinet2;
 
-		@FindBy(xpath = (".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]"))
-		private WebElement Select_Drawer2;
+	@FindBy(xpath = (".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]"))
+	private WebElement Select_Drawer2;
 
-		@FindBy(xpath = (".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]"))
-		private WebElement Select_Folder2;
+	@FindBy(xpath = (".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]"))
+	private WebElement Select_Folder2;
 
-		// Search Document
-		@FindBy(xpath = ".//div[@id='viewDocumentnavigator']/ul[1]/li[1]/a[1]")
-		private WebElement Select_Cabinet;
+	// Search Document
+	@FindBy(xpath = ".//div[@id='viewDocumentnavigator']/ul[1]/li[1]/a[1]")
+	private WebElement Select_Cabinet;
 
-		@FindBy(xpath = ".//div[@id='viewDocumentnavigator']/ul[1]/li[1]/ul[1]/li[1]/a[1]")
-		private WebElement Select_Drawer;
+	@FindBy(xpath = ".//div[@id='viewDocumentnavigator']/ul[1]/li[1]/ul[1]/li[1]/a[1]")
+	private WebElement Select_Drawer;
 
-		@FindBy(xpath = (".//div[@id='viewDocumentnavigator']/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]"))
-		private WebElement Select_Folder;
+	@FindBy(xpath = (".//div[@id='viewDocumentnavigator']/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]"))
+	private WebElement Select_Folder;
 
-		@FindBy(xpath = ".//div[@id='viewDocumentnavigator']/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]")
-		private WebElement Select_subFolder;
+	@FindBy(xpath = ".//div[@id='viewDocumentnavigator']/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]")
+	private WebElement Select_subFolder;
 
-		// Select from Destination folder Location
+	// Select from Destination folder Location
 
-		@FindBy(xpath = (".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/a[1]"))
-		private WebElement Select_Cabinet1;
+	@FindBy(xpath = (".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/a[1]"))
+	private WebElement Select_Cabinet1;
 
-		@FindBy(xpath = (".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]"))
-		private WebElement Select_Drawer1;
+	@FindBy(xpath = (".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]"))
+	private WebElement Select_Drawer1;
 
-		@FindBy(xpath = (".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]"))
-		private WebElement Select_Folder1;
+	@FindBy(xpath = (".//div[@id='navigatorModel']/div[2]/div[1]/div[1]/ul[1]/li[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]"))
+	private WebElement Select_Folder1;
 
 	@FindBy(xpath = "//*[@id=\"messageButtonNo27\"]")
 	private WebElement Nobutton;
@@ -542,6 +548,27 @@ public class My_Preferences extends BaseClass {
 	@FindBy(xpath = "//*[@id=\"generalRow_Id\"]/td[2]")
 	private WebElement GeneralTabDociID;
 
+	@FindBy(xpath = "//*[@id=\"sidbiassignedWfTable\"]/tbody/tr/td")
+	private WebElement SendWorkflow;
+
+	@FindBy(xpath = "//*[@id=\"sidbisendworkflowOk\"]")
+	private WebElement Applybtn;
+	
+
+	
+	@FindBy(xpath = "//a[@class='acceptAction']")
+	private WebElement WFAccept;
+	
+	@FindBy(xpath = "//*[@id=\"wfactionOk\"]")
+	private WebElement WFAcceptOK;
+	
+	@FindBy(xpath = "//*[@id=\"wfcomments\"]")
+	private WebElement Textenter;
+	
+
+	@FindBy(xpath = "//*[@id=\"CommentsMessageModelOk\"]")
+	private WebElement WFOK;
+
 	@FindBy(xpath = "//*[@id=\"addCustomStamps\"]")
 	private WebElement Register_Custom_Stamp;
 
@@ -556,6 +583,9 @@ public class My_Preferences extends BaseClass {
 
 	@FindBy(xpath = "//*[@id=\"closeTemplateModel\"]")
 	private WebElement RegisterStamp_CloseButton;
+
+	@FindBy(xpath = "//*[@id=\"sendtoworkflow\"]")
+	private WebElement sendToWorkflow;
 
 	@FindBy(xpath = "//*[@id=\"cancelStamp\"]")
 	private WebElement RegisterStamp_CancelButton;
@@ -582,7 +612,7 @@ public class My_Preferences extends BaseClass {
 	private WebElement Select_Added_Stamp;
 
 	@FindBy(xpath = "//li[normalize-space()='Automation Custom Stamp']") // change it custom stamp postion accrodingly
-																		// change final li calue
+																			// change final li calue
 	private WebElement Select_Added_Stamp_adv;
 
 	@FindBy(xpath = "//*[@id=\"pdfViewerDiv_annotation\"]")
@@ -590,12 +620,26 @@ public class My_Preferences extends BaseClass {
 
 	@FindBy(xpath = "//span/div/ul/li/span")
 	private WebElement AddStamp;
-	
+
 	@FindBy(xpath = "//span[@class='e-menu-icon e-pv-stamp-icon e-pv-icon']")
 	private WebElement AddStampADV;
 
 	@FindBy(xpath = ("(//ul[@class='e-menu-parent e-ul '])[1]/li[5]"))
 	private WebElement AddCustomStamp;
+
+	@FindBy(xpath = ("//*[@id=\"pageheader\"]/div[1]/ul/li[5]"))
+	private WebElement DocumentList;
+	
+	@FindBy(xpath = ("//*[@id=\"pageheader\"]/div[1]/ul/li[7]"))
+	private WebElement Todolist;
+	
+	@FindBy(xpath = ("//*[@id=\"newItems\"]"))
+	private WebElement NewItems;
+	
+	
+	@FindBy(xpath = ("//*[@id=\"todoListTable\"]/tbody/tr/td[2]"))
+	private WebElement OpenWFDoc;
+	
 
 	public WebElement getClick_Dropdown_DefaultViewing() {
 		Click_Dropdown_DefaultViewing.click();
@@ -1028,7 +1072,7 @@ public class My_Preferences extends BaseClass {
 		jsclick(Click_AddSignature_Upload);
 	}
 
-	@FindBy(xpath = "//button[@id='saveUploadedSignature']") 
+	@FindBy(xpath = "//button[@id='saveUploadedSignature']")
 	private WebElement Overidesignature;
 
 	public void getClick_AddSignature_Save() throws Exception {
@@ -1128,8 +1172,7 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Showing 10 documents in folder.";
 		String actualcount = Verify_Loadmorecount_Document_Folder.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		log("The " + Verify_Loadmorecount_Document_Folder.getText()
-				+ " this count is shows on Folder search result");
+		log("The " + Verify_Loadmorecount_Document_Folder.getText() + " this count is shows on Folder search result");
 	}
 
 	public void getVerify_Loadmorecount_Document_Folder2() throws Exception {
@@ -1137,8 +1180,7 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Showing 20 documents in folder.";
 		String actualcount = Verify_Loadmorecount_Document_Folder.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		log("The " + Verify_Loadmorecount_Document_Folder.getText()
-				+ " this count is shows on Folder search result");
+		log("The " + Verify_Loadmorecount_Document_Folder.getText() + " this count is shows on Folder search result");
 	}
 
 	// Verify Maximum load more count
@@ -1164,8 +1206,7 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Showing 60 documents in folder.";
 		String actualcount = Verify_Loadmorecount_Document_Folder.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		log("The " + Verify_Loadmorecount_Document_Folder.getText()
-				+ " this count is shows on Folder search result");
+		log("The " + Verify_Loadmorecount_Document_Folder.getText() + " this count is shows on Folder search result");
 	}
 
 	public void getVerify_maxLoadmorecount_Document_Folder2() throws Exception {
@@ -1173,8 +1214,7 @@ public class My_Preferences extends BaseClass {
 		String expectcount = "Showing 120 documents in folder.";
 		String actualcount = Verify_Loadmorecount_Document_Folder.getText();
 		softAssert.assertEquals(actualcount, expectcount);
-		log("The " + Verify_Loadmorecount_Document_Folder.getText()
-				+ " this count is shows on Folder search result");
+		log("The " + Verify_Loadmorecount_Document_Folder.getText() + " this count is shows on Folder search result");
 	}
 
 	public void getEnter_Maximum_Loadmorecount() throws Exception {
@@ -1765,14 +1805,12 @@ public class My_Preferences extends BaseClass {
 
 		List<WebElement> elements = driver.findElements(By.xpath("(//img[@class='imgP'])"));
 
-		
-
 		// String regex = "^[0-9]";
 
 		String pagecounttext = Pagecount.getAttribute("value");
 
 		System.out.println(pagecounttext);
-		
+
 		Refresh_Button();
 		Thread.sleep(4000);
 		log("Click on Refresh button");
@@ -1911,7 +1949,7 @@ public class My_Preferences extends BaseClass {
 		getClick_AddSignature_Save();
 		Thread.sleep(2000);
 		jsclick(Signature_Upload_OkButton);
-		
+
 		try {
 			log("Click on Save button");
 			getEnterpassword();
@@ -1922,7 +1960,7 @@ public class My_Preferences extends BaseClass {
 		} catch (Exception e) {
 			System.out.println("Alert is not present...");
 		}
-		
+
 		log("New signature Upload Successfully");
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
@@ -2155,19 +2193,14 @@ public class My_Preferences extends BaseClass {
 		jsclick(My_Preferencesetting);
 		Thread.sleep(6000);
 		log("Click on My Preferences Option");
-		/*getReset_Button();
-		Thread.sleep(6000);
-		log("Click on Reset button");
-		Thread.sleep(6000);
-		movingclkElement(Apply_button);
-		Thread.sleep(6000);
-		log("Click on Apply button");
-		movingclkElement(Setting_Icon);
-		Thread.sleep(6000);
-		log("Click on Setting Icon");
-		jsclick(My_Preferencesetting);
-		Thread.sleep(6000);
-		log("Click on My Preferences Option");*/
+		/*
+		 * getReset_Button(); Thread.sleep(6000); log("Click on Reset button");
+		 * Thread.sleep(6000); movingclkElement(Apply_button); Thread.sleep(6000);
+		 * log("Click on Apply button"); movingclkElement(Setting_Icon);
+		 * Thread.sleep(6000); log("Click on Setting Icon");
+		 * jsclick(My_Preferencesetting); Thread.sleep(6000);
+		 * log("Click on My Preferences Option");
+		 */
 		jsclick(allannotation);
 		Thread.sleep(4000);
 		log("Click on Annotation");
@@ -2701,25 +2734,16 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(4000);
 		LogoutPage();
 
-		/*// Verify Download Path
-
-		File directory = new File("C:\\Users\\dipak.p\\Downloads");
-		boolean downloadinFilePresence = false;
-		File[] filesList = null;
-		LOOP: while (true) {
-			filesList = directory.listFiles();
-			for (File file : filesList) {
-				downloadinFilePresence = file.getName().contains(".zip");
-			}
-			if (downloadinFilePresence) {
-				for (; downloadinFilePresence;) {
-					Thread.sleep(5000);
-					continue LOOP;
-				}
-			} else {
-				break;
-			}
-		}*/
+		/*
+		 * // Verify Download Path
+		 * 
+		 * File directory = new File("C:\\Users\\dipak.p\\Downloads"); boolean
+		 * downloadinFilePresence = false; File[] filesList = null; LOOP: while (true) {
+		 * filesList = directory.listFiles(); for (File file : filesList) {
+		 * downloadinFilePresence = file.getName().contains(".zip"); } if
+		 * (downloadinFilePresence) { for (; downloadinFilePresence;) {
+		 * Thread.sleep(5000); continue LOOP; } } else { break; } }
+		 */
 
 	}
 
@@ -4459,7 +4483,7 @@ public class My_Preferences extends BaseClass {
 		movingclkElement(Apply_button);
 		Thread.sleep(3000);
 		log("Click on Apply button");
-		//getToastmessage();
+		// getToastmessage();
 		Thread.sleep(3000);
 		jsclick(Click_New_Document);
 		Thread.sleep(6000);
@@ -4707,4 +4731,164 @@ public class My_Preferences extends BaseClass {
 		Thread.sleep(8000);
 		log("Click on Refresh button");
 	}
+
+	// Galadari PDF Signature issue
+
+	public void Send_DocumenttoWorkflow () throws Exception {
+
+		
+		selectElement(Select_Cabinet);
+		Thread.sleep(1000);
+		Reporter.log("Navigate till Cabinet", true);
+		selectElement(Select_Drawer);
+		Thread.sleep(1000);
+		Reporter.log("Navigate till Drawer", true);
+		selectElement(Select_Folder);
+		Thread.sleep(1000);
+		Reporter.log("Navigate till Folder", true);
+		// ================= PROCESS 100 DOCUMENTS =================
+
+		 // ===== LOCATOR FOR ALL CHECKBOXES =====
+		String checkboxXpath = "//input[@class='document-option']";
+		Reporter.log("Check one by one document ", true);
+		// ===== FILE TO STORE LAST SELECTED CHECKBOX =====
+		File file = new File("count.txt");
+
+		int count = 1;
+
+		// Read previous count
+		if (file.exists()) {
+
+		    BufferedReader br = new BufferedReader(new FileReader(file));
+
+		    String value = br.readLine();
+
+		    if (value != null && !value.isEmpty()) {
+		        count = Integer.parseInt(value);
+		    }
+
+		    br.close();
+		}
+
+		// Get all checkboxes
+		List<WebElement> checkboxes =
+		        driver.findElements(By.xpath(checkboxXpath));
+
+		Reporter.log("Total Checkboxes : " + checkboxes.size(), true);
+
+		// Check count should not exceed size
+		if (count <= checkboxes.size()) {
+
+		    // Refresh list
+		    checkboxes = driver.findElements(By.xpath(checkboxXpath));
+
+		    // Select only current checkbox
+		    WebElement checkbox = checkboxes.get(count - 1);
+
+		    // Scroll if needed
+		    // ((JavascriptExecutor)driver)
+		    // .executeScript("arguments[0].scrollIntoView(true);", checkbox);
+
+		    // Click checkbox
+		    if (!checkbox.isSelected()) {
+
+		        jsclick(checkbox);
+
+		        System.out.println("Selected checkbox : " + count);
+		    }
+
+		    // Save next count
+		    BufferedWriter bw =
+		            new BufferedWriter(new FileWriter(file));
+
+		    bw.write(String.valueOf(count + 1));
+
+		    bw.close();
+
+		} else {
+
+		    System.out.println("All checkboxes completed.");
+		}
+
+            // =====================================
+            // SEND WORKFLOW CODE HERE
+            // =====================================
+            
+            movingElement(DocumentList);
+            Reporter.log("Move to the Document Tab", true);
+            Thread.sleep(1000);
+    		jsclick(sendToWorkflow);
+    		Thread.sleep(1000);
+    		Reporter.log("Click on the Send To workflow", true);
+    		jsclick(SendWorkflow);
+    		Thread.sleep(1000);
+    		jsclick(Applybtn);
+    		Thread.sleep(1000);
+    		Reporter.log("Select Workflow and send document to workflow", true);
+    	    jsclick(WFOK);	
+    	    
+    	    movingElement(Todolist);
+    	    Reporter.log("Mousehover Todolist tab", true);
+    		jsclick(NewItems);
+    		Thread.sleep(1000);
+    		Reporter.log("Select New Items", true);
+    		jsclick(OpenWFDoc);
+    		Thread.sleep(4000);
+    		Reporter.log("Open documents", true);
+    		getClick_signature_Menuoption();
+    		Thread.sleep(4000);
+    		getAdd_Signature_Onpage();
+    		Thread.sleep(4000);
+    		jsclick(Save_button);
+    		Thread.sleep(6000);
+    		jsclick(DocumentSave_Ok_button);
+    		Reporter.log("Add signature on the page and verify it's added", true);
+    		
+    	/*	// Locate saved signature element
+    		WebElement savedSignature = driver.findElement(By.id("signatureImage"));
+
+    		if (savedSignature.isDisplayed()) {
+    		    System.out.println("Signature is added and displayed properly");
+    		} else {
+    		    System.out.println("Signature not added properly");
+    		}*/
+    		Thread.sleep(4000);
+    		jsclick(WFAccept);
+    		Thread.sleep(1000);
+    		Reporter.log("Click on the Accept workflow action", true);
+    		Textenter.sendKeys("Document accepted by User");
+    		jsclick(WFAcceptOK);
+    		Thread.sleep(1000);
+    		LogoutPage();
+    		Thread.sleep(1000);
+    		LogInAdmin();
+    		Thread.sleep(2000);
+    		Reporter.log("Login as Task user2", true);
+    		 movingElement(Todolist);
+    		 Reporter.log("mousehover Todolist tab", true);
+     		jsclick(NewItems);
+     		Thread.sleep(1000);
+     		Reporter.log("Click on the new Items", true);
+     		jsclick(OpenWFDoc);
+     		Thread.sleep(4000);
+     		Reporter.log("Open document and add signature on the page", true);
+     		getClick_signature_Menuoption();
+     		Thread.sleep(3000);
+     		getAdd_Signature_Onpage();
+     		Thread.sleep(3000);
+     		jsclick(Save_button);
+    		Thread.sleep(6000);
+    		jsclick(DocumentSave_Ok_button);
+    		Reporter.log("after saving verify signature is added", true);
+     		jsclick(WFAccept);
+     		Thread.sleep(2000);
+     		Textenter.sendKeys("Document accepted by User");
+     		jsclick(WFAcceptOK);
+     		Reporter.log("Accept the workflow", true);
+     		Thread.sleep(2000);
+     		LogoutPage();
+     		Reporter.log("Logout task user 2 and login Task user 1 and validate again next document", true);
+     		Thread.sleep(1000);
+     		LogDipakUser();
+}
 }
